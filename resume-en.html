@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Данила Аринов — резюме</title>
+<title>Danila Arinov — Résumé</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
@@ -22,15 +22,12 @@
   .sec h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.11em;color:var(--dim);border-bottom:1.5px solid var(--line);padding-bottom:5px;margin-bottom:11px}
   .skills{display:flex;flex-wrap:wrap;gap:6px}
   .sk{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;background:#f7f9fc}
-  .rowset{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
   .it{margin-bottom:13px}
   .it-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
   .it-t{font-weight:600;font-size:14px}
   .it-d{font-size:12px;color:var(--dim);white-space:nowrap}
   .it a{color:var(--acc);text-decoration:none;font-size:11.5px;word-break:break-all}
   .it p{font-size:13px;color:#333a45;margin-top:2px}
-  .bar{height:4px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:5px;max-width:220px}
-  .bar i{display:block;height:100%;background:var(--acc)}
   .ed{font-size:13px}
   .ed b{font-weight:600}
   .ed span{color:var(--dim)}
@@ -46,10 +43,7 @@
     .print,.back{display:none}
     .it{page-break-inside:avoid}
   }
-  @media(max-width:640px){
-    .sheet{padding:26px 22px}
-    .rowset{grid-template-columns:1fr}
-  }
+  @media(max-width:640px){.sheet{padding:26px 22px}}
 </style>
 </head>
 <body>
@@ -57,30 +51,30 @@
 <div class="sheet">
 
   <header>
-    <h1>Данила Аринов</h1>
-    <p class="role">Разработчик программного обеспечения — C++ / Rust / Python</p>
+    <h1>Danila Arinov</h1>
+    <p class="role">Software Developer — C++ / Rust / Python</p>
     <p class="meta">
       <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a> ·
       <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram @Smishnyavko</a> ·
       <a href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener">LinkedIn</a> ·
       <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">Kwork</a> ·
       <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">github.com/TeivrimOriginal</a> ·
-      Россия
+      Russia
     </p>
   </header>
 
   <section class="sec">
-    <h2>О себе</h2>
+    <h2>Profile</h2>
     <p class="note">
-      Студент УрТК НИЯУ МИФИ, специальность «Информационные сети и программирование» (СПО), 2024–2027.
-      Занимаюсь системным и графическим программированием: C++, Rust, Python, Vulkan, OpenGL, Win32.
-      Интересуют низкоуровневая графика, производительные системы и прикладной Rust.
-      Английский — уровень A2, чтение технической документации.
+      Student at Ural College of Technologies, NRNU MEPhI — Information Networks and Programming (vocational qualification), 2024–2027.
+      Working in systems and graphics programming: C++, Rust, Python, Vulkan, OpenGL, Win32.
+      Interested in low-level graphics, high-performance systems and applied Rust.
+      English — A2, able to read technical documentation.
     </p>
   </section>
 
   <section class="sec">
-    <h2>Технологии</h2>
+    <h2>Technologies</h2>
     <div class="skills">
       <span class="sk">Rust</span>
       <span class="sk">C++</span>
@@ -92,19 +86,19 @@
       <span class="sk">Git</span>
       <span class="sk">Qt 6</span>
       <span class="sk">Blender</span>
-      <span class="sk">Рисование / 3D</span>
+      <span class="sk">Drawing / 3D</span>
     </div>
   </section>
 
   <section class="sec">
-    <h2>Проекты</h2>
+    <h2>Projects</h2>
 
     <div class="it">
       <div class="it-h">
-        <span class="it-t">TPaint — растровый редактор</span>
+        <span class="it-t">TPaint — Raster Graphics Editor</span>
         <span class="it-d mono">Rust · Win32/GDI · MIT</span>
       </div>
-      <p>Рабочий растровый редактор (аналог SAI Paint), написанный на чистом Rust без C/C++. Инструменты: кисть с регулировкой толщины, карандаш, линия, эллипс, распылитель, заливка. Поддержка undo/redo, зума и панорамирования, открытие и сохранение в PNG. Собственный вывод UI через Win32 API и GDI.</p>
+      <p>A working raster graphics editor (SAI Paint analogue) written in pure Rust with no C/C++. Tools: brush with adjustable thickness, pencil, line, ellipse, airbrush, fill. Supports undo/redo, zoom and pan, opening and saving PNG. UI drawn directly through the Win32 API and GDI.</p>
       <a href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust</a>
     </div>
 
@@ -113,16 +107,16 @@
         <span class="it-t">Teivrim-Engine</span>
         <span class="it-d mono">C++ · Vulkan / OpenGL · CMake</span>
       </div>
-      <p>Кроссплатформенный игровой движок: модульная архитектура, рендеринг на Vulkan и OpenGL, сборка через CMake. 87 коммитов за период разработки. Проект в работе, готовность ~10–15%.</p>
+      <p>Cross-platform game engine: modular architecture, Vulkan and OpenGL rendering, CMake build system. 87 commits during its development. Work in progress, roughly 10–15% complete.</p>
       <a href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/Teivrim-Engine</a>
     </div>
 
     <div class="it">
       <div class="it-h">
-        <span class="it-t">Редактор визуальных новелл</span>
+        <span class="it-t">Visual Novel Editor</span>
         <span class="it-d mono">C++ · Win32 / GDI+ / MinGW</span>
       </div>
-      <p>Таймлайн, иерархия сцен, инспектор, панель скриптов и браузер ассетов — редактор для сборки визуальных новелл.</p>
+      <p>Timeline, scene hierarchy, inspector, script panel and asset browser — a tool for building visual novels.</p>
       <a href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/teivrim-novell-engine</a>
     </div>
 
@@ -131,42 +125,42 @@
         <span class="it-t">TeivrimSite</span>
         <span class="it-d mono">Rust</span>
       </div>
-      <p>Агрегатор аниме, манги и ранобэ: работа с публичными API, обработка и структурирование данных, практика Rust.</p>
+      <p>Aggregator for anime, manga and light novels: consuming public APIs, processing and structuring data, hands-on Rust practice.</p>
       <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
     </div>
 
     <div class="it">
       <div class="it-h">
-        <span class="it-t">Сайт для изучения английского</span>
-        <span class="it-d mono">Web · в разработке</span>
+        <span class="it-t">English Learning Website</span>
+        <span class="it-d mono">Web · in development</span>
       </div>
-      <p>Проект в разработке: площадка с авторским учебным контентом и упражнениями для практики английского языка.</p>
+      <p>A platform for original study material and exercises for practising English.</p>
       <a href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">github.com/TeivrimOriginal/Cautious-Enigma</a>
     </div>
 
   </section>
 
   <section class="sec">
-    <h2>Образование</h2>
+    <h2>Education</h2>
     <p class="ed">
-      <b>УрТК НИЯУ МИФИ</b> — Уральский технологический колледж<br />
-      <span>Специальность «Информационные сети и программирование», СПО · 2024–2027</span>
+      <b>Ural College of Technologies, NRNU MEPhI</b><br />
+      <span>Information Networks and Programming, vocational qualification · 2024–2027</span>
     </p>
   </section>
 
   <section class="sec">
-    <h2>Дополнительно</h2>
+    <h2>Additional</h2>
     <p class="note">
-      3D-моделирование в Blender, рисование. Английский — A2 ( чтение документации ).
-      Основной проект по движку ведётся с марта 2026 года.
+      3D modelling in Blender, drawing. English — A2 (technical documentation reading).
+      Main engine project under development since March 2026.
     </p>
   </section>
 
 </div>
 
-<div class="print"><button onclick="window.print()">Сохранить в PDF / распечатать</button></div>
-<a class="back" href="index.html">← Вернуться на сайт</a>
-<a class="back" href="resume-en.html">English version</a>
+<div class="print"><button onclick="window.print()">Save as PDF / Print</button></div>
+<a class="back" href="index-en.html">← Back to site</a>
+<a class="back" href="resume.html">Русская версия</a>
 
 </body>
 </html>
