@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Данила Аринов — разработчик C++ / Rust</title>
-<meta name="description" content="Портфолио Данилы Аринова: C++, Rust, Python, OpenGL, Vulkan, Win32, CMake." />
+<title>Данила Аринов — C++ / Rust</title>
+<meta name="description" content="C++, Rust, Python, Vulkan, OpenGL, Win32, CMake." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&lt;/&gt;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +20,17 @@
     <nav class="nav-links">
       <a href="#skills">Навыки</a>
       <a href="#projects">Проекты</a>
-      <a href="#contacts">Контакты</a>
     </nav>
-    <a class="lang-sw mono" href="index-en.html" title="Switch to English">EN</a>
+    <a class="lang-sw mono" href="index-en.html" title="English">EN</a>
+  </div>
+  <!-- Контакты -->
+  <div class="wrap contact-bar">
+    <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a>
+    <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">Kwork</a>
+    <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
+    <a href="resume.html" class="cb-res">Резюме</a>
   </div>
 </header>
 
@@ -32,21 +40,20 @@
   <section class="hero">
     <div class="wrap hero-in">
       <div class="hero-l">
-        <p class="kicker mono">Разработчик программного обеспечения</p>
+        <p class="kicker mono">Разработчик ПО</p>
         <h1>Данила Аринов</h1>
         <p class="role">C++ · Rust · Python · графика и системное программирование</p>
         <p class="lead">
-          Студент УрТК НИЯУ МИФИ, специальность «Информационные сети и программирование» (СПО), 2024–2027.
-          Разработка с 2024 года. Основной интерес — низкоуровневая графика и производительные системы.
+          Студент УрТК НИЯУ МИФИ, «Информационные сети и программирование», 2024–2027.
+          Разработка с 2024 года. Низкоуровневая графика и производительные системы.
         </p>
         <div class="cta">
-          <a class="btn" href="mailto:teivrim@gmail.com">teivrim@gmail.com</a>
+          <a class="btn" href="resume.html">Открыть резюме</a>
           <a class="btn ghost" href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
       <div class="hero-r">
-        <img id="avatar" class="avatar" alt="Фото профиля TeivrimOriginal" />
-        <p class="cap mono">Фото подтягивается из профиля GitHub</p>
+        <img id="avatar" class="avatar" alt="Фото из профиля GitHub" />
       </div>
     </div>
   </section>
@@ -73,7 +80,6 @@
           <div class="tags"><span class="t">3D-моделирование</span><span class="t">Рисование</span><span class="t">Английский A2</span></div>
         </div>
       </div>
-      <p class="note">Владею на уровне, достаточном для самостоятельной работы. Английский — A2, чтение документации.</p>
     </div>
   </section>
 
@@ -83,57 +89,41 @@
       <h2 class="h2 mono">02 / Проекты</h2>
       <div class="grid">
 
+        <a class="pc" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">Rust</span><span class="wip">работает</span></div>
+          <h3>TPaint — растровый редактор</h3>
+          <p>Аналог SAI Paint на чистом Rust без C/C++. Кисть, карандаш, линия, эллипс, заливка, undo/redo, PNG. Win32/GDI.</p>
+          <div class="tags sm"><span class="t">Rust</span><span class="t">Win32</span><span class="t">MIT</span></div>
+        </a>
+
         <a class="pc" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
-          <div class="pc-h"><span class="lang">C++</span><span class="wip">в разработке · ~10–15%</span></div>
+          <div class="pc-h"><span class="lang">C++</span><span class="wip">~10–15%</span></div>
           <h3>Teivrim-Engine</h3>
-          <p>Кроссплатформенный игровой движок. Vulkan, OpenGL, модульная архитектура. Работа ведётся параллельно с учёбой; готовность проекта — порядка 10–15%.</p>
+          <p>Кроссплатформенный игровой движок. Vulkan, OpenGL, модульная архитектура, CMake.</p>
           <div class="tags sm"><span class="t">Vulkan</span><span class="t">OpenGL</span><span class="t">CMake</span></div>
         </a>
 
         <a class="pc" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
           <div class="pc-h"><span class="lang">C++</span></div>
           <h3>Редактор визуальных новелл</h3>
-          <p>Таймлайн, иерархия сцен, инспектор, панель скриптов, браузер ассетов. Win32, GDI+, MinGW.</p>
+          <p>Таймлайн, иерархия сцен, инспектор, панель скриптов, браузер ассетов.</p>
           <div class="tags sm"><span class="t">Win32</span><span class="t">GDI+</span><span class="t">MinGW</span></div>
-        </a>
-
-        <a class="pc" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
-          <div class="pc-h"><span class="lang">Rust</span><span class="wip">работает</span></div>
-          <h3>TPaint — растровый редактор</h3>
-          <p>Рабочий растровый редактор (аналог SAI Paint) на чистом Rust без C/C++: кисть, карандаш, линия, эллипс, заливка, распылитель, undo/redo, зум, открытие и сохранение PNG. Win32/GDI.</p>
-          <div class="tags sm"><span class="t">Rust</span><span class="t">Win32</span><span class="t">GDI</span><span class="t">MIT</span></div>
-        </a>
-
-        <a class="pc" href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">
-          <div class="pc-h"><span class="lang">Web</span></div>
-          <h3>Сайт для изучения английского</h3>
-          <p>Собственный учебный контент: упражнения и материалы для практики английского языка.</p>
-          <div class="tags sm"><span class="t">English</span><span class="t">Web</span></div>
         </a>
 
         <a class="pc" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
           <div class="pc-h"><span class="lang">Rust</span></div>
           <h3>TeivrimSite</h3>
-          <p>Агрегатор аниме, манги и ранобэ. Работа с публичными API, изучение Rust.</p>
+          <p>Агрегатор аниме, манги и ранобэ. Публичные API, обработка данных.</p>
           <div class="tags sm"><span class="t">Rust</span><span class="t">API</span></div>
         </a>
 
-      </div>
-    </div>
-  </section>
+        <a class="pc" href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">Web</span><span class="wip">в разработке</span></div>
+          <h3>Сайт для изучения английского</h3>
+          <p>Учебный контент и упражнения для практики языка.</p>
+          <div class="tags sm"><span class="t">English</span><span class="t">Web</span></div>
+        </a>
 
-  <!-- CONTACTS -->
-  <section class="sec" id="contacts">
-    <div class="wrap">
-      <h2 class="h2 mono">03 / Контакты</h2>
-      <div class="c-grid">
-        <a class="c" href="resume.html"><span class="ck">Резюме</span><span class="cv">Открыть CV</span></a>
-        <a class="c" href="resume-en.html"><span class="ck">Résumé</span><span class="cv">English version</span></a>
-        <a class="c" href="mailto:teivrim@gmail.com"><span class="ck">Email</span><span class="cv">teivrim@gmail.com</span></a>
-        <a class="c" href="https://t.me/Smishnyavko" target="_blank" rel="noopener"><span class="ck">Telegram</span><span class="cv">@Smishnyavko</span></a>
-        <a class="c" href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener"><span class="ck">LinkedIn</span><span class="cv">danila-arinov</span></a>
-        <a class="c" href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener"><span class="ck">Kwork</span><span class="cv">kwork.ru/user/teivrim</span></a>
-        <a class="c" href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener"><span class="ck">GitHub</span><span class="cv">TeivrimOriginal</span></a>
       </div>
     </div>
   </section>
