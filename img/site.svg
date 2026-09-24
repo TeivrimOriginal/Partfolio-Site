@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1c2e"/><stop offset="1" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <g stroke="#22304c" stroke-width="1">
+    <path d="M0 90 H640 M0 180 H640 M0 270 H640 M160 0 V360 M320 0 V360 M480 0 V360"/>
+  </g>
+  <g>
+    <rect x="24" y="30" width="112" height="140" rx="6" fill="#4f8cff" opacity=".2"/>
+    <rect x="152" y="30" width="112" height="140" rx="6" fill="#8b5cf6" opacity=".16"/>
+    <rect x="280" y="30" width="112" height="140" rx="6" fill="#3ddc97" opacity=".14"/>
+    <rect x="408" y="30" width="112" height="140" rx="6" fill="#4f8cff" opacity=".12"/>
+    <rect x="536" y="30" width="80" height="140" rx="6" fill="#8b5cf6" opacity=".1"/>
+  </g>
+  <g fill="#7d93b8">
+    <rect x="24" y="196" width="200" height="7" rx="3.5"/>
+    <rect x="24" y="212" width="150" height="7" rx="3.5"/>
+    <rect x="24" y="238" width="176" height="7" rx="3.5"/>
+    <rect x="280" y="196" width="140" height="7" rx="3.5"/>
+  </g>
+  <g fill="#4f8cff" opacity=".9">
+    <rect x="24" y="276" width="60" height="20" rx="10"/>
+    <rect x="96" y="276" width="44" height="20" rx="10" opacity=".6"/>
+    <rect x="152" y="276" width="72" height="20" rx="10" opacity=".4"/>
+  </g>
+  <text x="24" y="330" font-family="monospace" font-size="12" fill="#4a5c78">PUBLIC API · RUST</text>
+</svg>

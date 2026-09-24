@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b2e"/><stop offset="1" stop-color="#0a0f1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <g font-family="Georgia,serif" font-size="150" fill="none" stroke="#2d4368" stroke-width="1.5" opacity=".8">
+    <text x="52" y="205">Aa</text>
+  </g>
+  <g fill="#4f8cff">
+    <rect x="286" y="96" width="290" height="10" rx="5" opacity=".9"/>
+    <rect x="286" y="124" width="220" height="10" rx="5" opacity=".55"/>
+    <rect x="286" y="152" width="258" height="10" rx="5" opacity=".35"/>
+  </g>
+  <g fill="#3ddc97" opacity=".85">
+    <rect x="286" y="196" width="150" height="34" rx="8"/>
+  </g>
+  <g fill="#8fb6ff" opacity=".8">
+    <rect x="452" y="196" width="124" height="34" rx="8" fill="none" stroke="#4f8cff" stroke-width="1.5"/>
+  </g>
+  <g fill="#2d4368">
+    <rect x="286" y="256" width="96" height="7" rx="3.5"/>
+    <rect x="394" y="256" width="70" height="7" rx="3.5"/>
+  </g>
+</svg>
