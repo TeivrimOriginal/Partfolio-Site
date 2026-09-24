@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Данила Аринов — разработчик C++ / Rust</title>
+<meta name="description" content="Портфолио Данилы Аринова: C++, Rust, Python, OpenGL, Vulkan, Win32, CMake." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&lt;/&gt;</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="bg"></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo">Аринов<span class="sep">/</span><span class="mono dim">portfolio</span></a>
+    <nav class="nav-links">
+      <a href="#skills">Навыки</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-l">
+        <p class="kicker mono">Разработчик программного обеспечения</p>
+        <h1>Данила Аринов</h1>
+        <p class="role">C++ · Rust · Python · графика и системное программирование</p>
+        <p class="lead">
+          Студент УрТК НИЯУ МИФИ, специальность «Информационные сети и программирование» (СПО), 2024–2027.
+          Разработка с 2024 года. Основной интерес — низкоуровневая графика и производительные системы.
+        </p>
+        <div class="cta">
+          <a class="btn" href="mailto:teivrim@gmail.com">teivrim@gmail.com</a>
+          <a class="btn ghost" href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="hero-r">
+        <img id="avatar" class="avatar" alt="Фото профиля TeivrimOriginal" />
+        <p class="cap mono">Фото подтягивается из профиля GitHub</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="sec" id="skills">
+    <div class="wrap">
+      <h2 class="h2 mono">01 / Навыки</h2>
+      <div class="rows">
+        <div class="row">
+          <span class="rk">Языки</span>
+          <div class="tags"><span class="t">Rust</span><span class="t">C++</span><span class="t">Python</span></div>
+        </div>
+        <div class="row">
+          <span class="rk">Графика</span>
+          <div class="tags"><span class="t">Vulkan</span><span class="t">OpenGL</span></div>
+        </div>
+        <div class="row">
+          <span class="rk">Инструменты</span>
+          <div class="tags"><span class="t">CMake</span><span class="t">Git</span><span class="t">Win32</span><span class="t">Blender</span></div>
+        </div>
+        <div class="row">
+          <span class="rk">Прочее</span>
+          <div class="tags"><span class="t">3D-моделирование</span><span class="t">Рисование</span><span class="t">Английский A2</span></div>
+        </div>
+      </div>
+      <p class="note">Владею на уровне, достаточном для самостоятельной работы. Английский — A2, чтение документации.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="sec alt" id="projects">
+    <div class="wrap">
+      <h2 class="h2 mono">02 / Проекты</h2>
+      <div class="grid">
+
+        <a class="pc" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">C++</span><span class="wip">в разработке · ~10–15%</span></div>
+          <h3>Teivrim-Engine</h3>
+          <p>Кроссплатформенный игровой движок. Vulkan, OpenGL, модульная архитектура. Работа ведётся параллельно с учёбой; готовность проекта — порядка 10–15%.</p>
+          <div class="tags sm"><span class="t">Vulkan</span><span class="t">OpenGL</span><span class="t">CMake</span></div>
+        </a>
+
+        <a class="pc" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">C++</span></div>
+          <h3>Редактор визуальных новелл</h3>
+          <p>Таймлайн, иерархия сцен, инспектор, панель скриптов, браузер ассетов. Win32, GDI+, MinGW.</p>
+          <div class="tags sm"><span class="t">Win32</span><span class="t">GDI+</span><span class="t">MinGW</span></div>
+        </a>
+
+        <a class="pc" href="https://github.com/TeivrimOriginal/WindowsModuleSystem" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">C++ / Qt 6</span></div>
+          <h3>Модульная оконная система</h3>
+          <p>Окна с подключаемыми скриптами, изменяемый размер, удаление окон. Qt 6.8.1.</p>
+          <div class="tags sm"><span class="t">Qt 6</span><span class="t">CMake</span></div>
+        </a>
+
+        <a class="pc" href="https://github.com/TeivrimOriginal/Minecraft-Launcher-Teivrim-CPP-QT" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">C++ / Qt</span></div>
+          <h3>Лаунчер Minecraft</h3>
+          <p>Бэкенд и фронтенд на C++. Интерфейс на Qt, кроссплатформенная сборка.</p>
+          <div class="tags sm"><span class="t">C++</span><span class="t">Qt</span></div>
+        </a>
+
+        <a class="pc" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
+          <div class="pc-h"><span class="lang">Rust</span></div>
+          <h3>TeivrimSite</h3>
+          <p>Агрегатор аниме, манги и ранобэ. Работа с публичными API, изучение Rust.</p>
+          <div class="tags sm"><span class="t">Rust</span><span class="t">API</span></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="sec" id="contacts">
+    <div class="wrap">
+      <h2 class="h2 mono">03 / Контакты</h2>
+      <div class="c-grid">
+        <a class="c" href="mailto:teivrim@gmail.com"><span class="ck">Email</span><span class="cv">teivrim@gmail.com</span></a>
+        <a class="c" href="https://t.me/Smishnyavko" target="_blank" rel="noopener"><span class="ck">Telegram</span><span class="cv">@Smishnyavko</span></a>
+        <a class="c" href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener"><span class="ck">LinkedIn</span><span class="cv">danila-arinov</span></a>
+        <a class="c" href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener"><span class="ck">Kwork</span><span class="cv">kwork.ru/user/teivrim</span></a>
+        <a class="c" href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener"><span class="ck">GitHub</span><span class="cv">TeivrimOriginal</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in mono">
+    <span>Данила Аринов · 2026</span>
+    <span>C++ / Rust</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
