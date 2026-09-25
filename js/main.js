@@ -1,67 +1,72 @@
-/* Портфолио Данилы Аринова — интерактив */
-(function () {
-  "use strict";
+const avatar = document.getElementById("avatar");
 
-  /* ---------- Фото из профиля GitHub (обновляется автоматически) ---------- */
-  var img = document.getElementById("avatar");
-  if (img) {
-    // Метка на текущие сутки — сброс кэша, чтобы новое фото подхватывалось сразу
-    var stamp = new Date().toISOString().slice(0, 10);
-    img.src = "https://github.com/TeivrimOriginal.png?v=" + stamp;
-    img.onerror = function () {
-      img.onerror = null;
-      img.src = "https://avatars.githubusercontent.com/u/174201371?v=4";
-    };
+if (avatar) {
+  const today = new Date().toISOString().slice(0, 10);
+  avatar.src = `https://github.com/TeivrimOriginal.png?v=${today}`;
+
+  avatar.addEventListener("error", () => {
+    avatar.src = "https://avatars.githubusercontent.com/u/174201371?v=4";
+  }, { once: true });
+}
+
+const revealed = document.querySelectorAll(".hero-l, .hero-r, .rows, .grid, .c-grid");
+
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add("vis");
+      io.unobserve(entry.target);
+    }
+  }, { threshold: 0.1 });
+
+  for (const el of revealed) {
+    el.classList.add("rv");
+    io.observe(el);
   }
+} else {
+  for (const el of revealed) el.classList.add("vis");
+}
 
-  /* ---------- Появление блоков при прокрутке ---------- */
-  var els = document.querySelectorAll(".hero-l, .hero-r, .rows, .grid, .c-grid");
-  if ("IntersectionObserver" in window) {
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("vis");
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    els.forEach(function (el) {
-      el.classList.add("rv");
-      obs.observe(el);
-    });
-  } else {
-    els.forEach(function (el) { el.classList.add("vis"); });
-  }
+const STORE = "portfolio_hidden_projects_v1";
+const hidden = new Set();
 
-  /* ---------- Удаление проекта ---------- */
-  var KEY = "portfolio_hidden_projects_v1";
-  var hidden = new Set();
+try {
+  for (const name of JSON.parse(localStorage.getItem(STORE) || "[]")) hidden.add(name);
+} catch {}
 
+const remember = () => {
   try {
-    JSON.parse(localStorage.getItem(KEY) || "[]").forEach(function (n) { hidden.add(n); });
-  } catch (e) { /* повреждённые данные игнорируем */ }
+    localStorage.setItem(STORE, JSON.stringify([...hidden]));
+  } catch {}
+};
 
-  function save() {
-    try { localStorage.setItem(KEY, JSON.stringify(Array.from(hidden))); } catch (e) {}
+for (const card of document.querySelectorAll(".pc")) {
+  const title = card.querySelector("h3")?.textContent.trim();
+
+  if (title && hidden.has(title)) {
+    card.style.display = "none";
+    continue;
   }
 
-  document.querySelectorAll(".pc").forEach(function (card) {
-    var name = (card.querySelector("h3") || {}).textContent || "";
+  const remove = document.createElement("button");
+  remove.type = "button";
+  remove.className = "del";
+  remove.title = "Удалить проект";
+  remove.setAttribute("aria-label", "Удалить проект");
+  remove.textContent = "✕";
 
-    if (name && hidden.has(name)) { card.style.display = "none"; return; }
+  remove.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-    var b = document.createElement("button");
-    b.type = "button";
-    b.className = "del";
-    b.title = "Удалить проект";
-    b.setAttribute("aria-label", "Удалить проект");
-    b.textContent = "✕";
-    b.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if (name) { hidden.add(name); save(); }
-      card.style.display = "none";
-    });
-    card.appendChild(b);
+    if (title) {
+      hidden.add(title);
+      remember();
+    }
+
+    card.style.display = "none";
   });
-})();
+
+  card.append(remove);
+}
