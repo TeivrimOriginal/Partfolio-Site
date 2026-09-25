@@ -25,16 +25,16 @@ if ("IntersectionObserver" in window) {
     io.observe(el);
   }
 
-  requestAnimationFrame(() => {
-    if (document.hidden) {
-      for (const el of revealed) el.classList.add("vis");
-      return;
-    }
-
+  const inView = () => {
     for (const el of revealed) {
-      if (el.getBoundingClientRect().top < innerHeight) el.classList.add("vis");
+      if (document.hidden || el.getBoundingClientRect().top < innerHeight) {
+        el.classList.add("vis");
+      }
     }
-  });
+  };
+
+  inView();
+  addEventListener("scroll", inView, { passive: true });
 } else {
   for (const el of revealed) el.classList.add("vis");
 }
