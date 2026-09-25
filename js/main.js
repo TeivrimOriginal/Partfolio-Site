@@ -24,6 +24,17 @@ if ("IntersectionObserver" in window) {
     el.classList.add("rv");
     io.observe(el);
   }
+
+  requestAnimationFrame(() => {
+    if (document.hidden) {
+      for (const el of revealed) el.classList.add("vis");
+      return;
+    }
+
+    for (const el of revealed) {
+      if (el.getBoundingClientRect().top < innerHeight) el.classList.add("vis");
+    }
+  });
 } else {
   for (const el of revealed) el.classList.add("vis");
 }
