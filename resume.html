@@ -46,14 +46,19 @@
   .note{font-size:12.5px;color:var(--dim)}
   .print{display:block;max-width:790px;margin:16px auto 0;text-align:center}
   .print button{font:inherit;font-size:13px;padding:9px 18px;border:1px solid var(--line);background:#fff;border-radius:var(--r);cursor:pointer}
-  .print button:hover{border-color:var(--acc);color:var(--acc)}
+  .print .dl{display:inline-block;font-size:13px;padding:10px 20px;border:1px solid var(--line);background:#fff;border-radius:var(--r);color:var(--tx);text-decoration:none;transition:border-color .15s,color .15s}
+  .print .dl:hover{border-color:var(--acc);color:var(--acc)}
   .back{display:block;max-width:790px;margin:12px auto 0;text-align:center;font-size:12.5px;color:var(--dim);text-decoration:none}
   .back:hover{color:var(--acc)}
+  @page{size:A4;margin:11mm}
   @media print{
-    body{background:#fff;padding:0}
+    body{background:#fff;padding:0;line-height:1.45}
     .sheet{box-shadow:none;padding:0;max-width:none}
     .print,.back{display:none}
-    .it{page-break-inside:avoid}
+    .sec{margin-top:14px}
+    .sec h2{margin-bottom:8px;padding-bottom:3px}
+    .it{margin-bottom:9px;page-break-inside:avoid}
+    .note,.ed{font-size:12px}
   }
   @media(max-width:640px){
     .sheet{padding:26px 22px}
@@ -173,7 +178,7 @@
 
 </div>
 
-<div class="print"><button onclick="window.print()">Сохранить в PDF / распечатать</button></div>
+<div class="print"><a class="dl" href="resume.pdf" download>Скачать PDF</a></div>
 <a class="back" href="index.html">← Вернуться на сайт</a>
 <a class="back" href="resume-en.html">English version</a>
 
