@@ -169,6 +169,41 @@ h1 {
   font-size: .95rem;
 }
 
+.lead-sub {
+  display: block;
+  color: var(--dim);
+  font-size: .72rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  opacity: .75;
+  margin-bottom: 7px;
+}
+
+/* Короткий список опыта под лидом: mono-нумерация, как в заголовках секций. */
+.xp {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  max-width: 78ch;
+  margin: -12px 0 22px;
+  font-size: .8rem;
+  color: var(--dim);
+}
+
+.xp li {
+  display: flex;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.xp-i {
+  flex: none;
+  color: var(--acc);
+  opacity: .7;
+  font-size: .68rem;
+  padding-top: .2em;
+}
+
 .cta {
   display: flex;
   gap: 10px;
@@ -512,6 +547,8 @@ h1 {
 
   .role { margin: 8px 0 16px; }
   .lead { margin: 0 auto 24px; }
+  .lead-sub { margin-bottom: 6px; }
+  .xp { margin: -8px auto 20px; max-width: 40ch; text-align: left; }
   .cta { justify-content: center; }
   .h1, h1 { font-size: clamp(1.75rem, 8.5vw, 2.3rem); }
 
