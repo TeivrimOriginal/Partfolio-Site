@@ -303,6 +303,43 @@ h1 {
 
 .pc:hover .pc-img img { transform: scale(1.03); }
 
+/* Карточка с дополнительной ссылкой (видео): вместо <a> на всю карточку
+   заголовок становится ссылкой с растянутым ::after, поэтому карточка целиком
+   ведёт на GitHub, а видео остаётся отдельной кликабельной ссылкой. */
+.pc-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.pc-link:focus-visible::after {
+  outline: 2px solid var(--acc);
+  outline-offset: -3px;
+  border-radius: var(--r);
+}
+
+.pc-video {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(79, 140, 255, .35);
+  background: rgba(79, 140, 255, .1);
+  color: #8fb6ff;
+  font-size: .74rem;
+  transition: color .15s, border-color .15s, background .15s;
+}
+
+.pc-video:hover {
+  color: #fff;
+  border-color: var(--acc);
+  background: rgba(79, 140, 255, .2);
+}
+
 .pc-h {
   display: flex;
   align-items: center;
@@ -343,6 +380,7 @@ h1 {
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 3;
   width: 24px;
   height: 24px;
   display: grid;
