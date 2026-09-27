@@ -9,36 +9,6 @@ if (avatar) {
   }, { once: true });
 }
 
-const revealed = document.querySelectorAll(".hero-l, .hero-r, .rows, .grid, .c-grid");
-
-if ("IntersectionObserver" in window) {
-  const io = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add("vis");
-      io.unobserve(entry.target);
-    }
-  }, { threshold: 0.1 });
-
-  for (const el of revealed) {
-    el.classList.add("rv");
-    io.observe(el);
-  }
-
-  const inView = () => {
-    for (const el of revealed) {
-      if (document.hidden || el.getBoundingClientRect().top < innerHeight) {
-        el.classList.add("vis");
-      }
-    }
-  };
-
-  inView();
-  addEventListener("scroll", inView, { passive: true });
-} else {
-  for (const el of revealed) el.classList.add("vis");
-}
-
 const STORE = "portfolio_hidden_projects_v1";
 const hidden = new Set();
 
@@ -52,7 +22,7 @@ const remember = () => {
   } catch {}
 };
 
-for (const card of document.querySelectorAll(".pc")) {
+for (const card of document.querySelectorAll(".work")) {
   const title = card.querySelector("h3")?.textContent.trim();
 
   if (title && hidden.has(title)) {
