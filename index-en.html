@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -13,12 +13,25 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://teivrimoriginal.github.io/Partfolio-Site/index-en.html" />
+<link rel="canonical" href="https://teivrimoriginal.github.io/Partfolio-Site/index-en.html" />
+<link rel="alternate" hreflang="en" href="https://teivrimoriginal.github.io/Partfolio-Site/index-en.html" />
+<link rel="alternate" hreflang="ru" href="https://teivrimoriginal.github.io/Partfolio-Site/" />
+<link rel="alternate" hreflang="x-default" href="https://teivrimoriginal.github.io/Partfolio-Site/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&lt;/&gt;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=2.0" />
+<link rel="stylesheet" href="css/style.css?v=2.1" />
+<script>
+// Runs before first paint so a saved light theme never flashes dark first.
+try {
+  var saved = localStorage.getItem("portfolio_theme");
+  if (saved === "light" || saved === "dark") {
+    document.documentElement.dataset.theme = saved;
+  }
+} catch (e) {}
+</script>
 </head>
 <body>
 
@@ -30,6 +43,7 @@
       <a href="#works">Projects</a>
     </nav>
     <a class="lang" href="index.html">RU</a>
+    <button class="lang theme" type="button" id="theme-toggle" aria-pressed="false" aria-label="Light theme" title="Light theme">?</button>
   </div>
   <div class="wrap links">
     <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a>
@@ -38,7 +52,7 @@
     <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">Kwork</a>
     <a href="https://itch.io/profile/teivrim" target="_blank" rel="noopener">itch.io</a>
     <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
-    <a href="resume-en.html" class="cv">Résumé</a>
+    <a href="resume-en.html" class="cv">Resume</a>
   </div>
 </header>
 
@@ -50,15 +64,14 @@
       <h1>Danila Arinov</h1>
       <p class="role">Developer. C++, Rust, Python — graphics and systems programming.</p>
       <p class="lead">
-        Student at Ural College of Technologies, NRNU MEPhI — Information Networks and Programming, 2024–2027.
-        Writing code since 2024. Interested in low-level graphics and high-performance systems.
+        Low-level graphics and high-performance systems. Writing code since 2024.
       </p>
       <p class="acts">
-        <a class="button" href="resume-en.html">Résumé</a>
+        <a class="button" href="resume-en.html">Resume</a>
         <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
       </p>
     </div>
-    <img id="avatar" class="face" alt="Photo from GitHub profile" />
+    <img id="avatar" class="face" src="avatar.png" width="168" height="168" alt="Photo from GitHub profile" />
   </div>
 </section>
 
@@ -90,60 +103,68 @@
   <div class="wrap">
     <h2>Projects</h2>
 
+    <div class="filters" role="group" aria-label="Filter projects by technology">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="rust" aria-pressed="false">Rust</button>
+      <button type="button" data-filter="cpp" aria-pressed="false">C++</button>
+      <button type="button" data-filter="graphics" aria-pressed="false">Graphics</button>
+      <button type="button" data-filter="web" aria-pressed="false">Web</button>
+    </div>
+
     <div class="works">
 
-      <a class="work" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
+      <a class="work" data-tags="rust graphics win32 gdi" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/tpaint.png" width="1080" height="740" alt="TPaint screenshot" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>TPaint <span>raster editor</span></h3>
+          <h3>TPaint</h3>
           <p class="stack">Rust · Win32, GDI · MIT</p>
-          <p>Desktop raster editor in the spirit of SAI Paint. Pure Rust, not a line of C/C++ — the UI is drawn straight through Win32 and GDI. Brush, pencil, eraser, line, rectangle, ellipse, fill, airbrush, undo and redo, zoom, save to PNG.</p>
+          <p>Raster editor. Pure Rust, no C/C++.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
+      <a class="work" data-tags="cpp graphics vulkan opengl" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/engine_real.png" width="816" height="639" alt="Engine OpenGL render: rotating triangle" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>Teivrim-Engine <span>in development, ~15%</span></h3>
+          <h3>Teivrim-Engine <span>~15%</span></h3>
           <p class="stack">C++ · Vulkan, OpenGL · CMake</p>
-          <p>Cross-platform game engine with a modular architecture. Vulkan and OpenGL rendering, CMake build. Started March 2026 alongside my studies.</p>
+          <p>Game engine. In development.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
+      <a class="work" data-tags="cpp graphics win32 gdi" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="img/novell.svg" width="640" height="360" alt="" loading="lazy" />
+          <img src="img/novell.svg" width="640" height="360" alt="Timeline, scene hierarchy and inspector panels of the novel editor" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>Visual novel editor</h3>
           <p class="stack">C++ · Win32, GDI+, MinGW</p>
-          <p>Scene timeline, hierarchy, inspector, script panel and asset browser.</p>
+          <p>Editor for visual novels.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
+      <a class="work" data-tags="rust web api" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/site_real.jpg" width="1000" height="472" alt="TeivrimSite running: anime catalogue with filters" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>TeivrimSite <span>anime and manga aggregator</span></h3>
+          <h3>TeivrimSite</h3>
           <p class="stack">Rust · actix-web · public APIs</p>
-          <p>actix-web server backed by SQLite. Pulls data from AniList and Shikimori, with filters by genre, country, year and rating, plus title search.</p>
+          <p>Aggregator for anime and manga.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">
+      <a class="work" data-tags="web" href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="img/english.svg" width="640" height="360" alt="" loading="lazy" />
+          <img src="img/english.svg" width="640" height="360" alt="Screen of the English learning platform with study material" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>English learning website <span>in development</span></h3>
+          <h3>English learning website</h3>
           <p class="stack">Web</p>
-          <p>A platform for original study material and exercises, from basic topics through to free reading.</p>
+          <p>Study material and exercises. In development.</p>
         </div>
       </a>
 
@@ -153,12 +174,18 @@
 
 </main>
 
+<section class="block">
+  <div class="wrap">
+    <p class="fine">Education: Ural College of Technologies, NRNU MEPhI — Information Networks and Programming, 2024–2027.</p>
+  </div>
+</section>
+
 <footer class="foot">
   <div class="wrap">
     <span>Danila Arinov, 2026</span>
   </div>
 </footer>
 
-<script src="js/main.js?v=2.0"></script>
+<script src="js/main.js?v=2.1"></script>
 </body>
 </html>
