@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
@@ -13,12 +13,25 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://teivrimoriginal.github.io/Partfolio-Site/" />
+<link rel="canonical" href="https://teivrimoriginal.github.io/Partfolio-Site/" />
+<link rel="alternate" hreflang="ru" href="https://teivrimoriginal.github.io/Partfolio-Site/" />
+<link rel="alternate" hreflang="en" href="https://teivrimoriginal.github.io/Partfolio-Site/index-en.html" />
+<link rel="alternate" hreflang="x-default" href="https://teivrimoriginal.github.io/Partfolio-Site/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&lt;/&gt;</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=2.0" />
+<link rel="stylesheet" href="css/style.css?v=2.1" />
+<script>
+// Runs before first paint so a saved light theme never flashes dark first.
+try {
+  var saved = localStorage.getItem("portfolio_theme");
+  if (saved === "light" || saved === "dark") {
+    document.documentElement.dataset.theme = saved;
+  }
+} catch (e) {}
+</script>
 </head>
 <body>
 
@@ -30,6 +43,7 @@
       <a href="#works">Проекты</a>
     </nav>
     <a class="lang" href="index-en.html">EN</a>
+    <button class="lang theme" type="button" id="theme-toggle" aria-pressed="false" aria-label="Светлая тема" title="Светлая тема">?</button>
   </div>
   <div class="wrap links">
     <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a>
@@ -50,15 +64,14 @@
       <h1>Данила Аринов</h1>
       <p class="role">Разработчик. C++, Rust, Python — графика и системное программирование.</p>
       <p class="lead">
-        Студент УрТК НИЯУ МИФИ, «Информационные сети и программирование», 2024–2027.
-        Пишу код с 2024 года. Интересуют низкоуровневая графика и производительные системы.
+        Низкоуровневая графика и производительные системы. Пишу код с 2024 года.
       </p>
       <p class="acts">
         <a class="button" href="resume.html">Резюме</a>
         <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
       </p>
     </div>
-    <img id="avatar" class="face" alt="Фото из профиля GitHub" />
+    <img id="avatar" class="face" src="avatar.png" width="168" height="168" alt="Фото из профиля GitHub" />
   </div>
 </section>
 
@@ -90,60 +103,68 @@
   <div class="wrap">
     <h2>Проекты</h2>
 
+    <div class="filters" role="group" aria-label="Фильтр проектов по технологии">
+      <button type="button" data-filter="all" aria-pressed="true">Все</button>
+      <button type="button" data-filter="rust" aria-pressed="false">Rust</button>
+      <button type="button" data-filter="cpp" aria-pressed="false">C++</button>
+      <button type="button" data-filter="graphics" aria-pressed="false">Графика</button>
+      <button type="button" data-filter="web" aria-pressed="false">Web</button>
+    </div>
+
     <div class="works">
 
-      <a class="work" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
+      <a class="work" data-tags="rust graphics win32 gdi" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/tpaint.png" width="1080" height="740" alt="Скриншот TPaint" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>TPaint <span>растровый редактор</span></h3>
+          <h3>TPaint</h3>
           <p class="stack">Rust · Win32, GDI · MIT</p>
-          <p>Настольный растровый редактор в духе SAI Paint. Чистый Rust, ни строки C/C++ — интерфейс отрисован напрямую через Win32 и GDI. Кисть, карандаш, ластик, линия, прямоугольник, эллипс, заливка, распылитель, отмена и повтор, зум, сохранение в PNG.</p>
+          <p>Растровый редактор. Чистый Rust, без C/C++.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
+      <a class="work" data-tags="cpp graphics vulkan opengl" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/engine_real.png" width="816" height="639" alt="OpenGL-рендер движка: вращающийся треугольник" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>Teivrim-Engine <span>в разработке, ~15%</span></h3>
+          <h3>Teivrim-Engine <span>~15%</span></h3>
           <p class="stack">C++ · Vulkan, OpenGL · CMake</p>
-          <p>Кроссплатформенный игровой движок с модульной архитектурой. Рендеринг на Vulkan и OpenGL, сборка через CMake. Пишу с марта 2026 параллельно с учёбой.</p>
+          <p>Игровой движок. В разработке.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
+      <a class="work" data-tags="cpp graphics win32 gdi" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="img/novell.svg" width="640" height="360" alt="" loading="lazy" />
+          <img src="img/novell.svg" width="640" height="360" alt="Панели таймлайна, иерархии сцен и инспектора в редакторе новелл" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>Редактор визуальных новелл</h3>
           <p class="stack">C++ · Win32, GDI+, MinGW</p>
-          <p>Таймлайн сцен, иерархия, инспектор, панель скриптов и браузер ассетов.</p>
+          <p>Редактор для визуальных новелл.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
+      <a class="work" data-tags="rust web api" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/site_real.jpg" width="1000" height="472" alt="Работающий TeivrimSite: каталог аниме с фильтрами" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>TeivrimSite <span>агрегатор аниме и манги</span></h3>
+          <h3>TeivrimSite</h3>
           <p class="stack">Rust · actix-web · публичные API</p>
-          <p>Сервер на actix-web с SQLite. Сбор данных по AniList и Shikimori, фильтры по жанрам, стране, году и рейтингу, поиск по названию.</p>
+          <p>Агрегатор аниме и манги.</p>
         </div>
       </a>
 
-      <a class="work" href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">
+      <a class="work" data-tags="web" href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="img/english.svg" width="640" height="360" alt="" loading="lazy" />
+          <img src="img/english.svg" width="640" height="360" alt="Экран площадки для изучения английского с учебными материалами" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>Сайт для изучения английского <span>в разработке</span></h3>
+          <h3>Сайт для изучения английского</h3>
           <p class="stack">Web</p>
-          <p>Площадка с авторским учебным контентом и упражнениями — от базовых тем к свободному чтению.</p>
+          <p>Учебный контент и упражнения. В разработке.</p>
         </div>
       </a>
 
@@ -153,12 +174,18 @@
 
 </main>
 
+<section class="block">
+  <div class="wrap">
+    <p class="fine">Образование: УрТК НИЯУ МИФИ, «Информационные сети и программирование», 2024–2027.</p>
+  </div>
+</section>
+
 <footer class="foot">
   <div class="wrap">
     <span>Данила Аринов, 2026</span>
   </div>
 </footer>
 
-<script src="js/main.js?v=2.0"></script>
+<script src="js/main.js?v=2.1"></script>
 </body>
 </html>
