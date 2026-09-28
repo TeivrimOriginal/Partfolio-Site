@@ -1,10 +1,33 @@
-﻿:root {
+:root {
   --bg: #0d0d0f;
   --bg-alt: #101013;
   --edge: #232327;
   --text: #e9e9ea;
-  --muted: #8e8e96;
+  /* 7.49:1 on --bg � passes WCAG AAA for the small .stack / .lead body copy. */
+  --muted: #a0a0a8;
   --link: #6ea8fe;
+  --thumb-bg: #08080a;
+  --btn-bg: #e9e9ea;
+  --btn-fg: #0d0d0f;
+  --btn-bg-hover: #ffffff;
+  color-scheme: dark;
+}
+
+/* Light theme. Measured with the WCAG relative-luminance formula:
+   --muted is 6.18:1 on --bg and 6.61:1 on --bg-alt, --link 6.60:1, --text 16.86:1.
+   All comfortably clear WCAG AA (4.5:1) for body copy. */
+:root[data-theme="light"] {
+  --bg: #f7f7f9;
+  --bg-alt: #ffffff;
+  --edge: #dcdce2;
+  --text: #16161a;
+  --muted: #5c5c66;
+  --link: #1450c4;
+  --thumb-bg: #eceef2;
+  --btn-bg: #16161a;
+  --btn-fg: #ffffff;
+  --btn-bg-hover: #000000;
+  color-scheme: light;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,6 +46,14 @@ html, body { max-width: 100%; overflow-x: hidden; }
 a, button { color: inherit; text-decoration: none; touch-action: manipulation; -webkit-tap-highlight-color: rgba(110, 168, 254, .15); }
 
 a:hover { color: var(--link); }
+
+/* Keyboard users must be able to see where they are. The delete button in
+   particular is opacity:0 until hover, so focus has to reveal it too. */
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
 
 .wrap {
   width: 100%;
@@ -53,6 +84,52 @@ a:hover { color: var(--link); }
   padding: 2px 8px;
 }
 .lang:hover { color: var(--link); border-color: var(--link); }
+
+.theme {
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.filters button {
+  font: inherit;
+  font-size: .82rem;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--edge);
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.filters button:hover { color: var(--link); border-color: var(--link); }
+.filters button[aria-pressed="true"] {
+  color: var(--link);
+  border-color: var(--link);
+}
+
+/* Sits with the filter chips but is not one of them, so it is styled apart
+   even though it shares the row. */
+.restore {
+  font-size: .82rem;
+  color: var(--muted);
+  background: none;
+  border: 1px dashed var(--edge);
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  margin-left: auto;
+}
+.restore:hover { color: var(--link); border-color: var(--link); }
+.restore[hidden] { display: none; }
 
 .links {
   display: flex;
@@ -93,13 +170,13 @@ h1 {
 .acts a:hover { color: var(--link); }
 
 .button {
-  background: var(--text);
-  color: #0d0d0f !important;
+  background: var(--btn-bg);
+  color: var(--btn-fg) !important;
   padding: 8px 18px;
   font-weight: 500;
   border-radius: 4px;
 }
-.button:hover { background: #fff; color: #0d0d0f; }
+.button:hover { background: var(--btn-bg-hover); color: var(--btn-fg); }
 
 .face {
   width: 168px;
@@ -131,22 +208,33 @@ h2 {
 .skills dt { flex: 0 0 130px; color: var(--muted); font-size: .92rem; }
 .skills dd { font-size: .95rem; }
 
+/* The list draws its own bottom rule instead of `.work:last-child`: filtering
+   and hiding can remove the last card, which would otherwise leave the list
+   visually unterminated. */
+.works { border-bottom: 1px solid var(--edge); }
+
 .work {
   display: flex;
   gap: 26px;
   align-items: flex-start;
-  padding: 26px 0;
+  padding: 26px 34px 26px 0;
   border-top: 1px solid var(--edge);
+  /* Anchors the absolutely positioned delete control in its corner. */
+  position: relative;
 }
-.work:last-child { border-bottom: 1px solid var(--edge); }
 .work:hover h3 { color: var(--link); }
+
+/* Tag filter hides non-matching cards. The delete control uses an inline
+   display:none, which outranks this class, so a card hidden by the user stays
+   hidden no matter which filter is active. */
+.work.filtered { display: none; }
 
 .thumb {
   flex: 0 0 188px;
   border: 1px solid var(--edge);
   border-radius: 4px;
   overflow: hidden;
-  background: #08080a;
+  background: var(--thumb-bg);
 }
 .thumb img { display: block; width: 100%; height: auto; }
 
@@ -182,10 +270,10 @@ h2 {
   opacity: 0;
   transition: opacity .15s, color .15s, border-color .15s;
 }
-.work:hover .del { opacity: 1; }
+.work:hover .del, .del:focus-visible { opacity: 1; }
 .del:hover { color: #ff6b81; border-color: #ff6b81; }
 
-.work { position: relative; padding-right: 34px; }
+.fine { color: var(--muted); font-size: .85rem; }
 
 .foot { border-top: 1px solid var(--edge); padding: 26px 0; color: var(--muted); font-size: .85rem; }
 
