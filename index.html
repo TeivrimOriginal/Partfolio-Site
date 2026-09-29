@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=2.1" />
+<link rel="stylesheet" href="css/style.css?v=2.2" />
 <script>
 // Runs before first paint so a saved light theme never flashes dark first.
 try {
@@ -71,7 +71,7 @@ try {
         <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
       </p>
     </div>
-    <img id="avatar" class="face" src="avatar.png" width="168" height="168" alt="Фото из профиля GitHub" />
+    <img id="avatar" class="face" width="168" height="168" alt="Фото из профиля GitHub" />
   </div>
 </section>
 
@@ -109,6 +109,7 @@ try {
       <button type="button" data-filter="cpp" aria-pressed="false">C++</button>
       <button type="button" data-filter="graphics" aria-pressed="false">Графика</button>
       <button type="button" data-filter="web" aria-pressed="false">Web</button>
+      <button type="button" class="restore" hidden>Показать удалённые</button>
     </div>
 
     <div class="works">
@@ -124,20 +125,21 @@ try {
         </div>
       </a>
 
-      <a class="work" data-tags="cpp graphics vulkan opengl" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">
+      <div class="work" data-tags="cpp graphics vulkan opengl">
         <div class="thumb">
-          <img src="img/engine_real.png" width="816" height="639" alt="OpenGL-рендер движка: вращающийся треугольник" loading="lazy" />
+          <img src="img/engine_editor.jpg" width="1280" height="685" alt="Редактор Teivrim-Engine: иерархия сцен, 3D-вьюпорт, инспектор и браузер ассетов" loading="lazy" />
         </div>
         <div class="work-text">
-          <h3>Teivrim-Engine <span>~15%</span></h3>
+          <h3><a class="work-link" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">Teivrim-Engine <span>~15%</span></a></h3>
           <p class="stack">C++ · Vulkan, OpenGL · CMake</p>
           <p>Игровой движок. В разработке.</p>
+          <a class="work-video" href="https://t.me/teivri/114" target="_blank" rel="noopener">Видео в Telegram</a>
         </div>
-      </a>
+      </div>
 
       <a class="work" data-tags="cpp graphics win32 gdi" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
         <div class="thumb">
-          <img src="img/novell.svg" width="640" height="360" alt="Панели таймлайна, иерархии сцен и инспектора в редакторе новелл" loading="lazy" />
+          <img src="img/novell_real.jpg" width="1280" height="675" alt="Редактор визуальных новелл: иерархия, сцена со спрайтом, инспектор, панель скриптов и таймлайн" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>Редактор визуальных новелл</h3>
@@ -186,6 +188,6 @@ try {
   </div>
 </footer>
 
-<script src="js/main.js?v=2.1"></script>
+<script src="js/main.js?v=2.2"></script>
 </body>
 </html>

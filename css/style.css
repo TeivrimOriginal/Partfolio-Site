@@ -224,6 +224,30 @@ h2 {
 }
 .work:hover h3 { color: var(--link); }
 
+/* The engine card carries a second link (the demo video), so it cannot be an
+   anchor wrapping the whole row. The title becomes the link instead, stretched
+   over the row by a pseudo-element, which keeps the row clickable and leaves the
+   video as a separate link sitting on top of it. */
+.work-link { color: inherit; }
+.work-link::after { content: ""; position: absolute; inset: 0; }
+.work-link:focus-visible::after {
+  outline: 2px solid var(--link);
+  outline-offset: -3px;
+}
+
+.work-video {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin-top: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: .74rem;
+  color: var(--link);
+  border-bottom: 1px solid var(--link);
+  padding-bottom: 1px;
+}
+.work-video:hover { opacity: .7; }
+
 /* Tag filter hides non-matching cards. The delete control uses an inline
    display:none, which outranks this class, so a card hidden by the user stays
    hidden no matter which filter is active. */
