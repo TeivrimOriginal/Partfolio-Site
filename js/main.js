@@ -1,5 +1,4 @@
 const avatar = document.getElementById("avatar");
-
 if (avatar) {
   const today = new Date().toISOString().slice(0, 10);
   avatar.src = `https://github.com/TeivrimOriginal.png?v=${today}`;
@@ -7,6 +6,42 @@ if (avatar) {
   avatar.addEventListener("error", () => {
     avatar.src = "https://avatars.githubusercontent.com/u/174201371?v=4";
   }, { once: true });
+}
+
+/* Theme toggle. The inline script in <head> applies the saved value before the
+   first paint, so this only has to write it back and keep the button in step.
+   The button advertises the theme it switches to, the way the markup did. */
+const themeToggle = document.getElementById("theme-toggle");
+
+if (themeToggle) {
+  const KEY = "portfolio_theme";
+  const ru = document.documentElement.lang === "ru";
+
+  const sync = () => {
+    const light = document.documentElement.dataset.theme === "light";
+    const label = ru
+      ? (light ? "Тёмная тема" : "Светлая тема")
+      : (light ? "Dark theme" : "Light theme");
+
+    themeToggle.setAttribute("aria-pressed", String(light));
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.title = label;
+    themeToggle.textContent = light ? "☾" : "☀";
+  };
+
+  sync();
+
+  themeToggle.addEventListener("click", () => {
+    const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+
+    document.documentElement.dataset.theme = next;
+
+    try {
+      localStorage.setItem(KEY, next);
+    } catch {}
+
+    sync();
+  });
 }
 
 const STORE = "portfolio_hidden_projects_v1";
