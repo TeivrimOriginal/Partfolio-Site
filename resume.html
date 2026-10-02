@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Данила Аринов — резюме</title>
-<meta name="description" content="Резюме Данилы Аринова: разработчик C++ / Rust / Python. Опыт системного и графического программирования, проекты (Vulkan, OpenGL, Win32), образование и контакты." />
+<title>Данила Аринов — C++ / Rust, графика и системы</title>
+<meta name="description" content="Резюме Данилы Аринова: C++ / Rust-разработчик. Графика и системное программирование: Rust, C++17, Vulkan, OpenGL, Win32. Проекты: растровый редактор TPaint, игровой движок, Anime DB. Контакты." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Danila Arinov" />
 <meta property="og:title" content="Резюме — Данила Аринов" />
-<meta property="og:description" content="Разработчик C++ / Rust / Python. Опыт, проекты, образование." />
+<meta property="og:description" content="C++ / Rust: графика, движки, инструменты. TPaint, Teivrim-Engine, Anime DB." />
 <meta property="og:image" content="https://teivrimoriginal.github.io/Partfolio-Site/img/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -37,12 +37,16 @@
   .sec h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.11em;color:var(--dim);border-bottom:1.5px solid var(--line);padding-bottom:5px;margin-bottom:11px}
   .skills{display:flex;flex-wrap:wrap;gap:6px}
   .sk{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;background:#f7f9fc}
+  .sk b{font-weight:600}
   .it{margin-bottom:13px}
   .it-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
   .it-t{font-weight:600;font-size:14px}
   .it-d{font-size:12px;color:var(--dim);white-space:nowrap}
   .it a{color:var(--acc);text-decoration:none;font-size:11.5px;word-break:break-all}
   .it p{font-size:13px;color:#333a45;margin-top:2px}
+  ul.bul{margin:4px 0 0 16px;font-size:13px;color:#333a45}
+  ul.bul li{margin:2px 0}
+  ul.bul li::marker{color:var(--dim)}
   .ed{font-size:13px}
   .ed b{font-weight:600}
   .ed span{color:var(--dim)}
@@ -71,63 +75,71 @@
 
   <header>
     <h1>Данила Аринов</h1>
-    <p class="role">Разработчик программного обеспечения — C++ / Rust / Python</p>
+    <p class="role">C++ / Rust-разработчик — графика, движки и инструменты</p>
     <p class="meta">
       <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a> ·
       <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram @Smishnyavko</a> ·
+      <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">github.com/TeivrimOriginal</a> ·
+      <a href="https://teivrimoriginal.github.io/Partfolio-Site/" target="_blank" rel="noopener">Портфолио</a> ·
       <a href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener">LinkedIn</a> ·
       <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">Kwork</a> ·
-      <a href="https://itch.io/profile/teivrim" target="_blank" rel="noopener">itch.io/teivrim</a> ·
-      <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">github.com/TeivrimOriginal</a> ·
       Россия
     </p>
   </header>
 
   <section class="sec">
-    <h2>О себе</h2>
+    <h2>Профиль</h2>
     <p class="note">
-      Студент УрТК НИЯУ МИФИ, специальность «Информационные сети и программирование» (СПО), 2024–2027.
-      Занимаюсь системным и графическим программированием: C++, Rust, Python, Vulkan, OpenGL, Win32.
-      Интересуют низкоуровневая графика, производительные системы и прикладной Rust.
+      Разработчик C++/Rust, фокус — графика низкого уровня и инструменты: движки, редакторы, рендеринг.
+      Практика с 2024 года: open-source, командная разработка, оплачиваемый DnD-арт.
+      Ключевой проект — <b>TPaint</b>: растровый редактор на Rust/OpenGL с собственным UI, 15+ инструментами и 140+ автотестами.
+      Командная Unity-игра про средневековье (код, геймдизайн, найм) и оплачиваемая работа художником DnD-проекта (весь визуал).
     </p>
   </section>
 
   <section class="sec">
-    <h2>Технологии</h2>
-    <div class="skills">
-      <span class="sk">Rust</span>
-      <span class="sk">C++</span>
-      <span class="sk">Python</span>
-      <span class="sk">Vulkan</span>
-      <span class="sk">OpenGL</span>
-      <span class="sk">Win32 / GDI</span>
-      <span class="sk">CMake</span>
-      <span class="sk">Git</span>
-      <span class="sk">Qt 6</span>
-      <span class="sk">Blender</span>
-      <span class="sk">Рисование / 3D</span>
-    </div>
-  </section>
-
-  <section class="sec">
-    <h2>Проекты</h2>
+    <h2>Опыт</h2>
 
     <div class="it">
       <div class="it-h">
-        <span class="it-t">TPaint — растровый редактор</span>
-        <span class="it-d mono">Rust · Win32/GDI · MIT</span>
+        <span class="it-t">TPaint — растровый редактор (аналог SAI/Clip Studio)</span>
+        <span class="it-d mono">Rust · OpenGL / GLFW · 08.2026 — н.в.</span>
       </div>
-      <p>Рабочий растровый редактор (аналог SAI Paint), написанный на чистом Rust без C/C++. Инструменты: кисть с регулировкой толщины, карандаш, линия, эллипс, распылитель, заливка. Поддержка undo/redo, зума и панорамирования, открытие и сохранение в PNG. Собственный вывод UI через Win32 API и GDI.</p>
+      <ul class="bul">
+        <li>Спроектировал и написал с нуля immediate-mode UI на OpenGL: панели, колорпикер, файловые диалоги — без системных контролов.</li>
+        <li>Реализовал 15+ инструментов (кисть, ластик, фигуры, заливка, текст с кириллицей): симметрия до 12 секторов, стабилизатор мазка, липкая и восстанавливающая кисти.</li>
+        <li>Реализовал слои: папки, маски, 10 режимов наложения, эффекты (тень/обводка/свечение), фильтры (кривые, уровни, тон/баланс) — всё отменяется одним шагом истории.</li>
+        <li>Реализовал форматы: свой .tpaint, импорт/экспорт PSD со слоями, PNG/JPEG; автосейв раз в минуту, undo/redo с лентой состояний.</li>
+        <li>Покрыл 140+ автотестами (raster, слои, история, PSD, UI-логика); сборки MSVC + MinGW, тёмная тема, DPI-aware. Первый стабильный релиз опубликован на GitHub.</li>
+      </ul>
       <a href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust</a>
     </div>
 
     <div class="it">
       <div class="it-h">
-        <span class="it-t">Teivrim-Engine</span>
-        <span class="it-d mono">C++ · Vulkan / OpenGL · CMake</span>
+        <span class="it-t">Teivrim-Engine — игровой движок с нуля</span>
+        <span class="it-d mono">C++17 · Vulkan / OpenGL · CMake · 10.2025 — н.в.</span>
       </div>
-      <p>Кроссплатформенный игровой движок: модульная архитектура, рендеринг на Vulkan и OpenGL, сборка через CMake. Разработка ведётся с марта 2026. Проект в работе, готовность ~15%.</p>
+      <ul class="bul">
+        <li>Спроектировал модульную архитектуру: выбор бэкенда в рантайме через синглтон AbstractRender, один код сцены для Vulkan и OpenGL.</li>
+        <li>Реализовал scene graph (parent/child, кватернионы, world-матрицы), импорт FBX/OBJ/MTL через Assimp, текст через stb_truetype с атласами.</li>
+        <li>Настроил шейдеры GLSL → SPIR-V, отладку через Khronos validation layers, сборку CMake с вендорингом зависимостей; 88 коммитов.</li>
+      </ul>
       <a href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/Teivrim-Engine</a>
+    </div>
+
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Anime DB — каталог аниме из 3 публичных API</span>
+        <span class="it-d mono">Rust · Actix-Web · SQLite · Docker · 2024 — н.в.</span>
+      </div>
+      <ul class="bul">
+        <li>Переписал первую версию с Node.js на Rust и улучшил алгоритм извлечения данных из публичных API.</li>
+        <li>Агрегировал AniList (~20 тыс. записей) + Kitsu + Shikimori в одну базу SQLite с FTS5 (unicode61 — работает русский поиск).</li>
+        <li>Реализовал JSON API с одного origin: фильтры, пагинация, suggest, rate-limit, статический mobile-first фронт (RU/EN) + нативный Android-клиент.</li>
+        <li>Реализовал аккаунты: Argon2id, opaque-токены (SHA-256, 90 дней); собственный мини-пул соединений и CORS вместо тяжёлых зависимостей.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
     </div>
 
     <div class="it">
@@ -135,59 +147,46 @@
         <span class="it-t">Редактор визуальных новелл</span>
         <span class="it-d mono">C++ · Win32 / GDI+ / MinGW</span>
       </div>
-      <p>Таймлайн, иерархия сцен, инспектор, панель скриптов и браузер ассетов — редактор для сборки визуальных новелл.</p>
+      <ul class="bul">
+        <li>Разработал 6 панелей: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Explorer, save/load проекта, preview с покадровым диалогом.</li>
+      </ul>
       <a href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/teivrim-novell-engine</a>
     </div>
 
-    <div class="it">
-      <div class="it-h">
-        <span class="it-t">TeivrimSite</span>
-        <span class="it-d mono">Rust</span>
-      </div>
-      <p>Агрегатор аниме, манги и ранобэ: работа с публичными API, обработка и структурирование данных, практика Rust.</p>
-      <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
-    </div>
-
-    <div class="it">
-      <div class="it-h">
-        <span class="it-t">Сайт для изучения английского</span>
-        <span class="it-d mono">Web · в разработке</span>
-      </div>
-      <p>Проект в разработке: площадка с авторским учебным контентом и упражнениями для практики английского языка.</p>
-      <a href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">github.com/TeivrimOriginal/Cautious-Enigma</a>
-    </div>
-
   </section>
 
   <section class="sec">
-    <h2>Опыт и практика</h2>
-    <p class="note">
-      Опыт разработки крупных монолитных систем на C++ с графикой на Vulkan и OpenGL.
-      Перенос сайта для изучения английского на телефон, адаптация под мобильные устройства.
-      Хакатон HackIT с одногруппниками и совместная работа над общей инди-игрой и маленьким проектом.
-    </p>
+    <h2>Командный опыт</h2>
+    <ul class="bul">
+      <li>Инди-игра про средневековье на Unity — код, геймдизайн, найм людей в проект; готовим проект к поиску инвесторов.</li>
+      <li>Художник приватного DnD-проекта (оплачиваемо) — весь визуал: персонажи, окружение, ассеты; единый стиль под мастеров и игроков.</li>
+      <li>Хакатон HackIT — графическая часть и сборка; довели прототип до демо за выходные.</li>
+    </ul>
   </section>
 
   <section class="sec">
-    <h2>Образование</h2>
-    <p class="ed">
-      <b>УрТК НИЯУ МИФИ</b> — Уральский технологический колледж<br />
-      <span>Специальность «Информационные сети и программирование», СПО · 2024–2027</span>
-    </p>
+    <h2>Навыки</h2>
+    <div class="skills">
+      <span class="sk"><b>Языки:</b> C++17, Rust, Python, GLSL, SQL (SQLite)</span>
+      <span class="sk"><b>Графика:</b> OpenGL, Vulkan, Win32 API, GDI/GDI+, GLFW, GLEW, GLM, Assimp, stb</span>
+      <span class="sk"><b>Бэкенд/инструменты:</b> Actix-Web, SQLite FTS5, CMake, Cargo, Git, Docker, MinGW / MSVC</span>
+      <span class="sk"><b>Практики:</b> тесты, ревью, SPIR-V, документирование архитектуры</span>
+    </div>
   </section>
 
   <section class="sec">
     <h2>Дополнительно</h2>
     <p class="note">
-      3D-моделирование в Blender, рисование. Английский — уровень A2.
-      Основной проект по движку ведётся с марта 2026 года.
+      Английский — чтение технической документации. Ранее — Qt 6 (~2 года, 2–3 проекта), сейчас фокус — Rust/C++.
+      Фриланс на Kwork в прошлом (заказы через kwork.ru/user/teivrim).
+      Понимаю пайплайн арта от скетча до ассета (Blender, 2D).
     </p>
   </section>
 
 </div>
 
 <div class="print"><a class="dl" href="resume.pdf" download>Скачать PDF</a></div>
-<a class="back" href="index.html">< Вернуться на сайт</a>
+<a class="back" href="index.html">← Вернуться на сайт</a>
 <a class="back" href="resume-en.html">English version</a>
 
 </body>
