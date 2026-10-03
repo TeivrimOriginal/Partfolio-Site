@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Данила Аринов — C++ / Rust</title>
-<meta name="description" content="C++, Rust, Python, Vulkan, OpenGL, Win32, CMake." />
+<title>Данила Аринов — Python / C++ разработчик</title>
+<meta name="description" content="Python, C++, Actix-Web, REST API, SQLite, Docker, автоматизация." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Danila Arinov" />
-<meta property="og:title" content="Danila Arinov — C++ / Rust разработчик" />
-<meta property="og:description" content="C++, Rust, Python, Vulkan, OpenGL, Win32, CMake. Портфолио и проекты." />
+<meta property="og:title" content="Danila Arinov — Python / C++ разработчик" />
+<meta property="og:description" content="Python, C++, backend, REST API, автоматизация. Портфолио и проекты." />
 <meta property="og:image" content="https://teivrimoriginal.github.io/Partfolio-Site/img/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -62,21 +62,17 @@ try {
   <div class="wrap intro">
     <div class="intro-text">
       <h1>Данила Аринов</h1>
-      <p class="role">Junior C++ / Rust разработчик — графика, игровые движки, инструменты, backend</p>
+      <p class="role">Junior Python / C++ разработчик — backend, REST API, автоматизация</p>
       <p class="lead">
-        Собственный immediate-mode UI на Rust (15+ инструментов, 140+ автотестов), движок
-        на C++17 с двумя бэкендами Vulkan/OpenGL (88 коммитов), перенос каталога из 3 API
-        с Node.js на Rust (~20 тыс. записей, Docker). Код с 2024 года.
+        Переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5,
+        фильтры и пагинация, Docker, Android-клиент. Telegram-боты и парсеры по заказам.
+        140+ автотестов в своём проекте. Python с 2022, C++17 с 2024.
       </p>
       <p class="acts">
         <a class="button" href="resume.html">Резюме</a>
         <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
         <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram</a>
         <a href="tel:+79014318298">+7 901 431-82-98</a>
-      </p>
-      <p class="fine">
-        Удалённая работа полностью · готов к стендаму и офису рядом ·
-        гибкий график · готов на junior / стажёрскую ставку · самозанятость оформлена.
       </p>
     </div>
     <img id="avatar" class="face" width="168" height="168" alt="Фото из профиля GitHub" />
@@ -89,11 +85,11 @@ try {
     <dl class="skills">
       <div>
         <dt>Языки</dt>
-        <dd>C++17, Rust, Python, GLSL, SQL, C# (Unity)</dd>
+        <dd>Python, C++17, SQL, C# (Unity)</dd>
       </div>
       <div>
-        <dt>Графика</dt>
-        <dd>Vulkan, OpenGL, GLFW, GLEW, GLM, Assimp, stb, Win32, GDI+</dd>
+        <dt>Автоматизация</dt>
+        <dd>парсеры сайтов, Telegram-боты, интеграции внешних API</dd>
       </div>
       <div>
         <dt>Backend</dt>
@@ -109,7 +105,7 @@ try {
       </div>
       <div>
         <dt>Прочее</dt>
-        <dd>3D-моделирование и рисование (Blender, 2D), английский — чтение техдокументации</dd>
+        <dd>английский — чтение техдокументации</dd>
       </div>
     </dl>
   </div>
@@ -121,39 +117,39 @@ try {
 
     <div class="filters" role="group" aria-label="Фильтр проектов по технологии">
       <button type="button" data-filter="all" aria-pressed="true">Все</button>
-      <button type="button" data-filter="rust" aria-pressed="false">Rust</button>
+      <button type="button" data-filter="python" aria-pressed="false">Python</button>
       <button type="button" data-filter="cpp" aria-pressed="false">C++</button>
-      <button type="button" data-filter="graphics" aria-pressed="false">Графика</button>
+      <button type="button" data-filter="backend" aria-pressed="false">Backend</button>
       <button type="button" data-filter="web" aria-pressed="false">Web</button>
-      <button type="button" class="restore" hidden>Показать удалённые</button>
+      <button type="button" class="restore" hidden>Показать остальные</button>
     </div>
 
     <div class="works">
 
-      <a class="work" data-tags="rust graphics win32 gdi" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
+      <a class="work" data-tags="python backend" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/tpaint.png" width="1080" height="740" alt="Скриншот TPaint" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>TPaint</h3>
-          <p class="stack">Rust · Win32, GDI · MIT</p>
-          <p>Растровый редактор (аналог SAI / Clip Studio). Чистый Rust, без C/C++: свой immediate-mode UI, 15+ инструментов, слои с масками и 10 режимами наложения, PSD, 140+ автотестов.</p>
+          <p class="stack">Rust · 2026</p>
+          <p>Редактор изображений: 15+ инструментов, слои с масками, PSD, 140+ автотестов.</p>
         </div>
       </a>
 
-      <div class="work" data-tags="cpp graphics vulkan opengl">
+      <div class="work" data-tags="cpp backend">
         <div class="thumb">
-          <img src="img/engine_editor.jpg" width="1280" height="685" alt="Редактор Teivrim-Engine: иерархия сцен, 3D-вьюпорт, инспектор и браузер ассетов" loading="lazy" />
+          <img src="img/engine_editor.jpg" width="1280" height="685" alt="Редактор Teivrim-Engine: иерархия сцен, вьюпорт, инспектор и браузер ассетов" loading="lazy" />
         </div>
         <div class="work-text">
           <h3><a class="work-link" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">Teivrim-Engine <span>~15%</span></a></h3>
-          <p class="stack">C++ · Vulkan, OpenGL · CMake</p>
-          <p>Игровой движок с нуля: выбор бэкенда Vulkan/OpenGL в рантайме, scene graph, импорт FBX/OBJ через Assimp, шейдеры SPIR-V, 88 коммитов.</p>
+          <p class="stack">C++17 · CMake</p>
+          <p>Движок с нуля: выбор бэкенда в рантайме, scene graph, импорт FBX/OBJ, 88 коммитов.</p>
           <a class="work-video" href="https://t.me/teivri/114" target="_blank" rel="noopener">Видео в Telegram</a>
         </div>
       </div>
 
-      <a class="work" data-tags="cpp graphics win32 gdi" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
+      <a class="work" data-tags="cpp backend" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/novell_real.jpg" width="1280" height="675" alt="Редактор визуальных новелл: иерархия, сцена со спрайтом, инспектор, панель скриптов и таймлайн" loading="lazy" />
         </div>
@@ -164,14 +160,14 @@ try {
         </div>
       </a>
 
-      <a class="work" data-tags="rust web api" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
+      <a class="work" data-tags="python backend" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/site_real.jpg" width="1000" height="472" alt="Работающий TeivrimSite: каталог аниме с фильтрами" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>TeivrimSite</h3>
-          <p class="stack">Rust · actix-web · публичные API</p>
-          <p>Агрегатор аниме и манги: переписан с Node.js на Rust, ~20 тыс. записей из трёх API, JSON API с фильтрами и пагинацией, Android-клиент.</p>
+          <p class="stack">Actix-Web · SQLite · Docker</p>
+          <p>Каталог из трёх публичных API: ~20 тыс. записей, JSON API с фильтрами и пагинацией, Android-клиент.</p>
         </div>
       </a>
 
@@ -194,7 +190,7 @@ try {
 
 <section class="block">
   <div class="wrap">
-    <p class="fine">Образование: УрТК НИЯУ МИФИ, «Информационные сети и программирование», 2024–2027. Опыт работы: 4 месяца сортировки товаров на складе Ozon (ноябрь 2025 — февраль 2026), фриланс на Kwork, оплачиваемый арт для DnD-проекта, командная Unity-игра.</p>
+    <p class="fine">Образование: УрТК НИЯУ МИФИ, «Информационные сети и программирование», 2024–2027.</p>
   </div>
 </section>
 

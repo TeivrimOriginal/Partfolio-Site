@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Danila Arinov — C++ / Rust</title>
-<meta name="description" content="C++, Rust, Python, Vulkan, OpenGL, Win32, CMake." />
+<title>Danila Arinov — Python / C++ Developer</title>
+<meta name="description" content="Python, C++, Actix-Web, REST API, SQLite, Docker, automation." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Danila Arinov" />
-<meta property="og:title" content="Danila Arinov — C++ / Rust Developer" />
-<meta property="og:description" content="C++, Rust, Python, Vulkan, OpenGL, Win32, CMake. Portfolio and projects." />
+<meta property="og:title" content="Danila Arinov — Python / C++ Developer" />
+<meta property="og:description" content="Python, C++, backend, REST API, automation. Portfolio and projects." />
 <meta property="og:image" content="https://teivrimoriginal.github.io/Partfolio-Site/img/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -62,21 +62,17 @@ try {
   <div class="wrap intro">
     <div class="intro-text">
       <h1>Danila Arinov</h1>
-      <p class="role">Junior C++ / Rust Developer — graphics, game engines, tools, backend</p>
+      <p class="role">Junior Python / C++ Developer — backend, REST API, automation</p>
       <p class="lead">
-        A custom immediate-mode UI in Rust (15+ tools, 140+ automated tests), a C++17 engine with
-        two backends (Vulkan/OpenGL, 88 commits), and a catalogue of 3 APIs rewritten from Node.js
-        to Rust (~20k records, Docker). Writing code since 2024.
+        Rewrote a catalogue of 3 public APIs from Node.js to Actix-Web: ~20k records, SQLite FTS5, filters
+        and pagination, Docker, Android client. Telegram bots and scrapers for client orders.
+        140+ automated tests in my own project. Python since 2022, C++17 since 2024.
       </p>
       <p class="acts">
         <a class="button" href="resume-en.html">Resume</a>
         <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
         <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram</a>
         <a href="tel:+79014318298">+7 901 431-82-98</a>
-      </p>
-      <p class="fine">
-        Fully remote · open to on-site nearby · flexible schedule ·
-        open to junior / internship rate · self-employed status registered.
       </p>
     </div>
     <img id="avatar" class="face" width="168" height="168" alt="Photo from GitHub profile" />
@@ -89,11 +85,11 @@ try {
     <dl class="skills">
       <div>
         <dt>Languages</dt>
-        <dd>C++17, Rust, Python, GLSL, SQL, C# (Unity)</dd>
+        <dd>Python, C++17, SQL, C# (Unity)</dd>
       </div>
       <div>
-        <dt>Graphics</dt>
-        <dd>Vulkan, OpenGL, GLFW, GLEW, GLM, Assimp, stb, Win32, GDI+</dd>
+        <dt>Automation</dt>
+        <dd>website scrapers, Telegram bots, third-party API integrations</dd>
       </div>
       <div>
         <dt>Backend</dt>
@@ -109,7 +105,7 @@ try {
       </div>
       <div>
         <dt>Other</dt>
-        <dd>3D modelling and drawing (Blender, 2D), English — reading technical documentation</dd>
+        <dd>English — reading technical documentation</dd>
       </div>
     </dl>
   </div>
@@ -121,39 +117,38 @@ try {
 
     <div class="filters" role="group" aria-label="Filter projects by technology">
       <button type="button" data-filter="all" aria-pressed="true">All</button>
-      <button type="button" data-filter="rust" aria-pressed="false">Rust</button>
+      <button type="button" data-filter="python" aria-pressed="false">Python</button>
       <button type="button" data-filter="cpp" aria-pressed="false">C++</button>
-      <button type="button" data-filter="graphics" aria-pressed="false">Graphics</button>
       <button type="button" data-filter="web" aria-pressed="false">Web</button>
       <button type="button" class="restore" hidden>Show removed</button>
     </div>
 
     <div class="works">
 
-      <a class="work" data-tags="rust graphics win32 gdi" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
+      <a class="work" data-tags="python backend" href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/tpaint.png" width="1080" height="740" alt="TPaint screenshot" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>TPaint</h3>
-          <p class="stack">Rust · Win32, GDI · MIT</p>
-          <p>Raster editor. Pure Rust, no C/C++.</p>
+          <p class="stack">Rust · 2026</p>
+          <p>Image editor: 15+ tools, layers with masks, PSD, 140+ automated tests.</p>
         </div>
       </a>
 
-      <div class="work" data-tags="cpp graphics vulkan opengl">
+      <div class="work" data-tags="cpp backend">
         <div class="thumb">
-          <img src="img/engine_editor.jpg" width="1280" height="685" alt="Teivrim-Engine editor: scene hierarchy, 3D viewport, inspector and asset browser" loading="lazy" />
+          <img src="img/engine_editor.jpg" width="1280" height="685" alt="Teivrim-Engine editor: scene hierarchy, viewport, inspector and asset browser" loading="lazy" />
         </div>
         <div class="work-text">
           <h3><a class="work-link" href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">Teivrim-Engine <span>~15%</span></a></h3>
-          <p class="stack">C++ · Vulkan, OpenGL · CMake</p>
-          <p>Game engine. In development.</p>
+          <p class="stack">C++17 · CMake</p>
+          <p>Engine from scratch: runtime backend selection, scene graph, FBX/OBJ import, 88 commits.</p>
           <a class="work-video" href="https://t.me/teivri/114" target="_blank" rel="noopener">Demo video on Telegram</a>
         </div>
       </div>
 
-      <a class="work" data-tags="cpp graphics win32 gdi" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
+      <a class="work" data-tags="cpp backend" href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/novell_real.jpg" width="1280" height="675" alt="Visual novel editor: hierarchy, sprite scene, inspector, script panel and timeline" loading="lazy" />
         </div>
@@ -164,13 +159,13 @@ try {
         </div>
       </a>
 
-      <a class="work" data-tags="rust web api" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
+      <a class="work" data-tags="python backend" href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">
         <div class="thumb">
           <img src="img/site_real.jpg" width="1000" height="472" alt="TeivrimSite running: anime catalogue with filters" loading="lazy" />
         </div>
         <div class="work-text">
           <h3>TeivrimSite</h3>
-          <p class="stack">Rust · actix-web · public APIs</p>
+          <p class="stack">Actix-Web · SQLite · Docker</p>
           <p>Aggregator for anime and manga.</p>
         </div>
       </a>
