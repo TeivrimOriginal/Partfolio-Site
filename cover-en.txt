@@ -1,0 +1,16 @@
+Здравствуйте! My name is Danila Arinov, a junior C++/Rust developer focused on graphics, game engines, tools and backend. I have no commercial development experience yet, so I am looking for a first job — open to an internship / junior rate, fully remote.
+
+What I have actually built (not coursework):
+— a game engine from scratch in C++17: runtime Vulkan/OpenGL backend selection, scene graph, FBX/OBJ import via Assimp, SPIR-V shaders, 88 commits;
+— a raster editor in Rust + OpenGL/GLFW: my own immediate-mode UI with no native widgets, 15+ tools, layers with masks and 10 blend modes, PSD export, 140+ automated tests;
+— a rewrite of a 3-API catalogue from Node.js to Rust: Actix-Web, SQLite FTS5, ~20k records, Docker, Android client.
+
+Also: a team Unity game (code, game design, hiring), paid 2D/3D art work for a DnD project, and 4 months as a warehouse sorter at Ozon, where I learned to keep pace on high volumes.
+
+Code and projects: https://github.com/TeivrimOriginal
+Resume: https://teivrimoriginal.github.io/Partfolio-Site/resume-en.html
+Telegram: @Smishnyavko · teivrim@gmail.com · +7 901 431-82-98
+
+Happy to take a test task and to start fast. Flexible on pay.
+
+Danila Arinov
