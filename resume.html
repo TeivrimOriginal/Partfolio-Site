@@ -56,15 +56,17 @@
   .print .dl:hover{border-color:var(--acc);color:var(--acc)}
   .back{display:block;max-width:790px;margin:12px auto 0;text-align:center;font-size:12.5px;color:var(--dim);text-decoration:none}
   .back:hover{color:var(--acc)}
-  @page{size:A4;margin:11mm}
+  @page{size:A4;margin:9mm}
   @media print{
-    body{background:#fff;padding:0;line-height:1.45}
+    body{background:#fff;padding:0;line-height:1.4;font-size:12px}
     .sheet{box-shadow:none;padding:0;max-width:none}
     .print,.back{display:none}
-    .sec{margin-top:14px}
-    .sec h2{margin-bottom:8px;padding-bottom:3px}
-    .it{margin-bottom:9px;page-break-inside:avoid}
-    .note,.ed{font-size:12px}
+    .sec{margin-top:10px}
+    .sec h2{margin-bottom:6px;padding-bottom:3px}
+    .it{margin-bottom:7px;page-break-inside:avoid}
+    ul.bul{margin-top:2px}
+    ul.bul li{margin:1px 0}
+    .note,.ed{font-size:11.5px}
   }
   @media(max-width:640px){.sheet{padding:26px 22px}}
 </style>
@@ -90,7 +92,7 @@
   <section class="sec">
     <h2>Профиль</h2>
     <p class="note">
-      Разработчик C++/Rust, фокус — графика низкого уровня и инструменты: движки, редакторы, рендеринг.
+      Разработчик C++/Rust, фокус — графика, инструменты, backend и mobile: движки, редакторы, API, приложения.
       Практика с 2024 года: open-source, командная разработка, оплачиваемый DnD-арт.
       Ключевой проект — <b>TPaint</b>: растровый редактор на Rust/OpenGL с собственным UI, 15+ инструментами и 140+ автотестами.
       Командная Unity-игра про средневековье (код, геймдизайн, найм) и оплачиваемая работа художником DnD-проекта (весь визуал).
@@ -106,11 +108,7 @@
         <span class="it-d mono">Rust · OpenGL / GLFW · 08.2026 — н.в.</span>
       </div>
       <ul class="bul">
-        <li>Спроектировал и написал с нуля immediate-mode UI на OpenGL: панели, колорпикер, файловые диалоги — без системных контролов.</li>
-        <li>Реализовал 15+ инструментов (кисть, ластик, фигуры, заливка, текст с кириллицей): симметрия до 12 секторов, стабилизатор мазка, липкая и восстанавливающая кисти.</li>
-        <li>Реализовал слои: папки, маски, 10 режимов наложения, эффекты (тень/обводка/свечение), фильтры (кривые, уровни, тон/баланс) — всё отменяется одним шагом истории.</li>
-        <li>Реализовал форматы: свой .tpaint, импорт/экспорт PSD со слоями, PNG/JPEG; автосейв раз в минуту, undo/redo с лентой состояний.</li>
-        <li>Покрыл 140+ автотестами (raster, слои, история, PSD, UI-логика); сборки MSVC + MinGW, тёмная тема, DPI-aware. Первый стабильный релиз опубликован на GitHub.</li>
+        <li>Растровый редактор на Rust/OpenGL с собственным immediate-mode UI: 15+ инструментов, слои с масками и 10 режимами наложения, форматы .tpaint/PSD/PNG, 140+ автотестов.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust</a>
     </div>
@@ -121,9 +119,7 @@
         <span class="it-d mono">C++17 · Vulkan / OpenGL · CMake · 10.2025 — н.в.</span>
       </div>
       <ul class="bul">
-        <li>Спроектировал модульную архитектуру: выбор бэкенда в рантайме через синглтон AbstractRender, один код сцены для Vulkan и OpenGL.</li>
-        <li>Реализовал scene graph (parent/child, кватернионы, world-матрицы), импорт FBX/OBJ/MTL через Assimp, текст через stb_truetype с атласами.</li>
-        <li>Настроил шейдеры GLSL → SPIR-V, отладку через Khronos validation layers, сборку CMake с вендорингом зависимостей; 88 коммитов.</li>
+        <li>Движок с нуля на C++17: выбор бэкенда Vulkan/OpenGL в рантайме, scene graph, импорт FBX/OBJ через Assimp, шейдеры SPIR-V; 88 коммитов.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/Teivrim-Engine</a>
     </div>
@@ -134,10 +130,7 @@
         <span class="it-d mono">Rust · Actix-Web · SQLite · Docker · 2024 — н.в.</span>
       </div>
       <ul class="bul">
-        <li>Переписал первую версию с Node.js на Rust и улучшил алгоритм извлечения данных из публичных API.</li>
-        <li>Агрегировал AniList (~20 тыс. записей) + Kitsu + Shikimori в одну базу SQLite с FTS5 (unicode61 — работает русский поиск).</li>
-        <li>Реализовал JSON API с одного origin: фильтры, пагинация, suggest, rate-limit, статический mobile-first фронт (RU/EN) + нативный Android-клиент.</li>
-        <li>Реализовал аккаунты: Argon2id, opaque-токены (SHA-256, 90 дней); собственный мини-пул соединений и CORS вместо тяжёлых зависимостей.</li>
+        <li>Каталог аниме из 3 публичных API: переписал с Node.js на Rust (Actix-Web, SQLite FTS5, Docker), ~20 тыс. записей, JSON API с фильтрами и пагинацией, Android-клиент.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
     </div>
@@ -151,6 +144,17 @@
         <li>Разработал 6 панелей: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Explorer, save/load проекта, preview с покадровым диалогом.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/teivrim-novell-engine</a>
+    </div>
+
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Сайт для изучения английского</span>
+        <span class="it-d mono">Web · Mobile</span>
+      </div>
+      <ul class="bul">
+        <li>Площадка с учебным контентом и упражнениями; сделал мобильную версию с адаптацией под телефоны.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">github.com/TeivrimOriginal/Cautious-Enigma</a>
     </div>
 
   </section>

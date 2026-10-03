@@ -56,15 +56,17 @@
   .print .dl:hover{border-color:var(--acc);color:var(--acc)}
   .back{display:block;max-width:790px;margin:12px auto 0;text-align:center;font-size:12.5px;color:var(--dim);text-decoration:none}
   .back:hover{color:var(--acc)}
-  @page{size:A4;margin:11mm}
+  @page{size:A4;margin:9mm}
   @media print{
-    body{background:#fff;padding:0;line-height:1.45}
+    body{background:#fff;padding:0;line-height:1.4;font-size:12px}
     .sheet{box-shadow:none;padding:0;max-width:none}
     .print,.back{display:none}
-    .sec{margin-top:14px}
-    .sec h2{margin-bottom:8px;padding-bottom:3px}
-    .it{margin-bottom:9px;page-break-inside:avoid}
-    .note,.ed{font-size:12px}
+    .sec{margin-top:10px}
+    .sec h2{margin-bottom:6px;padding-bottom:3px}
+    .it{margin-bottom:7px;page-break-inside:avoid}
+    ul.bul{margin-top:2px}
+    ul.bul li{margin:1px 0}
+    .note,.ed{font-size:11.5px}
   }
   @media(max-width:640px){.sheet{padding:26px 22px}}
 </style>
@@ -90,7 +92,7 @@
   <section class="sec">
     <h2>Profile</h2>
     <p class="note">
-      C++/Rust developer focused on low-level graphics and tools: engines, editors, rendering.
+      C++/Rust developer focused on graphics, tools, backend and mobile: engines, editors, APIs, apps.
       Hands-on practice since 2024: open-source, team development, paid DnD art.
       Flagship project — <b>TPaint</b>: a Rust/OpenGL raster editor with a custom UI, 15+ tools and 140+ automated tests.
       Team Unity game about the Middle Ages (code, game design, hiring) plus paid artist work on a DnD project (all visuals).
@@ -106,11 +108,7 @@
         <span class="it-d mono">Rust · OpenGL / GLFW · Aug 2026 — Present</span>
       </div>
       <ul class="bul">
-        <li>Designed and built a custom immediate-mode UI in OpenGL from scratch: panels, color picker, file dialogs — zero native controls.</li>
-        <li>Implemented 15+ tools (brush, eraser, shapes, fill, Cyrillic text): symmetry up to 12 sectors, stroke stabilizer, sticky and healing brushes.</li>
-        <li>Implemented layers: folders, masks, 10 blend modes, effects (shadow/outline/glow), filters (curves, levels, hue/balance) — each edit is one undo step.</li>
-        <li>Implemented formats: custom .tpaint, PSD import/export with layers, PNG/JPEG; per-minute autosave, undo/redo with a clickable history strip.</li>
-        <li>Covered with 140+ automated tests (raster, layers, history, PSD, UI logic); MSVC + MinGW builds, dark theme, DPI-aware. First stable release published on GitHub.</li>
+        <li>Raster editor in Rust/OpenGL with a custom immediate-mode UI: 15+ tools, layers with masks and 10 blend modes, .tpaint/PSD/PNG formats, 140+ automated tests.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust</a>
     </div>
@@ -121,9 +119,7 @@
         <span class="it-d mono">C++17 · Vulkan / OpenGL · CMake · Oct 2025 — Present</span>
       </div>
       <ul class="bul">
-        <li>Designed a modular architecture: runtime backend selection via an AbstractRender singleton, one scene codebase for Vulkan and OpenGL.</li>
-        <li>Implemented a scene graph (parent/child, quaternions, world matrices), FBX/OBJ/MTL import via Assimp, text via stb_truetype atlases.</li>
-        <li>Set up GLSL → SPIR-V shaders, debugging with Khronos validation layers, CMake build with vendored deps; 88 commits.</li>
+        <li>From-scratch C++17 engine: runtime Vulkan/OpenGL backend selection, scene graph, FBX/OBJ import via Assimp, SPIR-V shaders; 88 commits.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/Teivrim-Engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/Teivrim-Engine</a>
     </div>
@@ -134,10 +130,7 @@
         <span class="it-d mono">Rust · Actix-Web · SQLite · Docker · 2024 — Present</span>
       </div>
       <ul class="bul">
-        <li>Rewrote the first version from Node.js in Rust and improved the data-extraction algorithm for public APIs.</li>
-        <li>Aggregated AniList (~20k records) + Kitsu + Shikimori into one SQLite DB with FTS5 (unicode61 — Russian search works).</li>
-        <li>Implemented a same-origin JSON API: filters, pagination, suggest, rate limiting, static mobile-first frontend (RU/EN) plus a native Android client.</li>
-        <li>Implemented accounts: Argon2id, opaque tokens (SHA-256, 90 days); hand-rolled mini connection pool and CORS to keep dependencies lean.</li>
+        <li>Anime catalogue from 3 public APIs: rewrote from Node.js in Rust (Actix-Web, SQLite FTS5, Docker), ~20k records, JSON API with filters and pagination, Android client.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
     </div>
@@ -151,6 +144,17 @@
         <li>Developed 6 panels: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop from Explorer, project save/load, tick-based dialogue preview.</li>
       </ul>
       <a href="https://github.com/TeivrimOriginal/teivrim-novell-engine" target="_blank" rel="noopener">github.com/TeivrimOriginal/teivrim-novell-engine</a>
+    </div>
+
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">English Learning Website</span>
+        <span class="it-d mono">Web · Mobile</span>
+      </div>
+      <ul class="bul">
+        <li>Platform with study content and exercises; built a mobile version adapted for phones.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/Cautious-Enigma" target="_blank" rel="noopener">github.com/TeivrimOriginal/Cautious-Enigma</a>
     </div>
 
   </section>
