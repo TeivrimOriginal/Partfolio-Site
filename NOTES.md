@@ -2036,3 +2036,40 @@ d005 (окно заполнено), d006 (готов к заливке). Бое�
   То есть это сетевой блок Pages-домена у нас, а не проблема деплоя. Ссылка для заказчика рабочая
   у него, проверить её отсюда нельзя.
 - Проект: 40 файлов, 273 КБ. Из них 24 картинки — 89 КБ. На C: за час +1.8 МБ (браузерный клиент).
+## TeivrimSite: CI + починенная сборка cargo (04.10.2026, утро)
+Клон: `D:\tmp_work\TeivrimSite` (`gh repo clone --depth=1`), 1,85 МБ на D:.
+Коммит `cea0e14`, запушен в TeivrimOriginal/TeivrimSite.
+
+### Что выяснилось про репозиторий
+- Тесты ЕСТЬ: 505 `#[test]` во всех 32 файлах `src/` (встроенные `#[cfg(test)]`).
+  Мой первый поиск по именам файлов (`*test*` в путях) их пропустил — ищи по `#[test]`,
+  а не по именам. Тесты герметичные: фикстуры `serde_json::json!`, сокеты на 127.0.0.1:0.
+- `.cargo/config.toml` указывал на зеркало USTC, а тёплый кэш этой машины заполнен
+  под rsproxy.cn и index.crates.io. USTC-индекса в кэше нет вообще — сборка падала
+  на `argon2` («no matching package named actix-web», затем «candidate versions found:
+  0.5.3» вместо 0.6.0). То есть локальная сборка была сломана. Переключил на rsproxy.
+- Без `[http] check-revoke = false` Windows schannel роняет загрузку с зеркала:
+  `CRYPT_E_REVOCATION_OFFLINE (0x80092013)`. Добавил.
+- Локально собрать не удалось: зеркало отдаёт так медленно, что `cargo fetch --locked`
+  не уложился в 10 минут и был убит. Прирост на C: за всю попытку — 0,6 МБ.
+  По AGENTS.md тяжёлую сборку лучше делать удалённым раннером — так и сделал: CI.
+
+### Что сделал
+- `cargo fmt --all` по 33 файлам: до этого `cargo fmt --check` падал, гейт в CI был бы
+  красным с первой секунды. Правки только форматирование, семантика не тронута.
+- `.github/workflows/ci.yml`: fmt + clippy -D warnings + cargo test на ubuntu;
+  отдельная джоба на windows прогоняет разбор ключа RuStore в PowerShell 5.1 и 7
+  (README это утверждал — теперь проверяется). Зеркало CI отключает перезаписью файла,
+  а не флагом `--config`: PowerShell 5.1 срезает кавычки в нативных аргументах,
+  из-за чего `--config 'k="v"'` падает с «string values must be quoted».
+- Бейдж CI в README, раздел «Проверки» переписан, запись в CHANGELOG.
+
+### Грабли
+- Активный аккаунт gh был `Teivrim`, а не `TeivrimOriginal` → push дал 403
+  «Permission to TeivrimOriginal/TeivrimSite.git denied to Teivrim».
+  Вылечило `gh auth switch --user TeivrimOriginal`. Проверять перед каждым пушем.
+- `.gitattributes` требует `eol=lf`, а в блобах лежит CRLF, поэтому diff после
+  форматирования выглядит гигантским. Реальные правки смотри через
+  `git diff --ignore-cr-at-eol --stat` — иначе решишь, что затронуто слишком много.
+- PowerShell: `git show HEAD:file | Out-String` и stdout с кириллицей ломают UTF-8
+  (в CHANGELOG были \ufffd). Файл при этом цел — читай через файл, не через консоль.
