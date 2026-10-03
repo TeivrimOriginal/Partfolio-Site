@@ -6,42 +6,79 @@
 <title>Проверка мобильной вёрстки — Тёплый Контур</title>
 <style>
   body { font: 13px/1.5 Consolas, monospace; margin: 16px; background: #fff; }
-  #out { white-space: pre-wrap; background: #f5f5f5; padding: 12px; border: 1px solid #ddd; margin-bottom: 12px; }
-  iframe { width: 390px; height: 780px; border: 2px solid #333; }
-  h1 { font-size: 15px; margin: 0 0 10px; }
+  h2 { font-size: 14px; margin: 18px 0 6px; }
+  #log { background: #f5f5f5; padding: 10px; border: 1px solid #ddd; white-space: pre-wrap; margin-bottom: 12px; }
+  iframe { width: 390px; height: 780px; border: 2px solid #333; background: #fff; }
 </style>
 </head>
 <body>
-<h1>Проверка главной во вьюпорте 390 px (эмуляция мобильного)</h1>
-<div id="out">загрузка…</div>
-<iframe id="fr" src="../index.html"></iframe>
+<h1 style="font-size:15px">Проверка мобильной вёрстки: вьюпорт 390 px</h1>
+<div id="log">загрузка…</div>
+
+<!-- По одному статическому iframe на страницу: статический src надёжнее, чем srcdoc и动态 .src -->
+<iframe src="../index.html"></iframe>
+<iframe src="../catalog.html"></iframe>
+<iframe src="../calc.html"></iframe>
+<iframe src="../delivery.html"></iframe>
+<iframe src="../about.html"></iframe>
+<iframe src="../product.html?p=bytovka-6x3"></iframe>
+<iframe src="../kp.html?p=bytovka-6x3"></iframe>
+<iframe src="../404.html"></iframe>
+
 <script>
-  var fr = document.getElementById("fr");
-  fr.onload = function () {
+  var log = document.getElementById("log");
+  var frames = Array.prototype.slice.call(document.querySelectorAll("iframe"));
+  var done = 0;
+
+  function check(fr) {
     var d = fr.contentDocument, w = fr.contentWindow;
-    w.scrollTo(0, d.body.scrollHeight);
-    setTimeout(function () {
-      w.scrollTo(0, 0);
-      var cs = function (sel) { return w.getComputedStyle(d.querySelector(sel)); };
-      var out = {
-        "горизонтальный скролл (scrollWidth/clientWidth)": d.documentElement.scrollWidth + " / " + d.documentElement.clientWidth,
-        "бургер": cs(".burger").display,
-        "липкая кнопка снизу": cs(".sticky-cta").display,
-        "колонок в сетке товаров": cs(".grid--4").gridTemplateColumns,
-        "колонок в этапах": cs(".steps").gridTemplateColumns,
-        "колонок в калькуляторе": cs(".calc__grid").gridTemplateColumns,
-        "размер H1": cs("h1").fontSize,
-        "цена калькулятора": ((d.querySelector(".calc__price") || {}).innerText || "").split("\n")[0],
-        "карточек на главной": d.querySelectorAll("[data-home-cards] .card").length,
-        "битых картинок": Array.from(d.images).filter(function (i) { return i.getAttribute("src") && i.complete && i.naturalWidth === 0; }).length,
-        "высота страницы": d.body.scrollHeight
-      };
-      d.querySelector(".burger").click();
-      out["меню после клика по бургеру"] = cs(".nav").display;
-      out["пунктов в меню"] = d.querySelectorAll(".nav a").length;
-      document.getElementById("out").textContent = JSON.stringify(out, null, 2);
-    }, 1800);
-  };
+    if (!d || !d.body) return "нет доступа к документу";
+    var cs = function (sel) { return d.querySelector(sel) ? w.getComputedStyle(d.querySelector(sel)) : null; };
+    var res = {
+      "скролл X": d.documentElement.scrollWidth + "/" + d.documentElement.clientWidth,
+      "битых фото": Array.from(d.images).filter(function (i) {
+        return i.getAttribute("src") && i.complete && i.naturalWidth === 0;
+      }).length,
+      "высота": d.body.scrollHeight,
+      "бургер": cs(".burger") ? cs(".burger").display : "—",
+      "липкая кнопка": cs(".sticky-cta") ? cs(".sticky-cta").display : "—"
+    };
+    if (cs(".calc__grid")) res["колонок калькулятора"] = cs(".calc__grid").gridTemplateColumns.split(" ").length;
+    if (cs(".filters")) res["фильтры"] = cs(".filters").position;
+    var wide = Array.from(d.querySelectorAll("table, .kp, .specs")).filter(function (t) {
+      return t.getBoundingClientRect().width > d.documentElement.clientWidth;
+    }).length;
+    res["блоков шире экрана"] = wide;
+    return res;
+  }
+
+  function show(fr) {
+    var name = fr.getAttribute("src").replace("../", "");
+    var r = check(fr);
+    var line = name + "\n" + "   " + (typeof r === "string" ? r : JSON.stringify(r));
+    log.textContent += (done ? "\n\n" : "") + line;
+    done++;
+  }
+
+  frames.forEach(function (fr) {
+    var tries = 0;
+    var poll = setInterval(function () {
+      var d = fr.contentDocument;
+      tries++;
+      if (d && d.readyState === "complete" && d.body && d.body.childElementCount >= 1) {
+        clearInterval(poll);
+        /* даём скриптам страницы отработать рендер карточек и калькулятор */
+        setTimeout(function () {
+          try { show(fr); } catch (e) { log.textContent += "\n" + name(fr) + " ОШИБКА: " + e.message; }
+        }, 700);
+      } else if (tries > 100) {
+        clearInterval(poll);
+        log.textContent += "\n" + name(fr) + " не догрузилась";
+      }
+    }, 100);
+  });
+
+  function name(fr) { return fr.getAttribute("src").replace("../", ""); }
 </script>
 </body>
 </html>

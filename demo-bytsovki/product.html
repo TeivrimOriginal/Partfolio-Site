@@ -18,8 +18,9 @@
     <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="nav">
       <a href="catalog.html">Каталог</a>
-      <a href="index.html#calc">Калькулятор</a>
-      <a href="index.html#stages">Как мы работаем</a>
+      <a href="calc.html">Калькулятор</a>
+      <a href="delivery.html">Доставка и монтаж</a>
+      <a href="about.html">О компании</a>
       <a href="index.html#examples">Примеры работ</a>
       <a href="index.html#request">Контакты</a>
       <a class="header__phone" data-co="phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
@@ -120,7 +121,7 @@
       <div class="calc">
         <div class="calc__head" style="padding:16px 20px"><h3 style="font-size:17px">Быстрый расчёт этого изделия</h3></div>
         <div class="calc__body" style="padding:20px">
-          <div class="calc__grid" style="grid-template-columns:1fr 1fr;gap:14px">
+          <div class="calc__grid calc__grid--2">
             <div class="field">
               <label for="q-w">Длина, м</label>
               <input id="q-w" type="number" min="1" max="12" step="0.5" value="6">
@@ -207,27 +208,41 @@
 <script src="js/data.js" defer></script>
 <script src="js/main.js" defer></script>
 <script>
-/* Быстрый расчёт в карточке: та же формула, что на главной, но для одной позиции */
+/* Быстрый расчёт в карточке: масштабируем цену самой позиции по площади,
+   чтобы цифра в карточке не расходилась с калькулятором на главной */
 document.addEventListener("DOMContentLoaded", function () {
   var C = window.TK.calc, ins = document.getElementById("q-ins");
   ins.innerHTML = C.insulation.map(function (o) {
     return '<option value="' + o.v + '">' + o.label + '</option>';
   }).join("");
-  var basePerM2 = 2900, baseAdd = 26000, priceEl = document.getElementById("q-price"), hintEl = document.getElementById("q-hint");
+  ins.value = "w100";
+
+  var slug = new URLSearchParams(location.search).get("p");
+  var p = window.TK.products.filter(function (x) { return x.slug === slug; })[0] || window.TK.products[0];
+  var dims = p.dims.split("×").map(function (s) { return parseFloat(s.replace(",", ".")) || 0; });
+  var baseL = dims[0] || 6, baseW = dims[1] || 3;
+  var baseArea = Math.max(C.minArea, baseL * baseW);
+  var isFixed = !!p.dims.match(/^\s*2\s*×/); /* качели: цена фиксированная */
+
+  document.getElementById("q-w").value = baseL;
+  document.getElementById("q-d").value = baseW;
+
+  var priceEl = document.getElementById("q-price"), hintEl = document.getElementById("q-hint");
   var money = new Intl.NumberFormat("ru-RU");
-  ins.value = "w100"; /* базовая комплектация: утепление 100 мм (как в карточке) */
+
   function recalc() {
-    var w = parseFloat(document.getElementById("q-w").value) || 6;
-    var d = parseFloat(document.getElementById("q-d").value) || 3;
+    var w = parseFloat(document.getElementById("q-w").value) || baseL;
+    var d = parseFloat(document.getElementById("q-d").value) || baseW;
     var area = Math.max(C.minArea, w * d);
     var add = 0;
     C.insulation.forEach(function (o) { if (o.v === ins.value) add = o.add; });
-    var total = Math.max(9000, Math.round(area * basePerM2 + baseAdd + add));
-    if (total > 100000) total = Math.round(total * C.discount);
-    priceEl.textContent = money.format(total) + " ₽";
+    /* Цена карточки — опорная, поэтому скидку за порог здесь не применяем */
+    var total = isFixed ? p.price : Math.max(9000, p.price * (area / baseArea) + add);
+    priceEl.textContent = money.format(Math.round(total)) + " ₽";
     hintEl.textContent = area.toFixed(1) + " м² · " + ins.options[ins.selectedIndex].text +
       " · фундамент включён, монтаж и доставка отдельно";
   }
+
   ["q-w", "q-d", "q-ins"].forEach(function (id) {
     document.getElementById(id).addEventListener("input", recalc);
     document.getElementById(id).addEventListener("change", recalc);

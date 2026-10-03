@@ -202,6 +202,17 @@
     setv("[name=windows]", "2");
     setv("[name=doors]", "1");
 
+    /* Чекбоксы «доп. опции» — на отдельной странице калькулятора */
+    var extraBox = $("[data-calc-extras]", form);
+    if (extraBox && C.extras) {
+      extraBox.innerHTML = C.extras.map(function (o) {
+        return '<label class="check"><input type="checkbox" name="extra" value="' + o.v + '" data-add="' + o.add + '"> ' +
+          o.label + ' <span class="muted">+ ' + rub(o.add) + '</span></label>';
+      }).join("");
+    }
+    var montageBox = $("[name=montage]", form);
+    if (montageBox && !montageBox.checked) montageBox.checked = true;
+
     var out = $("[data-calc-out]", form);
     var summary = $("[data-calc-summary]");
     var from = $("[data-calc-from]");
@@ -226,26 +237,52 @@
       var insAdd = ins.add;
       var roofAdd = roof.add;
       var total = Math.max(9000, base + insAdd + roofAdd + win.add + door.add);
-      if (total > 100000) total = Math.round(total * C.discount);
+
       var delivery = km * C.deliveryPerKm;
+      /* Доп. опции и монтаж — только если есть соответствующие поля на странице */
+      var extras = $$("[name=extra]:checked", form);
+      var extrasAdd = extras.reduce(function (s, el) { return s + (+el.getAttribute("data-add") || 0); }, 0);
+      var extrasText = extras.map(function (el) {
+        return (el.parentNode.textContent || "").replace(/\s+/g, " ").trim().replace(/\s*\+.*$/, "");
+      });
+      var montageOn = montageBox ? montageBox.checked : false;
+      var montageAdd = montageOn ? C.montage : 0;
+      total += extrasAdd + montageAdd;
+      /* На полной странице калькулятора доставка входит в итог, на главной — показывается строкой */
+      var fullCalc = !!montageBox;
+      if (fullCalc) total += delivery;
+      /* Скидка показывается явно: иначе при увеличении размера цена «прыгает» вниз */
+      var discounted = false;
+      if (total > 100000) { total = Math.round(total * C.discount); discounted = true; }
 
       if (out) {
+        var line = [];
+        if (extrasText.length) line.push("опции: " + extrasText.join(", "));
+        if (montageOn) line.push("монтаж " + rub(C.montage));
+        if (delivery) line.push("доставка ~" + rub(delivery));
+        if (discounted) line.push("скидка 10% при заказе от 100 000 ₽");
         out.innerHTML = '<div><div class="calc__price">' + rub(total) +
-          '<small>предварительная стоимость, монтаж и доставка считаются отдельно</small></div>' +
+          '<small>предварительная стоимость' +
+          (fullCalc ? " с учётом доставки и монтажа" : ", доставка и монтаж считаются отдельно") + '</small></div>' +
           '<p class="calc__hint">Расчёт: ' + area.toFixed(1) + ' м² · утепление ' + ins.label + ' · ' +
-          'кровля ' + roof.label + ' · ' + win.label + ' · ' + door.label + '</p></div>' +
+          'кровля ' + roof.label + ' · ' + win.label + ' · ' + door.label + '</p>' +
+          (line.length ? '<p class="calc__hint">' + line.join(" · ") + '</p>' : "") + '</div>' +
           '<div class="btn-row"><a class="btn btn--primary" href="#request" data-send-calc>Заказать расчёт</a>' +
           '<a class="btn btn--ghost" href="catalog.html">Смотреть каталог</a></div>';
       }
       if (summary) {
         summary.innerHTML = 'Расчёт: <b>' + type.label + '</b>, ' + area.toFixed(1) + ' м², ' +
           ins.label + ', ' + roof.label + ', ' + win.label + ', ' + door.label +
+          (extrasText.length ? ', ' + extrasText.join(", ") : "") +
+          (montageOn ? ', монтаж' : "") +
           '. Предварительно <b>' + rub(total) + '</b>' +
-          (delivery ? ' + доставка ~' + rub(delivery) + ' (' + km + ' км)' : '') + '.';
+          (delivery ? ' (включая доставку ' + km + ' км)' : '') + '.';
       }
       form.dataset.total = String(Math.round(total));
       form.dataset.text = type.label + ", " + w + "×" + d + " м (" + area.toFixed(1) + " м²), " + ins.label + ", " +
-        roof.label + ", " + win.label + ", " + door.label + ", предварительно " + rub(total);
+        roof.label + ", " + win.label + ", " + door.label +
+        (extrasText.length ? ", " + extrasText.join(", ") : "") +
+        (montageOn ? ", монтаж" : "") + ", предварительно " + rub(total);
       return total;
     }
 
@@ -435,6 +472,48 @@
     $$("[data-co=region]").forEach(function (el) { el.textContent = TK.company.region; });
   }
 
+  /* ---------- Рендер страниц «Доставка и монтаж» и «О компании» из данных ---------- */
+  function initInfoPages() {
+    var D = TK.delivery, A = TK.about, box;
+
+    if (D && (box = $("[data-delivery-zones]"))) {
+      box.innerHTML = "<tbody>" + D.zones.map(function (z) {
+        return "<tr><th>" + z.title + "</th><td>" + z.price + "</td><td>" + z.term + "</td></tr>";
+      }).join("") + "</tbody>";
+    }
+    if (D && (box = $("[data-delivery-terms]"))) {
+      box.innerHTML = D.terms.map(function (t) { return "<li>" + t + "</li>"; }).join("");
+    }
+    if (D && (box = $("[data-delivery-stages]"))) {
+      box.innerHTML = D.stages.map(function (s) {
+        return '<div class="step"><h3>' + s.title + '</h3><p>' + s.text + '</p></div>';
+      }).join("");
+    }
+    if (A && (box = $("[data-about-facts]"))) {
+      box.innerHTML = A.facts.map(function (f) {
+        return '<div class="feature"><div class="feature__num">' + f.n + '</div><h3>' + f.t + '</h3><p>' + f.d + '</p></div>';
+      }).join("");
+    }
+    if (A && (box = $("[data-about-principles]"))) {
+      box.innerHTML = A.principle.map(function (p) {
+        return '<div class="feature"><h3>' + p.t + '</h3><p>' + p.d + '</p></div>';
+      }).join("");
+    }
+    if (A && (box = $("[data-about-equipment]"))) {
+      box.innerHTML = A.equipment.map(function (e) { return "<li>" + e + "</li>"; }).join("");
+    }
+    if (A && (box = $("[data-about-timeline]"))) {
+      box.innerHTML = A.timeline.map(function (t) {
+        return '<li><b>' + t.y + '</b><span><strong>' + t.t + "</strong><br>" + t.d + "</span></li>";
+      }).join("");
+    }
+    if (TK.faq && (box = $("[data-faq]"))) {
+      box.innerHTML = TK.faq.map(function (f, i) {
+        return '<details class="faq"' + (i === 0 ? " open" : "") + "><summary>" + f.q + "</summary><p>" + f.a + "</p></details>";
+      }).join("");
+    }
+  }
+
   /* ---------- Сводка расчёта, если калькулятора на странице нет ---------- */
   function initSummaryOnly() {
     var summary = $("[data-calc-summary]");
@@ -452,6 +531,7 @@
     initHomeCards();
     initCatalog();
     initCalc();
+    initInfoPages();
     initSummaryOnly();
     initForm();
     initTabs();

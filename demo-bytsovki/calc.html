@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Калькулятор расчёта — деревянные бытовки под ключ | Тёплый Контур</title>
+<meta name="description" content="Калькулятор стоимости деревянной бытовки: тип изделия, габариты, материалы, утепление, окна и двери, доп. опции, доставка и монтаж. Предварительная цена сразу на сайте.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<p class="demo-note">Демо-версия прототипа: изображения — иллюстрации, цены и контакты — демонстрационные.</p>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt=""> <span><b>Тёплый</b> Контур</span></a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="calc.html">Калькулятор</a>
+      <a href="delivery.html">Доставка и монтаж</a>
+      <a href="about.html">О компании</a>
+      <a href="index.html#request">Контакты</a>
+      <a class="header__phone" data-co="phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+      <a class="btn btn--primary btn--sm header__cta" href="#request">Рассчитать стоимость</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <nav class="crumbs"><a href="index.html">Главная</a> → Калькулятор</nav>
+    <span class="eyebrow" style="margin-top:14px">Калькулятор расчёта</span>
+    <h1 style="font-size:clamp(24px,4vw,38px)">Сколько стоит ваша бытовка</h1>
+    <p class="lead">Считаем в браузере, без регистрации и без звонков. Цена предварительная — точную подтверждаем
+      по вашим замерам и фото участка.</p>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-bottom:70px">
+  <div class="wrap">
+    <form class="calc" data-calc novalidate>
+      <div class="calc__head">
+        <h3>Параметры изделия</h3>
+        <p>Базовая комплектация: утепление 100 мм, кровля из профнастиля, 2 окна, 1 дверь, винтовой фундамент</p>
+      </div>
+      <div class="calc__body">
+        <div class="calc__grid">
+          <div class="field">
+            <label for="c-type">Тип изделия</label>
+            <select id="c-type" name="type"></select>
+          </div>
+          <div class="field">
+            <label for="c-w">Длина, м</label>
+            <input id="c-w" name="width" type="number" min="1" max="12" step="0.5" value="6">
+          </div>
+          <div class="field">
+            <label for="c-d">Ширина, м</label>
+            <input id="c-d" name="depth" type="number" min="1" max="6" step="0.5" value="3">
+          </div>
+          <div class="field">
+            <label for="c-ins">Утепление стен, пола и крыши</label>
+            <select id="c-ins" name="insulation"></select>
+          </div>
+          <div class="field">
+            <label for="c-roof">Кровля</label>
+            <select id="c-roof" name="roof"></select>
+          </div>
+          <div class="field">
+            <label for="c-win">Окна</label>
+            <select id="c-win" name="windows"></select>
+          </div>
+          <div class="field">
+            <label for="c-door">Двери</label>
+            <select id="c-door" name="doors"></select>
+          </div>
+          <div class="field">
+            <label for="c-km">Доставка, км от производства</label>
+            <input id="c-km" name="km" type="number" min="0" max="5000" step="10" value="40">
+          </div>
+          <div class="field">
+            <label for="c-from">Что считаем</label>
+            <input id="c-from" name="item" type="text" placeholder="Например: бытовка под склад" data-calc-from>
+          </div>
+        </div>
+
+        <div style="margin-top:22px">
+          <span class="eyebrow">Дополнительные опции</span>
+          <div class="calc__options" data-calc-extras></div>
+          <label class="check">
+            <input type="checkbox" name="montage" checked> Монтаж на участке
+            <span class="muted">+ 18 000 ₽</span>
+          </label>
+        </div>
+
+        <div class="calc__result" data-calc-out></div>
+      </div>
+    </form>
+
+    <div class="grid grid--3" style="margin-top:34px">
+      <div class="feature"><h3>Цена в договоре</h3><p>После замера смета фиксируется. Меняем цену только по вашему согласию.</p></div>
+      <div class="feature"><h3>Не показываем цену «от»</h3><p>Считаем по вашей конфигурации: утепление, окна и опции — в сумме сразу.</p></div>
+      <div class="feature"><h3>Монтаж в смете</h3><p>Доставка и сборка считаются отдельной строкой, чтобы их можно было убрать.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap">
+    <span class="eyebrow">Частые вопросы</span>
+    <h2 style="font-size:26px">Что обычно спрашивают про расчёт</h2>
+    <div style="margin-top:22px;max-width:820px" data-faq></div>
+  </div>
+</section>
+
+<section class="section" id="request">
+  <div class="wrap">
+    <div class="calc" style="max-width:760px;margin:0 auto">
+      <div class="calc__head">
+        <h3>Уточнить расчёт</h3>
+        <p>Пришлём смету с чертёжом и фотографиями уже собранных похожих объектов</p>
+      </div>
+      <div class="calc__body">
+        <div class="calc-summary" data-calc-summary></div>
+        <form data-form novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="r-name">Как вас зовут</label>
+              <input id="r-name" name="name" type="text" placeholder="Иван" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="r-phone">Телефон</label>
+              <input id="r-phone" name="phone" type="tel" placeholder="+7 900 000-00-00" autocomplete="tel" required>
+            </div>
+            <div class="field field--full">
+              <label for="r-comment">Комментарий</label>
+              <textarea id="r-comment" name="comment" rows="4" placeholder="Нужен замер участка, подъездные пути узкие"></textarea>
+            </div>
+          </div>
+          <div class="btn-row" style="margin-top:18px">
+            <button class="btn btn--primary" type="submit">Отправить заявку</button>
+            <a class="btn btn--ghost" href="catalog.html">Смотреть каталог</a>
+          </div>
+          <p class="consent">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          <div class="btn-row" data-form-actions></div>
+          <div class="form-status" data-form-status></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="img/favicon.svg" alt=""> Тёплый Контур</div>
+        <p style="font-size:14px;max-width:34ch">Деревянные бытовки, хозблоки и туалеты под ключ. Своё производство, свои монтажники.</p>
+      </div>
+      <div>
+        <h4>Каталог</h4>
+        <ul class="footer__list">
+          <li><a href="catalog.html">Бытовки</a></li>
+          <li><a href="catalog.html">Хозблоки</a></li>
+          <li><a href="catalog.html">Туалеты</a></li>
+          <li><a href="catalog.html">Качели</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Покупателю</h4>
+        <ul class="footer__list">
+          <li><a href="calc.html">Калькулятор</a></li>
+          <li><a href="delivery.html">Доставка и монтаж</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="index.html#examples">Примеры работ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul class="footer__list">
+          <li><a data-co="phone" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+          <li><a data-co="tg" href="https://t.me/teply_kontur">Telegram</a></li>
+          <li><a data-co="email" href="mailto:zakaz@example.ru">zakaz@example.ru</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© Тёплый Контур. Демо-прототип: изображения — иллюстрации, контакты и цены — демонстрационные.</span>
+      <span>Сделано на HTML + CSS + JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--ghost btn--sm" href="tel:+74950000000">Позвонить</a>
+  <a class="btn btn--primary btn--sm" href="#request">Отправить расчёт</a>
+</div>
+
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

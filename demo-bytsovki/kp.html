@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Коммерческое предложение | Тёплый Контур</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .kp { background: #fff; max-width: 900px; margin: 0 auto; padding: 40px; border: 1px solid var(--line); border-radius: var(--radius); }
+  .kp h1 { font-size: 28px; }
+  .kp h2 { font-size: 20px; margin-top: 34px; }
+  .kp table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .kp th, .kp td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  .kp th { width: 45%; color: var(--ink-3); font-weight: 600; background: #fffdfa; }
+  .kp__total { display: flex; justify-content: space-between; align-items: center; margin-top: 26px; padding: 18px 22px; background: var(--sand-2); border-radius: var(--radius-s); flex-wrap: wrap; gap: 12px; }
+  .kp__total b { font-size: 26px; }
+  .kp__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .kp__head { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; border-bottom: 2px solid var(--wood-600); padding-bottom: 16px; }
+  .kp__draw { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .kp__draw figure { margin: 0; }
+  .kp__draw img { border: 1px solid var(--line); border-radius: var(--radius-s); background: #fbfcfe; }
+  .kp__draw figcaption { font-size: 13px; color: var(--ink-3); margin-top: 6px; }
+  .kp__note { font-size: 13px; color: var(--ink-3); margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line); }
+  @media print { .kp { border: 0; padding: 0; } .kp__actions { display: none; } body { padding: 0; } }
+  @media (max-width: 760px) { .kp { padding: 20px; } .kp__draw { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="wrap" style="padding:28px 16px 60px">
+  <div class="kp__actions" style="max-width:900px;margin:0 auto 16px">
+    <button class="btn btn--primary btn--sm" type="button" onclick="window.print()">Сохранить как PDF</button>
+    <a class="btn btn--ghost btn--sm" id="kp-back" href="catalog.html">Вернуться в каталог</a>
+  </div>
+
+  <article class="kp">
+    <div class="kp__head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:6px" data-kp-num>Коммерческое предложение</p>
+        <h1 data-kp-title>—</h1>
+        <p class="muted" style="margin:0" data-kp-company></p>
+      </div>
+      <div style="text-align:right">
+        <p class="muted" style="margin:0;font-size:14px" data-kp-contact></p>
+      </div>
+    </div>
+
+    <h2>Конфигурация</h2>
+    <table data-kp-specs><tbody></tbody></table>
+
+    <h2>Что входит в стоимость</h2>
+    <ul data-kp-kit></ul>
+
+    <h2 id="drawings">Чертёж</h2>
+    <div class="kp__draw">
+      <figure>
+        <img data-kp-plan src="img/plan-bytovka-6x3.svg" alt="План-кровля" width="900" height="640">
+        <figcaption>План-кровля: габариты, окна, дверь, шаг стоек</figcaption>
+      </figure>
+      <figure>
+        <img data-kp-section src="img/section-bytovka-6x3.svg" alt="Продольный разрез" width="900" height="640">
+        <figcaption>Продольный разрез: пол, стена с утеплителем, стропильная система</figcaption>
+      </figure>
+    </div>
+
+    <h2>Опции за доплату</h2>
+    <table data-kp-extras><tbody></tbody></table>
+
+    <h2>Оплачивается отдельно</h2>
+    <ul data-kp-extra-costs></ul>
+
+    <div class="kp__total">
+      <span><b data-kp-price>—</b><br><span class="muted" style="font-size:14px">изделие с фундаментом, базовая комплектация</span></span>
+      <span class="muted" style="font-size:14px">Цена действительна 14 дней с даты КП</span>
+    </div>
+
+    <p class="kp__note">
+      Демо-прототип: документ подготовлен как пример для согласования структуры коммерческого предложения.
+      Реквизиты, цены и контакты — демонстрационные. На боевом сайте сюда подставляются реквизиты
+      компании, номер КП из счётчика и оттиск печати.
+    </p>
+  </article>
+</div>
+
+<script src="js/data.js"></script>
+<script>
+(function () {
+  var TK = window.TK;
+  var money = new Intl.NumberFormat("ru-RU");
+  var rub = function (n) { return money.format(Math.round(n)) + " ₽"; };
+  var slug = new URLSearchParams(location.search).get("p");
+  var p = TK.products.filter(function (x) { return x.slug === slug; })[0] || TK.products[0];
+  var C = TK.calc, co = TK.company;
+
+  document.title = "КП: " + p.title + " — Тёплый Контур";
+  var set = function (sel, txt) { var el = document.querySelector(sel); if (el) el.textContent = txt; };
+  set("[data-kp-num]", "Коммерческое предложение от 03.10.2026");
+  set("[data-kp-title]", p.title);
+  set("[data-kp-company]", co.name + " · " + co.address);
+  set("[data-kp-contact]", co.phone + "\n" + co.email);
+  document.querySelector("[data-kp-contact]").innerHTML =
+    co.phone + "<br>" + co.email + "<br>" + co.telegram;
+  set("[data-kp-price]", rub(p.price));
+  document.getElementById("kp-back").href = "product.html?p=" + p.slug;
+
+  var specs = [
+    ["Габариты (Д×Ш×В)", p.dims], ["Площадь", p.area], ["Вес готового изделия", p.weight],
+    ["Каркас и материалы", p.material], ["Утепление", p.insulation], ["Кровля", p.roof],
+    ["Пол", p.floor], ["Окна", p.windows], ["Двери", p.doors],
+    ["Срок изготовления", p.terms], ["Доставка и монтаж", p.delivery],
+    ["Гарантия", co.warranty + " года на каркас и кровлю, 2 года на утеплитель и фурнитуру"]
+  ];
+  document.querySelector("[data-kp-specs] tbody").innerHTML = specs.map(function (r) {
+    return "<tr><th>" + r[0] + "</th><td>" + r[1] + "</td></tr>";
+  }).join("");
+
+  document.querySelector("[data-kp-kit]").innerHTML = p.kit.split(",").map(function (s) {
+    return "<li>" + s.trim() + "</li>";
+  }).join("");
+
+  document.querySelector("[data-kp-extras] tbody").innerHTML = C.extras.map(function (e) {
+    return '<tr><th>' + e.label + '</th><td style="text-align:right;font-weight:700;color:var(--wood-700)">+ ' + rub(e.add) + "</td></tr>";
+  }).join("");
+
+  document.querySelector("[data-kp-extra-costs]").innerHTML = [
+    "Монтаж на участке — " + rub(C.montage) + ", один рабочий день",
+    "Доставка далее 50 км — " + C.deliveryPerKm + " ₽/км, свой транспорт",
+    "Подъём краном при высоте более 3 этажей — от 8 000 ₽",
+    "Оплата: 50 % предоплата на старте производства, 50 % после монтажа"
+  ].map(function (t) { return "<li>" + t + "</li>"; }).join("");
+
+  /* Чертежи: если для позиции нет своего файла, показываем ближайший по смыслу */
+  var has = TK.products.filter(function (x) { return x.slug === p.slug; }).length;
+  document.querySelector("[data-kp-plan]").src = "img/plan-" + p.slug + ".svg";
+  document.querySelector("[data-kp-section]").src = "img/section-" + p.slug + ".svg";
+  document.querySelectorAll("[data-kp-plan], [data-kp-section]").forEach(function (im) {
+    im.addEventListener("error", function () {
+      if (im.src.indexOf("bytovka-6x3") < 0) im.src = im.src.replace(/plan-|section-/, function (m) {
+        return m + "bytovka-6x3";
+      });
+    });
+  });
+  document.documentElement.setAttribute("data-kp-ready", has ? "1" : "0");
+})();
+</script>
+</body>
+</html>

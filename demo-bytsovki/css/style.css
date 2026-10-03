@@ -232,6 +232,7 @@ p { margin: 0 0 1em; }
 .calc__head p { margin: 0; font-size: 14px; color: #d9c9ae; }
 .calc__body { padding: 24px; }
 .calc__grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+.calc__grid--2 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field label { font-size: 14px; font-weight: 700; color: var(--ink-2); }
 .field select, .field input {
@@ -378,6 +379,45 @@ p { margin: 0 0 1em; }
   font-size: 13px; text-align: center; padding: 7px 16px;
 }
 
+/* ---------- Чекбоксы опций в калькуляторе ---------- */
+.check {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius-s);
+  background: #fffdfa; cursor: pointer; font-size: 15px; margin-bottom: 8px;
+}
+.check:hover { border-color: var(--wood-500); }
+.check input { width: 18px; height: 18px; accent-color: var(--green); flex: none; }
+.check .muted { font-size: 14px; }
+.calc__options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 16px; }
+
+/* ---------- Цифры компании ---------- */
+.feature__num {
+  font-size: 40px; font-weight: 800; color: var(--wood-600); line-height: 1;
+  margin-bottom: 10px; letter-spacing: -0.02em;
+}
+
+/* ---------- Таймлайн компании ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li {
+  display: grid; grid-template-columns: 90px 1fr; gap: 18px;
+  padding: 18px 0; border-bottom: 1px dashed var(--line);
+}
+.timeline li:last-child { border-bottom: 0; }
+.timeline b { color: var(--wood-600); font-size: 20px; font-weight: 800; }
+.timeline strong { display: block; color: var(--wood-900); font-size: 17px; margin-bottom: 2px; }
+.timeline span { color: var(--ink-2); font-size: 15px; }
+
+/* ---------- FAQ ---------- */
+.faq { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-s); margin-bottom: 10px; }
+.faq summary {
+  cursor: pointer; padding: 14px 18px; font-weight: 700; color: var(--wood-900);
+  list-style: none; display: flex; justify-content: space-between; gap: 12px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 20px; color: var(--wood-600); }
+.faq[open] summary::after { content: "−"; }
+.faq p { padding: 0 18px 16px; margin: 0; color: var(--ink-2); font-size: 15px; }
+
 /* ---------- Адаптив ---------- */
 @media (max-width: 1024px) {
   .hero__grid { grid-template-columns: 1fr; }
@@ -403,7 +443,9 @@ p { margin: 0 0 1em; }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .step::after { display: none; }
-  .calc__grid { grid-template-columns: 1fr; }
+  .calc__grid, .calc__grid--2 { grid-template-columns: 1fr; }
+  .calc__options { grid-template-columns: 1fr; }
+  .timeline li { grid-template-columns: 64px 1fr; gap: 12px; }
   .form-grid { grid-template-columns: 1fr; }
   .contacts { grid-template-columns: 1fr; }
   .gallery-examples { grid-template-columns: repeat(2, 1fr); }
