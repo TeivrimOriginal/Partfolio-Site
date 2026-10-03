@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог — деревянные бытовки, хозблоки, туалеты, качели | Тёплый Контур</title>
+<meta name="description" content="Каталог деревянных изделий: бытовки, хозблоки, туалеты, качели. Фильтры по габаритам, материалу, назначению и цене, сортировка по популярности и новизне.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<p class="demo-note">Демо-версия прототипа: изображения — иллюстрации, цены и контакты — демонстрационные.</p>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt=""> <span><b>Тёплый</b> Контур</span></a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="index.html#calc">Калькулятор</a>
+      <a href="index.html#stages">Как мы работаем</a>
+      <a href="index.html#examples">Примеры работ</a>
+      <a href="index.html#request">Контакты</a>
+      <a class="header__phone" data-co="phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+      <a class="btn btn--primary btn--sm header__cta" href="index.html#request">Рассчитать стоимость</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section section--tight">
+  <div class="wrap">
+    <nav class="crumbs"><a href="index.html">Главная</a> → Каталог</nav>
+    <span class="eyebrow" style="margin-top:14px">Каталог</span>
+    <h1 style="font-size:clamp(24px,4vw,38px)">Бытовки, хозблоки, туалеты и качели</h1>
+    <p class="lead">Фильтры работают без перезагрузки страницы: габариты, материал, назначение и цена.</p>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-bottom:64px">
+  <div class="wrap catalog">
+    <aside class="filters" data-filters>
+      <h3>Фильтры</h3>
+
+      <div class="filters__group">
+        <span>Назначение</span>
+        <label><input type="radio" name="f-cat" value="all" checked> Все изделия</label>
+        <label><input type="radio" name="f-cat" value="bytovka"> Бытовки</label>
+        <label><input type="radio" name="f-cat" value="bytovka2"> Бытовки эконом</label>
+        <label><input type="radio" name="f-cat" value="hozhblok"> Хозблоки</label>
+        <label><input type="radio" name="f-cat" value="tualet"> Туалеты</label>
+        <label><input type="radio" name="f-cat" value="kacheli"> Качели</label>
+      </div>
+
+      <div class="filters__group">
+        <span>Длина корпуса</span>
+        <label><input type="radio" name="f-size" value="all" checked> Любая</label>
+        <label><input type="radio" name="f-size" value="s"> До 3 м</label>
+        <label><input type="radio" name="f-size" value="m"> 3–4 м</label>
+        <label><input type="radio" name="f-size" value="l"> от 4 м</label>
+      </div>
+
+      <div class="filters__group">
+        <span>Материал каркаса</span>
+        <label><input type="radio" name="f-mat" value="all" checked> Любой</label>
+        <label><input type="radio" name="f-mat" value="pine"> Сосна</label>
+        <label><input type="radio" name="f-mat" value="spruce"> Ель</label>
+        <label><input type="radio" name="f-mat" value="larch"> Лиственница</label>
+      </div>
+
+      <div class="filters__group">
+        <span>Цена</span>
+        <label><input type="radio" name="f-price" value="all" checked> Любая</label>
+        <label><input type="radio" name="f-price" value="a"> до 30 000 ₽</label>
+        <label><input type="radio" name="f-price" value="b"> 30 000 – 60 000 ₽</label>
+        <label><input type="radio" name="f-price" value="c"> 60 000 – 100 000 ₽</label>
+        <label><input type="radio" name="f-price" value="d"> от 100 000 ₽</label>
+      </div>
+
+      <button class="btn btn--ghost btn--sm btn--block" type="button" data-filters-reset>Сбросить фильтры</button>
+    </aside>
+
+    <div>
+      <div class="catalog__bar">
+        <span class="catalog__count" data-catalog-count>Загрузка…</span>
+        <label class="catalog__sort">
+          <span class="muted" style="font-size:14px">Сортировка:</span>
+          <select data-catalog-sort>
+            <option value="pop">по популярности</option>
+            <option value="price-asc">сначала дешёвые</option>
+            <option value="price-desc">сначала дорогие</option>
+            <option value="new">по новизне</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grid grid--3" data-catalog></div>
+      <div class="empty" data-catalog-empty style="display:none">
+        Под такие условия ничего не нашлось. Сбросьте фильтры или позвоните — соберём изделие под вашу задачу.
+      </div>
+
+      <div class="calc" style="margin-top:34px">
+        <div class="calc__body">
+          <h3>Не нашли нужный размер?</h3>
+          <p class="muted">Соберём по вашим габаритам: до 12 м длиной, любая комплектация и отделка. Расчёт — в калькуляторе на главной.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="index.html#calc">Открыть калькулятор</a>
+            <a class="btn btn--ghost" data-co="phone" href="tel:+74950000000">Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="margin-top:0;border:0;padding-top:0">
+      <span>© Тёплый Контур. Демо-прототип: изображения — иллюстрации, контакты и цены — демонстрационные.</span>
+      <span><a href="index.html">На главную</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--ghost btn--sm" href="tel:+74950000000">Позвонить</a>
+  <a class="btn btn--primary btn--sm" href="index.html#calc">Рассчитать стоимость</a>
+</div>
+
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

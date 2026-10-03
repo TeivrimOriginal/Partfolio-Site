@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Карточка товара | Тёплый Контур</title>
+<meta name="description" content="Характеристики, комплектация, фото, что входит в стоимость и опции за доплату. Заказать расчёт и скачать КП.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<p class="demo-note">Демо-версия прототипа: изображения — иллюстрации, цены и контакты — демонстрационные.</p>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html"><img src="img/favicon.svg" alt=""> <span><b>Тёплый</b> Контур</span></a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="index.html#calc">Калькулятор</a>
+      <a href="index.html#stages">Как мы работаем</a>
+      <a href="index.html#examples">Примеры работ</a>
+      <a href="index.html#request">Контакты</a>
+      <a class="header__phone" data-co="phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+      <a class="btn btn--primary btn--sm header__cta" href="#request">Рассчитать стоимость</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="crumbs"><a href="index.html">Главная</a> → <a href="catalog.html">Каталог</a> → <span data-p-crumb>Карточка товара</span></nav>
+</div>
+
+<section class="product wrap" data-product>
+  <div>
+    <div data-p-gallery></div>
+
+    <div style="margin-top:36px">
+      <span class="eyebrow">Характеристики</span>
+      <h2 style="font-size:26px">Технические данные</h2>
+      <table class="specs" data-p-specs></table>
+    </div>
+
+    <div style="margin-top:36px">
+      <div class="tabs" data-tabs role="tablist">
+        <button type="button" role="tab" aria-selected="true">Что входит в стоимость</button>
+        <button type="button" role="tab" aria-selected="false">Опции за доплату</button>
+        <button type="button" role="tab" aria-selected="false">Доставка и монтаж</button>
+        <button type="button" role="tab" aria-selected="false">Оплата и гарантия</button>
+      </div>
+
+      <div class="tabpanel" data-tabpanel>
+        <ul>
+          <li>Каркас из сухой строганой доски, сборка на оцинкованном крепеже</li>
+          <li>Обшивка стен и фасада, ветрозащита</li>
+          <li>Утепление 100 мм по всему контуру: стены, пол, крыша</li>
+          <li>Шпунтованная половая доска 28 мм, лаги 50×150</li>
+          <li>Кровля из профнастиля С8 с уклоном и водостоком</li>
+          <li>Окна ПВХ двухкамерные и утеплённая дверь 870 мм</li>
+          <li>Электрика: кабель, автоматы, розетка, светильник</li>
+          <li>Винтовой фундамент под площадь пола</li>
+        </ul>
+      </div>
+
+      <div class="tabpanel" data-tabpanel hidden>
+        <table class="specs">
+          <tbody>
+            <tr><th>Утепление 150 мм вместо 100 мм</th><td class="tabpanel__price">+3 600 ₽ за м²</td></tr>
+            <tr><th>Мягкая кровля (снег, без конденсата в профнастиле)</th><td class="tabpanel__price">+1 800 ₽ за м²</td></tr>
+            <tr><th>Дополнительное окно ПВХ</th><td class="tabpanel__price">+7 500 ₽</td></tr>
+            <tr><th>Вторая дверь (перегородка, вход с другой стороны)</th><td class="tabpanel__price">+5 500 ₽</td></tr>
+            <tr><th>Обшивка имитацией бруса вместо вагонки</th><td class="tabpanel__price">+9 400 ₽</td></tr>
+            <tr><th>Электрика «под ключ»: щиток, 4 розетки, 2 светильника</th><td class="tabpanel__price">+12 000 ₽</td></tr>
+            <tr><th>Свайно-винтовой фундамент 1,5 м</th><td class="tabpanel__price">+4 200 ₽ за м²</td></tr>
+            <tr><th>Печь-буржуйка с дымоходом</th><td class="tabpanel__price">+21 000 ₽</td></tr>
+            <tr><th>Вертикальная пропитка и антисептик</th><td class="tabpanel__price">+3 900 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tabpanel" data-tabpanel hidden>
+        <ul>
+          <li><b>По области до 50 км — бесплатно</b>, далее 12 ₽ за километр, до 800 км.</li>
+          <li>Свой транспорт: тент или трал для длинных изделий, подъём к участку включён.</li>
+          <li>Монтаж бригадой из 2 человек — <b>18 000 ₽</b>, один рабочий день.</li>
+          <li>Нужен кран для изделий от 7 м — согласуем заранее, обычно в тот же день.</li>
+          <li>Разгрузка на участке силами заказчика — скидка 4 000 ₽ с монтажа.</li>
+        </ul>
+      </div>
+
+      <div class="tabpanel" data-tabpanel hidden>
+        <ul>
+          <li>Оплата: предоплата 50 % на старте производства, остаток после монтажа.</li>
+          <li>Работаем с физлицами, ИП и юрлицами. Для юрлистов — счёт и закрывающие документы.</li>
+          <li>Гарантия <b><span data-co="warranty">3</span> года</b> на каркас и кровлю, 2 года на утеплитель и фурнитуру.</li>
+          <li>Сервисное обслуживание от 4 000 ₽ в год: проверка герметичности, замена расходников.</li>
+          <li>Срок в договоре. Задержка по нашей вине — компенсация по условиям договора.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <aside>
+    <div>
+      <span class="eyebrow">Стоимость с фундаментом</span>
+      <h1 style="font-size:30px" data-p-title>Карточка товара</h1>
+      <div class="product__price"><b data-p-price>—</b><span data-p-old></span></div>
+      <p class="muted" data-p-desc></p>
+
+      <div class="product__buy">
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#request">Заказать расчёт</a>
+          <a class="btn btn--ghost" data-co="phone" href="tel:+74950000000">Позвонить</a>
+        </div>
+        <div class="btn-row" style="margin-top:10px" data-p-files></div>
+        <p class="price-note">Расчёт пришлём в Telegram и на почту. Оплата после подтверждения сметы.</p>
+      </div>
+
+      <div class="calc">
+        <div class="calc__head" style="padding:16px 20px"><h3 style="font-size:17px">Быстрый расчёт этого изделия</h3></div>
+        <div class="calc__body" style="padding:20px">
+          <div class="calc__grid" style="grid-template-columns:1fr 1fr;gap:14px">
+            <div class="field">
+              <label for="q-w">Длина, м</label>
+              <input id="q-w" type="number" min="1" max="12" step="0.5" value="6">
+            </div>
+            <div class="field">
+              <label for="q-d">Ширина, м</label>
+              <input id="q-d" type="number" min="1" max="6" step="0.5" value="3">
+            </div>
+            <div class="field" style="grid-column:1/-1">
+              <label for="q-ins">Утепление</label>
+              <select id="q-ins"></select>
+            </div>
+          </div>
+          <div class="calc__result" style="margin-top:16px">
+            <div><div class="calc__price" id="q-price">—</div><p class="calc__hint" id="q-hint"></p></div>
+            <a class="btn btn--wood btn--sm" href="#request">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap">
+    <span class="eyebrow">Похожие изделия</span>
+    <h2 style="font-size:26px">Сравните с другими позициями</h2>
+    <div class="grid grid--3" data-p-related style="margin-top:24px"></div>
+  </div>
+</section>
+
+<section class="section" id="request">
+  <div class="wrap">
+    <div class="calc" style="max-width:760px;margin:0 auto">
+      <div class="calc__head">
+        <h3>Заявка на расчёт</h3>
+        <p>Ответим в Telegram и на почту в течение рабочего дня</p>
+      </div>
+      <div class="calc__body">
+        <div class="calc-summary" data-calc-summary></div>
+        <form data-form novalidate>
+          <input type="hidden" name="product" value="">
+          <div class="form-grid">
+            <div class="field">
+              <label for="r-name">Как вас зовут</label>
+              <input id="r-name" name="name" type="text" placeholder="Иван" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="r-phone">Телефон</label>
+              <input id="r-phone" name="phone" type="tel" placeholder="+7 900 000-00-00" autocomplete="tel" required>
+            </div>
+            <div class="field field--full">
+              <label for="r-comment">Комментарий</label>
+              <textarea id="r-comment" name="comment" rows="4" placeholder="Нужна доставка и монтаж, участок в Дмитрове"></textarea>
+            </div>
+          </div>
+          <div class="btn-row" style="margin-top:18px">
+            <button class="btn btn--primary" type="submit">Отправить заявку</button>
+            <a class="btn btn--ghost" href="catalog.html">Вернуться в каталог</a>
+          </div>
+          <p class="consent">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          <div class="btn-row" data-form-actions></div>
+          <div class="form-status" data-form-status></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__bottom" style="margin-top:0;border:0;padding-top:0">
+      <span>© Тёплый Контур. Демо-прототип: изображения — иллюстрации, контакты и цены — демонстрационные.</span>
+      <span><a href="catalog.html">Каталог</a> · <a href="index.html">На главную</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn--ghost btn--sm" href="tel:+74950000000">Позвонить</a>
+  <a class="btn btn--primary btn--sm" href="#request">Заказать расчёт</a>
+</div>
+
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+<script>
+/* Быстрый расчёт в карточке: та же формула, что на главной, но для одной позиции */
+document.addEventListener("DOMContentLoaded", function () {
+  var C = window.TK.calc, ins = document.getElementById("q-ins");
+  ins.innerHTML = C.insulation.map(function (o) {
+    return '<option value="' + o.v + '">' + o.label + '</option>';
+  }).join("");
+  var basePerM2 = 2900, baseAdd = 26000, priceEl = document.getElementById("q-price"), hintEl = document.getElementById("q-hint");
+  var money = new Intl.NumberFormat("ru-RU");
+  ins.value = "w100"; /* базовая комплектация: утепление 100 мм (как в карточке) */
+  function recalc() {
+    var w = parseFloat(document.getElementById("q-w").value) || 6;
+    var d = parseFloat(document.getElementById("q-d").value) || 3;
+    var area = Math.max(C.minArea, w * d);
+    var add = 0;
+    C.insulation.forEach(function (o) { if (o.v === ins.value) add = o.add; });
+    var total = Math.max(9000, Math.round(area * basePerM2 + baseAdd + add));
+    if (total > 100000) total = Math.round(total * C.discount);
+    priceEl.textContent = money.format(total) + " ₽";
+    hintEl.textContent = area.toFixed(1) + " м² · " + ins.options[ins.selectedIndex].text +
+      " · фундамент включён, монтаж и доставка отдельно";
+  }
+  ["q-w", "q-d", "q-ins"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", recalc);
+    document.getElementById(id).addEventListener("change", recalc);
+  });
+  recalc();
+});
+</script>
+</body>
+</html>

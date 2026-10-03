@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Проверка мобильной вёрстки — Тёплый Контур</title>
+<style>
+  body { font: 13px/1.5 Consolas, monospace; margin: 16px; background: #fff; }
+  #out { white-space: pre-wrap; background: #f5f5f5; padding: 12px; border: 1px solid #ddd; margin-bottom: 12px; }
+  iframe { width: 390px; height: 780px; border: 2px solid #333; }
+  h1 { font-size: 15px; margin: 0 0 10px; }
+</style>
+</head>
+<body>
+<h1>Проверка главной во вьюпорте 390 px (эмуляция мобильного)</h1>
+<div id="out">загрузка…</div>
+<iframe id="fr" src="../index.html"></iframe>
+<script>
+  var fr = document.getElementById("fr");
+  fr.onload = function () {
+    var d = fr.contentDocument, w = fr.contentWindow;
+    w.scrollTo(0, d.body.scrollHeight);
+    setTimeout(function () {
+      w.scrollTo(0, 0);
+      var cs = function (sel) { return w.getComputedStyle(d.querySelector(sel)); };
+      var out = {
+        "горизонтальный скролл (scrollWidth/clientWidth)": d.documentElement.scrollWidth + " / " + d.documentElement.clientWidth,
+        "бургер": cs(".burger").display,
+        "липкая кнопка снизу": cs(".sticky-cta").display,
+        "колонок в сетке товаров": cs(".grid--4").gridTemplateColumns,
+        "колонок в этапах": cs(".steps").gridTemplateColumns,
+        "колонок в калькуляторе": cs(".calc__grid").gridTemplateColumns,
+        "размер H1": cs("h1").fontSize,
+        "цена калькулятора": ((d.querySelector(".calc__price") || {}).innerText || "").split("\n")[0],
+        "карточек на главной": d.querySelectorAll("[data-home-cards] .card").length,
+        "битых картинок": Array.from(d.images).filter(function (i) { return i.getAttribute("src") && i.complete && i.naturalWidth === 0; }).length,
+        "высота страницы": d.body.scrollHeight
+      };
+      d.querySelector(".burger").click();
+      out["меню после клика по бургеру"] = cs(".nav").display;
+      out["пунктов в меню"] = d.querySelectorAll(".nav a").length;
+      document.getElementById("out").textContent = JSON.stringify(out, null, 2);
+    }, 1800);
+  };
+</script>
+</body>
+</html>
