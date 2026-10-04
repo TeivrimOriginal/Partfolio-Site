@@ -68,6 +68,16 @@ const QUERIES = [
   'стажёр тестировщик',
 ];
 
+// Выдача по навыкам — второй вход в тот же список. Текстовый запрос ищет по
+// заголовку и описанию, а навык — по тому, что работодатель отметил в карточке.
+// Заголовок «Стажёр» без слова python в заголовке не найдётся текстом, но
+// найдётся здесь. Проверено: skills/python отдаёт 142 вакансии, postgresql — 105,
+// docker — 62, linux — 115, selenium — 3. Часть навыков отдаёт 404 (qa, ci,
+// telegram, c-, rest-api): это обычные навыки, просто не заведены в оглавление,
+// поэтому берём только те, что отвечают.
+const SKILLS = ['python', 'postgresql', 'docker', 'linux', 'selenium'];
+const SKILL_PAGES = 2;
+
 function get(url) {
   return new Promise((resolve) => {
     const req = https.get(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'ru-RU,ru;q=0.9', Accept: 'text/html' } }, (res) => {
@@ -156,6 +166,32 @@ async function main() {
   // Шаг 1: собрать карточки.
   const seen = new Map();
   const stats = { byLevel: {}, byQuery: {}, levels: {}, remote: { yes: 0, no: 0 } };
+
+  // Карточка из состояния страницы: общая форма для текстовых запросов и для
+  // выдачи по навыкам, чтобы дальше обе шли одним путём.
+  function absorb(list) {
+    for (const v of list) {
+      const lvl = String(v.qualification || 'не указан');
+      stats.levels[lvl] = (stats.levels[lvl] || 0) + 1;
+      stats.remote[v.remoteWork ? 'yes' : 'no'] += 1;
+      if (seen.has(String(v.id))) continue;
+      seen.set(String(v.id), {
+        id: String(v.id),
+        title: v.title || '',
+        company: (v.company && (v.company.title || v.company.alias_name)) || '',
+        companyAlias: (v.company && v.company.alias_name) || '',
+        remote: !!v.remoteWork,
+        level: lvl,
+        employment: v.employment || '',
+        published: v.publishedDate || '',
+        skills: (v.skills || []).map((s) => (typeof s === 'string' ? s : s && s.title) || '').filter(Boolean),
+        href: v.href || ('/vacancies/' + v.id),
+        quickResponse: v.quickResponseHref || '',
+        responses: v.reactions ? (v.reactions.count || 0) : null,
+      });
+    }
+  }
+
   for (const q of QUERIES) {
     let got = 0;
     for (let page = 1; page <= PAGES_PER_QUERY; page++) {
@@ -167,30 +203,32 @@ async function main() {
       const list = state.vacancies.list;
       if (!list.length) break;
       got += list.length;
-      for (const v of list) {
-        const lvl = String(v.qualification || 'не указан');
-        stats.levels[lvl] = (stats.levels[lvl] || 0) + 1;
-        stats.remote[v.remoteWork ? 'yes' : 'no'] += 1;
-        if (seen.has(String(v.id))) continue;
-        seen.set(String(v.id), {
-          id: String(v.id),
-          title: v.title || '',
-          company: (v.company && (v.company.title || v.company.alias_name)) || '',
-          companyAlias: (v.company && v.company.alias_name) || '',
-          remote: !!v.remoteWork,
-          level: lvl,
-          employment: v.employment || '',
-          published: v.publishedDate || '',
-          skills: (v.skills || []).map((s) => (typeof s === 'string' ? s : s && s.title) || '').filter(Boolean),
-          href: v.href || ('/vacancies/' + v.id),
-          quickResponse: v.quickResponseHref || '',
-          responses: v.reactions ? (v.reactions.count || 0) : null,
-        });
-      }
+      absorb(list);
       await sleep(PAUSE_MS);
     }
     stats.byQuery[q] = got;
   }
+
+  // Выдача по навыкам. Страницы нумеруются тем же параметром page, а данные лежат
+  // в том же месте состояния.
+  const beforeSkills = seen.size;
+  for (const skill of SKILLS) {
+    let got = 0;
+    for (let page = 1; page <= SKILL_PAGES; page++) {
+      const url = BASE + '/skills/' + encodeURIComponent(skill) + '?type=all&page=' + page;
+      const r = await get(url);
+      if (r.status !== 200) break;
+      const state = stateOf(r.body);
+      if (!state || !state.vacancies || !Array.isArray(state.vacancies.list)) break;
+      const list = state.vacancies.list;
+      if (!list.length) break;
+      got += list.length;
+      absorb(list);
+      await sleep(PAUSE_MS);
+    }
+    stats.byQuery['навык: ' + skill] = got;
+  }
+  console.log('добавлено выдачей по навыкам: ' + (seen.size - beforeSkills));
 
   const all = [...seen.values()];
   console.log('карточек уникальных: ' + all.length);

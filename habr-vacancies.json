@@ -2,24 +2,24 @@
  "generated": "2026-10-04",
  "thresholdMonths": 12,
  "queries": 24,
- "cards": 580,
+ "cards": 610,
  "byReason": {
-  "не удалённая": 225,
-  "уровень: Senior": 153,
-  "blockTitle": 93,
+  "не удалённая": 241,
+  "уровень: Senior": 160,
+  "blockTitle": 95,
   "уже отклик": 4,
   "blockCompany": 11,
-  "уровень: Lead": 38,
-  "noMatch": 28,
+  "уровень: Lead": 40,
+  "noMatch": 30,
   "alreadyEngaged": 5
  },
  "levelDistribution": {
-  "Middle": 985,
-  "не указан": 740,
-  "Senior": 945,
-  "Junior": 263,
-  "Lead": 144,
-  "Intern": 237
+  "Middle": 1031,
+  "не указан": 812,
+  "Senior": 996,
+  "Junior": 280,
+  "Lead": 160,
+  "Intern": 238
  },
  "vacancies": [],
  "rejectedByDescription": [
@@ -38,13 +38,6 @@
    "matched": "коммерческой разработк"
   },
   {
-   "id": "1000163346",
-   "title": "Python Developer",
-   "company": "ITK academy",
-   "rule": "level",
-   "matched": "Senior "
-  },
-  {
    "id": "1000168741",
    "title": "Python Developer / AI Engineer (Document Processing)",
    "company": "AYROSA",
@@ -52,9 +45,9 @@
    "matched": "уровня Middle"
   },
   {
-   "id": "1000168328",
-   "title": "Разработчик С++",
-   "company": "DIS Group",
+   "id": "1000163346",
+   "title": "Python Developer",
+   "company": "ITK academy",
    "rule": "level",
    "matched": "Senior "
   },
@@ -66,6 +59,13 @@
    "matched": "Senior "
   },
   {
+   "id": "1000168328",
+   "title": "Разработчик С++",
+   "company": "DIS Group",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
    "id": "1000168396",
    "title": "DWH разработчик",
    "company": "Top Selection",
@@ -73,16 +73,16 @@
    "matched": "от 3 лет"
   },
   {
-   "id": "1000168356",
-   "title": "Функциональный тестировщик / QA инженер (стажировка)",
-   "company": "ИТ-компания «Лоция»",
+   "id": "1000167237",
+   "title": "Инженер по обеспечению безопасности разработки",
+   "company": "Базис",
    "rule": "level",
    "matched": "Senior "
   },
   {
-   "id": "1000167237",
-   "title": "Инженер по обеспечению безопасности разработки",
-   "company": "Базис",
+   "id": "1000168356",
+   "title": "Функциональный тестировщик / QA инженер (стажировка)",
+   "company": "ИТ-компания «Лоция»",
    "rule": "level",
    "matched": "Senior "
   },
@@ -108,16 +108,16 @@
    "matched": "от 2-х лет"
   },
   {
-   "id": "1000168002",
-   "title": "Системный инженер Linux",
-   "company": "Simple",
+   "id": "1000167238",
+   "title": "Инженер по обеспечению безопасности разработки (Fuzzing)",
+   "company": "Базис",
    "rule": "level",
    "matched": "Senior "
   },
   {
-   "id": "1000167238",
-   "title": "Инженер по обеспечению безопасности разработки (Fuzzing)",
-   "company": "Базис",
+   "id": "1000168002",
+   "title": "Системный инженер Linux",
+   "company": "Simple",
    "rule": "level",
    "matched": "Senior "
   },
@@ -183,6 +183,13 @@
    "company": "SM Lab",
    "rule": "level",
    "matched": "Senior "
+  },
+  {
+   "id": "1000167858",
+   "title": "DevOps-инженер",
+   "company": "Центр Финансовых Технологий",
+   "rule": "experience-stated",
+   "matched": "ожидаем опыт"
   }
  ],
  "duplicates": [],
