@@ -34,11 +34,23 @@ const QUERIES = [
   'Python разработчик стажер',
   'Python Flask FastAPI',
   'автоматизация тестирования',
+  ' junior Python разработчик',
+  'стажер python',
+  'автоматизатор python',
+  'инженер данных',
+  'разработчик api',
+  'python микросервис',
+  'python telegram бот',
+  'тестировщик python',
+  'junior devops',
+  'разработчик python удаленно',
 ];
 
-const SEARCH_BASE =
-  '/search/vacancy?area=113&experience=noExperience&work_format=REMOTE' +
-  '&order_by=publication_time&text=';
+// Фильтр опыта снят осознанно. С experience=noExperience hh отдаёт 116 вакансий,
+// и после отсева по стеку не остаётся ни одной: там Aston и мусор. Метки junior и
+// стажёр при этом сохранены, а требование «от года» на джуна завышено — 11
+// собеседований как раз пришли с таких вакансий.
+const SEARCH_BASE = '/search/vacancy?area=113&work_format=REMOTE&text=';
 
 const browserScripts = {
   /**
@@ -84,12 +96,26 @@ const browserScripts = {
       '    }\n' +
       '  }\n' +
       '}\n' +
-      'var all = [], keep = [], drop = {};\n' +
+      'var all = [], drop = {};\n' +
       'for (var id in map){\n' +
       '  var v = map[id];\n' +
       '  all.push(v);\n' +
-      '  if (v.why) { drop[v.why] = (drop[v.why]||0)+1; } else { keep.push(v); }\n' +
+      '  if (v.why) { drop[v.why] = (drop[v.why]||0)+1; }\n' +
       '}\n' +
+      // Дедуп по паре «компания + заголовок». В выдаче встречались восемь
+      // одинаковых «Автотестировщик в крауд-тестирование» у Яндекс Крауд и
+      // четыре одинаковых у Ozon Банка. Отклик на каждую копию не даёт
+      // ничего, кроме одного и того же ответа.
+      'var groups = {}, keep = [], dup = 0;\n' +
+      'for (var id2 in map){\n' +
+      '  var v2 = map[id2];\n' +
+      '  if (v2.why) continue;\n' +
+      '  var key = v2.co + "|" + v2.title.toLowerCase().replace(/[^a-zа-яё0-9]+/gi, " ");\n' +
+      '  if (groups[key]) { groups[key].push(id2); dup++; continue; }\n' +
+      '  groups[key] = [id2];\n' +
+      '  keep.push(v2);\n' +
+      '}\n' +
+      'drop.sameTitle = dup;\n' +
       'return JSON.stringify({ seen: all.length, keep: keep, dropped: drop });\n' +
       '} catch(e) { return JSON.stringify({ error: String(e && e.message || e) }); }\n' +
       '})()'
