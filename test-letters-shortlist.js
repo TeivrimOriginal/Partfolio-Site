@@ -27,4 +27,20 @@ for (const r of rows) {
   seen.set(t, r.id);
 }
 console.log('писем: ' + rows.length + ', уникальных: ' + seen.size + ', проблемных: ' + bad);
+
+// Вакансии, которые правило опыта помечено ложно, обязаны остаться в письмах.
+// Без этой проверки следующий прогон, увидев в тексте слово «коммерческий»,
+// отсечёт их и потеряет: у HireWay прямо написано, что подойдут pet-проекты.
+const drop = require('./hh-shortlist-drop.js');
+const protectedIds = (drop.KEEP_NOT_DROPPED || []).map((d) => d.id);
+let protectedBad = 0;
+for (const id of protectedIds) {
+  const dropped = drop.some((d) => d.id === id);
+  const written = rows.some((r) => r.id === id);
+  if (dropped) { console.log('  ' + id + ' помечена как защищённая, но лежит в отсеве'); protectedBad++; }
+  if (!written) { console.log('  ' + id + ' помечена как защищённая, но письма для неё нет'); protectedBad++; }
+}
+console.log('защищённых от ложного отсева: ' + protectedIds.length + ', нарушений: ' + protectedBad);
+bad += protectedBad;
+
 process.exit(bad === 0 ? 0 : 1);

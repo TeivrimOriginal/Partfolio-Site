@@ -9,7 +9,7 @@ const list = require('./hh-shortlist.js');
 const drop = require('./hh-shortlist-drop.js');
 const { composeLetter } = require('./hh-letter.js');
 
-// Данные в трёх файлах по партиям: партия 1, партия 2, партия 3.
+// Данные в четырёх файлах по партиям: 1, 2, 3, 4.
 // Склеиваем, потому что все партии обязаны идти через один и тот же генератор
 // и одну проверку уникальности — иначе уникальность проверяется только внутри
 // партии, а это как раз тот случай, когда два отклика у разных компаний
@@ -18,6 +18,7 @@ const items = [
   ...JSON.parse(fs.readFileSync('hh-shortlist-data.json', 'utf8')).items,
   ...JSON.parse(fs.readFileSync('hh-shortlist-data-b2.json', 'utf8')).items,
   ...JSON.parse(fs.readFileSync('hh-shortlist-data-b3.json', 'utf8')).items,
+  ...JSON.parse(fs.readFileSync('hh-shortlist-data-b4.json', 'utf8')).items,
 ];
 
 // Имя компании берём из hh-shortlist.js, а не из DOM. В DOM к названию
