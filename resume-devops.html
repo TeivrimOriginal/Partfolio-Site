@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Данила Аринов — Junior DevOps-инженер</title>
+<!--
+  Резюме под DevOps-вакансии: три из четырёх вакансий на Хабр Карьере и 14 на hh
+  относятся к этому стеку. Раньше для них подставлялось backend-резюме, а письмо
+  при этом называло «Инженер DevOps» — в отклике получалось приложение с чужим
+  заголовком. Этот файл существует, чтобы имя в письме и заголовок в резюме
+  совпадали.
+
+  Все пункты взяты из файлов, которые можно открыть и проверить:
+    * healthcheck, depends_on по готовности, healthcheck postgres и redis —
+      PROJECTFASTAPI/docker-compose.yml
+    * многостадийный Dockerfile, непривилегированный пользователь, слой
+      зависимостей отдельно — PROJECTFASTAPI/Dockerfile
+    * скрипт сборки релиза, SHA-256, release.json, подпись ключом —
+      YandexGame/rustore/build-apk.ps1
+    * 564 юнит-теста и CI (rustfmt, clippy -D warnings, cargo test) —
+      github.com/TeivrimOriginal/TeivrimSite
+
+  Чего здесь нет намеренно: Kubernetes, Ansible, Terraform, мониторинга и
+  observability. Ни одного из этих инструментов в проектах нет, а DevOps-вакансия
+  их почти всегда называет — добавлять их в резюме без опыта значит врать в первых
+  же строках.
+-->
+<style>
+  :root{--tx:#161a22;--dim:#5a6472;--line:#dfe3ea;--acc:#1f5fd0;--r:8px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font:400 14px/1.55 "Segoe UI",system-ui,-apple-system,Arial,Helvetica,sans-serif;color:var(--tx);background:#eef0f4;padding:28px 14px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sheet{max-width:790px;margin:0 auto;background:#fff;padding:42px 46px;box-shadow:0 6px 34px rgba(20,30,50,.12)}
+  .mono{font-family:"Cascadia Mono",Consolas,"Courier New",monospace}
+  h1{font-size:25px;font-weight:700;letter-spacing:-.02em}
+  .role{color:var(--acc);font-weight:600;font-size:14px;margin:2px 0 10px}
+  .meta{color:var(--dim);font-size:12.5px;margin-bottom:16px}
+  .meta a{color:var(--acc);text-decoration:none}
+  .meta a:hover{text-decoration:underline}
+  .meta .tel{color:var(--tx);font-weight:600;text-decoration:none}
+  .sec{margin-top:18px}
+  .sec h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.11em;color:var(--dim);border-bottom:1.5px solid var(--line);padding-bottom:5px;margin-bottom:9px}
+  .skills{display:flex;flex-wrap:wrap;gap:6px}
+  .sk{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;background:#f7f9fc}
+  .sk b{font-weight:600}
+  .it{margin-bottom:11px}
+  .it-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .it-t{font-weight:600;font-size:13.5px}
+  .it-d{font-size:12px;color:var(--dim);white-space:nowrap}
+  .it a{color:var(--acc);text-decoration:none;font-size:11.5px;word-break:break-all}
+  ul.bul{margin:3px 0 0 16px;font-size:13px;color:#333a45}
+  ul.bul li{margin:2px 0}
+  ul.bul li::marker{color:var(--dim)}
+  .note{font-size:12.5px;color:var(--dim)}
+  .print{display:block;max-width:790px;margin:16px auto 0;text-align:center}
+  .print .dl{display:inline-block;font-size:13px;padding:10px 20px;border:1px solid var(--line);background:#fff;border-radius:var(--r);color:var(--tx);text-decoration:none;transition:border-color .15s,color .15s}
+  .print .dl:hover{border-color:var(--acc);color:var(--acc)}
+  .back{display:block;max-width:790px;margin:12px auto 0;text-align:center;font-size:12.5px;color:var(--dim);text-decoration:none}
+  .back:hover{color:var(--acc)}
+  @page{size:A4;margin:9mm}
+  @media print{
+    body{background:#fff;padding:0;line-height:1.24;font-size:11px}
+    .sheet{box-shadow:none;padding:0;max-width:none}
+    .print,.back{display:none}
+    .sec{margin-top:6px}
+    .sec h2{margin-bottom:3px;padding-bottom:2px}
+    .it{margin-bottom:5px;page-break-inside:avoid}
+    .it-t{font-size:12.2px}
+    ul.bul{margin-top:1px;font-size:10.7px}
+    ul.bul li{margin:0}
+    .note{font-size:10.8px;line-height:1.3}
+    h1{font-size:21px}
+    .role{font-size:12.2px;margin:2px 0 6px}
+    .meta{font-size:10.9px;margin-bottom:8px}
+    .sk{font-size:10.5px;padding:2px 7px}
+  }
+  @media(max-width:640px){.sheet{padding:26px 22px}}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <header>
+    <h1>Данила Аринов</h1>
+    <p class="role">Junior DevOps-инженер &mdash; Linux, Docker, CI/CD, сборка и выкатка релиза</p>
+    <p class="meta">
+      <a class="tel" href="tel:+79014318298">+7 901 431-82-98</a> &middot;
+      <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a> &middot;
+      <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram @Smishnyavko</a> &middot;
+      <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">github.com/TeivrimOriginal</a> &middot;
+      <a href="https://teivrimoriginal.github.io/Partfolio-Site/" target="_blank" rel="noopener">Портфолио</a> &middot;
+      <a href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </header>
+
+  <section class="sec">
+    <h2>О себе</h2>
+    <p class="note">
+      DevOps у меня не отдельная профессия, а часть разработки: контейнеры, CI на каждом
+      пуше и скрипты сборки релиза, чтобы релиз не зависел от того, кто его делает.
+      Python &mdash; основной рабочий язык, на нём пишу скрипты автоматизации; на нём же
+      сервис, который разворачивается через compose.
+      <b>769 автотестов суммарно в трёх проектах, CI зелёный на каждом пуше.
+      Ищу junior DevOps-стажировку, готов к тестовому заданию.</b>
+    </p>
+  </section>
+
+  <section class="sec">
+    <h2>Опыт работы</h2>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Фриланс &mdash; заказы на Kwork</span>
+        <span class="it-d mono">Python &middot; 2022 &mdash; н.в.</span>
+      </div>
+      <ul class="bul">
+        <li>Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">kwork.ru/user/teivrim</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Проекты</h2>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">TaskHub &mdash; сервис на FastAPI в Docker Compose</span>
+        <span class="it-d mono">Docker &middot; PostgreSQL &middot; Redis &middot; Celery</span>
+      </div>
+      <ul class="bul">
+        <li>Compose-файл на шесть сервисов: <span class="mono">postgres</span>, <span class="mono">redis</span>, <span class="mono">mailpit</span>, <span class="mono">api</span>, <span class="mono">worker</span>, <span class="mono">beat</span>; у каждого свой healthcheck, API и воркеры стартуют только после готовности БД и брокера через <span class="mono">depends_on: condition: service_healthy</span>.</li>
+        <li>Данные не теряются между запусками: именованные тома <span class="mono">pgdata</span> и <span class="mono">redisdata</span>, у БД и брокера <span class="mono">restart: unless-stopped</span>.</li>
+        <li>Dockerfile многостадийный: в сборщике остаётся toolchain и кеш wheels, в рантайм попадают только virtualenv и приложение, сервис работает от непривилегированного пользователя; слой зависимостей пересобирается отдельно от кода.</li>
+        <li>Вся конфигурация во внешнем файле: строки подключения, брокер, секрет, флаги логирования; запуск &mdash; <span class="mono">docker run --env-file .env</span>, без правок в коде.</li>
+      </ul>
+    </div>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Сборка релиза Android-игры</span>
+        <span class="it-d mono">PowerShell &middot; AAB / APK &middot; SHA-256</span>
+      </div>
+      <ul class="bul">
+        <li>Скрипт собирает пакеты одной командой, подписывает их ключом и считает SHA-256 каждого артефакта, версии и контрольные суммы пишет рядом с ними.</li>
+        <li>Ключ хранится отдельно от исходников и переживает пересборку: release не должен зависеть от того, на какой машине собрали.</li>
+        <li>Описание релиза и контрольные суммы лежат в репозитории вместе с артефактами &mdash; видно, что именно уходило в выкатку.</li>
+      </ul>
+    </div>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Anime DB &mdash; каталог из 3 публичных API</span>
+        <span class="it-d mono">Actix-Web &middot; SQLite FTS5 &middot; Docker</span>
+      </div>
+      <ul class="bul">
+        <li>Сборка в контейнере, каталог на ~20 тыс. записей пересобирается по расписанию, ручной перезапуск защищён токеном.</li>
+        <li>564 юнит-теста; CI на каждом пуше: <span class="mono">rustfmt</span>, <span class="mono">clippy</span> с <span class="mono">-D warnings</span>, <span class="mono">cargo test</span> &mdash; сборка ломается на ошибках и предупреждениях.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Навыки</h2>
+    <div class="skills">
+      <span class="sk"><b>Контейнеры:</b> Docker, docker-compose, многостадийная сборка, healthcheck, depends_on по готовности, именованные тома, непривилегированный пользователь</span>
+      <span class="sk"><b>CI/CD:</b> GitHub Actions, rustfmt, clippy -D warnings, cargo test, pytest, Allure</span>
+      <span class="sk"><b>Автоматизация:</b> PowerShell, Python, переменные окружения вместо правок в коде, .env.example, SHA-256 и версионирование артефактов</span>
+      <span class="sk"><b>Системы:</b> Linux, Git, PostgreSQL, Redis, Celery</span>
+      <span class="sk"><b>Языки:</b> Python, Rust, JavaScript, SQL, C++</span>
+      <span class="sk"><b>Практики:</b> 769 автотестов суммарно, CI на каждом пуше, ревью кода</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Дополнительно</h2>
+    <p class="note">
+      Английский &mdash; чтение технической документации. Открытый код: <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">11 активных публичных репозиториев</a>, лицензия MIT, у каждого проекта тесты и CI.
+      <br />
+      Не работал с Kubernetes, Ansible, Terraform и мониторингом &mdash; ищу место, где этому учат на задачах.
+    </p>
+  </section>
+
+</div>
+<!--
+  Блока «Скачать PDF» здесь нет намеренно: файл resume-devops.pdf не собирается,
+  а ссылка на несуществующий файл хуже, чем её отсутствие.
+-->
+<a class="back" href="resumes.html">&larr; Все резюме</a>
+<a class="back" href="index.html">&larr; Вернуться на сайт</a>
+
+</body>
+</html>

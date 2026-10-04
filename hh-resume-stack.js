@@ -17,38 +17,64 @@
 // Поле resumeId — это id резюме на hh. Он же попадает в отклик: отклик без
 // выбранного резюме на hh не отправляется.
 
+// Поле publicUrl — публичная ссылка на резюме на GitHub Pages.
+//
+// Зачем проверять: до сих пор в репозитории отслеживались только
+// resume.html и resume-en.html, поэтому Pages отдавал 404 на всё остальное, и
+// ссылка на резюме под конкретный стек была нерабочей. Отклик на Хабре
+// требует ссылку на резюме, так что без этих URL отклик не собрать.
+// Проверка: node verify-resume-links.js
+
+const PUBLIC = 'https://teivrimoriginal.github.io/Partfolio-Site/';
+
 // Доказательства берём из локальных резюме, а не выдумываем: каждый пункт
 // это то, что уже лежит в resumes-data.json в поле «проекты» этого стека.
 const STACKS = {
   python: {
     label: 'Junior Python-разработчик',
     file: 'resume-python.html',
+    publicUrl: PUBLIC + 'resume-python.html',
     hhTitle: 'Junior Python-разработчик',
     resumeId: null,
     hhResumeReady: false,
     intro: 'Меня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.',
     proof: [
-      'два года Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков',
+      'Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков',
       'переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация',
       '769 автотестов в трёх проектах, CI на каждом пуше',
+    ],
+    evidence: [
+      { file: 'resume-python.html', quote: 'Kwork' },
+      { file: 'evidence/teivrimsite-readme.txt', quote: 'AniList, Kitsu и Shikimori' },
+      { file: 'resume-python.html', quote: '769' },
     ],
   },
   backend: {
     label: 'Junior Backend-разработчик',
     file: 'resume-backend.html',
+    publicUrl: PUBLIC + 'resume-backend.html',
     hhTitle: 'Junior Backend-разработчик',
     resumeId: 'bf37e31cff112962a90039ed1f6d625a44436d',
     hhResumeReady: true,
     intro: 'Меня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.',
     proof: [
       'переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста',
-      'три загрузчика внешних API с разными схемами ошибок: GraphQL, JSON:API и v1 JSON',
-      'Docker + docker-compose с healthcheck, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test',
+      'три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту',
+      'Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test',
+    ],
+    evidence: [
+      { file: 'evidence/teivrimsite-readme.txt', quote: 'SQLite FTS5' },
+      // Раньше здесь стояли «GraphQL, JSON:API и v1 JSON». В репозитории есть
+      // AniList, Kitsu и Shikimori, но слов GraphQL и JSON:API там нет — названия
+      // протоколов появились сами. Проверено: node verify-backend-repo.js
+      { file: 'evidence/teivrimsite-readme.txt', quote: 'поднимает лимит AniList с 30 до 90' },
+      { file: 'PROJECTFASTAPI/docker-compose.yml', quote: 'healthcheck' },
     ],
   },
   qa: {
     label: 'Junior QA-инженер',
     file: 'resume-qa.html',
+    publicUrl: PUBLIC + 'resume-qa.html',
     hhTitle: 'Junior QA-инженер',
     resumeId: null,
     hhResumeReady: false,
@@ -58,23 +84,37 @@ const STACKS = {
       '769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты',
       'тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде',
     ],
+    evidence: [
+      { file: 'resume-qa.html', quote: 'Selenium' },
+      { file: 'resume-qa.html', quote: '769' },
+      { file: 'resume-qa.html', quote: 'тест-кейс' },
+    ],
   },
   cpp: {
     label: 'Junior C++-разработчик',
     file: 'resume-cpp.html',
+    publicUrl: PUBLIC + 'resume-cpp.html',
     hhTitle: 'Разработчик C++',
     resumeId: '5a7a0ca7ff10971d1b0039ed1f324c65625969',
     hhResumeReady: true,
     intro: 'Меня зовут Данила Аринов — Junior C++-разработчик: движки, графика, прикладные приложения.',
     proof: [
-      'игровой движок на C++17 с нуля: два бэкенда Vulkan/OpenGL на выбор в рантайме, scene graph, импорт FBX/OBJ через Assimp, 88 коммитов',
-      'редактор на Rust и GLFW/OpenGL со своим immediate-mode UI, 158 юнит-тестов',
+      'игровой движок на C++17 с нуля: два графических бэкенда Vulkan и OpenGL на выбор в рантайме, scene graph, импорт FBX/OBJ через Assimp, 88 коммитов',
+      'редактор на Rust и GLFW со своим immediate-mode UI, 158 юнит-тестов',
       'Win32 и GDI+ приложение, собирается MinGW/MSVC одной командой',
+    ],
+    evidence: [
+      // Названия бэкендов в письмах появились раньше, чем в резюме, поэтому
+      // подтверждены по публичному репозиторию: node verify-github-facts.js
+      { file: 'evidence/teivrim-engine-readme.txt', quote: 'Vulkan' },
+      { file: 'resume-cpp.html', quote: '158' },
+      { file: 'resume-cpp.html', quote: 'GDI+' },
     ],
   },
   gamedev: {
     label: 'Разработчик игр',
     file: 'resume-gamedev.html',
+    publicUrl: PUBLIC + 'resume-gamedev.html',
     hhTitle: 'Разработчик игр',
     resumeId: '5a7a0ca7ff10971d1b0039ed1f324c65625969',
     hhResumeReady: true,
@@ -84,10 +124,16 @@ const STACKS = {
       'редактор изображений на Rust со своим immediate-mode UI: 15+ инструментов, 140+ автотестов',
       'живой опыт в команде на Unity: геймдизайн и прототипирование за выходные',
     ],
+    evidence: [
+      { file: 'evidence/teivrim-engine-readme.txt', quote: 'scene graph' },
+      { file: 'resume-gamedev.html', quote: 'immediate-mode' },
+      { file: 'resume-gamedev.html', quote: 'Unity' },
+    ],
   },
   frontend: {
     label: 'Junior Frontend-разработчик',
     file: 'resume-frontend.html',
+    publicUrl: PUBLIC + 'resume-frontend.html',
     hhTitle: 'Junior Frontend-разработчик',
     resumeId: null,
     hhResumeReady: false,
@@ -97,22 +143,46 @@ const STACKS = {
       'портфолио-сайт на JavaScript и HTML5 без сборщика, собственный drag-and-drop на immediate-mode UI',
       '47 UI-автотестов Selenium и Pytest — интерфейс проверяется автоматически',
     ],
+    evidence: [
+      { file: 'resume-frontend.html', quote: 'socket.io' },
+      { file: 'resume-frontend.html', quote: 'drag-and-drop' },
+      { file: 'resume-frontend.html', quote: '47' },
+    ],
   },
   devops: {
     // Отдельный стек, потому что три из четырёх вакансий на Хабре — DevOps.
     // Без него они уезжали в qa по слову «тестирование» в описании и получали
-    // чужое резюме. Резюме на площадке пока нет: в локальных версиях для DevOps
-    // отдельного файла тоже нет, стек закрывают факты из backend и общего.
+    // чужое резюме.
+    //
+    // Отдельный файл появился, потому что три из четырёх вакансий на Хабре и 14 на
+    // hh — DevOps, а подставлять backend-резюме было нельзя: письмо называет
+    // «Инженер DevOps», а в ссылке стоял заголовок «Junior Backend-разработчик».
+    // Каждый пункт файла ссылается на проверяемый источник, перечень — в шапке
+    // resume-devops.html.
     label: 'Инженер DevOps',
-    file: 'resume-backend.html',
+    file: 'resume-devops.html',
+    publicUrl: PUBLIC + 'resume-devops.html',
     hhTitle: 'Инженер DevOps',
     resumeId: null,
     hhResumeReady: false,
-    intro: 'Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, автоматизация сборки и выкатки.',
+    intro: 'Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.',
+    // Каждый пункт обязан быть подтверждён файлом: см. evidence ниже и
+    // test-proof-sources.js. Раньше здесь стояло «разбор приватного ключа в
+    // ASN.1 вручную и тест test-rustore-signing.ps1, который ловил ошибки до
+    // отправки» — такого скрипта на диске нет, а фраза успела разойтись по
+    // письмам. Проверяется простым поиском по D:\SOOBSHESTVA.
     proof: [
-      'Docker и docker-compose с healthcheck и .env.example: конфигурация вынесена из кода, сервисы поднимаются одной командой',
+      'Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах',
+      'скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат',
       'CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях',
-      'скрипт публикации в RuStore на PowerShell: разбор приватного ключа, подпись, черновик, загрузка AAB и commit; тест на этот разбор ловил ошибки в ASN.1 до отправки',
+    ],
+    // evidence[i] подтверждает proof[i]: файл обязан существовать, а quote —
+    // в нём присутствовать. Если утверждение нельзя подтвердить файлом, оно не
+    // попадает в письма.
+    evidence: [
+      { file: 'PROJECTFASTAPI/docker-compose.yml', quote: 'pg_isready' },
+      { file: 'D:/SOOBSHESTVA/AUTOMATIC/YandexGame/rustore/build-apk.ps1', quote: 'Get-FileHash' },
+      { file: 'resume-devops.html', quote: 'clippy' },
     ],
   },
 };
