@@ -10,7 +10,7 @@
 const fs = require('fs');
 const rows = JSON.parse(fs.readFileSync('LETTERS-SHORTLIST.json', 'utf8'));
 const { STACKS, stackFor, profileFor, DEFAULT_STACK } = require('./hh-resume-stack.js');
-const { sameFact } = require('./hh-letter.js');
+const { sameFact, composeLetter } = require('./hh-letter.js');
 
 let bad = 0;
 const byStack = {};
@@ -85,6 +85,12 @@ const ROUTING = [
   ['Разработчик игр — C++ и Rust', 'gamedev'],
   ['Младший разработчик / Junior Developer', 'python'],
   ['Инженер по внедрению', 'python'],
+  // Найдено на Хабре: DevOps-вакансии уезжали в qa по слову «тестирование»
+  // в описании и получали чужое резюме.
+  ['DevOps Engineer (KORM)', 'devops'],
+  ['Инженер DevOps', 'devops'],
+  ['DevOps / Infrastructure Engineer (Europe/CIS)', 'devops'],
+  ['Junior DevOps', 'devops'],
 ];
 for (const [title, want] of ROUTING) {
   const got = stackFor(title, '').stack;
@@ -103,6 +109,40 @@ for (const s of Object.keys(byStack)) {
     bad++;
   } else if (!p.hhTitle) {
     console.log('  стек ' + s + ': нет заголовка резюме');
+    bad++;
+  }
+}
+
+// Упоминание чужого стека в описании не должно превращать письмо в отказ:
+// вакансия AQA-тестировщика на Python упоминает JavaScript, и старая проверка
+// без границ слов писала «по стеку опыта у меня нет». Это худшее, что можно
+// написать в отклик на вакансию, где его стек как раз нужен.
+const NOT_FOREIGN = [
+  ['AQA Тестировщик (Python)', 'ITK academy', 'Мы ищем тех, кто хочет расти в автоматизированном тестировании. Знания Python, ООП, async/await. Технологии: Docker, JavaScript в отчётах Allure. Опыт от 1 года.'],
+  ['Junior Python-разработчик', 'ООО Ромашка', 'Python, FastAPI, PostgreSQL. В команде есть frontend на JavaScript, но задачи — на backend.'],
+  ['DevOps Engineer', 'Касперский', 'Kubernetes, Ansible, Linux. Скрипты на Python и Bash.'],
+  ['QA-инженер', 'Тест', 'Java, Selenium, JUnit, SQL, REST API, нагрузочное тестирование'],
+  ['Python разработчик', 'Ромашка', 'Мы не используем Java в этом проекте.'],
+];
+for (const [title, company, desc] of NOT_FOREIGN) {
+  const text = composeLetter(title, desc, company, profileFor(stackFor(title, desc).stack));
+  if (/опыта у меня пока нет/.test(text)) {
+    console.log('  ЛОЖНОЕ «нет опыта» на «' + title + '»: стек не чужой, а письмо говорит обратное');
+    bad++;
+  }
+}
+// Обратная проверка: настоящий чужой стек должен давать честное признание.
+const FOREIGN = [
+  ['Java разработчик', 'Ромашка', 'Spring, PostgreSQL, Kafka'],
+  ['1С-разработчик', 'Ромашка', 'Конфигурация 1С:Предприятие, BSL, регистры'],
+  ['PHP разработчик', 'Ромашка', 'Laravel, MySQL, REST'],
+  ['Golang разработчик', 'Ромашка', 'Go, gRPC, Kubernetes'],
+  ['Unity разработчик', 'Ромашка', 'C#, Unity, игровая логика'],
+];
+for (const [title, company, desc] of FOREIGN) {
+  const text = composeLetter(title, desc, company, profileFor(stackFor(title, desc).stack));
+  if (!/опыта у меня пока нет/.test(text)) {
+    console.log('  ПРОПУЩЕН чужой стек «' + title + '»: письмо не признало отсутствие опыта');
     bad++;
   }
 }

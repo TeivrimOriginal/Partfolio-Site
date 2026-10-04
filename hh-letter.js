@@ -158,8 +158,16 @@ const GROUPS = [
   {
     // Стек, которого у меня нет. Отдельная ветка в письме: честное признание
     // вместо выдуманного опыта.
+    //
+    // Границы обязательны. Без них «java» совпадает внутри «JavaScript», и
+    // вакансия AQA-тестировщика на Python получала письмо «по стеку опыта у
+    // меня нет» — ровно то, чего писать нельзя, потому что Python у него есть,
+    // а JavaScript в описании упомянут как соседняя технология.
+    //
+    // И решение принимается только по заголовку. Упоминание Java в списке
+    // технологий не делает вакансию Java-вакансией.
     id: 'foreign',
-    strong: /java|spring|1с|1c|erp|php|golang|unity/i,
+    strong: /(?<![а-яёa-z])(java|spring|php|golang|unity|elixir)(?![а-яёa-z])|(?<![а-яё])(1с|1c|erp)(?![а-яёa-z])/i,
     foreign: true,
   },
 ];
@@ -226,7 +234,9 @@ function composeLetter(title, desc, company, profile) {
   let foreign = false;
   for (const g of GROUPS) {
     if (g.foreign) {
-      if (countHits(g.strong, t) || countHits(g.strong, d)) foreign = true;
+      // Только заголовок: «Java» в списке технологий описания не делает
+      // вакансию Java-вакансией.
+      if (countHits(g.strong, t)) foreign = true;
       continue;
     }
     const s = countHits(g.strong, t) * 4 + countHits(g.strong, d) + countHits(g.weak, t) * 3;

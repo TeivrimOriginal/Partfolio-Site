@@ -98,6 +98,23 @@ const STACKS = {
       '47 UI-автотестов Selenium и Pytest — интерфейс проверяется автоматически',
     ],
   },
+  devops: {
+    // Отдельный стек, потому что три из четырёх вакансий на Хабре — DevOps.
+    // Без него они уезжали в qa по слову «тестирование» в описании и получали
+    // чужое резюме. Резюме на площадке пока нет: в локальных версиях для DevOps
+    // отдельного файла тоже нет, стек закрывают факты из backend и общего.
+    label: 'Инженер DevOps',
+    file: 'resume-backend.html',
+    hhTitle: 'Инженер DevOps',
+    resumeId: null,
+    hhResumeReady: false,
+    intro: 'Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, автоматизация сборки и выкатки.',
+    proof: [
+      'Docker и docker-compose с healthcheck и .env.example: конфигурация вынесена из кода, сервисы поднимаются одной командой',
+      'CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях',
+      'скрипт публикации в RuStore на PowerShell: разбор приватного ключа, подпись, черновик, загрузка AAB и commit; тест на этот разбор ловил ошибки в ASN.1 до отправки',
+    ],
+  },
 };
 
 // Порядок важен: более узкие стеки проверяются раньше широких. «QA-инженер»
@@ -122,6 +139,9 @@ const RULES = [
   { stack: 'frontend', strong: WORD.frontend },
   { stack: 'gamedev', strong: WORD.gamedev },
   { stack: 'cpp', strong: WORD.cpp },
+  // DevOps проверяется до python: в описании почти всегда есть «тестирование»
+  // и «мониторинг», и без этого правила вакансия DevOps уходила в qa.
+  { stack: 'devops', strong: /(?<![а-яёa-z])(devops|docker|kubernetes|ansible|terraform)(?![а-яёa-z])|ci[ /]?cd|инфраструктур|системный инженер|мониторинг/i },
   { stack: 'python', strong: WORD.python },
   { stack: 'backend', strong: WORD.backend },
 ];

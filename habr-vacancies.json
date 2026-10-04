@@ -1,0 +1,296 @@
+{
+ "generated": "2026-10-04",
+ "thresholdMonths": 12,
+ "queries": 24,
+ "cards": 575,
+ "byReason": {
+  "не удалённая": 220,
+  "уровень: Senior": 153,
+  "blockTitle": 91,
+  "blockCompany": 11,
+  "уровень: Lead": 38,
+  "noMatch": 28,
+  "alreadyEngaged": 5
+ },
+ "levelDistribution": {
+  "Middle": 958,
+  "не указан": 716,
+  "Senior": 910,
+  "Junior": 256,
+  "Lead": 139,
+  "Intern": 235
+ },
+ "vacancies": [
+  {
+   "id": "1000168633",
+   "title": "AQA Тестировщик (Python)",
+   "company": "ITK academy",
+   "level": "Junior",
+   "remote": true,
+   "employment": "full_time",
+   "published": {
+    "date": "2026-10-03T10:50:55+03:00",
+    "title": "3 октября"
+   },
+   "skills": [
+    "Python",
+    "ООП",
+    "Базы данных",
+    "REST",
+    "SQL",
+    "HTTP"
+   ],
+   "href": "/vacancies/1000168633",
+   "responses": 0,
+   "desc": "Привет! Мы — ИТК компания на юге России, в которой главная цель — помогать IT-специалистам развиваться через реальные проекты. Если есть желание расти в сфере автоматизированного тестирования и разработке автотестов на Python - мы ищем именно вас! Поддержим развитие и предоставить все необходимые ресурсы . Ознакомьтесь с требованиями и нашим предложением. Если вы готовы учиться, развивать навыки, цените работу в команде и готовы решать реальные задачи — откликайтесь, и с вами свяжется HR‑менеджер. Обязательные требования: - Знания Python - Core Python - ООП - Функциональные конструкции - желательно async/await - базовое понимание: REST / HTTP, HTML, SQL - Ответственность и организованность Предлагаем: - Полный рабочий - Удалённый формат работы - Профессиональный роста в команде наставников (разбор кода, советы по архитектуре тестов, предоставляем все нужные инструменты) - Доступ к собственным обучающим платформам - Поддержка на каждом шаге - Интересные проекты с реальными задачами; - ЗП от 75000 т.р. на руки Смотреть ещё вакансии QA тестировщик 58 Junior QA engineer 15 ITK academy ИТ-аккредитация Минцифры Цифровая образовательная платформа itk.academy 4.92 Python Developer ITK academy &bull; Москва Москва От 75 000 ₽ Системный аналитик ITK academy &bull; Нижний Новгород Нижний Новгород От 100 000 до 130 000 ₽ Java Developer ITK academy От 75 000 ₽ Все вакансии (7) Похожие вакансии Backend-разработчик php (yii2) ТТК Диджитал &bull; Казань ТТК Диджитал Казань CRM-менеджер РОСГОССТРАХ &bull; Москва РОСГОССТРАХ Москва Системный аналитик DWH (Oracle) МТС Банк &bull; Москва МТС Банк Москва Аналитик ML-моделей / Специалист по контролю качества (валидации) ML-данных ЛАНИТ &bull; Москва ЛАНИТ Москва AI/ML Engineer СберСпасибо &bull; Москва СберСпасибо Москва Старший менеджер по аналитике (управление оттоком В2С) МегаФон &bull; Москва МегаФон Москва Смотреть ещё вакансии QA тестировщик 58 Junior QA engineer 15 Хабр Карьера О сервисе Услуги и цены Журнал Каталог вакансий Каталог курсов Карта сайта Контакты Образование Отзывы об онлайн-школах Рейтинг школ Промокоды и скидки Помощь Для соискателя Для работодателя API сервиса Служба поддержки Документы Соглашение с пользователем Правила оказания услуг Прайс-лист Следите за нами в соцсетях Сейчас на сайте 1096 вакансий и 813796 резюме, в среднем 27 откликов на вакансию &copy; Habr О сервисе Услуги и цены Помощь Для соискателя Для работодателя API сервиса Служба поддержки Все сервисы Хабра Хабр Q&A Карьера Курсы",
+   "descLen": 2490
+  },
+  {
+   "id": "1000167096",
+   "title": "DevOps Engineer (KORM)",
+   "company": "Лаборатория Касперского",
+   "level": "не указан",
+   "remote": true,
+   "employment": "",
+   "published": {
+    "date": "2026-09-30T10:21:55+03:00",
+    "title": "30 сентября"
+   },
+   "skills": [
+    "DevOps"
+   ],
+   "href": "/vacancies/1000167096",
+   "responses": 0,
+   "desc": "Вы нам нужны для: Развития высокодоступной кластерной инфраструктуры на базе Kubernetes; Доработки и развития процессов сборки и доставки ПО (CI/CD), разработки и поддержки используемых инструментов; Проработки и внедрения IaC; Архитектурного перехода с Windows в Linux и контейнеры (гибридная модель); Развития системы мониторинга и логирования, трассировки, сбора метрик, запуска нагрузочных/интеграционных тестов. Что мы ожидаем от вас: Опыт системного администрирования Linux; Глубокие знания средств контейнеризации и оркестрации (Kubernetes); Опыт написания и шаблонизирования Helm чартов; Опыт использования и настройки CI/CD утилит/платформ; Опыт использования IaC подхода; Желание и умение автоматизировать рутинные задачи; Английский язык на уровне чтения технической документации, переписки; Желание сделать жизнь коллеги чуть лучше посредством внедрения новых утилит и инструментов. Будет плюсом: Глубокие знания «внутренностей» Kubernetes; Глубокие знания протокола Kerberos; Опыт работы с Yandex Cloud; Опыт работы с Prometheus stack, Victoria Metrics; Опыт использования в качестве CI/CD платформы Azure DevOps (on-premise); Опыт написания кода на GOlang/Python; Знание скриптовых языков Bash/Power Shell. Смотреть ещё вакансии Специалист по внедрению ПО 211 Лаборатория Касперского ИТ-аккредитация Минцифры Блог на Хабре ТОП-3 международная компания в области IT-безопасности, один из лучших работодателей России kaspersky.ru 4.2 Project Manager (B2B) Лаборатория Касперского Testing Engineer (Services Integration) Лаборатория Касперского &bull; Москва Москва Testing Engineer (NGFW) Лаборатория Касперского Все вакансии (6) Похожие вакансии Разработчик .Net с опытом работы Solar, Lekton/ Проектная работа / АУТСТАФФ Extyl Extyl ML/DevOps Engineer МТС Банк &bull; Москва МТС Банк Москва DevOps-инженер (стажер) МТС Банк &bull; Москва МТС Банк Москва Технический директор трайба МТС Банк &bull; Москва МТС Банк Москва DevOps инженер со знанием платформы ЦФТ/ Проектная работа / АУТСТАФФ Extyl Extyl Инженер платформы (DevOps-инженер) ДОМ.РФ ДОМ.РФ Смотреть ещё вакансии Специалист по внедрению ПО 211 Хабр Карьера О сервисе Услуги и цены Журнал Каталог вакансий Каталог курсов Карта сайта Контакты Образование Отзывы об онлайн-школах Рейтинг школ Промокоды и скидки Помощь Для соискателя Для работодателя API сервиса Служба поддержки Документы Соглашение с пользователем Правила оказания услуг Прайс-лист Следите за нами в соцсетях Сейчас на сайте 1096 вакансий и 813796 резюме, в среднем 27 откликов на вакансию &copy; Habr О сервисе Услуги и цены Помощь Для соискателя Для работодателя API сервиса Служба поддержки Все сервисы Хабра Хабр Q&A Карьера Курсы",
+   "descLen": 2674
+  },
+  {
+   "id": "1000168634",
+   "title": "DevOps / Infrastructure Engineer (Europe/CIS)",
+   "company": "Flex Databases",
+   "level": "Middle",
+   "remote": true,
+   "employment": "full_time",
+   "published": {
+    "date": "2026-10-01T15:08:50+03:00",
+    "title": "1 октября"
+   },
+   "skills": [
+    "Администрирование Windows",
+    "Диагностика и мониторинг",
+    "DNS",
+    "Firewall",
+    "Ansible",
+    "Jenkins",
+    "CI/CD",
+    "Powershell",
+    "AWS",
+    "Git"
+   ],
+   "href": "/vacancies/1000168634",
+   "responses": 0,
+   "desc": "We cannot hire in Russia and Belarus Flex Databases team is looking for a DevOps/Infrastructure Engineer who can approach infrastructure with intelligence and pragmatism. We have operational systems, mission-critical services, and a ton of interesting challenges. What we’re looking for: 3+ years of hands-on experience in infrastructure administration, DevOps, or a similar technical role. Strong practical experience with Windows and/or Linux server administration. Experience with production infrastructure operations, including monitoring, troubleshooting, patching, backup, and recovery. Good understanding of networking fundamentals, DNS, SSL/TLS, firewalls, and related infrastructure technologies. Experience with infrastructure automation and configuration management; Ansible experience is preferred. Practical experience with CI/CD tools and processes; Jenkins experience is preferred. Good knowledge of Git and TFS; experience with GitLab and TFS is preferred. Experience with at least one public cloud platform; AWS experience is preferred. Experience supporting and administering production database systems (installation, configuration, backup, recovery, monitoring, and troubleshooting). Experience with Firebird is a strong advantage; experience with other relational databases (e.g. Microsoft SQL Server, PostgreSQL, MySQL, Oracle) is also acceptable. Scripting skills in Python, Bash, and/or PowerShell. Ability to troubleshoot infrastructure, deployment, and application-related issues. Ability to work with existing and legacy systems and improve them incrementally without introducing unnecessary operational risk. Good written and spoken English. Professional Skills: Strong troubleshooting and problem-solving skills. Practical, hands-on approach to infrastructure operations. Comfortable combining day-to-day infrastructure work with DevOps engineering tasks. Willingness to support existing systems rather than focusing exclusively on new technologies. Ability to understand an existing system before proposing significant changes. Ability to identify repetitive manual work and automate it where appropriate. Pragmatic approach to technology selection and infrastructure improvements. Ability to introduce improvements gradually, with appropriate assessment of operational risks. Ability to collaborate with system administrators, developers, QA engineers, and software architects. Why join us: Fully remote & international team Opportunity to work in a fast-growing company with impact on global clinical research Supportive culture that values responsibility, flexibility, and quality Annual leave (depends on contract type) Bank holidays (depends on contract type) Sick days fully paid by the company (depends on contract type) How we work: We care more about the things you do rather than your set working hours. We have flexible start hours from 8:00 to 11:00. It is important to participate in meetings with clients and (fixed) team meetings. We value respect, transparency, proactivity, openness and positive approach. We do care about our team’s mental health and happiness. This is why we follow an open-door policy and accept constructive feedback from both sides. We believe in teamwork with our clients and employees and build long-lasting trusted relationships. To apply for this position, please contact: hr_team@flexdatabases.com Смотреть ещё вакансии Администратор баз данных 44 Flex Databases You find the ways to save lives. We make it easier for you flexdatabases.com Все вакансии (1) Похожие вакансии DevOps-инженер (Ведущий) Nevatech &bull; Санкт-Петербург Nevatech Санкт-Петербург DevOps engineer МТС Банк &bull; Москва МТС Банк Москва Главный дата-инженер Альфа-Банк &bull; Москва Альфа-Банк Москва Разработчик БД (PostgreSQL, Middle) ИТЛ Консалтинг ИТЛ Консалтинг Платформенный SRE Cloud.ru &bull; Москва Cloud.ru Москва Стажер системный администратор (офис, Москва) ЛАНИТ &bull; Москва ЛАНИТ Москва Смотреть ещё вакансии Администратор баз данных 44",
+   "descLen": 4557
+  },
+  {
+   "id": "1000168753",
+   "title": "Инженер DevOps",
+   "company": "Intellectual management systems",
+   "level": "Middle",
+   "remote": true,
+   "employment": "full_time",
+   "published": {
+    "date": "2026-09-22T16:15:22+03:00",
+    "title": "22 сентября"
+   },
+   "skills": [
+    "Mikrotik",
+    "NGFW",
+    "Linux"
+   ],
+   "href": "/vacancies/1000168753",
+   "responses": 0,
+   "desc": "О компании и ожидания от кандидата Ищем DevOps-инженера для развития и эксплуатации инфраструктуры проектов в области информационной безопасности. Нам важен специалист, который понимает, как связаны приложения, контейнеры, сети, хранилища и физическое оборудование, и умеет разбираться в причинах проблем на разных уровнях. Мы ведём стабильные, долгосрочные проекты с высокими требованиями к безопасности и доступности. Основная инфраструктура работает на собственном оборудовании в ЦОДах; для части задач используем ресурсы хостинг- и облачных провайдеров. Вам предстоит: • Развивать и сопровождать инфраструктуру на bare metal, виртуальных машинах и Kubernetes. • Автоматизировать сборку, доставку и развёртывание приложений с помощью GitLab CI/CD и Argo CD. • Обеспечивать отказоустойчивость сервисов в инфраструктуре с тремя точками присутствия, участвовать в проектировании и проверке сценариев переключения и восстановления. • Сопровождать системы хранения, базы данных и инфраструктурные сервисы: управлять конфигурациями, обновлениями, резервным копированием и восстановлением. • Развивать мониторинг и оповещения, находить узкие места, разбирать инциденты и устранять причины повторяющихся сбоев. • Обеспечивать безопасное взаимодействие сервисов, управление секретами, сертификатами и доступом. • Документировать архитектуру, эксплуатационные процедуры и принятые технические решения. Основной стек, опыт работы с которым для нас особенно важен: Контейнерная инфраструктура и сети: Kubernetes, K3s, Cilium. CI/CD и хранение артефактов: GitLab CI/CD, Argo CD, Harbor, Nexus. Хранилища: S3-совместимые системы — MinIO, SeaweedFS; Ceph. Базы данных и кеширование: PostgreSQL, ClickHouse, Redis / Valkey. Секреты и управление доступом: Vault, Keycloak. Коммуникационные сервисы: WebRTC, TURN / coturn. Мониторинг: VictoriaMetrics, Grafana, Zabbix. Для этой роли важно: Уверенная работа с Linux и понимание принципов эксплуатации серверной инфраструктуры. Понимание работы bare metal, гипервизоров и виртуализации; знакомство с Proxmox VE и VMware. Практический опыт будет преимуществом. Уверенное понимание модели OSI на уровнях L1–L7 и способность применять эти знания при диагностике. Понимание маршрутизации, NAT и DNS, умение разбирать проблемы сетевой связности и доступности сервисов. Понимание принципов построения отказоустойчивой инфраструктуры на трёх площадках: репликации, кворума, поведения систем при потере площадки или связи между ними. Особенно ценим практический опыт таких решений. Понимание практик применения СКЗИ, работы с сертификатами и взаимной TLS-аутентификации — mTLS. Самостоятельность в диагностике, аккуратность при изменениях и умение оценивать их влияние на доступность и безопасность. Будет преимуществом: Опыт работы с сетевым оборудованием MikroTik и Huawei. Понимание принципов работы NGFW, в том числе решений Positive Technologies. Опыт работы с NetBird. Понимание архитектуры и принципов работы UEM- и MDM-систем. Опыт развёртывания и эксплуатации инфраструктуры для локальных LLM: vLLM, LiteLLM, llama.cpp, модели и инструменты Hugging Face. Знакомство с GPU-инфраструктурой и ускорением вычислений: NVIDIA / CUDA, DGX Spark, macOS / Metal. Условия работы Гибкий удалённый формат работы Занятость: full-time Трудоустройство: ИП, также обязательно подписание NDA (высокие требования к конфиденциальности) Работа в сильной команде, минимум бюрократии и живое общение. Дополнительные инструкции Мы предлагаем стабильные, длительные проекты в области ИБ и инженерные задачи на стыке инфраструктуры, сетей и безопасности. Здесь можно работать с полным контуром — от физического оборудования в ЦОДе до доставки приложений и обеспечения их надёжной работы. В отклике будет полезно кратко рассказать о вашей инфраструктуре: с каким масштабом работали, за какие компоненты отвечали и какие задачи по отказоустойчивости или безопасности решали. Смотреть ещё вакансии Администратор баз данных 44 Администратор баз данных в Санкт-Петербурге 2 Администратор баз данн",
+   "descLen": 5535
+  }
+ ],
+ "rejectedByDescription": [
+  {
+   "id": "1000168585",
+   "title": "Инженер по тестированию (Python / API) / QA Engineer",
+   "company": "IBS",
+   "rule": "commercial",
+   "matched": "коммерческого опыт"
+  },
+  {
+   "id": "1000165251",
+   "title": "Python-разработчик",
+   "company": "ИТ-компания «Лоция»",
+   "rule": "commercial",
+   "matched": "коммерческой разработк"
+  },
+  {
+   "id": "1000163346",
+   "title": "Python Developer",
+   "company": "ITK academy",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168741",
+   "title": "Python Developer / AI Engineer (Document Processing)",
+   "company": "AYROSA",
+   "rule": "level",
+   "matched": "уровня Middle"
+  },
+  {
+   "id": "1000168584",
+   "title": "Инженер-тестировщик (ручное тестирование / API)",
+   "company": "IBS",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000160393",
+   "title": "Blockchain  разработчик (Backend)",
+   "company": "Bitbanker.ru",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168328",
+   "title": "Разработчик С++",
+   "company": "DIS Group",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168396",
+   "title": "DWH разработчик",
+   "company": "Top Selection",
+   "rule": "floor",
+   "matched": "от 3 лет"
+  },
+  {
+   "id": "1000167887",
+   "title": "Разработчик Oracle",
+   "company": "Top Selection",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168356",
+   "title": "Функциональный тестировщик / QA инженер (стажировка)",
+   "company": "ИТ-компания «Лоция»",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168863",
+   "title": "QA Engineer (Тестировщик)",
+   "company": "ИТЛ Консалтинг",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000163170",
+   "title": "Функциональный тестировщик / QA инженер",
+   "company": "ИТ-компания «Лоция»",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168856",
+   "title": "QA-специалист (Navision/MS Dynamics NAV)",
+   "company": "RostJob",
+   "rule": "floor",
+   "matched": "от 2-х лет"
+  },
+  {
+   "id": "1000168002",
+   "title": "Системный инженер Linux",
+   "company": "Simple",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000165810",
+   "title": "DevOps-инженер",
+   "company": "ИТ-компания «Лоция»",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168784",
+   "title": "DevOps-инженер",
+   "company": "BorneoLandAI",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168695",
+   "title": "DevOps-инженер",
+   "company": "TRIBE",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000164826",
+   "title": "DevSecOps инженер (SOC)",
+   "company": "ИТ-компания «Лоция»",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168679",
+   "title": "Инженер платформы (DevOps-инженер)",
+   "company": "ДОМ.РФ",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000167238",
+   "title": "Инженер по обеспечению безопасности разработки (Fuzzing)",
+   "company": "Базис",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000168168",
+   "title": "DevOps",
+   "company": "Top Selection",
+   "rule": "floor",
+   "matched": "от 3 лет"
+  },
+  {
+   "id": "1000168825",
+   "title": "DevOps",
+   "company": "IT_One",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000167237",
+   "title": "Инженер по обеспечению безопасности разработки",
+   "company": "Базис",
+   "rule": "level",
+   "matched": "Senior "
+  },
+  {
+   "id": "1000163215",
+   "title": "DevSecOps инженер (DevOps)",
+   "company": "ИТ-компания «Лоция»",
+   "rule": "floor",
+   "matched": "60 мес"
+  },
+  {
+   "id": "1000168746",
+   "title": "Аналитик данных BI",
+   "company": "SM Lab",
+   "rule": "level",
+   "matched": "Senior "
+  }
+ ],
+ "duplicates": [],
+ "unreadable": []
+}
