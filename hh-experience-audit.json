@@ -15,6 +15,10 @@
    "matched": "",
    "months": 0,
    "context": "",
+   "closed": false,
+   "hasApply": true,
+   "alreadyApplied": false,
+   "label": "Откликнуться <button class=\"magritte-button___Pubhr",
    "alreadyDropped": true,
    "protected": false
   },
@@ -27,8 +31,14 @@
    "matched": "",
    "months": 0,
    "context": "",
+   "closed": false,
+   "hasApply": true,
+   "alreadyApplied": false,
+   "label": "Откликнуться <button class=\"magritte-button___Pubhr",
    "alreadyDropped": true,
    "protected": false
   }
- ]
+ ],
+ "notOpen": [],
+ "alreadyAppliedDetected": []
 }
