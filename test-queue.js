@@ -31,7 +31,14 @@ function check(name, ok, extra) {
 }
 
 const st = q.stats();
-check('шорт-лист прочитан', st.total === 20, 'всего ' + st.total);
+// Длина очереди сверяется с файлом писем, а не с константой: шорт-лист
+// вырос с 20 до 46 вакансий, и тест, зашитый в «ровно 20», соврал бы
+// в обе стороны — не заметил бы ни прирост, ни потерю писем.
+const letters = JSON.parse(require('fs').readFileSync('LETTERS-SHORTLIST.json', 'utf8'));
+const dropIds = require('./hh-shortlist-drop.js').map((d) => d.id);
+check('очередь равна количеству построенных писем', st.total === letters.length, st.total + ' против ' + letters.length);
+check('в очереди нет вакансий, отклонённых по описанию', letters.every((r) => dropIds.indexOf(r.id) < 0));
+check('очередь крупнее первой партии', st.total >= 40, st.total);
 check('есть остаток', st.left > 0, 'осталось ' + st.left);
 check('следующая вакансия известна', !!st.nextId, st.nextId);
 

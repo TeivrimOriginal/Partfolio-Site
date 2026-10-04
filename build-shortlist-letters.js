@@ -6,28 +6,45 @@
 // это видно сразу, поэтому одинаковые письма — дефект, а не мелочь.
 const fs = require('fs');
 const list = require('./hh-shortlist.js');
+const drop = require('./hh-shortlist-drop.js');
 const { composeLetter } = require('./hh-letter.js');
-const data = JSON.parse(fs.readFileSync('hh-shortlist-data.json', 'utf8'));
 
-// Имя компании из DOM hh приходит с мусором: кнопка «Хочу тут работать»
-// и бейдж «Финалист Рейтинга работодателей hh.ru» приклеены к тому же
-// элементу. У ИП вместо имени кнопка «Связаться» — берём из шорт-листа.
-const NOISE = /Хочу тут работать|ФиналистРейтинга работодателей hh\.ru|Проверенный работодатель/g;
-function cleanCompany(id, dom) {
-  const fallback = (list.find((v) => v.id === id) || {}).co || '';
-  let c = (dom || '').replace(NOISE, '').trim();
-  if (!c || c === 'Связаться') c = fallback;
-  return c;
+// Данные в двух файлах по партиям: hh-shortlist-data.json — партия 1,
+// hh-shortlist-data-b2.json — партия 2. Склеиваем, потому что обе партии
+// обязаны идти через один и тот же генератор и одну проверку уникальности.
+const items = [
+  ...JSON.parse(fs.readFileSync('hh-shortlist-data.json', 'utf8')).items,
+  ...JSON.parse(fs.readFileSync('hh-shortlist-data-b2.json', 'utf8')).items,
+];
+
+// Имя компании берём из hh-shortlist.js, а не из DOM. В DOM к названию
+// приклеены кнопки и бейджи: «Хочу тут работать», «Финалист Рейтинга
+// работодателей hh.ru», «У работодателя есть аккредитация», а у части
+// вакансий вместо имени вовсе отдаётся «Контакты» или «Связаться».
+// Шорт-лист заполнен названиями с карточек поиска — там они чистые.
+function companyFor(id) {
+  const fromList = (list.find((v) => v.id === id) || {}).co || '';
+  if (fromList) return fromList;
+  const row = items.find((x) => x.id === id);
+  return ((row && row.companyDom) || '')
+    .replace(/Хочу тут работать|ФиналистРейтинга работодателей hh\.ru|Проверенный работодатель|IT-компания|У работодателя есть аккредитация|ПобедительПремии HR-Бренд|Топ-200Рейтинга работодателей hh\.ru|Открытый|Показывает отзывы от сотрудников|Контакты|Связаться/g, '')
+    .trim();
 }
 
 const out = [];
 const texts = new Map();
 let dup = 0;
+let dropped = 0;
 
 for (const v of list) {
-  const row = (data.items || []).find((x) => x.id === v.id);
+  // Отклонённые по тексту описания пропускаем здесь, а не правим руками:
+  // причина лежит в hh-shortlist-drop.js и её можно перепроверить.
+  const cut = drop.find((d) => d.id === v.id);
+  if (cut) { dropped++; continue; }
+
+  const row = items.find((x) => x.id === v.id);
   const sents = row ? row.sents : [];
-  const company = cleanCompany(v.id, row ? row.companyDom : '');
+  const company = companyFor(v.id);
   // Описание склеиваем из отобранных предложений: этого хватает генератору,
   // а пересылать полный текст вакансии ради пары цитат незачем.
   const desc = sents.join('. ');
@@ -55,7 +72,15 @@ for (const r of out) {
 fs.writeFileSync('LETTERS-SHORTLIST.md', md.join('\n'), 'utf8');
 
 const withQuotes = out.filter((r) => r.quoted > 0).length;
-console.log('вакансий: ' + out.length + ', уникальных писем: ' + texts.size + ', дублей: ' + dup);
+const noData = out.filter((r) => !r.sents.length).map((r) => r.id);
+console.log('в отборе: ' + list.length + ', отклонено по описанию: ' + dropped + ', в письмах: ' + out.length);
+console.log('уникальных писем: ' + texts.size + ', дублей: ' + dup);
 console.log('писем с цитатой из описания: ' + withQuotes + ' из ' + out.length);
-console.log('без цитаты: ' + out.filter((r) => r.quoted === 0).map((r) => r.id).join(', '));
-process.exit(dup === 0 && withQuotes >= out.length - 1 ? 0 : 1);
+console.log('без цитаты (в описании нет предложений-требований): ' + (noData.join(', ') || 'нет'));
+if (dropped) {
+  console.log('причины отклонений:');
+  for (const d of drop) if (list.some((v) => v.id === d.id)) console.log('  ' + d.id + ' — ' + d.reason);
+}
+// Отклонений без цитаты может быть несколько: у части вакансий описания
+// короткие и не содержат ни одного предложения с требованиями.
+process.exit(dup === 0 && withQuotes >= out.length - noData.length ? 0 : 1);
