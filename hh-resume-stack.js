@@ -262,6 +262,10 @@ function profileFor(stack) {
     hhTitle: s.hhTitle,
     resumeId: s.resumeId,
     hhResumeReady: s.hhResumeReady,
+    // Ссылка на резюме нужна не только hh: гостевый отклик на Хабре — это поле
+    // «Ссылка на резюме», и без него форму заполнить нечем.
+    file: s.file,
+    publicUrl: s.publicUrl,
   };
 }
 

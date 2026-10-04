@@ -15,6 +15,15 @@ const { stackFor, profileFor } = require('./hh-resume-stack.js');
 const report = JSON.parse(fs.readFileSync('habr-vacancies.json', 'utf8'));
 const rows = report.vacancies || [];
 
+// Контакты берём из уже опубликованного резюме, а не пишем руками: в гостевой
+// форме Хабра они и есть полями, и опечатка в телефоне означает, что работодатель
+// не дозвонится после отклика.
+const REF = 'resume.html';
+const refHtml = fs.existsSync(REF) ? fs.readFileSync(REF, 'utf8') : '';
+const phone = (refHtml.match(/\+7[\s\d\-()]{9,20}/) || [''])[0].trim();
+const email = (refHtml.match(/[\w.\-]+@[\w.\-]+\.\w+/) || [''])[0];
+const telegram = (refHtml.match(/t\.me\/([A-Za-z0-9_]+)/) || ['', ''])[1];
+
 const out = [];
 const texts = new Map();
 let dup = 0;
@@ -42,13 +51,35 @@ for (const v of rows) {
     resume: profile.hhTitle,
     resumeId: profile.resumeId,
     resumeReady: profile.hhResumeReady,
+    // Ссылка на резюме под этот стек и PDF того же резюме: в гостевой форме
+    // поле называется «Ссылка на резюме», а работодатель кликает по нему.
+    resumeUrl: profile.publicUrl || null,
+    resumePdf: profile.publicUrl ? profile.publicUrl.replace(/\.html$/, '.pdf') : null,
     quoted: reqs.length,
     letter: text,
     len: text.length,
+    // Готовые значения полей гостевой формы. Ключи совпадают с именами полей на
+    // career.habr.com, чтобы заполнение не было угадыванием.
+    guestForm: {
+      'response[resumeHref]': profile.publicUrl || '',
+      'response[contactPhone]': phone,
+      'response[telegram]': telegram ? '@' + telegram : '',
+    },
+    // Что мешает отправить без человека. Гостевой отклик на Хабре закрыт
+    // reCAPTCHA v3: токен нужен до нажатия, кнопка «Откликнуться без
+    // регистрации» остаётся disabled, пока captchaToken пуст. Проверено
+    // 04.10.2026: grecaptcha.execute() не возвращает токен из этого окружения.
+    blockedBy: 'captcha',
+    blockedNote: 'гостевая форма требует reCAPTCHA v3; нужен человек',
   });
 }
 
 fs.writeFileSync('HABR-LETTERS.json', JSON.stringify(out, null, 1), 'utf8');
+
+const noResume = out.filter((r) => !r.resumeUrl).length;
+if (noResume) {
+  console.log('ВНИМАНИЕ: у ' + noResume + ' вакансий нет ссылки на резюме — гостевую форму заполнить нечем.');
+}
 
 let md = ['# Письма — Хабр Карьера', '',
   'Собраны тем же генератором, что и письма для hh: `hh-letter.js`, профиль — `hh-resume-stack.js`.',
@@ -67,6 +98,7 @@ for (const r of out) {
 fs.writeFileSync('HABR-LETTERS.md', md.join('\n'), 'utf8');
 
 console.log('вакансий: ' + out.length + ', уникальных писем: ' + texts.size + ', дублей: ' + dup);
+console.log('контакты из ' + REF + ': телефон «' + phone + '», телеграм «@' + telegram + '», почта ' + email);
 for (const r of out) {
   console.log('  ' + r.id + ' | ' + r.stack.padEnd(8) + ' | ' + r.level.padEnd(10) + ' | резюме «' + r.resume + '»' +
     (r.resumeReady ? '' : ' НЕ СОЗДАНО') + ' | цитат ' + r.quoted);

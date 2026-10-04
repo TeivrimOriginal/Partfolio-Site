@@ -60,6 +60,46 @@ CI из резюме backend.
 Terraform и мониторингом: этими словами наполнены почти все DevOps-вакансии, и
 добавлять их без опыта значит врать в первых же строках.
 
+## Хабр: отклик без регистрации есть, но упирается в капчу
+
+Разобрана гостевая форма на `career.habr.com/vacancies/<id>`:
+
+```
+response[resumeFile]        файл, PDF до 10 МБ
+response[resumeHref]        «Ссылка на резюме»
+response[contactPhone]      телефон (маска +7 (___) ___-__-__)
+response[telegram]          имя пользователя или телефон
+g-recaptcha-response        reCAPTCHA v3
+```
+
+Фронтенд — Vue 2, компонент `.guest-response`. Его `$data` после заполнения:
+
+```
+resumeHref:    https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf
+contactPhone:  +7 (901) 431-82-98
+telegram:      @Smishnyavko
+captchaToken:  ''            ← из-за этого кнопка disabled
+captchaRequired: true
+```
+
+То есть **кнопка «Откликнуться без регистрации» неактивна, пока пуст
+`captchaToken`**, независимо от заполненных полей. `grecaptcha.execute()` с
+ключом из страницы (`6Le5ViMUAAAAAJpew3Qiw_0xBM1vXAn6yWULBvAh`) из этого
+окружения не возвращает токен — 15 секунд таймаут. Проверено, а не предположено.
+
+Поля тоже пришлось заполнять через `Object.getOwnPropertyDescriptor(
+HTMLInputElement.prototype,'value').set` + `input`: прямой `el.value =` не
+доходит до состояния Vue. Маска телефона после этого сама переписывает значение
+в `+7 (901) 431-82-98` — читать значение надо после события, а не до.
+
+Готовые значения формы для каждой из 4 вакансий лежат в `HABR-LETTERS.json` →
+`guestForm`, ключи совпадают с именами полей на сайте. Контакты берутся из
+`resume.html`, а не пишутся руками.
+
+`resume-devops.pdf` собран Chrome в headless (`--print-to-pdf`), 114 КБ, одна
+страница. Ссылки на PDF проверяются `verify-resume-links.js` — раньше мёртвые
+ссылки на PDF никто не проверял.
+
 ## Публичные ссылки на резюме
 
 Семь файлов под стеки не были отслежены в git, поэтому Pages отдавал на них 404,
