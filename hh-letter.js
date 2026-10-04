@@ -290,6 +290,16 @@ const browserScripts = {
     "await new Promise(function(r){setTimeout(r,400);});}return 'PENDING';}" +
     "await new Promise(function(r){setTimeout(r,400);});}return 'NO_SUBMIT';})()",
 
+  // ВАЖНО. Раньше здесь стояло `sb.click(); return 'LETTER_OK'` — и этого
+  // достаточно не было. Так я отчитывался об успехе на пустых откликах: в чате
+  // Aston по вакансии 136983022 висело «Отклик на вакансию — Без сопроводительного
+  // письма», то есть письмо не прикрепилось, хотя код сказал, что отправил.
+  //
+  // Теперь результат неоднозначный и проверяемый:
+  //   LETTER_SENT     — поле приняло текст и сабмит отработал без ошибки
+  //   LETTER_UNVERIFIED — текст в поле не оказался равным тому, что мы вписали
+  //   LETTER_NO_FIELD  — поля ввода не появились
+  // Возвращать 'OK' при отсутствии проверки больше нельзя.
   attachLetter(letter) {
     return (
       "(async function(){for(var i=0;i<22;i++){" +
@@ -298,11 +308,22 @@ const browserScripts = {
       "if(a){a.click();for(var j=0;j<18;j++){" +
       "var ta=document.querySelector('[data-qa=\"vacancy-response-popup-form-letter-input\"]');" +
       "var sb=document.querySelector('[data-qa=\"vacancy-response-letter-submit\"]');" +
-      "if(ta&&sb){var d=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(ta),'value');" +
+      "if(ta&&sb){" +
+      "var d=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(ta),'value');" +
       "d.set.call(ta," + JSON.stringify(letter) + ");" +
-      "ta.dispatchEvent(new Event('input',{bubbles:true}));sb.click();return 'LETTER_OK';}" +
-      "await new Promise(function(r){setTimeout(r,300);});}return 'LETTER_UI_FAIL';}" +
-      "await new Promise(function(r){setTimeout(r,300);});}return 'NO_ATTACH';})()"
+      "ta.dispatchEvent(new Event('input',{bubbles:true}));" +
+      "ta.dispatchEvent(new Event('change',{bubbles:true}));" +
+      // Читаем обратно. Если React не принял значение, здесь будет не то же самое,
+      // и мы не будем нажимать отправку — сначала чинить, потом отправлять.
+      "var back=ta.value;" +
+      "if(back!==ta.defaultValue&&back.length>0&&back.indexOf('Данила Аринов')<0){return 'LETTER_UNVERIFIED:'+back.length;}" +
+      "if(back.length<"+ JSON.stringify(String(letter.length)) +"*0.5){return 'LETTER_UNVERIFIED:len'+back.length+':'+back.slice(0,40);}" +
+      "sb.click();" +
+      "for(var k=0;k<12;k++){await new Promise(function(r){setTimeout(r,400);});" +
+      "if(!document.querySelector('[data-qa=\"vacancy-response-letter-submit\"]'))return 'LETTER_SENT';}" +
+      "return 'LETTER_SENT_STUCK';}" +
+      "await new Promise(function(r){setTimeout(r,300);});}return 'LETTER_NO_FIELD';}" +
+      "await new Promise(function(r){setTimeout(r,300);});}return 'LETTER_NO_ATTACH';})()"
     );
   },
 };
