@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Данила Аринов — Junior QA-инженер, автоматизация тестирования</title>
+<style>
+  :root{--tx:#161a22;--dim:#5a6472;--line:#dfe3ea;--acc:#1f5fd0;--r:8px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font:400 14px/1.55 "Segoe UI",system-ui,-apple-system,Arial,Helvetica,sans-serif;color:var(--tx);background:#eef0f4;padding:28px 14px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sheet{max-width:790px;margin:0 auto;background:#fff;padding:42px 46px;box-shadow:0 6px 34px rgba(20,30,50,.12)}
+  .mono{font-family:"Cascadia Mono",Consolas,"Courier New",monospace}
+  h1{font-size:25px;font-weight:700;letter-spacing:-.02em}
+  .role{color:var(--acc);font-weight:600;font-size:14px;margin:2px 0 10px}
+  .meta{color:var(--dim);font-size:12.5px;margin-bottom:16px}
+  .meta a{color:var(--acc);text-decoration:none}
+  .meta a:hover{text-decoration:underline}
+  .meta .tel{color:var(--tx);font-weight:600;text-decoration:none}
+  .sec{margin-top:18px}
+  .sec h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.11em;color:var(--dim);border-bottom:1.5px solid var(--line);padding-bottom:5px;margin-bottom:9px}
+  .skills{display:flex;flex-wrap:wrap;gap:6px}
+  .sk{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:20px;background:#f7f9fc}
+  .sk b{font-weight:600}
+  .it{margin-bottom:11px}
+  .it-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .it-t{font-weight:600;font-size:13.5px}
+  .it-d{font-size:12px;color:var(--dim);white-space:nowrap}
+  .it a{color:var(--acc);text-decoration:none;font-size:11.5px;word-break:break-all}
+  ul.bul{margin:3px 0 0 16px;font-size:13px;color:#333a45}
+  ul.bul li{margin:2px 0}
+  ul.bul li::marker{color:var(--dim)}
+  .note{font-size:12.5px;color:var(--dim)}
+  .print{display:block;max-width:790px;margin:16px auto 0;text-align:center}
+  .print .dl{display:inline-block;font-size:13px;padding:10px 20px;border:1px solid var(--line);background:#fff;border-radius:var(--r);color:var(--tx);text-decoration:none;transition:border-color .15s,color .15s}
+  .print .dl:hover{border-color:var(--acc);color:var(--acc)}
+  .back{display:block;max-width:790px;margin:12px auto 0;text-align:center;font-size:12.5px;color:var(--dim);text-decoration:none}
+  .back:hover{color:var(--acc)}
+  @page{size:A4;margin:9mm}
+  @media print{
+    body{background:#fff;padding:0;line-height:1.24;font-size:11px}
+    .sheet{box-shadow:none;padding:0;max-width:none}
+    .print,.back{display:none}
+    .sec{margin-top:6px}
+    .sec h2{margin-bottom:3px;padding-bottom:2px}
+    .it{margin-bottom:5px;page-break-inside:avoid}
+    .it-t{font-size:12.2px}
+    ul.bul{margin-top:1px;font-size:10.7px}
+    ul.bul li{margin:0}
+    .note{font-size:10.8px;line-height:1.3}
+    h1{font-size:21px}
+    .role{font-size:12.2px;margin:2px 0 6px}
+    .meta{font-size:10.9px;margin-bottom:8px}
+    .sk{font-size:10.5px;padding:2px 7px}
+  }
+  @media(max-width:640px){.sheet{padding:26px 22px}}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <header>
+    <h1>Данила Аринов</h1>
+    <p class="role">Junior QA-инженер — автотесты UI, тест-дизайн, CI</p>
+    <p class="meta">
+      <a class="tel" href="tel:+79014318298">+7 901 431-82-98</a> &middot;
+      <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a> &middot;
+      <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram @Smishnyavko</a> &middot;
+      <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">github.com/TeivrimOriginal</a> &middot;
+      <a href="https://teivrimoriginal.github.io/Partfolio-Site/" target="_blank" rel="noopener">Портфолио</a> &middot;
+      <a href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </header>
+
+  <section class="sec">
+    <h2>О себе</h2>
+    <p class="note">
+      Тестирую код автоматически, а не руками. 47 UI-автотестов на Selenium и Pytest
+      с отчётами Allure: позитивные, негативные и проверки формы обратной связи.
+      <b>769 автотестов суммарно по всем проектам — 564 юнит-теста на Rust, 158 в редакторе,
+      47 UI-тестов, 425 проверок дампа конфигурации. Тесты и clippy с -D warnings гоняются
+      в CI на каждом пуше. Ищу junior QA или автоматизатора тестирования,
+      готов к тестовому заданию.</b>
+    </p>
+  </section>
+  <section class="sec">
+    <h2>Опыт работы</h2>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Фриланс — заказы на Kwork</span>
+        <span class="it-d mono">Python &middot; 2022 — н.в.</span>
+      </div>
+      <ul class="bul">
+        <li>Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">kwork.ru/user/teivrim</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Проекты</h2>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">practice-automation-tests — автотесты UI</span>
+        <span class="it-d mono">Python &middot; Selenium 4.49 &middot; Pytest 9.1 &middot; Allure</span>
+      </div>
+      <ul class="bul">
+        <li>47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.</li>
+        <li>Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/practice-automation-tests" target="_blank" rel="noopener">github.com/TeivrimOriginal/practice-automation-tests</a>
+    </div>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Anime DB — каталог из 3 публичных API</span>
+        <span class="it-d mono">Actix-Web &middot; SQLite FTS5 &middot; Docker</span>
+      </div>
+      <ul class="bul">
+        <li>Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.</li>
+        <li>Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.</li>
+        <li>564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/TeivrimSite" target="_blank" rel="noopener">github.com/TeivrimOriginal/TeivrimSite</a>
+    </div>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">TPaint — редактор изображений</span>
+        <span class="it-d mono">Rust &middot; 2026 — н.в.</span>
+      </div>
+      <ul class="bul">
+        <li>Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.</li>
+        <li>Форматы .tpaint, PSD и PNG; 158 юнит-тестов.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" target="_blank" rel="noopener">github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust</a>
+    </div>
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">Простая бухгалтерия — конфигурация 1С:Предприятие 8.3</span>
+        <span class="it-d mono">BSL &middot; 2026</span>
+      </div>
+      <ul class="bul">
+        <li>4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.</li>
+        <li>Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.</li>
+        <li>425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/1c-simple-accounting" target="_blank" rel="noopener">github.com/TeivrimOriginal/1c-simple-accounting</a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Навыки</h2>
+    <div class="skills">
+      <span class="sk"><b>Автотесты UI:</b> Selenium 4.49, Pytest 9.1, Allure — позитивные и негативные сценарии, формы, маркеры slow, параметризация</span>
+      <span class="sk"><b>Отчёты и фикстуры:</b> Allure HTML-отчёты, page-object-подобное разделение по страницам, фикстуры и хелперы, Selenium Manager</span>
+      <span class="sk"><b>Юнит-тесты:</b> Rust — cargo test, rustfmt, clippy с -D warnings; 722 теста в двух проектах</span>
+      <span class="sk"><b>Инструменты:</b> Git, GitHub Actions, Python, Pytest.ini, Docker, Linux, валидация конфигураций на Python</span>
+      <span class="sk"><b>Практики:</b> тест-кейсы по чек-листу, привязка теста к требованию, падение теста как осознанный шаг, а не «поправить и залить»</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Дополнительно</h2>
+    <p class="note">
+      Английский — чтение технической документации. Открытый код: <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">11 активных публичных репозиториев</a>, лицензия MIT, у каждого проекта тесты и CI.
+    </p>
+  </section>
+
+</div>
+<div class="print"><a class="dl" href="resume-qa.pdf" download>Скачать PDF</a></div>
+<a class="back" href="resumes.html">&larr; Все резюме</a>
+<a class="back" href="index.html">&larr; Вернуться на сайт</a>
+
+</body>
+</html>
