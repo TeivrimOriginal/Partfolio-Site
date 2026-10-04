@@ -1,0 +1,180 @@
+{
+ "generated": "2026-10-04",
+ "note": "отклик с remote-job ведёт на другую площадку; здесь фактические адреса",
+ "rows": [
+  {
+   "remoteJobId": "1462895",
+   "hhId": "134492344",
+   "url": "https://zarechny.hh.ru/vacancy/134492344",
+   "state": "уже отклик отправлен"
+  },
+  {
+   "remoteJobId": "1469144",
+   "hhId": "134829827",
+   "url": "https://zarechny.hh.ru/vacancy/134829827",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1498986",
+   "hhId": "136586918",
+   "url": "https://togliatti.hh.ru/vacancy/136586918",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1502049",
+   "hhId": "136810581",
+   "url": "https://zarechny.hh.ru/vacancy/136810581",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1507817",
+   "hhId": "137215780",
+   "url": "https://zarechny.hh.ru/vacancy/137215780",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1508869",
+   "hhId": "137271035",
+   "url": "https://zarechny.hh.ru/vacancy/137271035",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1511150",
+   "hhId": "137435084",
+   "url": "https://zarechny.hh.ru/vacancy/137435084",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1511796",
+   "hhId": "137485520",
+   "url": "https://zarechny.hh.ru/vacancy/137485520",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1512225",
+   "hhId": "137518234",
+   "url": "https://novosibirsk.hh.ru/vacancy/137518234",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1512274",
+   "hhId": "137514511",
+   "url": "https://zarechny.hh.ru/vacancy/137514511",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1512460",
+   "hhId": "137521646",
+   "url": "https://cheboksary.hh.ru/vacancy/137521646",
+   "state": "уже отклик отправлен"
+  },
+  {
+   "remoteJobId": "1513282",
+   "hhId": "137587241",
+   "url": "https://novosibirsk.hh.ru/vacancy/137587241",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1513283",
+   "hhId": "137587111",
+   "url": "https://zarechny.hh.ru/vacancy/137587111",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1513313",
+   "hhId": "137585398",
+   "url": "https://zarechny.hh.ru/vacancy/137585398",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1513507",
+   "hhId": "137354249",
+   "url": "https://novosibirsk.hh.ru/vacancy/137354249",
+   "state": "уже отклик отправлен"
+  },
+  {
+   "remoteJobId": "1513990",
+   "hhId": "137622630",
+   "url": "https://rostov.hh.ru/vacancy/137622630",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1513992",
+   "hhId": "137622470",
+   "url": "https://rostov.hh.ru/vacancy/137622470",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1514040",
+   "hhId": "137652608",
+   "url": "https://zarechny.hh.ru/vacancy/137652608",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1514133",
+   "hhId": "137646890",
+   "url": "https://zarechny.hh.ru/vacancy/137646890",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1516458",
+   "hhId": "137802363",
+   "url": "https://spb.hh.ru/vacancy/137802363",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1516561",
+   "hhId": "137824411",
+   "url": "https://zarechny.hh.ru/vacancy/137824411",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1517547",
+   "hhId": "137873203",
+   "url": "https://zarechny.hh.ru/vacancy/137873203",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1518149",
+   "hhId": "137922959",
+   "url": "https://chelyabinsk.hh.ru/vacancy/137922959",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1518525",
+   "hhId": "137964777",
+   "url": "https://vladimir.hh.ru/vacancy/137964777",
+   "state": "уже отклик отправлен"
+  },
+  {
+   "remoteJobId": "1518527",
+   "hhId": "137964592",
+   "url": "https://rostov.hh.ru/vacancy/137964592",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1518881",
+   "hhId": "137976192",
+   "url": "https://zarechny.hh.ru/vacancy/137976192",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1519103",
+   "hhId": "138021455",
+   "url": "https://podolsk.hh.ru/vacancy/138021455",
+   "state": "новая вакансия hh — можно добавить в очередь"
+  },
+  {
+   "remoteJobId": "1519470",
+   "hhId": "137959823",
+   "url": "https://rostov.hh.ru/vacancy/137959823",
+   "state": "уже есть в шортлисте с письмом"
+  },
+  {
+   "remoteJobId": "1519932",
+   "hhId": "138055992",
+   "url": "https://nn.hh.ru/vacancy/138055992",
+   "state": "уже есть в шортлисте с письмом"
+  }
+ ]
+}

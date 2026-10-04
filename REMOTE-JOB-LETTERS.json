@@ -1,0 +1,895 @@
+[
+ {
+  "id": "1513992",
+  "href": "https://remote-job.ru/vacancy/show/1513992/junior-python-razrabotchik",
+  "title": "Junior Python-разработчик (удаленная работа)",
+  "company": "Иктин Групп",
+  "salary": "от 60 000 до 90 000 руб.",
+  "salaryFloor": 60000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior Python-разработчик (удаленная работа)» в Иктин Групп.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Чем предстоит заниматься Разрабатывать небольшие сервисы и модули на Python по техническим заданиям»\n— «Создавать и дорабатывать API-эндпоинты на FastAPI»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1316,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1516561",
+  "href": "https://remote-job.ru/vacancy/show/1516561/junior-razrabotchik-avtomatizato-python-ai",
+  "title": "Junior разработчик/автоматизато (python +AI) (удаленная работа)",
+  "company": "Ольшевская Анастасия Владимировна",
+  "salary": "от 100 000 до 100 000 руб.",
+  "salaryFloor": 100000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior разработчик/автоматизато (python +AI) (удаленная работа)» в Ольшевская Анастасия Владимировна.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Junior разработчик/автоматизато (python +AI) Описание вакансии О нас Blackpires бренд одежды с собственным производством»\n— «Чем предстоит заниматься Подключать API Wildberries, Ozon, Lamoda и МоегоСклада и настраивать автоматическую ежедневную загрузку данных»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1464,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1513990",
+  "href": "https://remote-job.ru/vacancy/show/1513990/junior-qa-engineer",
+  "title": "Junior QA Engineer (удаленная работа)",
+  "company": "Иктин Групп",
+  "salary": "от 60 000 до 80 000 руб.",
+  "salaryFloor": 60000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior QA Engineer (удаленная работа)» в Иктин Групп.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «Чем предстоит заниматься Проводить функциональное тестирование backend и web-приложения»\n— «Тестировать AI-агента на базе Qwen по готовым сценариям»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1259,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1512274",
+  "href": "https://remote-job.ru/vacancy/show/1512274/python-razrabotchik-speczialist-po-api-integracziyam-marketplejsov",
+  "title": "Python-разработчик / специалист по API-интеграциям маркетплейсов (удаленная работа)",
+  "company": "SCorp",
+  "salary": "от 60 000 до 60 000 руб.",
+  "salaryFloor": 60000,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python-разработчик / специалист по API-интеграциям маркетплейсов (удаленная работа)» в SCorp.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «есть рабочая Google-таблица, часть API-интеграций, существующий код, реализованные расчёты»\n— «Сейчас наша основная задача стабилизировать уже работающий проект :»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n— Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1439,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1508869",
+  "href": "https://remote-job.ru/vacancy/show/1508869/junior-backend-razrabotchik",
+  "title": "Junior Backend-разработчик (удаленная работа)",
+  "company": "Сафронов Максим Юрьевич",
+  "salary": "от 80 000 до 110 000 руб.",
+  "salaryFloor": 80000,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior Backend-разработчик (удаленная работа)» в Сафронов Максим Юрьевич.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «Солвиум - студия аутсорс-разработки»\n— «Junior Backend-разработчик Описание вакансии О компании:»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n— Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-сервисы\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1424,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1507817",
+  "href": "https://remote-job.ru/vacancy/show/1507817/junior-devops-engineer",
+  "title": "Junior DevOps Engineer (удаленная работа)",
+  "company": "IBS",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "devops",
+  "resume": "Инженер DevOps",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-devops.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-devops.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior DevOps Engineer (удаленная работа)» в IBS.\nМеня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.\nРезюме, которое прикреплено к отклику: «Инженер DevOps».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Подойдёт кандидат без коммерческого опыта, но с хорошей базой, практическими проектами и мотивацией развиваться в направлении DevOps»\n\nПо вакансии понял задачу так: нужно, чтобы код собирался и запускался предсказуемо.\n\nЧто сделаю:\n— Docker-образ с healthcheck и переменными окружения вместо правок в коде\n— CI, который ломает сборку на ошибках и предупреждениях, а не после релиза\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах\n— скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат\n— CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях\n— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1434,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1469144",
+  "href": "https://remote-job.ru/vacancy/show/1469144/junior-analitik-avtomatizator-n8n-ii-agenty",
+  "title": "Junior аналитик-автоматизатор (n8n + ИИ-агенты) (удаленная работа)",
+  "company": "Topface Media",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior аналитик-автоматизатор (n8n + ИИ-агенты) (удаленная работа)» в Topface Media.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «то, что раньше делали руками часами, ты превращаешь в автоматизацию на n8n и ИИ-агентах, которая работает сама»\n\nПо вакансии понял задачу так: нужна дисциплина в коде: история изменений, ревью, документация.\n\nЧто сделаю:\n— атомарные коммиты с объяснением в сообщении, а не «как попало»\n— архитектурные решения фиксировать письменно, с обоснованием и альтернативами\n— сначала описать контракты и инварианты, потом код — тогда спор идёт о сути, а не о формате\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— 88 коммитов в движке с нуля, каждый с осмысленным сообщением\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1268,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1476861",
+  "href": "https://remote-job.ru/vacancy/show/1476861/stazhyor-po-obrabotke-dannyx-junior-programmist-v-it-czentr",
+  "title": "Стажёр по обработке данных (Junior-программист) в IT-центр (удаленная работа)",
+  "company": "ООО \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ \"НТЦИТ\"",
+  "salary": "от 45 000 до 80 000 руб.",
+  "salaryFloor": 45000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Стажёр по обработке данных (Junior-программист) в IT-центр (удаленная работа)» в ООО \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ \"НТЦИТ\".\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Стажёр по обработке данных (Junior-программист) в IT-центр Стажировка в сфере медицинской статистики и аналитики данных — удалённый формат, старт 20 июля 2026»\n— «Обязанности на стажировке:»\n\nПо вакансии понял задачу так: нужно разобраться в предметной области и зафиксировать требования.\n\nЧто сделаю:\n— сначала описать контракты и инварианты, потом код — тогда спор идёт о сути, а не о формате\n— всё, что нельзя проверить компилятором, фиксировать тестом\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге контракт ответа задан явно: ошибки единого вида, поля типизированы\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1378,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1477600",
+  "href": "https://remote-job.ru/vacancy/show/1477600/stazhyor-po-obrabotke-dannyx-junior-programmist",
+  "title": "Стажёр по обработке данных (Junior-программист) (удаленная работа)",
+  "company": "ООО \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ \"НТЦИТ\"",
+  "salary": "от 45 000 до 80 000 руб.",
+  "salaryFloor": 45000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Стажёр по обработке данных (Junior-программист) (удаленная работа)» в ООО \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ \"НТЦИТ\".\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Стажёр по обработке данных (Junior-программист) Старт стажировки:»\n— «В период стажировки предусмотрена возможность выполнения разовых оплачиваемых задач в рамках производственной необходимости»\n\nПо вакансии понял задачу так: нужно, чтобы код собирался и запускался предсказуемо.\n\nЧто сделаю:\n— Docker-образ с healthcheck и переменными окружения вместо правок в коде\n— CI, который ломает сборку на ошибках и предупреждениях, а не после релиза\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1393,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1476862",
+  "href": "https://remote-job.ru/vacancy/show/1476862/junior-programmist-stazhyor-po-analizu-dannyx",
+  "title": "Junior-программист: стажёр по анализу данных (удаленная работа)",
+  "company": "ООО \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ \"НТЦИТ\"",
+  "salary": "от 45 000 до 80 000 руб.",
+  "salaryFloor": 45000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior-программист: стажёр по анализу данных (удаленная работа)» в ООО \"НАУЧНО-ТЕХНИЧЕСКИЙ ЦЕНТР ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ \"НТЦИТ\".\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «стажёр по анализу данных Мы ищем стажёра , который хочет войти в IT и получить реальные навыки работы с данными»\n— «Наша компания занимается медицинской статистикой и аналитикой, поэтому будем работать с реальными задачами»\n\nПо вакансии понял задачу так: нужен телеграм-бот или интеграция с внешним сервисом.\n\nЧто сделаю:\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n— держать состояние бота в БД, а не в памяти процесса\n— Docker-образ с healthcheck и переменными окружения вместо правок в коде\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— Telegram-боты на Python по заказам на Kwork\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1329,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1121504",
+  "href": "https://remote-job.ru/vacancy/show/1121504/python-backend-developer",
+  "title": "Python Backend Developer (удаленная работа)",
+  "company": "Broad Apps",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python Backend Developer (удаленная работа)» в Broad Apps.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Мы занимаемся разработкой приложений на популярные платформы»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1259,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1519470",
+  "href": "https://remote-job.ru/vacancy/show/1519470/python-razrabotchik",
+  "title": "Python-разработчик (удаленная работа)",
+  "company": "Rocket Science",
+  "salary": "от 140 000 до 140 000 руб.",
+  "salaryFloor": 140000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python-разработчик (удаленная работа)» в Rocket Science.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Python-разработчик Описание вакансии Привет!»\n— «Мы - Rocket Science Мы digital-продакшн полного цикла, с собственной продуктовой аналитикой, дизайном и веб-разработкой»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1327,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1518149",
+  "href": "https://remote-job.ru/vacancy/show/1518149/python-razrabotchik-backend",
+  "title": "Python-разработчик (Backend) (удаленная работа)",
+  "company": "KIWANO",
+  "salary": "от 80 000 до 200 000 руб.",
+  "salaryFloor": 80000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python-разработчик (Backend) (удаленная работа)» в KIWANO.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Python-разработчик (Backend) Описание вакансии Мы - стартап Speto, существуем с апреля, за полгода работы привлекли 750 000 пользователей, продолжаем рост»\n— «коммерческие боты, црм-ки, сайты, вся инфраструктура написанная нами»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1388,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1513282",
+  "href": "https://remote-job.ru/vacancy/show/1513282/python-razrabotchik",
+  "title": "Python-разработчик (удаленная работа)",
+  "company": "Автостройсервис",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python-разработчик (удаленная работа)» в Автостройсервис.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Необходимо развить систему:»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— сначала схема и индексы под запросы, потом логика — так узкое место видно на этапе проектирования\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— SQLite + FTS5 на ~20 тыс. записей: индексы, полнотекстовый поиск с unicode61, пул соединений\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1198,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1511796",
+  "href": "https://remote-job.ru/vacancy/show/1511796/python-razrabotchik-ai",
+  "title": "Python разработчик (AI) (удаленная работа)",
+  "company": "ДэвТим-Групп",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python разработчик (AI) (удаленная работа)» в ДэвТим-Групп.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Разработка и сопровождение backend-сервисов на Python»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1253,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1498986",
+  "href": "https://remote-job.ru/vacancy/show/1498986/python-razrabotchik",
+  "title": "Python-разработчик (удаленная работа)",
+  "company": "ОХК Уралхим",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Python-разработчик (удаленная работа)» в ОХК Уралхим.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Python-разработчик Описание вакансии УРАЛАЙТЕХ аккредитованная IT-компания, реализующая комплексно ИТ функцию для группы компаний Уралхим»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1331,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1519103",
+  "href": "https://remote-job.ru/vacancy/show/1519103/backend-razrabotchik-python",
+  "title": "Backend-разработчик (Python) (удаленная работа)",
+  "company": "ФГУП ПВС МВД России",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Backend-разработчик (Python) (удаленная работа)» в ФГУП ПВС МВД России.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «Описание вакансии Backend-разработчик (Python) Разработка и поддержка серверной части внутреннего сервиса:»\n— «не указана Требуемый опыт работы:»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— сначала схема и индексы под запросы, потом логика — так узкое место видно на этапе проектирования\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n— Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-сервисы\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1470,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1518527",
+  "href": "https://remote-job.ru/vacancy/show/1518527/backend-razrabotchik-v-produkt-dlya-otdelov-prodazh",
+  "title": "Backend-разработчик в продукт для отделов продаж (удаленная работа)",
+  "company": "Хамедов Санжар Рустанжон Оглы",
+  "salary": "от 100 000 до 100 000 руб.",
+  "salaryFloor": 100000,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Backend-разработчик в продукт для отделов продаж (удаленная работа)» в Хамедов Санжар Рустанжон Оглы.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «Backend-разработчик в продукт для отделов продаж Описание вакансии Что за продукт Отделы продаж в B2B тратят часы на ручной поиск:»\n— «Клиент получает таблицу, где каждая строка это компания, с которой можно работать сегодня, и повод, почему именно сегодня»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1400,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "591414",
+  "href": "https://remote-job.ru/vacancy/show/591414/razrabotchik-programmist-udalennaya-rabota",
+  "title": "Разработчик \\ программист (удаленная работа)",
+  "company": "RPA systems",
+  "salary": "от 80 000 до 200 000 руб.",
+  "salaryFloor": 80000,
+  "stack": "frontend",
+  "resume": "Junior Frontend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-frontend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-frontend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Разработчик \\ программист (удаленная работа)» в RPA systems.\nМеня зовут Данила Аринов — Junior Frontend-разработчик: JavaScript, интерфейсы, real-time.\nРезюме, которое прикреплено к отклику: «Junior Frontend-разработчик».\n\nИз описания выделил для себя:\n— «Возможность работать как полный, так и неполный день (по согласованию)»\n— «Обучение в процессе работы»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— социальный мессенджер на хакатоне: WebSocket на socket.io, авторизация по паролю с хешированием, загрузка файлов\n— портфолио-сайт на JavaScript и HTML5 без сборщика, собственный drag-and-drop на immediate-mode UI\n— 47 UI-автотестов Selenium и Pytest — интерфейс проверяется автоматически\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста, CI зелёный\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1315,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1513313",
+  "href": "https://remote-job.ru/vacancy/show/1513313/backend-razrabotchik-python-ii-platforma",
+  "title": "Backend-разработчик (Python, ИИ-платформа) (удаленная работа)",
+  "company": "Детский Мир",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Backend-разработчик (Python, ИИ-платформа) (удаленная работа)» в Детский Мир.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Делаем продукты для миллионов клиентов и сервисы, которые помогают бизнесу работать быстрее»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n— Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-сервисы\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1461,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1513283",
+  "href": "https://remote-job.ru/vacancy/show/1513283/razrabotchik-python-speczialist-po-avtomatizaczii",
+  "title": "Разработчик Python / специалист по автоматизации (удаленная работа)",
+  "company": "Adviva",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Разработчик Python / специалист по автоматизации (удаленная работа)» в Adviva.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Описание вакансии Ищем разработчика, который будет создавать и поддерживать инструменты автоматизации на Python»\n— «не указана Требуемый опыт работы:»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1330,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1462895",
+  "href": "https://remote-job.ru/vacancy/show/1462895/stazher-testirovshhik",
+  "title": "Стажер-тестировщик (удаленная работа)",
+  "company": "Р-Вижн",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Стажер-тестировщик (удаленная работа)» в Р-Вижн.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «Описание вакансии R-Vision разработчик надежных систем цифровизации и кибербезопасности»\n— «не указана Требуемый опыт работы:»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— атомарные коммиты с объяснением в сообщении, а не «как попало»\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1197,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "193923",
+  "href": "https://remote-job.ru/vacancy/show/193923/stazher-programmist-python-udalenno",
+  "title": "Стажер-программист Python удаленно",
+  "company": "ООО \"Когнитивные системы\"",
+  "salary": "от 15 000 до 20 000 руб.",
+  "salaryFloor": 15000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Стажер-программист Python удаленно» в ООО \"Когнитивные системы\".\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Желание расти и развиваться в дружной компании разработчиков, •»\n— «Обучение в штате опытных программистов, •»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1276,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1444247",
+  "href": "https://remote-job.ru/vacancy/show/1444247/stazher-qaa-python-inetcore-mts-veb-servisy",
+  "title": "Стажер QAA (Python) InetCore, МТС Веб Сервисы (удаленная работа)",
+  "company": "МТС",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Стажер QAA (Python) InetCore, МТС Веб Сервисы (удаленная работа)» в МТС.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «от работы с данными до разработки продуктов и оптимизации процессов»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1231,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1403801",
+  "href": "https://remote-job.ru/vacancy/show/1403801/ai-data-python-developer",
+  "title": "AI / Data Python Developer (удаленная работа)",
+  "company": "Warefly",
+  "salary": "от 100 000 до 170 000 руб.",
+  "salaryFloor": 100000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «AI / Data Python Developer (удаленная работа)» в Warefly.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Уверенный Python (3+ лет) , чистый код, понимание архитектуры»\n— «SQL pandas / numpy, понимание бизнес метрик, агрегаций, окон, когорт»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1294,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1516458",
+  "href": "https://remote-job.ru/vacancy/show/1516458/qa-engineer-sistema-upravleniya-pt-ngfw-triztex-gruppa-pozitiv",
+  "title": "QA Engineer (система управления PT NGFW, ТризТех, Группа Позитив) (удаленная работа)",
+  "company": "Positive Technologies",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «QA Engineer (система управления PT NGFW, ТризТех, Группа Позитив) (удаленная работа)» в Positive Technologies.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Предстоит проводить тестирование системы централизованного управления межсетевого экрана нового поколения - PT NGFW:»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1323,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1386689",
+  "href": "https://remote-job.ru/vacancy/show/1386689/qa-automation-engineer-python-setevoj-os",
+  "title": "QA Automation Engineer(Python) Сетевой ОС (удаленная работа)",
+  "company": "Бифорком Тек",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «QA Automation Engineer(Python) Сетевой ОС (удаленная работа)» в Бифорком Тек.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Развитие имеющихся и создание новых автотестов для упомянутой системы»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1215,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1380041",
+  "href": "https://remote-job.ru/vacancy/show/1380041/sdet-inzhener-quality-gates-ozon-bank",
+  "title": "SDET инженер, Quality Gates, Ozon Банк (удаленная работа)",
+  "company": "Ozon",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «SDET инженер, Quality Gates, Ozon Банк (удаленная работа)» в Ozon.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Мы строим банк как современный IT-продукт с передовыми технологиями и микросервисной архитектурой»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1260,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1514133",
+  "href": "https://remote-job.ru/vacancy/show/1514133/inzhener-po-avtomatizaczii-testirovaniya-v-fintex",
+  "title": "Инженер по автоматизации тестирования в Финтех (удаленная работа)",
+  "company": "Яндекс",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Инженер по автоматизации тестирования в Финтех (удаленная работа)» в Яндекс.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Автоматизация тестирования бэкенда Вы будете разрабатывать и поддерживать CI/CD-пайплайны для обеспечения бесперебойных релизов (более 30 в день)»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1290,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1489346",
+  "href": "https://remote-job.ru/vacancy/show/1489346/inzhener-po-avtomatizaczii-testirovaniya-instrumenty-validaczii-tovarov",
+  "title": "Инженер по автоматизации тестирования, Инструменты валидации товаров (удаленная работа)",
+  "company": "Ozon",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Инженер по автоматизации тестирования, Инструменты валидации товаров (удаленная работа)» в Ozon.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Инженер по автоматизации тестирования, Инструменты валидации товаров Описание вакансии Привет!»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— писать парсер с учётом лимитов источника: темп по квоте, Retry-After, докачка с места обрыва\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1282,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1518881",
+  "href": "https://remote-job.ru/vacancy/show/1518881/mladshij-speczialist-avtomatizaczii-analiticheskix-sistem-planirovaniya-i-byudzhetirovaniya",
+  "title": "Младший специалист автоматизации аналитических систем планирования и бюджетирования (удаленная работа)",
+  "company": "ИТС",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Младший специалист автоматизации аналитических систем планирования и бюджетирования (удаленная работа)» в ИТС.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Мы предоставляем бизнесу комплексные услуги под ключ, работаем с ведущими вендорами ПО, такими как:»\n\nПо вакансии понял задачу так: нужен телеграм-бот или интеграция с внешним сервисом.\n\nЧто сделаю:\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n— держать состояние бота в БД, а не в памяти процесса\n— писать парсер с учётом лимитов источника: темп по квоте, Retry-After, докачка с места обрыва\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1343,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1517547",
+  "href": "https://remote-job.ru/vacancy/show/1517547/inzhener-po-testirovaniyu-bekend",
+  "title": "Инженер по тестированию (бэкенд) (удаленная работа)",
+  "company": "Перфоманс Лаб",
+  "salary": "от 100 000 до 100 000 руб.",
+  "salaryFloor": 100000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Инженер по тестированию (бэкенд) (удаленная работа)» в Перфоманс Лаб.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «Инженер по тестированию (бэкенд) Описание вакансии Приветствуем тебя, дорогой соискатель!»\n— «:) Перфоманс Лаб эксперт в области тестирования и обеспечения качества»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1264,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1502049",
+  "href": "https://remote-job.ru/vacancy/show/1502049/inzhener-po-avtomatizaczii-proczessov-devops-inzhener",
+  "title": "Инженер по автоматизации процессов / DevOps-инженер (удаленная работа)",
+  "company": "Система Безопасных Коммуникаций",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "devops",
+  "resume": "Инженер DevOps",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-devops.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-devops.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Инженер по автоматизации процессов / DevOps-инженер (удаленная работа)» в Система Безопасных Коммуникаций.\nМеня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.\nРезюме, которое прикреплено к отклику: «Инженер DevOps».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Разрабатываем гибкую платформу для корпоративных коммуникаций, которая объединяет почту, календарь, чаты, ВКС и др»\n\nПо вакансии понял задачу так: нужно, чтобы код собирался и запускался предсказуемо.\n\nЧто сделаю:\n— Docker-образ с healthcheck и переменными окружения вместо правок в коде\n— CI, который ломает сборку на ошибках и предупреждениях, а не после релиза\n— вынести ручные шаги релиза в скрипт, чтобы релиз не зависел от того, кто его делает\n\nЧто уже делал:\n— Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах\n— скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат\n— CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях\n— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1459,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1506499",
+  "href": "https://remote-job.ru/vacancy/show/1506499/razrabotka-telegram-bota-i-bekend-dvizhka-dlya-monitoringa-slotov-avtomatizaczii-zapolneniya-form-mvp",
+  "title": "Разработка Telegram-бота и бэкенд-движка для мониторинга слотов автоматизации заполнения форм (MVP) (удаленная работа)",
+  "company": "Не указано",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Разработка Telegram-бота и бэкенд-движка для мониторинга слотов автоматизации заполнения форм (MVP) (удаленная работа)» в Не указано.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Функциональные требования Telegram-бот (пользовательский интерфейс) Личный кабинет пользователя:»\n\nПо вакансии понял задачу так: нужен телеграм-бот или интеграция с внешним сервисом.\n\nЧто сделаю:\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n— держать состояние бота в БД, а не в памяти процесса\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n— Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test\n— Telegram-боты на Python по заказам на Kwork\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1467,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1519932",
+  "href": "https://remote-job.ru/vacancy/show/1519932/speczialist-po-avtomatizaczii-i-ai-instrumentam-n8n-python",
+  "title": "Специалист по автоматизации и AI-инструментам (n8n / Python) (удаленная работа)",
+  "company": "IRuler",
+  "salary": "от 100 000 до 100 000 руб.",
+  "salaryFloor": 100000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Специалист по автоматизации и AI-инструментам (n8n / Python) (удаленная работа)» в IRuler.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Описание вакансии IRuler - официальный партнёр Яндекс.Такси с 8-летним опытом в сфере такси»\n— «Специалист по автоматизации и AI-инструментам (n8n / Python) Описание вакансии IRuler - официальный партнёр Яндекс.Такси с 8-летним опытом в сфере такси»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1441,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1514040",
+  "href": "https://remote-job.ru/vacancy/show/1514040/speczialist-po-razvitiyu-telegram-kanalov-i-ai-proektam",
+  "title": "Специалист по развитию Telegram-каналов и AI-проектам (удаленная работа)",
+  "company": "Созвездие",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "devops",
+  "resume": "Инженер DevOps",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-devops.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-devops.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Специалист по развитию Telegram-каналов и AI-проектам (удаленная работа)» в Созвездие.\nМеня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.\nРезюме, которое прикреплено к отклику: «Инженер DevOps».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «разработка стратегии развития Telegram-каналов»\n\nПо вакансии понял задачу так: нужен телеграм-бот или интеграция с внешним сервисом.\n\nЧто сделаю:\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n— держать состояние бота в БД, а не в памяти процесса\n— Docker-образ с healthcheck и переменными окружения вместо правок в коде\n\nЧто уже делал:\n— Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах\n— скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат\n— CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях\n— Telegram-боты на Python по заказам на Kwork\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1318,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1506515",
+  "href": "https://remote-job.ru/vacancy/show/1506515/ai-automation-developer-n8n-python-ai",
+  "title": "AI Automation Developer — n8n / Python / AI (удаленная работа)",
+  "company": "Не указано",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «AI Automation Developer — n8n / Python / AI (удаленная работа)» в Не указано.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «AI Automation Developer — n8n / Python / AI Ищем Middle / Middle+ разработчика для постоянного сотрудничества с AI-агентством»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1343,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1246912",
+  "href": "https://remote-job.ru/vacancy/show/1246912/razrabotchik-chat-botov",
+  "title": "Разработчик чат-ботов (удаленная работа)",
+  "company": "ИнСайт",
+  "salary": "от 50 000 до 50 000 руб.",
+  "salaryFloor": 50000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Разработчик чат-ботов (удаленная работа)» в ИнСайт.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Разработчик чат-ботов Описание вакансии Мы студия, специализирующаяся на создании сайтов под ключ на CMS WordPress (Elementor) »\n— «Работаем с частными и корпоративными заказами:»\n\nПо вакансии понял задачу так: нужен телеграм-бот или интеграция с внешним сервисом.\n\nЧто сделаю:\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n— держать состояние бота в БД, а не в памяти процесса\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1302,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1511150",
+  "href": "https://remote-job.ru/vacancy/show/1511150/backend-rust-developer-junior",
+  "title": "Backend Rust Developer Junior+ (удаленная работа)",
+  "company": "ИНГРАД Проект",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "backend",
+  "resume": "Junior Backend-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-backend.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Backend Rust Developer Junior+ (удаленная работа)» в ИНГРАД Проект.\nМеня зовут Данила Аринов — Junior Backend-разработчик: Python и Rust, REST API, реляционные данные.\nРезюме, которое прикреплено к отклику: «Junior Backend-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «вы сами проектируете API-контракт, продумываете модель данных, границы транзакций и защиту от ошибок, а не просто пишете код по ТЗ »\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— атомарные коммиты с объяснением в сообщении, а не «как попало»\n\nЧто уже делал:\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация, 564 юнит-теста\n— три внешних источника — AniList, Kitsu и Shikimori — с разными лимитами сведены в один JSON API с единым видом ошибок; лимит AniList поднимается ключом с 30 до 90 запросов в минуту\n— Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-сервисы\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1456,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1512225",
+  "href": "https://remote-job.ru/vacancy/show/1512225/razrabotchik-c-programmist-s",
+  "title": "Разработчик C++ / Программист С++ (удаленная работа)",
+  "company": "Абарус",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "cpp",
+  "resume": "Разработчик C++",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-cpp.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-cpp.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Разработчик C++ / Программист С++ (удаленная работа)» в Абарус.\nМеня зовут Данила Аринов — Junior C++-разработчик: движки, графика, прикладные приложения.\nРезюме, которое прикреплено к отклику: «Разработчик C++».\n\nИз описания выделил для себя:\n— «Описание вакансии ABARUS IT аккредитованная IT-компания, которая работает с 2017 года»\n— «не указана Требуемый опыт работы:»\n\nПо вакансии понял задачу так: нужен C++: интеграция с системой, производительность, десктоп или графика.\n\nЧто сделаю:\n— писать код, который собирается и запускается у другого человека одной командой\n— держать логику отдельно от платформенного слоя — иначе её нечем тестировать\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— игровой движок на C++17 с нуля: два графических бэкенда Vulkan и OpenGL на выбор в рантайме, scene graph, импорт FBX/OBJ через Assimp, 88 коммитов\n— редактор на Rust и GLFW со своим immediate-mode UI, 158 юнит-тестов\n— Win32 и GDI+ приложение, собирается MinGW/MSVC одной командой\n— Telegram-боты на Python по заказам на Kwork\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1249,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1512460",
+  "href": "https://remote-job.ru/vacancy/show/1512460/inzhener-programmist",
+  "title": "Инженер-программист (удаленная работа)",
+  "company": "Иванчин Иван",
+  "salary": "от 70 000 до 140 000 руб.",
+  "salaryFloor": 70000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Инженер-программист (удаленная работа)» в Иванчин Иван.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «Разработка и программирование микроконтроллеров для управления силовыми преобразователями»\n— «Участие в создании и тестировании программного обеспечения для систем электропривода и энергетики»\n\nПо вакансии понял задачу так: нужен телеграм-бот или интеграция с внешним сервисом.\n\nЧто сделаю:\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n— держать состояние бота в БД, а не в памяти процесса\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— Telegram-боты на Python по заказам на Kwork\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1148,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1513507",
+  "href": "https://remote-job.ru/vacancy/show/1513507/junior-razrabotchik-golosovyx-i-chat-botov-arxitektor-botov",
+  "title": "Junior разработчик голосовых и чат ботов (архитектор ботов) (удаленная работа)",
+  "company": "DISKWIN",
+  "salary": "от 25 000 до 55 000 руб.",
+  "salaryFloor": 25000,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior разработчик голосовых и чат ботов (архитектор ботов) (удаленная работа)» в DISKWIN.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «Junior разработчик голосовых и чат ботов (архитектор ботов) Описание вакансии Внимание!»\n— «В связи с ростом клиентской базы и увеличением продаж ищем Junior-разработчика голосовых и чат ботов»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— в каталоге три внешних источника с разными лимитами и форматами ответов сведены к одному JSON API с единым видом ошибок\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1385,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1157128",
+  "href": "https://remote-job.ru/vacancy/show/1157128/qa-engineer-testirovshhik-stazher-intern",
+  "title": "QA-engineer/тестировщик (стажер/intern) (удаленная работа)",
+  "company": "Ренью",
+  "salary": "от 50 000 до 50 000 руб.",
+  "salaryFloor": 50000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «QA-engineer/тестировщик (стажер/intern) (удаленная работа)» в Ренью.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «У нас сильные профессионалы, которые работают над сильными задачами!»\n— «у нас крупные российские заказчики, с которыми мы работаем уже много лет»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— взять их API, написать клиента с обработкой ошибок и лимитов, привести ответы к внутренней модели\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1272,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1462985",
+  "href": "https://remote-job.ru/vacancy/show/1462985/razrabotchik-python-control-plane-v-setevoj-os",
+  "title": "Разработчик Python control plane в сетевой ОС (удаленная работа)",
+  "company": "Бифорком Тек",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Разработчик Python control plane в сетевой ОС (удаленная работа)» в Бифорком Тек.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Разработчик Python control plane в сетевой ОС Описание вакансии Задачи:»\n\nПо вакансии понял задачу так: нужен backend с REST API и интеграцией с внешними сервисами.\n\nЧто сделаю:\n— поднять API со схемой БД под реальные запросы, фильтрами и пагинацией\n— накрыть хендлеры тестами и собрать CI, чтобы регрессии ложились до выкатки\n— Docker-образ с healthcheck и переменными окружения вместо правок в коде\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1236,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1496198",
+  "href": "https://remote-job.ru/vacancy/show/1496198/stazher-web-razrabotchik-programmist",
+  "title": "Стажер/web-разработчик (программист) (удаленная работа)",
+  "company": "Онли",
+  "salary": "з.п. не указана",
+  "salaryFloor": null,
+  "stack": "python",
+  "resume": "Junior Python-разработчик",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-python.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Стажер/web-разработчик (программист) (удаленная работа)» в Онли.\nМеня зовут Данила Аринов — Junior Python-разработчик: автоматизация, интеграции, тестирование.\nРезюме, которое прикреплено к отклику: «Junior Python-разработчик».\n\nИз описания выделил для себя:\n— «не указана Требуемый опыт работы:»\n— «Стажер/web-разработчик (программист) Описание вакансии Привет!»\n\nПо вакансии понял задачу так: нужна дисциплина в коде: история изменений, ревью, документация.\n\nЧто сделаю:\n— атомарные коммиты с объяснением в сообщении, а не «как попало»\n— архитектурные решения фиксировать письменно, с обоснованием и альтернативами\n— сначала описать контракты и инварианты, потом код — тогда спор идёт о сути, а не о формате\n\nЧто уже делал:\n— Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-интеграции по ТЗ заказчиков\n— переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация\n— 769 автотестов в трёх проектах, CI на каждом пуше\n— 88 коммитов в движке с нуля, каждый с осмысленным сообщением\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1200,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1457398",
+  "href": "https://remote-job.ru/vacancy/show/1457398/junior-testirovshhik",
+  "title": "Junior-тестировщик (удаленная работа)",
+  "company": "EvaTeam",
+  "salary": "от 35 000 до 35 000 руб.",
+  "salaryFloor": 35000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Junior-тестировщик (удаленная работа)» в EvaTeam.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «Мы создаем отечественные IT-продукты для управления проектами, сервисами, разработкой и корпоративными знаниями»\n— «Мы ищем Тестировщика ПО для улучшения нашего продукта»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— атомарные коммиты с объяснением в сообщении, а не «как попало»\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1242,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ },
+ {
+  "id": "1518525",
+  "href": "https://remote-job.ru/vacancy/show/1518525/mladshij-testirovshhik-junior-qa",
+  "title": "Младший тестировщик / Junior QA (удаленная работа)",
+  "company": "Коротков Александр Евгеньевич",
+  "salary": "от 40 000 до 40 000 руб.",
+  "salaryFloor": 40000,
+  "stack": "qa",
+  "resume": "Junior QA-инженер",
+  "resumeUrl": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.html",
+  "resumePdf": "https://teivrimoriginal.github.io/Partfolio-Site/resume-qa.pdf",
+  "quoted": 2,
+  "letter": "Здравствуйте! Откликаюсь на «Младший тестировщик / Junior QA (удаленная работа)» в Коротков Александр Евгеньевич.\nМеня зовут Данила Аринов — Junior QA-инженер: автотесты UI, тест-дизайн, CI.\nРезюме, которое прикреплено к отклику: «Junior QA-инженер».\n\nИз описания выделил для себя:\n— «Мы создаём и развиваем веб-сервисы, мобильные приложения, CRM-системы и интеграции с 1С, Битрикс24 и внешними сервисами»\n— «Ищем младшего ручного тестировщика, которому важны качество работы, самостоятельность и профессиональный рост»\n\nПо вакансии понял задачу так: нужно покрыть тестами то, что уже есть, и ловить регрессии.\n\nЧто сделаю:\n— тесты на чистой логике без сети и БД — они проходят быстро и детерминированно\n— отдельно тесты на то, что не видно ни в компиляторе, ни в ответе запроса: PATCH-семантика, лимиты, таймауты\n— сначала описать контракты и инварианты, потом код — тогда спор идёт о сути, а не о формате\n\nЧто уже делал:\n— 47 UI-автотестов на Selenium 4 и Pytest с отчётами Allure, включая негативные сценарии и формы\n— 769 автотестов суммарно в трёх проектах: 564 и 158 юнит-тестов плюс UI-тесты\n— тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде\n— в публичных репозиториях у каждого проекта есть тесты и CI\n\nКод: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com\nГотов выполнить тестовое задание.\n\nДанила Аринов",
+  "len": 1369,
+  "contacts": {
+   "phone": "+79014318298",
+   "telegram": "@Smishnyavko"
+  }
+ }
+]
