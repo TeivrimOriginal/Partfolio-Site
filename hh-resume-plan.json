@@ -1,0 +1,495 @@
+[
+ {
+  "stack": "python",
+  "hhTitle": "Junior Python-разработчик",
+  "alreadyOnHh": false,
+  "existingResumeId": null,
+  "fixExisting": [],
+  "sourceFile": "resume-python.html",
+  "specialtyCategory": "Информационные технологии",
+  "specialty": "Программист, разработчик",
+  "about": "Python с 2022 и он же — мой рабочий коммерческий язык: заказы на Kwork, где я пишу ботов, парсеры, REST-интеграции и автоматизацию по ТЗ заказчиков. Плюс 47 UI-автотестов на Selenium и Pytest с отчётами Allure. 769 автотестов суммарно по всем проектам, CI на каждом пуше. Люблю, когда ручную проверку можно заменить тестом. Ищу junior Python-стажировку, готов к тестовому заданию.",
+  "aboutLength": 380,
+  "workFormat": "удалённо",
+  "skills": [
+   [
+    "Python",
+    2
+   ],
+   [
+    "Pytest",
+    2
+   ],
+   [
+    "Selenium",
+    2
+   ],
+   [
+    "Allure",
+    1
+   ],
+   [
+    "REST API",
+    2
+   ],
+   [
+    "Postman",
+    2
+   ],
+   [
+    "Docker",
+    1
+   ],
+   [
+    "Git",
+    2
+   ],
+   [
+    "Linux",
+    2
+   ],
+   [
+    "SQL",
+    2
+   ],
+   [
+    "JSON",
+    2
+   ],
+   [
+    "HTTP",
+    2
+   ],
+   [
+    "JavaScript",
+    1
+   ],
+   [
+    "C++",
+    2
+   ],
+   [
+    "Rust",
+    2
+   ]
+  ],
+  "experience": {
+   "fill": false,
+   "why": "hh требует месяц начала, а в локальном резюме «2022 — н.в.». Публичной даты нет: самый ранний репозиторий — 26.10.2024, Kwork дату не отдаёт. Факты про Kwork перенесены в «О себе»."
+  },
+  "steps": [
+   "открыть /applicant/resumes/new",
+   "нажать «Укажу профессию» [data-qa=\"resume-profile-card-select-job\"]",
+   "вписать должность в [data-qa=\"resume-profile-position-input\"] и нажать Enter, затем выбрать появившийся чип",
+   "нажать «Сохранить и продолжить» [data-qa=\"resume-profile-next-screen\"] РЕАЛЬНЫМ кликом",
+   "в диалоге раскрыть «Информационные технологии» [data-qa=\"tree-selector-item tree-selector-item-category-11\"] (список виртуализирован, прокрутить [data-qa=\"tree-selector-container\"])",
+   "выбрать специальность «Программист, разработчик» и нажать [data-qa=\"category-modal-submit\"]",
+   "экран common: ФИО и телефон подставлены из профиля, проверить и сохранить",
+   "экран educations: оставить отмеченными две позиции УрТК НИЯУ МИФИ",
+   "экран keyskills: вписать навыки чипами в [data-qa=\"chips-trigger-input\"] + Enter",
+   "экран skill_levels: проставить уровни 1/2/3 в [data-qa=\"skill-level-N\"]",
+   "экран experience: нажать «Нет опыта работы»",
+   "дойти до конца мастера и записать полученный id резюме в hh-resume-stack.js"
+  ]
+ },
+ {
+  "stack": "backend",
+  "hhTitle": "Junior Backend-разработчик",
+  "alreadyOnHh": true,
+  "existingResumeId": "bf37e31cff112962a90039ed1f6d625a44436d",
+  "fixExisting": [
+   {
+    "what": "Формат работы",
+    "now": "На месте работодателя",
+    "need": "удалённо",
+    "why": "очередь отбиралась только по удалённым вакансиям; при «на месте работодателя» резюме не попадает в удалённую выдачу"
+   }
+  ],
+  "sourceFile": "resume-backend.html",
+  "specialtyCategory": "Информационные технологии",
+  "specialty": "Программист, разработчик",
+  "about": "Бэкенд с 2022: заказы на Kwork — Telegram-боты, парсеры, REST API и интеграции. С 2024 пишу на Rust: переписал каталог с Node.js на Actix-Web — 3 внешних API, ~20 тыс. записей, JSON API с фильтрами и пагинацией, полнотекстовый поиск в SQLite FTS5, Docker, Android-клиент. 769 автотестов суммарно, CI на каждом пуше. Данные и учёт знаю не по картинкам: в конфигурации 1С сам проектировал документы, движения по регистрам и запросы. Ищу junior/backend-стажировку, готов к тестовому заданию.",
+  "aboutLength": 488,
+  "workFormat": "удалённо",
+  "skills": [
+   [
+    "Python",
+    2
+   ],
+   [
+    "Rust",
+    2
+   ],
+   [
+    "Actix-web",
+    2
+   ],
+   [
+    "REST API",
+    2
+   ],
+   [
+    "PostgreSQL",
+    1
+   ],
+   [
+    "SQL",
+    2
+   ],
+   [
+    "Docker",
+    1
+   ],
+   [
+    "Git",
+    2
+   ],
+   [
+    "Linux",
+    2
+   ],
+   [
+    "JSON",
+    2
+   ],
+   [
+    "WebSocket",
+    2
+   ],
+   [
+    "Node.js",
+    1
+   ]
+  ],
+  "experience": {
+   "fill": false,
+   "why": "hh требует месяц начала, а в локальном резюме «2022 — н.в.». Публичной даты нет: самый ранний репозиторий — 26.10.2024, Kwork дату не отдаёт. Факты про Kwork перенесены в «О себе»."
+  },
+  "steps": [
+   "открыть /applicant/resumes/new",
+   "нажать «Укажу профессию» [data-qa=\"resume-profile-card-select-job\"]",
+   "вписать должность в [data-qa=\"resume-profile-position-input\"] и нажать Enter, затем выбрать появившийся чип",
+   "нажать «Сохранить и продолжить» [data-qa=\"resume-profile-next-screen\"] РЕАЛЬНЫМ кликом",
+   "в диалоге раскрыть «Информационные технологии» [data-qa=\"tree-selector-item tree-selector-item-category-11\"] (список виртуализирован, прокрутить [data-qa=\"tree-selector-container\"])",
+   "выбрать специальность «Программист, разработчик» и нажать [data-qa=\"category-modal-submit\"]",
+   "экран common: ФИО и телефон подставлены из профиля, проверить и сохранить",
+   "экран educations: оставить отмеченными две позиции УрТК НИЯУ МИФИ",
+   "экран keyskills: вписать навыки чипами в [data-qa=\"chips-trigger-input\"] + Enter",
+   "экран skill_levels: проставить уровни 1/2/3 в [data-qa=\"skill-level-N\"]",
+   "экран experience: нажать «Нет опыта работы»",
+   "дойти до конца мастера и записать полученный id резюме в hh-resume-stack.js"
+  ]
+ },
+ {
+  "stack": "qa",
+  "hhTitle": "Junior QA-инженер",
+  "alreadyOnHh": false,
+  "existingResumeId": null,
+  "fixExisting": [],
+  "sourceFile": "resume-qa.html",
+  "specialtyCategory": "Информационные технологии",
+  "specialty": "Тестировщик",
+  "about": "Тестирую код автоматически, а не руками. 47 UI-автотестов на Selenium и Pytest с отчётами Allure: позитивные, негативные и проверки формы обратной связи. 769 автотестов суммарно по всем проектам — 564 юнит-теста на Rust, 158 в редакторе, 47 UI-тестов, 425 проверок дампа конфигурации. Тесты и clippy с -D warnings гоняются в CI на каждом пуше. Ищу junior QA или автоматизатора тестирования, готов к тестовому заданию.",
+  "aboutLength": 417,
+  "workFormat": "удалённо",
+  "skills": [
+   [
+    "Selenium",
+    2
+   ],
+   [
+    "Pytest",
+    2
+   ],
+   [
+    "Allure",
+    2
+   ],
+   [
+    "Postman",
+    2
+   ],
+   [
+    "TestRail",
+    1
+   ],
+   [
+    "Atlassian Jira",
+    2
+   ],
+   [
+    "Test Design",
+    1
+   ],
+   [
+    "Git",
+    2
+   ],
+   [
+    "Docker",
+    1
+   ],
+   [
+    "Linux",
+    2
+   ],
+   [
+    "Python",
+    2
+   ],
+   [
+    "SQL",
+    2
+   ],
+   [
+    "REST API",
+    2
+   ]
+  ],
+  "experience": {
+   "fill": false,
+   "why": "hh требует месяц начала, а в локальном резюме «2022 — н.в.». Публичной даты нет: самый ранний репозиторий — 26.10.2024, Kwork дату не отдаёт. Факты про Kwork перенесены в «О себе»."
+  },
+  "steps": [
+   "открыть /applicant/resumes/new",
+   "нажать «Укажу профессию» [data-qa=\"resume-profile-card-select-job\"]",
+   "вписать должность в [data-qa=\"resume-profile-position-input\"] и нажать Enter, затем выбрать появившийся чип",
+   "нажать «Сохранить и продолжить» [data-qa=\"resume-profile-next-screen\"] РЕАЛЬНЫМ кликом",
+   "в диалоге раскрыть «Информационные технологии» [data-qa=\"tree-selector-item tree-selector-item-category-11\"] (список виртуализирован, прокрутить [data-qa=\"tree-selector-container\"])",
+   "выбрать специальность «Тестировщик» и нажать [data-qa=\"category-modal-submit\"]",
+   "экран common: ФИО и телефон подставлены из профиля, проверить и сохранить",
+   "экран educations: оставить отмеченными две позиции УрТК НИЯУ МИФИ",
+   "экран keyskills: вписать навыки чипами в [data-qa=\"chips-trigger-input\"] + Enter",
+   "экран skill_levels: проставить уровни 1/2/3 в [data-qa=\"skill-level-N\"]",
+   "экран experience: нажать «Нет опыта работы»",
+   "дойти до конца мастера и записать полученный id резюме в hh-resume-stack.js"
+  ]
+ },
+ {
+  "stack": "cpp",
+  "hhTitle": "Разработчик C++",
+  "alreadyOnHh": true,
+  "existingResumeId": "5a7a0ca7ff10971d1b0039ed1f324c65625969",
+  "fixExisting": [],
+  "sourceFile": "resume-cpp.html",
+  "specialtyCategory": "Информационные технологии",
+  "specialty": "Программист, разработчик",
+  "about": "C++ с 2024. Пишу то, что считает и рисует: игровой движок с нуля на C++17 и CMake с импортом FBX и OBJ через Assimp, редактор визуальных новелл на Win32 и GDI+, растровый редактор на Rust с собственным immediate-mode интерфейсом. 769 автотестов суммарно, CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test. Ищу junior C++-стажировку в играх или прикладной разработке, готов к тестовому заданию.",
+  "aboutLength": 404,
+  "workFormat": "удалённо",
+  "skills": [
+   [
+    "C++17",
+    2
+   ],
+   [
+    "Rust",
+    2
+   ],
+   [
+    "CMake",
+    2
+   ],
+   [
+    "Win32",
+    2
+   ],
+   [
+    "GDI+",
+    1
+   ],
+   [
+    "OpenGL",
+    2
+   ],
+   [
+    "Vulkan",
+    1
+   ],
+   [
+    "GLFW",
+    2
+   ],
+   [
+    "Git",
+    2
+   ],
+   [
+    "Linux",
+    2
+   ],
+   [
+    "MSVC",
+    2
+   ],
+   [
+    "MinGW",
+    2
+   ]
+  ],
+  "experience": {
+   "fill": false,
+   "why": "hh требует месяц начала, а в локальном резюме «2022 — н.в.». Публичной даты нет: самый ранний репозиторий — 26.10.2024, Kwork дату не отдаёт. Факты про Kwork перенесены в «О себе»."
+  },
+  "steps": [
+   "открыть /applicant/resumes/new",
+   "нажать «Укажу профессию» [data-qa=\"resume-profile-card-select-job\"]",
+   "вписать должность в [data-qa=\"resume-profile-position-input\"] и нажать Enter, затем выбрать появившийся чип",
+   "нажать «Сохранить и продолжить» [data-qa=\"resume-profile-next-screen\"] РЕАЛЬНЫМ кликом",
+   "в диалоге раскрыть «Информационные технологии» [data-qa=\"tree-selector-item tree-selector-item-category-11\"] (список виртуализирован, прокрутить [data-qa=\"tree-selector-container\"])",
+   "выбрать специальность «Программист, разработчик» и нажать [data-qa=\"category-modal-submit\"]",
+   "экран common: ФИО и телефон подставлены из профиля, проверить и сохранить",
+   "экран educations: оставить отмеченными две позиции УрТК НИЯУ МИФИ",
+   "экран keyskills: вписать навыки чипами в [data-qa=\"chips-trigger-input\"] + Enter",
+   "экран skill_levels: проставить уровни 1/2/3 в [data-qa=\"skill-level-N\"]",
+   "экран experience: нажать «Нет опыта работы»",
+   "дойти до конца мастера и записать полученный id резюме в hh-resume-stack.js"
+  ]
+ },
+ {
+  "stack": "gamedev",
+  "hhTitle": "Разработчик игр",
+  "alreadyOnHh": true,
+  "existingResumeId": "5a7a0ca7ff10971d1b0039ed1f324c65625969",
+  "fixExisting": [],
+  "sourceFile": "resume-gamedev.html",
+  "specialtyCategory": "Информационные технологии",
+  "specialty": "Программист, разработчик",
+  "about": "Пишу то, что двигает игру: собственный движок на C++17 с импортом FBX и OBJ через Assimp и выбором графического бэкенда в рантайме, растровый редактор на Rust с собственным immediate-mode интерфейсом, слоями и масками, редактор визуальных новелл с таймлайном и инспектором. Плюс живой опыт в команде: инди-игра на Unity, где я пишу код и геймдизайн вместе с опытным разработчиком; на хакатоне HackIT собрал прототип за выходные. Ищу junior-позицию в геймдеве, готов к тестовому заданию.",
+  "aboutLength": 486,
+  "workFormat": "удалённо",
+  "skills": [
+   [
+    "C++17",
+    2
+   ],
+   [
+    "Unity",
+    1
+   ],
+   [
+    "C#",
+    1
+   ],
+   [
+    "CMake",
+    2
+   ],
+   [
+    "OpenGL",
+    2
+   ],
+   [
+    "Vulkan",
+    1
+   ],
+   [
+    "Rust",
+    2
+   ],
+   [
+    "Git",
+    2
+   ],
+   [
+    "Linux",
+    2
+   ],
+   [
+    "MSVC",
+    2
+   ]
+  ],
+  "experience": {
+   "fill": false,
+   "why": "hh требует месяц начала, а в локальном резюме «2022 — н.в.». Публичной даты нет: самый ранний репозиторий — 26.10.2024, Kwork дату не отдаёт. Факты про Kwork перенесены в «О себе»."
+  },
+  "steps": [
+   "открыть /applicant/resumes/new",
+   "нажать «Укажу профессию» [data-qa=\"resume-profile-card-select-job\"]",
+   "вписать должность в [data-qa=\"resume-profile-position-input\"] и нажать Enter, затем выбрать появившийся чип",
+   "нажать «Сохранить и продолжить» [data-qa=\"resume-profile-next-screen\"] РЕАЛЬНЫМ кликом",
+   "в диалоге раскрыть «Информационные технологии» [data-qa=\"tree-selector-item tree-selector-item-category-11\"] (список виртуализирован, прокрутить [data-qa=\"tree-selector-container\"])",
+   "выбрать специальность «Программист, разработчик» и нажать [data-qa=\"category-modal-submit\"]",
+   "экран common: ФИО и телефон подставлены из профиля, проверить и сохранить",
+   "экран educations: оставить отмеченными две позиции УрТК НИЯУ МИФИ",
+   "экран keyskills: вписать навыки чипами в [data-qa=\"chips-trigger-input\"] + Enter",
+   "экран skill_levels: проставить уровни 1/2/3 в [data-qa=\"skill-level-N\"]",
+   "экран experience: нажать «Нет опыта работы»",
+   "дойти до конца мастера и записать полученный id резюме в hh-resume-stack.js"
+  ]
+ },
+ {
+  "stack": "frontend",
+  "hhTitle": "Junior Frontend-разработчик",
+  "alreadyOnHh": false,
+  "existingResumeId": null,
+  "fixExisting": [],
+  "sourceFile": "resume-frontend.html",
+  "specialtyCategory": "Информационные технологии",
+  "specialty": "Программист, разработчик",
+  "about": "Интерфейсы делаю в двух senses: в браузере и нативно. В вебе — свой портфолио-сайт и real-time мессенджер на socket.io с регистрацией, загрузкой файлов и обменом сообщениями через WebSocket. В нативном клиенте — собственный immediate-mode UI в растровом редакторе и редактор визуальных новелл на Win32 и GDI+. Фреймворки в продакшене не использовал: весь интерфейс — свой, на ванильном JavaScript и на Qt. 47 UI-автотестов на Selenium, чтобы проверять интерфейс автоматически. Ищу junior frontend-стажировку, готов к тестовому заданию.",
+  "aboutLength": 535,
+  "workFormat": "удалённо",
+  "skills": [
+   [
+    "JavaScript",
+    2
+   ],
+   [
+    "HTML",
+    2
+   ],
+   [
+    "CSS",
+    2
+   ],
+   [
+    "WebSocket",
+    2
+   ],
+   [
+    "Node.js",
+    1
+   ],
+   [
+    "Git",
+    2
+   ],
+   [
+    "Selenium",
+    2
+   ],
+   [
+    "Pytest",
+    2
+   ],
+   [
+    "Rust",
+    2
+   ],
+   [
+    "Linux",
+    1
+   ]
+  ],
+  "experience": {
+   "fill": false,
+   "why": "hh требует месяц начала, а в локальном резюме «2022 — н.в.». Публичной даты нет: самый ранний репозиторий — 26.10.2024, Kwork дату не отдаёт. Факты про Kwork перенесены в «О себе»."
+  },
+  "steps": [
+   "открыть /applicant/resumes/new",
+   "нажать «Укажу профессию» [data-qa=\"resume-profile-card-select-job\"]",
+   "вписать должность в [data-qa=\"resume-profile-position-input\"] и нажать Enter, затем выбрать появившийся чип",
+   "нажать «Сохранить и продолжить» [data-qa=\"resume-profile-next-screen\"] РЕАЛЬНЫМ кликом",
+   "в диалоге раскрыть «Информационные технологии» [data-qa=\"tree-selector-item tree-selector-item-category-11\"] (список виртуализирован, прокрутить [data-qa=\"tree-selector-container\"])",
+   "выбрать специальность «Программист, разработчик» и нажать [data-qa=\"category-modal-submit\"]",
+   "экран common: ФИО и телефон подставлены из профиля, проверить и сохранить",
+   "экран educations: оставить отмеченными две позиции УрТК НИЯУ МИФИ",
+   "экран keyskills: вписать навыки чипами в [data-qa=\"chips-trigger-input\"] + Enter",
+   "экран skill_levels: проставить уровни 1/2/3 в [data-qa=\"skill-level-N\"]",
+   "экран experience: нажать «Нет опыта работы»",
+   "дойти до конца мастера и записать полученный id резюме в hh-resume-stack.js"
+  ]
+ }
+]
