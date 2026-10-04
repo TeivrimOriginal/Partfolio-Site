@@ -170,10 +170,54 @@ function countHits(re, s) {
   return m ? m.length : 0;
 }
 
-/** Собирает письмо под вакансию. title и desc — с карточки hh. */
-function composeLetter(title, desc) {
+/**
+ * Вытаскивает из описания конкретные требования, чтобы письмо было про ИХ
+ * задачу, а не про общие слова.
+ *
+ * Зачем: 11 писем из 20 шорт-листа оказались побайтово одинаковыми — все эти
+ * вакансии попали в одну группу требований, и письмо собиралось из одних и тех
+ * же пунктов. Рекрутеру, у которого в разных откликах лежит один текст, это
+ * видно сразу. Конкретная цитата из описания делает письма разными и заодно
+ * показывает, что я прочитал вакансию.
+ */
+function extractRequirements(desc, limit, title) {
+  const max = limit || 2;
+  if (!desc) return [];
+  const text = desc.replace(/\s+/g, ' ').trim();
+  // Режем на предложения по точке, вопросу и переводу строки после регистра.
+  const parts = text.split(/(?<=[.!?;:•])\s+|\n+/);
+  const wanted = [];
+  const re = /нужно|необходимо|требуется|обязан|разрабатыва|пишем|работа с|работать с|знание|опыт|умение|понимание|docker|postgresql|linux|ci|тест|api|rest|asyncio|микросервис|парсер|бот|интеграц|деплой|баз[аы] данных|документ/i;
+  const bad = /высшее|среднее|образован|стаж[её]р[а-я]* р?а?з?р?я?т|зп|з\/п|оформлен|бенефит|питани|команд|офис|переезд|договор/i;
+  // Заголовок вакансии hh дублирует первое предложение описания. Цитировать
+  // «Разработчик Python (FastAPI)» как требование бессмысленно.
+  const normTitle = (title || '').toLowerCase().replace(/[^a-zа-яё0-9]+/g, ' ').trim();
+
+  for (const raw of parts) {
+    const p = raw.trim().replace(/^[-–—•*\s]+/, '');
+    if (p.length < 25 || p.length > 170) continue;
+    if (bad.test(p)) continue;
+    if (!re.test(p)) continue;
+    const norm = p.toLowerCase().replace(/[^a-zа-яё0-9]+/g, ' ').trim();
+    if (normTitle && (norm === normTitle || normTitle.indexOf(norm) === 0 || norm.indexOf(normTitle) === 0)) continue;
+    if (wanted.some((w) => w.slice(0, 40) === p.slice(0, 40))) continue;
+    wanted.push(p.replace(/[.;]+$/, ''));
+    if (wanted.length >= max) break;
+  }
+  return wanted;
+}
+
+/**
+ * Собирает письмо под вакансию.
+ *
+ * @param {string} title заголовок вакансии с hh
+ * @param {string} desc полный текст описания вакансии с hh
+ * @param {string} [company] название компании — чтобы обращаться по имени
+ */
+function composeLetter(title, desc, company) {
   const t = (title || '').toLowerCase();
   const d = (desc || '').toLowerCase();
+  const co = (company || '').trim();
 
   const scored = [];
   let foreign = false;
@@ -188,9 +232,23 @@ function composeLetter(title, desc) {
   scored.sort((a, b) => b.s - a.s);
   const top = scored.slice(0, 2).filter((x) => x.s >= 2);
 
+  const role = (title || '').trim();
+  const salutation = co
+    ? 'Здравствуйте! Откликаюсь на «' + role + '» в ' + co + '.'
+    : 'Здравствуйте! Откликаюсь на «' + role + '».';
   const L = [
-    'Здравствуйте! Меня зовут Данила Аринов — Python/C++ разработчик: backend, REST API, автоматизация.',
+    salutation,
+    'Меня зовут Данила Аринов — Python/C++ разработчик: backend, REST API, автоматизация.',
   ];
+
+  // Сначала то, что реально есть в описании. Это главное отличие письма от
+  // шаблона: цитата из их вакансии вместо пересказа своего резюме.
+  const reqs = extractRequirements(desc, 2, title);
+  if (reqs.length) {
+    L.push('');
+    L.push('Из описания выделил для себя:');
+    for (const r of reqs) L.push('— «' + r + '»');
+  }
 
   if (foreign) {
     L.push('');
@@ -328,4 +386,4 @@ const browserScripts = {
   },
 };
 
-module.exports = { composeLetter, letterTags, browserScripts, CONTACTS, GROUPS };
+module.exports = { composeLetter, letterTags, extractRequirements, browserScripts, CONTACTS, GROUPS };
