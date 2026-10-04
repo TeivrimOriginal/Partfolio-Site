@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Данила Аринов — C++ / Rust разработчик, junior</title>
+<title>Данила Аринов — Python / C++ разработчик, junior</title>
 <meta name="description" content="Резюме Данилы Аринова: junior Python/C++ разработчик. Backend, REST API, автоматизация, парсинг, интеграции. Проекты: Anime DB, TPaint, Teivrim-Engine. Контакты." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Danila Arinov" />
@@ -54,21 +54,20 @@
   .back:hover{color:var(--acc)}
   @page{size:A4;margin:9mm}
   @media print{
-    body{background:#fff;padding:0;line-height:1.31;font-size:11.9px}
+    body{background:#fff;padding:0;line-height:1.28;font-size:11.4px}
     .sheet{box-shadow:none;padding:0;max-width:none}
     .print,.back{display:none}
-    .sec{margin-top:8px}
-    .sec h2{margin-bottom:5px;padding-bottom:2px}
-    .it{margin-bottom:7px;page-break-inside:avoid}
-    .it-t{font-size:13px}
-    ul.bul{margin-top:2px;font-size:11.9px}
+    .sec{margin-top:7px}
+    .sec h2{margin-bottom:4px;padding-bottom:2px}
+    .it{margin-bottom:6px;page-break-inside:avoid}
+    .it-t{font-size:12.6px}
+    ul.bul{margin-top:2px;font-size:11.4px}
     ul.bul li{margin:1px 0}
-    .note,.fmt{font-size:11.2px}
-    h1{font-size:23px}
-    .role{font-size:13px;margin:2px 0 8px}
-    .meta{font-size:11.8px;margin-bottom:12px}
-    .fmt{padding:5px 9px}
-    .sk{font-size:11.4px;padding:3px 9px}
+    .note{font-size:11.4px;line-height:1.34}
+    h1{font-size:22px}
+    .role{font-size:12.6px;margin:2px 0 7px}
+    .meta{font-size:11.3px;margin-bottom:10px}
+    .sk{font-size:11px;padding:3px 8px}
   }
   @media(max-width:640px){.sheet{padding:26px 22px}}
 </style>
@@ -92,16 +91,13 @@
   </header>
 
   <section class="sec">
-    <h2>Образование</h2>
-    <div class="it">
-      <div class="it-h">
-        <span class="it-t">УрТК НИЯУ МИФИ — Информационные сети и программирование</span>
-        <span class="it-d mono">2024 — 2027</span>
-      </div>
-      <ul class="bul">
-        <li>Среднее специальное, заканчиваю в 2027 году. Практика с Python с 2022 года, с C++ и своими проектами — с 2024: open-source, автотесты, ревью кода.</li>
-      </ul>
-    </div>
+    <h2>О себе</h2>
+    <p class="note">
+      Python с 2022, C++ и Rust — с 2024. Делаю backend-сервисы, REST API и автоматизацию;
+      параллельно графику и инструменты: растровый редактор и игровой движок с нуля.
+      <b>769 автотестов суммарно, CI на каждом пуше: rustfmt, clippy -D warnings, cargo test.
+      Ищу junior/backend-стажировку, готов к тестовому заданию.</b>
+    </p>
   </section>
 
   <section class="sec">
@@ -123,8 +119,7 @@
         <span class="it-d mono">C# · Unity</span>
       </div>
       <ul class="bul">
-        <li>Код, геймдизайн, подбор людей в проект.</li>
-        <li>Хакатон HackIT: собрал прототип за выходные.</li>
+        <li>Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные.</li>
       </ul>
     </div>
 
@@ -132,6 +127,18 @@
 
   <section class="sec">
     <h2>Проекты</h2>
+
+    <div class="it">
+      <div class="it-h">
+        <span class="it-t">practice-automation-tests — автотесты UI</span>
+        <span class="it-d mono">Python · Selenium, Pytest, Allure · 2026 — н.в.</span>
+      </div>
+      <ul class="bul">
+        <li>47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.</li>
+        <li>Отчёты Allure HTML, запуск одной командой, Selenium Manager сам ставит драйверы.</li>
+      </ul>
+      <a href="https://github.com/TeivrimOriginal/practice-automation-tests" target="_blank" rel="noopener">github.com/TeivrimOriginal/practice-automation-tests</a>
+    </div>
 
     <div class="it">
       <div class="it-h">
@@ -183,23 +190,12 @@
 
   </section>
 
-    <div class="it">
-      <div class="it-h">
-        <span class="it-t">practice-automation-tests — автотесты UI</span>
-        <span class="it-d mono">Python · Selenium, Pytest, Allure · 2026 — н.в.</span>
-      </div>
-      <ul class="bul">
-        <li>47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.</li>
-        <li>Отчёты Allure HTML, запуск одной командой, Selenium Manager сам ставит драйверы.</li>
-      </ul>
-      <a href="https://github.com/TeivrimOriginal/practice-automation-tests" target="_blank" rel="noopener">github.com/TeivrimOriginal/practice-automation-tests</a>
-    </div>
   <section class="sec">
     <h2>Навыки</h2>
     <div class="skills">
-      <span class="sk"><b>Языки:</b> Python, C++17, SQL (SQLite), C# (Unity)</span>
+      <span class="sk"><b>Языки:</b> Python, C++17, Rust, SQL (SQLite), C# (Unity)</span>
       <span class="sk"><b>Backend:</b> Actix-Web, REST API, JSON, SQLite FTS5, Docker</span>
-      <span class="sk"><b>Автоматизация:</b> парсеры сайтов, Telegram-боты, интеграции внешних API</span>
+      <span class="sk"><b>Автоматизация:</b> Selenium, Pytest, Allure, парсеры сайтов, Telegram-боты, интеграции внешних API</span>
       <span class="sk"><b>Инструменты:</b> Git, CMake, Cargo, MinGW / MSVC, Linux, отладка и профилирование</span>
       <span class="sk"><b>Практики:</b> автотесты (769 суммарно), CI, ревью кода, документирование</span>
     </div>
@@ -207,7 +203,9 @@
 
   <section class="sec">
     <h2>Дополнительно</h2>
-    <p class="note">Английский — чтение технической документации.</p>
+    <p class="note">
+      Английский — чтение технической документации. Открытый код: <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">9 публичных репозиториев</a>, лицензия MIT, все проекты с тестами и CI.
+    </p>
   </section>
 
 </div>
