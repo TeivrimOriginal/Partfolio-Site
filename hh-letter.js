@@ -213,8 +213,11 @@ function extractRequirements(desc, limit, title) {
  * @param {string} title заголовок вакансии с hh
  * @param {string} desc полный текст описания вакансии с hh
  * @param {string} [company] название компании — чтобы обращаться по имени
+ * @param {object} [profile] стековой профиль из hh-resume-stack.js. Без него
+ *   письмо начнётся общей строкой про Python и C++, и это будет расходиться с
+ *   прикреплённым резюме: у него девять версий под разные вакансии.
  */
-function composeLetter(title, desc, company) {
+function composeLetter(title, desc, company, profile) {
   const t = (title || '').toLowerCase();
   const d = (desc || '').toLowerCase();
   const co = (company || '').trim();
@@ -236,10 +239,19 @@ function composeLetter(title, desc, company) {
   const salutation = co
     ? 'Здравствуйте! Откликаюсь на «' + role + '» в ' + co + '.'
     : 'Здравствуйте! Откликаюсь на «' + role + '».';
+  const DEFAULT_INTRO = 'Меня зовут Данила Аринов — Python/C++ разработчик: backend, REST API, автоматизация.';
+  const intro = (profile && profile.intro) || DEFAULT_INTRO;
   const L = [
     salutation,
-    'Меня зовут Данила Аринов — Python/C++ разработчик: backend, REST API, автоматизация.',
+    intro,
   ];
+
+  // Называем прикреплённое резюме. На hh рекрутер видит пару «письмо + резюме»,
+  // и явная связка «письмо под это резюме» снимает вопрос, откуда в письме
+  // про Selenium, если в заголовке вакансии только про API.
+  if (profile && profile.hhTitle) {
+    L.push('Резюме, которое прикреплено к отклику: «' + profile.hhTitle + '».');
+  }
 
   // Сначала то, что реально есть в описании. Это главное отличие письма от
   // шаблона: цитата из их вакансии вместо пересказа своего резюме.
@@ -261,20 +273,36 @@ function composeLetter(title, desc, company) {
     L.push('Конкретную задачу из описания вытащил плохо — допишу её точнее после короткого уточняющего вопроса, чтобы не гадать.');
   }
 
+  const hows = [];
   if (top.length) {
     L.push('');
     L.push('Что сделаю:');
-    const hows = [];
     for (const x of top) for (const v of x.g.how) if (hows.indexOf(v) < 0) hows.push(v);
     for (const v of hows.slice(0, 3)) L.push('— ' + v);
   }
 
   const proofs = [];
-  for (const x of top) for (const v of x.g.proof) if (proofs.indexOf(v) < 0) proofs.push(v);
+  // Сначала доказательства из прикреплённого резюме: именно их рекрутер видит
+  // рядом с письмом. Потом — из групп требований вакансии, если задача уже там
+  // попала в другую ветку. Так письмо и про вакансию, и про то, что реально
+  // прикреплено.
+  const candidates = [];
+  if (profile && profile.proof) for (const v of profile.proof) candidates.push(v);
+  for (const x of top) for (const v of x.g.proof) candidates.push(v);
+  // Повтор проверяется и против блока «Что сделаю»: «Docker-образ с healthcheck»
+  // в плане и «Docker + docker-compose с healthcheck» в достижениях — это один
+  // факт, и писать его дважды нельзя.
+  const said = hows.slice(0, 3);
+  for (const v of candidates) {
+    if (proofs.length >= 4) break;
+    if (proofs.some((p) => p === v || sameFact(p, v))) continue;
+    if (said.some((p) => p === v || sameFact(p, v))) continue;
+    proofs.push(v);
+  }
   if (proofs.length) {
     L.push('');
     L.push('Что уже делал:');
-    for (const v of proofs.slice(0, 3)) L.push('— ' + v);
+    for (const v of proofs) L.push('— ' + v);
   }
 
   L.push('');
@@ -386,4 +414,30 @@ const browserScripts = {
   },
 };
 
-module.exports = { composeLetter, letterTags, extractRequirements, browserScripts, CONTACTS, GROUPS };
+// Похожие формулировки одного факта. Письмо не должно содержать «769
+// автотестов» дважды: одно предложение из резюме и одно из группы требований
+// говорят о том же самом разными словами, и это выглядит как невнимательность.
+// Сравнение по множеству значимых слов: если половина слов совпала, строка
+// считается тем же фактом.
+const STOP = new Set(['и', 'в', 'на', 'с', 'по', 'для', 'не', 'что', 'как', 'из', 'до', 'за', 'при', 'под', 'к', 'а', 'то', 'же', 'у', 'о', 'или']);
+
+function words(s) {
+  return new Set(
+    String(s || '')
+      .toLowerCase()
+      .replace(/[^a-zа-яё0-9+]+/gi, ' ')
+      .split(/\s+/)
+      .filter((w) => w.length > 3 && !STOP.has(w))
+  );
+}
+
+function sameFact(a, b) {
+  const A = words(a);
+  const B = words(b);
+  if (A.size < 3 || B.size < 3) return false;
+  let common = 0;
+  for (const w of A) if (B.has(w)) common++;
+  return common / Math.min(A.size, B.size) >= 0.5;
+}
+
+module.exports = { composeLetter, letterTags, extractRequirements, browserScripts, CONTACTS, GROUPS, sameFact };

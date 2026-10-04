@@ -1,0 +1,1378 @@
+[
+ {
+  "stack": "общее",
+  "file": "resume.html",
+  "role": "Junior Python / C++ разработчик — backend, REST API, автоматизация",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior Python / C++ разработчик — backend, REST API, автоматизация",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    },
+    {
+     "href": "https://kwork.ru/user/teivrim",
+     "label": "Kwork"
+    }
+   ],
+   "sections": {
+    "О себе": "Python с 2022, C++ и Rust — с 2024. Делаю backend-сервисы, REST API и автоматизацию; параллельно графику и инструменты: растровый редактор и игровой движок с нуля. 769 автотестов суммарно, CI на каждом пуше: rustfmt, clippy -D warnings, cargo test. Ищу junior/backend-стажировку, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Фриланс — разработка по заказам на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты на Python, парсеры сайтов, REST API, автоматизация — по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     },
+     {
+      "name": "Инди-игра на Unity — команда с опытным разработчиком",
+      "meta": "C# · Unity",
+      "bullets": [
+       "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "practice-automation-tests — автотесты UI",
+      "meta": "Python · Selenium, Pytest, Allure · 2026 — н.в.",
+      "bullets": [
+       "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+       "Отчёты Allure HTML, запуск одной командой, Selenium Manager сам ставит драйверы."
+      ]
+     },
+     {
+      "name": "Anime DB — каталог из 3 публичных API",
+      "meta": "Actix-Web · SQLite FTS5 · Docker · 2024 — н.в.",
+      "bullets": [
+       "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+       "SQLite FTS5 для полнотекстового поиска, Docker для сборки, Android-клиент к тому же API.",
+       "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+      ]
+     },
+     {
+      "name": "TPaint — редактор изображений",
+      "meta": "Rust · 2026 — н.в.",
+      "bullets": [
+       "Собственный immediate-mode UI без системных контролов: 15+ инструментов, слои с масками и 10 режимами наложения.",
+       "Форматы .tpaint, PSD и PNG, 158 юнит-тестов."
+      ]
+     },
+     {
+      "name": "Teivrim-Engine — движок с нуля",
+      "meta": "C++17 · CMake · 2025 — н.в.",
+      "bullets": [
+       "Выбор бэкенда в рантайме, scene graph, импорт FBX/OBJ через Assimp, 88 коммитов."
+      ]
+     },
+     {
+      "name": "Редактор визуальных новелл",
+      "meta": "C++ · Win32 / GDI+ · MinGW",
+      "bullets": [
+       "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline.",
+       "Drag-and-drop из Проводника, сохранение и загрузка проекта."
+      ]
+     }
+    ],
+    "Навыки": "Языки: Python, C++17, Rust, SQL (SQLite), C# (Unity) Backend: Actix-Web, REST API, JSON, SQLite FTS5, Docker Автоматизация: Selenium, Pytest, Allure, парсеры сайтов, Telegram-боты, интеграции внешних API Инструменты: Git, CMake, Cargo, MinGW / MSVC, Linux, отладка и профилирование Практики: автотесты (769 суммарно), CI, ревью кода, документирование",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT, все проекты с тестами и CI."
+   },
+   "skills": [
+    "Языки: Python, C++17, Rust, SQL (SQLite), C# (Unity)",
+    "Backend: Actix-Web, REST API, JSON, SQLite FTS5, Docker",
+    "Автоматизация: Selenium, Pytest, Allure, парсеры сайтов, Telegram-боты, интеграции внешних API",
+    "Инструменты: Git, CMake, Cargo, MinGW / MSVC, Linux, отладка и профилирование",
+    "Практики: автотесты (769 суммарно), CI, ревью кода, документирование"
+   ]
+  },
+  "flat": {
+   "about": "Python с 2022, C++ и Rust — с 2024. Делаю backend-сервисы, REST API и автоматизацию; параллельно графику и инструменты: растровый редактор и игровой движок с нуля. 769 автотестов суммарно, CI на каждом пуше: rustfmt, clippy -D warnings, cargo test. Ищу junior/backend-стажировку, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Фриланс — разработка по заказам на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты на Python, парсеры сайтов, REST API, автоматизация — по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    },
+    {
+     "name": "Инди-игра на Unity — команда с опытным разработчиком",
+     "meta": "C# · Unity",
+     "bullets": [
+      "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "practice-automation-tests — автотесты UI",
+     "meta": "Python · Selenium, Pytest, Allure · 2026 — н.в.",
+     "bullets": [
+      "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+      "Отчёты Allure HTML, запуск одной командой, Selenium Manager сам ставит драйверы."
+     ]
+    },
+    {
+     "name": "Anime DB — каталог из 3 публичных API",
+     "meta": "Actix-Web · SQLite FTS5 · Docker · 2024 — н.в.",
+     "bullets": [
+      "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+      "SQLite FTS5 для полнотекстового поиска, Docker для сборки, Android-клиент к тому же API.",
+      "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+     ]
+    },
+    {
+     "name": "TPaint — редактор изображений",
+     "meta": "Rust · 2026 — н.в.",
+     "bullets": [
+      "Собственный immediate-mode UI без системных контролов: 15+ инструментов, слои с масками и 10 режимами наложения.",
+      "Форматы .tpaint, PSD и PNG, 158 юнит-тестов."
+     ]
+    },
+    {
+     "name": "Teivrim-Engine — движок с нуля",
+     "meta": "C++17 · CMake · 2025 — н.в.",
+     "bullets": [
+      "Выбор бэкенда в рантайме, scene graph, импорт FBX/OBJ через Assimp, 88 коммитов."
+     ]
+    },
+    {
+     "name": "Редактор визуальных новелл",
+     "meta": "C++ · Win32 / GDI+ · MinGW",
+     "bullets": [
+      "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline.",
+      "Drag-and-drop из Проводника, сохранение и загрузка проекта."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Языки: Python, C++17, Rust, SQL (SQLite), C# (Unity)",
+    "Backend: Actix-Web, REST API, JSON, SQLite FTS5, Docker",
+    "Автоматизация: Selenium, Pytest, Allure, парсеры сайтов, Telegram-боты, интеграции внешних API",
+    "Инструменты: Git, CMake, Cargo, MinGW / MSVC, Linux, отладка и профилирование",
+    "Практики: автотесты (769 суммарно), CI, ревью кода, документирование"
+   ]
+  }
+ },
+ {
+  "stack": "python",
+  "file": "resume-python.html",
+  "role": "Junior Python-разработчик — автоматизация, интеграции, тестирование",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior Python-разработчик — автоматизация, интеграции, тестирование",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "Python с 2022 и он же — мой рабочий коммерческий язык: заказы на Kwork, где я пишу ботов, парсеры, REST-интеграции и автоматизацию по ТЗ заказчиков. Плюс 47 UI-автотестов на Selenium и Pytest с отчётами Allure. 769 автотестов суммарно по всем проектам, CI на каждом пуше. Люблю, когда ручную проверку можно заменить тестом. Ищу junior Python-стажировку, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Фриланс — заказы на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     },
+     {
+      "name": "Инди-игра на Unity — команда с опытным разработчиком",
+      "meta": "C# · Unity",
+      "bullets": [
+       "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "practice-automation-tests — автотесты UI",
+      "meta": "Python · Selenium 4.49 · Pytest 9.1 · Allure",
+      "bullets": [
+       "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+       "Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы."
+      ]
+     },
+     {
+      "name": "Anime DB — каталог из 3 публичных API",
+      "meta": "Actix-Web · SQLite FTS5 · Docker",
+      "bullets": [
+       "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+       "Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.",
+       "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+      ]
+     },
+     {
+      "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+      "meta": "BSL · 2026",
+      "bullets": [
+       "4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.",
+       "Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.",
+       "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше."
+      ]
+     }
+    ],
+    "Навыки": "Python: Selenium 4, Pytest 9, Allure, разбор CSV и JSON, HTTP-интеграции, парсинг сайтов, Telegram-боты, работа с файлами Инструменты тестирования: Pytest (маркеры, фикстуры, параметризация), Allure-отчёты, Selenium Manager, page-object-подобное разделение по страницам Смежное: Rust (Actix-Web), SQL (SQLite, FTS5), JavaScript, BSL, C++, Docker, Git, Linux Практики: 769 автотестов суммарно, CI (GitHub Actions), ревью кода, документирование",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT."
+   },
+   "skills": [
+    "Python: Selenium 4, Pytest 9, Allure, разбор CSV и JSON, HTTP-интеграции, парсинг сайтов, Telegram-боты, работа с файлами",
+    "Инструменты тестирования: Pytest (маркеры, фикстуры, параметризация), Allure-отчёты, Selenium Manager, page-object-подобное разделение по страницам",
+    "Смежное: Rust (Actix-Web), SQL (SQLite, FTS5), JavaScript, BSL, C++, Docker, Git, Linux",
+    "Практики: 769 автотестов суммарно, CI (GitHub Actions), ревью кода, документирование"
+   ]
+  },
+  "flat": {
+   "about": "Python с 2022 и он же — мой рабочий коммерческий язык: заказы на Kwork, где я пишу ботов, парсеры, REST-интеграции и автоматизацию по ТЗ заказчиков. Плюс 47 UI-автотестов на Selenium и Pytest с отчётами Allure. 769 автотестов суммарно по всем проектам, CI на каждом пуше. Люблю, когда ручную проверку можно заменить тестом. Ищу junior Python-стажировку, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Фриланс — заказы на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    },
+    {
+     "name": "Инди-игра на Unity — команда с опытным разработчиком",
+     "meta": "C# · Unity",
+     "bullets": [
+      "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "practice-automation-tests — автотесты UI",
+     "meta": "Python · Selenium 4.49 · Pytest 9.1 · Allure",
+     "bullets": [
+      "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+      "Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы."
+     ]
+    },
+    {
+     "name": "Anime DB — каталог из 3 публичных API",
+     "meta": "Actix-Web · SQLite FTS5 · Docker",
+     "bullets": [
+      "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+      "Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.",
+      "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+     ]
+    },
+    {
+     "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+     "meta": "BSL · 2026",
+     "bullets": [
+      "4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.",
+      "Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.",
+      "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Python: Selenium 4, Pytest 9, Allure, разбор CSV и JSON, HTTP-интеграции, парсинг сайтов, Telegram-боты, работа с файлами",
+    "Инструменты тестирования: Pytest (маркеры, фикстуры, параметризация), Allure-отчёты, Selenium Manager, page-object-подобное разделение по страницам",
+    "Смежное: Rust (Actix-Web), SQL (SQLite, FTS5), JavaScript, BSL, C++, Docker, Git, Linux",
+    "Практики: 769 автотестов суммарно, CI (GitHub Actions), ревью кода, документирование"
+   ]
+  }
+ },
+ {
+  "stack": "backend",
+  "file": "resume-backend.html",
+  "role": "Junior Backend-разработчик — Python, Rust, REST API, реляционные данные",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior Backend-разработчик — Python, Rust, REST API, реляционные данные",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "Бэкенд с 2022: заказы на Kwork — Telegram-боты, парсеры, REST API и интеграции. С 2024 пишу на Rust: переписал каталог с Node.js на Actix-Web — 3 внешних API, ~20 тыс. записей, JSON API с фильтрами и пагинацией, полнотекстовый поиск в SQLite FTS5, Docker, Android-клиент. 769 автотестов суммарно, CI на каждом пуше. Данные и учёт знаю не по картинкам: в конфигурации 1С сам проектировал документы, движения по регистрам и запросы. Ищу junior/backend-стажировку, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Фриланс — заказы на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "Anime DB — каталог из 3 публичных API",
+      "meta": "Actix-Web · SQLite FTS5 · Docker",
+      "bullets": [
+       "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+       "Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.",
+       "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+      ]
+     },
+     {
+      "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+      "meta": "BSL · 2026",
+      "bullets": [
+       "4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.",
+       "Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.",
+       "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше."
+      ]
+     },
+     {
+      "name": "Социальный мессенджер — хакатон HackIT",
+      "meta": "Node.js · Express 5 · socket.io · SQLite",
+      "bullets": [
+       "Real-time обмен сообщениями через WebSocket, регистрация и вход с хешированием паролей (bcrypt), загрузка файлов (multer), хранение в SQLite.",
+       "Сделал за время хакатона вместе с командой."
+      ]
+     },
+     {
+      "name": "practice-automation-tests — автотесты UI",
+      "meta": "Python · Selenium 4.49 · Pytest 9.1 · Allure",
+      "bullets": [
+       "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+       "Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы."
+      ]
+     }
+    ],
+    "Навыки": "Backend: Python, Rust, Actix-Web, Node.js, Express 5, REST API, JSON, WebSocket (socket.io), аутентификация по паролю с хешированием, загрузка файлов Данные: SQL, SQLite, полнотекстовый поиск FTS5, схемы и индексы, фильтрация, пагинация, миграции данных из внешних источников Языки: Python, Rust, JavaScript, BSL, C++, SQL Инструменты: Git, Docker, Cargo, CMake, MinGW / MSVC, Linux, CI (GitHub Actions) Практики: автотесты (769 суммарно), CI, ревью кода, документирование",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT, у каждого проекта тесты и CI."
+   },
+   "skills": [
+    "Backend: Python, Rust, Actix-Web, Node.js, Express 5, REST API, JSON, WebSocket (socket.io), аутентификация по паролю с хешированием, загрузка файлов",
+    "Данные: SQL, SQLite, полнотекстовый поиск FTS5, схемы и индексы, фильтрация, пагинация, миграции данных из внешних источников",
+    "Языки: Python, Rust, JavaScript, BSL, C++, SQL",
+    "Инструменты: Git, Docker, Cargo, CMake, MinGW / MSVC, Linux, CI (GitHub Actions)",
+    "Практики: автотесты (769 суммарно), CI, ревью кода, документирование"
+   ]
+  },
+  "flat": {
+   "about": "Бэкенд с 2022: заказы на Kwork — Telegram-боты, парсеры, REST API и интеграции. С 2024 пишу на Rust: переписал каталог с Node.js на Actix-Web — 3 внешних API, ~20 тыс. записей, JSON API с фильтрами и пагинацией, полнотекстовый поиск в SQLite FTS5, Docker, Android-клиент. 769 автотестов суммарно, CI на каждом пуше. Данные и учёт знаю не по картинкам: в конфигурации 1С сам проектировал документы, движения по регистрам и запросы. Ищу junior/backend-стажировку, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Фриланс — заказы на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Anime DB — каталог из 3 публичных API",
+     "meta": "Actix-Web · SQLite FTS5 · Docker",
+     "bullets": [
+      "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+      "Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.",
+      "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+     ]
+    },
+    {
+     "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+     "meta": "BSL · 2026",
+     "bullets": [
+      "4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.",
+      "Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.",
+      "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше."
+     ]
+    },
+    {
+     "name": "Социальный мессенджер — хакатон HackIT",
+     "meta": "Node.js · Express 5 · socket.io · SQLite",
+     "bullets": [
+      "Real-time обмен сообщениями через WebSocket, регистрация и вход с хешированием паролей (bcrypt), загрузка файлов (multer), хранение в SQLite.",
+      "Сделал за время хакатона вместе с командой."
+     ]
+    },
+    {
+     "name": "practice-automation-tests — автотесты UI",
+     "meta": "Python · Selenium 4.49 · Pytest 9.1 · Allure",
+     "bullets": [
+      "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+      "Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Backend: Python, Rust, Actix-Web, Node.js, Express 5, REST API, JSON, WebSocket (socket.io), аутентификация по паролю с хешированием, загрузка файлов",
+    "Данные: SQL, SQLite, полнотекстовый поиск FTS5, схемы и индексы, фильтрация, пагинация, миграции данных из внешних источников",
+    "Языки: Python, Rust, JavaScript, BSL, C++, SQL",
+    "Инструменты: Git, Docker, Cargo, CMake, MinGW / MSVC, Linux, CI (GitHub Actions)",
+    "Практики: автотесты (769 суммарно), CI, ревью кода, документирование"
+   ]
+  }
+ },
+ {
+  "stack": "cpp",
+  "file": "resume-cpp.html",
+  "role": "Junior C++-разработчик — движки, графика, прикладные приложения",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior C++-разработчик — движки, графика, прикладные приложения",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "C++ с 2024. Пишу то, что считает и рисует: игровой движок с нуля на C++17 и CMake с импортом FBX и OBJ через Assimp, редактор визуальных новелл на Win32 и GDI+, растровый редактор на Rust с собственным immediate-mode интерфейсом. 769 автотестов суммарно, CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test. Ищу junior C++-стажировку в играх или прикладной разработке, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Инди-игра на Unity — команда с опытным разработчиком",
+      "meta": "C# · Unity",
+      "bullets": [
+       "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+      ]
+     },
+     {
+      "name": "Фриланс — заказы на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "Teivrim-Engine — игровой движок с нуля",
+      "meta": "C++17 · CMake · Assimp · 2025 — н.в.",
+      "bullets": [
+       "Выбор графического бэкенда в рантайме, scene graph, импорт FBX и OBJ через Assimp, 88 коммитов."
+      ]
+     },
+     {
+      "name": "Редактор визуальных новелл",
+      "meta": "C++ · Win32 / GDI+ · MinGW",
+      "bullets": [
+       "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника, сохранение и загрузка проекта."
+      ]
+     },
+     {
+      "name": "TPaint — редактор изображений",
+      "meta": "Rust · 2026 — н.в.",
+      "bullets": [
+       "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+       "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+      ]
+     }
+    ],
+    "Навыки": "Языки: C++17, Rust, C# (Unity), Python, BSL Графика и движки: scene graph, импорт FBX и OBJ через Assimp, выбор бэкенда в рантайме, Win32 и GDI+, immediate-mode UI, PSD и PNG, текстуры и спрайты Сборка и инструменты: CMake, Cargo, MinGW / MSVC, Git, профилирование и отладка, Qt 6.8 (личный проект) Практики: 769 автотестов суммарно, CI (GitHub Actions), ревью кода",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT."
+   },
+   "skills": [
+    "Языки: C++17, Rust, C# (Unity), Python, BSL",
+    "Графика и движки: scene graph, импорт FBX и OBJ через Assimp, выбор бэкенда в рантайме, Win32 и GDI+, immediate-mode UI, PSD и PNG, текстуры и спрайты",
+    "Сборка и инструменты: CMake, Cargo, MinGW / MSVC, Git, профилирование и отладка, Qt 6.8 (личный проект)",
+    "Практики: 769 автотестов суммарно, CI (GitHub Actions), ревью кода"
+   ]
+  },
+  "flat": {
+   "about": "C++ с 2024. Пишу то, что считает и рисует: игровой движок с нуля на C++17 и CMake с импортом FBX и OBJ через Assimp, редактор визуальных новелл на Win32 и GDI+, растровый редактор на Rust с собственным immediate-mode интерфейсом. 769 автотестов суммарно, CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test. Ищу junior C++-стажировку в играх или прикладной разработке, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Инди-игра на Unity — команда с опытным разработчиком",
+     "meta": "C# · Unity",
+     "bullets": [
+      "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+     ]
+    },
+    {
+     "name": "Фриланс — заказы на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Teivrim-Engine — игровой движок с нуля",
+     "meta": "C++17 · CMake · Assimp · 2025 — н.в.",
+     "bullets": [
+      "Выбор графического бэкенда в рантайме, scene graph, импорт FBX и OBJ через Assimp, 88 коммитов."
+     ]
+    },
+    {
+     "name": "Редактор визуальных новелл",
+     "meta": "C++ · Win32 / GDI+ · MinGW",
+     "bullets": [
+      "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника, сохранение и загрузка проекта."
+     ]
+    },
+    {
+     "name": "TPaint — редактор изображений",
+     "meta": "Rust · 2026 — н.в.",
+     "bullets": [
+      "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+      "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Языки: C++17, Rust, C# (Unity), Python, BSL",
+    "Графика и движки: scene graph, импорт FBX и OBJ через Assimp, выбор бэкенда в рантайме, Win32 и GDI+, immediate-mode UI, PSD и PNG, текстуры и спрайты",
+    "Сборка и инструменты: CMake, Cargo, MinGW / MSVC, Git, профилирование и отладка, Qt 6.8 (личный проект)",
+    "Практики: 769 автотестов суммарно, CI (GitHub Actions), ревью кода"
+   ]
+  }
+ },
+ {
+  "stack": "frontend",
+  "file": "resume-frontend.html",
+  "role": "Junior Frontend-разработчик — JavaScript, интерфейсы, real-time",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior Frontend-разработчик — JavaScript, интерфейсы, real-time",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "Интерфейсы делаю в двух senses: в браузере и нативно. В вебе — свой портфолио-сайт и real-time мессенджер на socket.io с регистрацией, загрузкой файлов и обменом сообщениями через WebSocket. В нативном клиенте — собственный immediate-mode UI в растровом редакторе и редактор визуальных новелл на Win32 и GDI+. Фреймворки в продакшене не использовал: весь интерфейс — свой, на ванильном JavaScript и на Qt. 47 UI-автотестов на Selenium, чтобы проверять интерфейс автоматически. Ищу junior frontend-стажировку, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Фриланс — заказы на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "Портфолио-сайт",
+      "meta": "HTML · CSS · JavaScript",
+      "bullets": [
+       "Вёрстка, адаптив, две языковые версии, SEO-мета и Open Graph, печать резюме в PDF через headless Chrome.",
+       "Живой сайт: teivrimoriginal.github.io ."
+      ]
+     },
+     {
+      "name": "Социальный мессенджер — хакатон HackIT",
+      "meta": "Node.js · Express 5 · socket.io · SQLite",
+      "bullets": [
+       "Real-time обмен сообщениями через WebSocket, регистрация и вход с хешированием паролей (bcrypt), загрузка файлов (multer), хранение в SQLite.",
+       "Сделал за время хакатона вместе с командой."
+      ]
+     },
+     {
+      "name": "TPaint — редактор изображений",
+      "meta": "Rust · 2026 — н.в.",
+      "bullets": [
+       "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+       "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+      ]
+     },
+     {
+      "name": "Редактор визуальных новелл",
+      "meta": "C++ · Win32 / GDI+ · MinGW",
+      "bullets": [
+       "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника, сохранение и загрузка проекта."
+      ]
+     }
+    ],
+    "Навыки": "Веб: JavaScript (ES6+), HTML5, CSS3, DOM и события, fetch и WebSocket (socket.io), адаптивная вёрстка, доступность и формы Нативные интерфейсы: собственный immediate-mode UI на Rust, Win32 и GDI+, Qt 6.8 (личный проект), drag-and-drop, таймлайн и инспектор Инструменты: Git, headless Chrome для печати в PDF, Linux, CMake, Cargo, MinGW Проверка интерфейса: Selenium 4, Pytest, Allure — 47 UI-автотестов",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT, у каждого проекта тесты и CI."
+   },
+   "skills": [
+    "Веб: JavaScript (ES6+), HTML5, CSS3, DOM и события, fetch и WebSocket (socket.io), адаптивная вёрстка, доступность и формы",
+    "Нативные интерфейсы: собственный immediate-mode UI на Rust, Win32 и GDI+, Qt 6.8 (личный проект), drag-and-drop, таймлайн и инспектор",
+    "Инструменты: Git, headless Chrome для печати в PDF, Linux, CMake, Cargo, MinGW",
+    "Проверка интерфейса: Selenium 4, Pytest, Allure — 47 UI-автотестов"
+   ]
+  },
+  "flat": {
+   "about": "Интерфейсы делаю в двух senses: в браузере и нативно. В вебе — свой портфолио-сайт и real-time мессенджер на socket.io с регистрацией, загрузкой файлов и обменом сообщениями через WebSocket. В нативном клиенте — собственный immediate-mode UI в растровом редакторе и редактор визуальных новелл на Win32 и GDI+. Фреймворки в продакшене не использовал: весь интерфейс — свой, на ванильном JavaScript и на Qt. 47 UI-автотестов на Selenium, чтобы проверять интерфейс автоматически. Ищу junior frontend-стажировку, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Фриланс — заказы на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Портфолио-сайт",
+     "meta": "HTML · CSS · JavaScript",
+     "bullets": [
+      "Вёрстка, адаптив, две языковые версии, SEO-мета и Open Graph, печать резюме в PDF через headless Chrome.",
+      "Живой сайт: teivrimoriginal.github.io ."
+     ]
+    },
+    {
+     "name": "Социальный мессенджер — хакатон HackIT",
+     "meta": "Node.js · Express 5 · socket.io · SQLite",
+     "bullets": [
+      "Real-time обмен сообщениями через WebSocket, регистрация и вход с хешированием паролей (bcrypt), загрузка файлов (multer), хранение в SQLite.",
+      "Сделал за время хакатона вместе с командой."
+     ]
+    },
+    {
+     "name": "TPaint — редактор изображений",
+     "meta": "Rust · 2026 — н.в.",
+     "bullets": [
+      "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+      "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+     ]
+    },
+    {
+     "name": "Редактор визуальных новелл",
+     "meta": "C++ · Win32 / GDI+ · MinGW",
+     "bullets": [
+      "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника, сохранение и загрузка проекта."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Веб: JavaScript (ES6+), HTML5, CSS3, DOM и события, fetch и WebSocket (socket.io), адаптивная вёрстка, доступность и формы",
+    "Нативные интерфейсы: собственный immediate-mode UI на Rust, Win32 и GDI+, Qt 6.8 (личный проект), drag-and-drop, таймлайн и инспектор",
+    "Инструменты: Git, headless Chrome для печати в PDF, Linux, CMake, Cargo, MinGW",
+    "Проверка интерфейса: Selenium 4, Pytest, Allure — 47 UI-автотестов"
+   ]
+  }
+ },
+ {
+  "stack": "qa",
+  "file": "resume-qa.html",
+  "role": "Junior QA-инженер — автотесты UI, тест-дизайн, CI",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior QA-инженер — автотесты UI, тест-дизайн, CI",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "Тестирую код автоматически, а не руками. 47 UI-автотестов на Selenium и Pytest с отчётами Allure: позитивные, негативные и проверки формы обратной связи. 769 автотестов суммарно по всем проектам — 564 юнит-теста на Rust, 158 в редакторе, 47 UI-тестов, 425 проверок дампа конфигурации. Тесты и clippy с -D warnings гоняются в CI на каждом пуше. Ищу junior QA или автоматизатора тестирования, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Фриланс — заказы на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "practice-automation-tests — автотесты UI",
+      "meta": "Python · Selenium 4.49 · Pytest 9.1 · Allure",
+      "bullets": [
+       "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+       "Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы."
+      ]
+     },
+     {
+      "name": "Anime DB — каталог из 3 публичных API",
+      "meta": "Actix-Web · SQLite FTS5 · Docker",
+      "bullets": [
+       "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+       "Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.",
+       "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+      ]
+     },
+     {
+      "name": "TPaint — редактор изображений",
+      "meta": "Rust · 2026 — н.в.",
+      "bullets": [
+       "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+       "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+      ]
+     },
+     {
+      "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+      "meta": "BSL · 2026",
+      "bullets": [
+       "4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.",
+       "Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.",
+       "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше."
+      ]
+     }
+    ],
+    "Навыки": "Автотесты UI: Selenium 4.49, Pytest 9.1, Allure — позитивные и негативные сценарии, формы, маркеры slow, параметризация Отчёты и фикстуры: Allure HTML-отчёты, page-object-подобное разделение по страницам, фикстуры и хелперы, Selenium Manager Юнит-тесты: Rust — cargo test, rustfmt, clippy с -D warnings; 722 теста в двух проектах Инструменты: Git, GitHub Actions, Python, Pytest.ini, Docker, Linux, валидация конфигураций на Python Практики: тест-кейсы по чек-листу, привязка теста к требованию, падение теста как осознанный шаг, а не «поправить и залить»",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT, у каждого проекта тесты и CI."
+   },
+   "skills": [
+    "Автотесты UI: Selenium 4.49, Pytest 9.1, Allure — позитивные и негативные сценарии, формы, маркеры slow, параметризация",
+    "Отчёты и фикстуры: Allure HTML-отчёты, page-object-подобное разделение по страницам, фикстуры и хелперы, Selenium Manager",
+    "Юнит-тесты: Rust — cargo test, rustfmt, clippy с -D warnings; 722 теста в двух проектах",
+    "Инструменты: Git, GitHub Actions, Python, Pytest.ini, Docker, Linux, валидация конфигураций на Python",
+    "Практики: тест-кейсы по чек-листу, привязка теста к требованию, падение теста как осознанный шаг, а не «поправить и залить»"
+   ]
+  },
+  "flat": {
+   "about": "Тестирую код автоматически, а не руками. 47 UI-автотестов на Selenium и Pytest с отчётами Allure: позитивные, негативные и проверки формы обратной связи. 769 автотестов суммарно по всем проектам — 564 юнит-теста на Rust, 158 в редакторе, 47 UI-тестов, 425 проверок дампа конфигурации. Тесты и clippy с -D warnings гоняются в CI на каждом пуше. Ищу junior QA или автоматизатора тестирования, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Фриланс — заказы на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "practice-automation-tests — автотесты UI",
+     "meta": "Python · Selenium 4.49 · Pytest 9.1 · Allure",
+     "bullets": [
+      "47 автотестов на Selenium и Pytest: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи.",
+      "Отчёты Allure HTML, маркеры slow, запуск одной командой; Selenium Manager сам ставит драйверы."
+     ]
+    },
+    {
+     "name": "Anime DB — каталог из 3 публичных API",
+     "meta": "Actix-Web · SQLite FTS5 · Docker",
+     "bullets": [
+      "Переписал проект с Node.js на Actix-Web: агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией.",
+      "Полнотекстовый поиск через SQLite FTS5, Docker для сборки, Android-клиент к тому же API.",
+      "564 юнит-теста; CI на каждом пуше: rustfmt, clippy с -D warnings, cargo test."
+     ]
+    },
+    {
+     "name": "TPaint — редактор изображений",
+     "meta": "Rust · 2026 — н.в.",
+     "bullets": [
+      "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+      "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+     ]
+    },
+    {
+     "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+     "meta": "BSL · 2026",
+     "bullets": [
+      "4 справочника, 3 документа с табличными частями, 3 регистра накопления «Остатки», регистр сведений, перечисление, роли и подсистемы.",
+      "Движения по регистрам при проведении, отмена проведения, контроль отрицательного остатка запросом к регистру, управляемая форма документа с клиентским модулем.",
+      "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, парность конструкций BSL) + CI на каждом пуше."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Автотесты UI: Selenium 4.49, Pytest 9.1, Allure — позитивные и негативные сценарии, формы, маркеры slow, параметризация",
+    "Отчёты и фикстуры: Allure HTML-отчёты, page-object-подобное разделение по страницам, фикстуры и хелперы, Selenium Manager",
+    "Юнит-тесты: Rust — cargo test, rustfmt, clippy с -D warnings; 722 теста в двух проектах",
+    "Инструменты: Git, GitHub Actions, Python, Pytest.ini, Docker, Linux, валидация конфигураций на Python",
+    "Практики: тест-кейсы по чек-листу, привязка теста к требованию, падение теста как осознанный шаг, а не «поправить и залить»"
+   ]
+  }
+ },
+ {
+  "stack": "1c",
+  "file": "resume1c.html",
+  "role": "Junior 1С-разработчик — учётные системы, закупка / продажа / оплата",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Junior 1С-разработчик — учётные системы, закупка / продажа / оплата",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "Программирую с 2022 (Python), с 2024 — C++ и Rust. Спроектировал конфигурацию 1С под цикл закупка → продажа → оплата: справочники, документы с движениями, регистры накопления, запросы на языке запросов 1С, управляемая форма документа. Параллельно пишу графические приложения с нуля: редактор изображений со своим immediate-mode интерфейсом и редактор визуальных новелл на Win32/GDI+. 769 автотестов суммарно, CI на каждом пуше. Ищу стажировку 1С или джуна в учётном ПО, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Фриланс — заказы на Kwork",
+      "meta": "Python · 2022 — н.в.",
+      "bullets": [
+       "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+      ]
+     },
+     {
+      "name": "Инди-игра на Unity — команда с опытным разработчиком",
+      "meta": "C# · Unity",
+      "bullets": [
+       "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+      "meta": "BSL · 2026",
+      "bullets": [
+       "4 справочника (контрагенты, номенклатура, склады, банковские счета с владельцем-контрагентом), перечисление видов операций, роли и подсистемы.",
+       "3 документа: ПоступлениеТоваров, РеализацияТоваров, Платёжное поручение. Табличная часть «Товары», расчёт сумм и НДС в ПередЗаписью , движения по регистрам, отмена проведения.",
+       "3 регистра накопления вида «Остатки» (товары на складе, взаиморасчёты, денежные средства) + регистр сведений по ценам.",
+       "Реализация не проводится, если не хватает товара: проверка остатка запросом к регистру и отказ проведения.",
+       "Управляемая форма платёжного поручения с клиентским модулем, общий модуль загрузки номенклатуры из CSV и выгрузки в JSON.",
+       "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, полнота ConfigDumpInfo, парность конструкций BSL) + CI на каждом пуше. Платформа 8.3 под рукой не было — конфигурация собрана в формате дампа и проверена статически."
+      ]
+     },
+     {
+      "name": "TPaint — редактор изображений",
+      "meta": "Rust · 2026 — н.в.",
+      "bullets": [
+       "Свой immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+       "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+      ]
+     },
+     {
+      "name": "Anime DB — каталог из 3 публичных API",
+      "meta": "Actix-Web · SQLite FTS5 · Docker",
+      "bullets": [
+       "Агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией, Android-клиент.",
+       "564 юнит-теста; CI: rustfmt, clippy с -D warnings, cargo test."
+      ]
+     },
+     {
+      "name": "Редактор визуальных новелл",
+      "meta": "C++ · Win32 / GDI+ · MinGW",
+      "bullets": [
+       "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника."
+      ]
+     },
+     {
+      "name": "practice-automation-tests — автотесты UI",
+      "meta": "Python · Selenium, Pytest, Allure",
+      "bullets": [
+       "47 автотестов: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи, отчёты Allure."
+      ]
+     }
+    ],
+    "Навыки": "1С: BSL, справочники, документы и табличные части, регистры накопления и сведений, запросы 1С, движения и отмена проведения, управляемые формы, роли и права, обмен данными CSV / JSON Учёт: закупка, продажа, оплата, НДС, остатки и обороты, взаиморасчёты, контроль отрицательных остатков Языки: Python, BSL, C++17, Rust, SQL (SQLite), C# (Unity) Графика и интерфейсы: immediate-mode UI, Win32 / GDI+, Qt, спрайты, текстуры Инструменты: Git, дамп конфигурации 1С (/DumpConfigToFiles), CMake, Cargo, MinGW / MSVC, Docker, Linux, отладка и профилирование Практики: автотесты (769 суммарно), CI, ревью кода, документирование",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT, у каждого проекта тесты и CI."
+   },
+   "skills": [
+    "1С: BSL, справочники, документы и табличные части, регистры накопления и сведений, запросы 1С, движения и отмена проведения, управляемые формы, роли и права, обмен данными CSV / JSON",
+    "Учёт: закупка, продажа, оплата, НДС, остатки и обороты, взаиморасчёты, контроль отрицательных остатков",
+    "Языки: Python, BSL, C++17, Rust, SQL (SQLite), C# (Unity)",
+    "Графика и интерфейсы: immediate-mode UI, Win32 / GDI+, Qt, спрайты, текстуры",
+    "Инструменты: Git, дамп конфигурации 1С (/DumpConfigToFiles), CMake, Cargo, MinGW / MSVC, Docker, Linux, отладка и профилирование",
+    "Практики: автотесты (769 суммарно), CI, ревью кода, документирование"
+   ]
+  },
+  "flat": {
+   "about": "Программирую с 2022 (Python), с 2024 — C++ и Rust. Спроектировал конфигурацию 1С под цикл закупка → продажа → оплата: справочники, документы с движениями, регистры накопления, запросы на языке запросов 1С, управляемая форма документа. Параллельно пишу графические приложения с нуля: редактор изображений со своим immediate-mode интерфейсом и редактор визуальных новелл на Win32/GDI+. 769 автотестов суммарно, CI на каждом пуше. Ищу стажировку 1С или джуна в учётном ПО, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Фриланс — заказы на Kwork",
+     "meta": "Python · 2022 — н.в.",
+     "bullets": [
+      "Telegram-боты, парсеры сайтов, REST API, автоматизация по ТЗ заказчиков; kwork.ru/user/teivrim ."
+     ]
+    },
+    {
+     "name": "Инди-игра на Unity — команда с опытным разработчиком",
+     "meta": "C# · Unity",
+     "bullets": [
+      "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Простая бухгалтерия — конфигурация 1С:Предприятие 8.3",
+     "meta": "BSL · 2026",
+     "bullets": [
+      "4 справочника (контрагенты, номенклатура, склады, банковские счета с владельцем-контрагентом), перечисление видов операций, роли и подсистемы.",
+      "3 документа: ПоступлениеТоваров, РеализацияТоваров, Платёжное поручение. Табличная часть «Товары», расчёт сумм и НДС в ПередЗаписью , движения по регистрам, отмена проведения.",
+      "3 регистра накопления вида «Остатки» (товары на складе, взаиморасчёты, денежные средства) + регистр сведений по ценам.",
+      "Реализация не проводится, если не хватает товара: проверка остатка запросом к регистру и отказ проведения.",
+      "Управляемая форма платёжного поручения с клиентским модулем, общий модуль загрузки номенклатуры из CSV и выгрузки в JSON.",
+      "425 автоматических проверок дампа без платформы (валидатор на Python: XML, uuid, все ссылки, полнота ConfigDumpInfo, парность конструкций BSL) + CI на каждом пуше. Платформа 8.3 под рукой не было — конфигурация собрана в формате дампа и проверена статически."
+     ]
+    },
+    {
+     "name": "TPaint — редактор изображений",
+     "meta": "Rust · 2026 — н.в.",
+     "bullets": [
+      "Свой immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+      "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+     ]
+    },
+    {
+     "name": "Anime DB — каталог из 3 публичных API",
+     "meta": "Actix-Web · SQLite FTS5 · Docker",
+     "bullets": [
+      "Агрегация AniList, Kitsu и Shikimori, ~20 тыс. записей, JSON API с фильтрами и пагинацией, Android-клиент.",
+      "564 юнит-теста; CI: rustfmt, clippy с -D warnings, cargo test."
+     ]
+    },
+    {
+     "name": "Редактор визуальных новелл",
+     "meta": "C++ · Win32 / GDI+ · MinGW",
+     "bullets": [
+      "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника."
+     ]
+    },
+    {
+     "name": "practice-automation-tests — автотесты UI",
+     "meta": "Python · Selenium, Pytest, Allure",
+     "bullets": [
+      "47 автотестов: 28 позитивных и 13 негативных на трёх страницах, 6 тестов формы обратной связи, отчёты Allure."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "1С: BSL, справочники, документы и табличные части, регистры накопления и сведений, запросы 1С, движения и отмена проведения, управляемые формы, роли и права, обмен данными CSV / JSON",
+    "Учёт: закупка, продажа, оплата, НДС, остатки и обороты, взаиморасчёты, контроль отрицательных остатков",
+    "Языки: Python, BSL, C++17, Rust, SQL (SQLite), C# (Unity)",
+    "Графика и интерфейсы: immediate-mode UI, Win32 / GDI+, Qt, спрайты, текстуры",
+    "Инструменты: Git, дамп конфигурации 1С (/DumpConfigToFiles), CMake, Cargo, MinGW / MSVC, Docker, Linux, отладка и профилирование",
+    "Практики: автотесты (769 суммарно), CI, ревью кода, документирование"
+   ]
+  }
+ },
+ {
+  "stack": "gamedev",
+  "file": "resume-gamedev.html",
+  "role": "Разработчик игр — C++ и Rust: движок, рендер, редакторы, Unity",
+  "parsed": {
+   "name": "Данила Аринов",
+   "role": "Разработчик игр — C++ и Rust: движок, рендер, редакторы, Unity",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Портфолио"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    }
+   ],
+   "sections": {
+    "О себе": "Пишу то, что двигает игру: собственный движок на C++17 с импортом FBX и OBJ через Assimp и выбором графического бэкенда в рантайме, растровый редактор на Rust с собственным immediate-mode интерфейсом, слоями и масками, редактор визуальных новелл с таймлайном и инспектором. Плюс живой опыт в команде: инди-игра на Unity, где я пишу код и геймдизайн вместе с опытным разработчиком; на хакатоне HackIT собрал прототип за выходные. Ищу junior-позицию в геймдеве, готов к тестовому заданию.",
+    "Опыт работы": [
+     {
+      "name": "Инди-игра на Unity — команда с опытным разработчиком",
+      "meta": "C# · Unity",
+      "bullets": [
+       "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+      ]
+     }
+    ],
+    "Проекты": [
+     {
+      "name": "Teivrim-Engine — игровой движок с нуля",
+      "meta": "C++17 · CMake · Assimp · 2025 — н.в.",
+      "bullets": [
+       "Выбор графического бэкенда в рантайме, scene graph, импорт FBX и OBJ через Assimp, 88 коммитов."
+      ]
+     },
+     {
+      "name": "TPaint — редактор изображений",
+      "meta": "Rust · 2026 — н.в.",
+      "bullets": [
+       "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+       "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+      ]
+     },
+     {
+      "name": "Редактор визуальных новелл",
+      "meta": "C++ · Win32 / GDI+ · MinGW",
+      "bullets": [
+       "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника, сохранение и загрузка проекта."
+      ]
+     }
+    ],
+    "Навыки": "Движки и рендер: C++17, CMake, Assimp (FBX и OBJ), scene graph, выбор бэкенда в рантайме, текстуры, спрайты, ресурсы Редакторы и инструменты: собственный immediate-mode UI на Rust, Win32 и GDI+, таймлайн, инспектор, drag-and-drop, PSD и PNG, Qt 6.8 (личный проект) Unity и C#: геймдизайн, прототипирование, хакатон-проект за выходные Инструменты: Git, CMake, Cargo, MinGW / MSVC, профилирование и отладка Практики: 769 автотестов суммарно, CI на каждом пуше",
+    "Дополнительно": "Английский — чтение технической документации. Открытый код: 11 активных публичных репозиториев , лицензия MIT."
+   },
+   "skills": [
+    "Движки и рендер: C++17, CMake, Assimp (FBX и OBJ), scene graph, выбор бэкенда в рантайме, текстуры, спрайты, ресурсы",
+    "Редакторы и инструменты: собственный immediate-mode UI на Rust, Win32 и GDI+, таймлайн, инспектор, drag-and-drop, PSD и PNG, Qt 6.8 (личный проект)",
+    "Unity и C#: геймдизайн, прототипирование, хакатон-проект за выходные",
+    "Инструменты: Git, CMake, Cargo, MinGW / MSVC, профилирование и отладка",
+    "Практики: 769 автотестов суммарно, CI на каждом пуше"
+   ]
+  },
+  "flat": {
+   "about": "Пишу то, что двигает игру: собственный движок на C++17 с импортом FBX и OBJ через Assimp и выбором графического бэкенда в рантайме, растровый редактор на Rust с собственным immediate-mode интерфейсом, слоями и масками, редактор визуальных новелл с таймлайном и инспектором. Плюс живой опыт в команде: инди-игра на Unity, где я пишу код и геймдизайн вместе с опытным разработчиком; на хакатоне HackIT собрал прототип за выходные. Ищу junior-позицию в геймдеве, готов к тестовому заданию.",
+   "jobs": [
+    {
+     "name": "Инди-игра на Unity — команда с опытным разработчиком",
+     "meta": "C# · Unity",
+     "bullets": [
+      "Пишу код и геймдизайн вместе с опытным разработчиком, вёл подбор людей в проект. Хакатон HackIT: собрал прототип за выходные."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "Teivrim-Engine — игровой движок с нуля",
+     "meta": "C++17 · CMake · Assimp · 2025 — н.в.",
+     "bullets": [
+      "Выбор графического бэкенда в рантайме, scene graph, импорт FBX и OBJ через Assimp, 88 коммитов."
+     ]
+    },
+    {
+     "name": "TPaint — редактор изображений",
+     "meta": "Rust · 2026 — н.в.",
+     "bullets": [
+      "Собственный immediate-mode интерфейс без системных контролов: 15+ инструментов, слои с масками, 10 режимов наложения.",
+      "Форматы .tpaint, PSD и PNG; 158 юнит-тестов."
+     ]
+    },
+    {
+     "name": "Редактор визуальных новелл",
+     "meta": "C++ · Win32 / GDI+ · MinGW",
+     "bullets": [
+      "6 панелей редактора: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline; drag-and-drop из Проводника, сохранение и загрузка проекта."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Движки и рендер: C++17, CMake, Assimp (FBX и OBJ), scene graph, выбор бэкенда в рантайме, текстуры, спрайты, ресурсы",
+    "Редакторы и инструменты: собственный immediate-mode UI на Rust, Win32 и GDI+, таймлайн, инспектор, drag-and-drop, PSD и PNG, Qt 6.8 (личный проект)",
+    "Unity и C#: геймдизайн, прототипирование, хакатон-проект за выходные",
+    "Инструменты: Git, CMake, Cargo, MinGW / MSVC, профилирование и отладка",
+    "Практики: 769 автотестов суммарно, CI на каждом пуше"
+   ]
+  }
+ },
+ {
+  "stack": "en",
+  "file": "resume-en.html",
+  "role": "Junior Python / C++ Developer — backend, REST APIs, automation",
+  "parsed": {
+   "name": "Danila Arinov",
+   "role": "Junior Python / C++ Developer — backend, REST APIs, automation",
+   "contacts": [
+    {
+     "href": "tel:+79014318298",
+     "label": "+7 901 431-82-98"
+    },
+    {
+     "href": "mailto:teivrim@gmail.com",
+     "label": "teivrim@gmail.com"
+    },
+    {
+     "href": "https://t.me/Smishnyavko",
+     "label": "Telegram @Smishnyavko"
+    },
+    {
+     "href": "https://github.com/TeivrimOriginal",
+     "label": "github.com/TeivrimOriginal"
+    },
+    {
+     "href": "https://teivrimoriginal.github.io/Partfolio-Site/",
+     "label": "Portfolio"
+    },
+    {
+     "href": "https://www.linkedin.com/in/danila-arinov-617680439",
+     "label": "LinkedIn"
+    },
+    {
+     "href": "https://kwork.ru/user/teivrim",
+     "label": "Kwork"
+    }
+   ],
+   "sections": {
+    "Profile": "Python since 2022, C++ and Rust since 2024. I build backend services, REST APIs and automation; alongside that, graphics and tooling: a raster editor and a game engine from scratch. 769 automated tests in total, CI on every push: rustfmt, clippy -D warnings, cargo test. Looking for a junior/backend internship, open to test tasks.",
+    "Work Experience": [
+     {
+      "name": "Freelance Developer — client orders on Kwork",
+      "meta": "Python · 2022 — Present",
+      "bullets": [
+       "Telegram bots in Python, website scrapers, REST APIs and automation built to client specs; kwork.ru/user/teivrim ."
+      ]
+     },
+     {
+      "name": "Unity indie game — team with a senior developer",
+      "meta": "C# · Unity",
+      "bullets": [
+       "Write code and game design alongside a senior developer; ran hiring for the project. HackIT hackathon: shipped a prototype over one weekend."
+      ]
+     }
+    ],
+    "Projects": [
+     {
+      "name": "practice-automation-tests — UI autotests",
+      "meta": "Python · Selenium, Pytest, Allure · 2026 — Present",
+      "bullets": [
+       "47 UI tests on Selenium and Pytest: 28 positive and 13 negative across three pages, plus 6 contact-form tests.",
+       "Allure HTML reports, single-command run, Selenium Manager installs the drivers."
+      ]
+     },
+     {
+      "name": "Anime DB — catalogue from 3 public APIs",
+      "meta": "Actix-Web · SQLite FTS5 · Docker · 2024 — Present",
+      "bullets": [
+       "Rewrote the project from Node.js to Actix-Web: aggregation of AniList, Kitsu and Shikimori, ~20k records, JSON API with filters and pagination.",
+       "SQLite FTS5 for full-text search, Docker for packaging, Android client on the same API.",
+       "564 unit tests; CI on every push: rustfmt, clippy with -D warnings, cargo test."
+      ]
+     },
+     {
+      "name": "TPaint — image editor",
+      "meta": "Rust · 2026 — Present",
+      "bullets": [
+       "Custom immediate-mode UI with no native widgets: 15+ tools, layers with masks and 10 blend modes.",
+       ".tpaint, PSD and PNG formats, 158 unit tests."
+      ]
+     },
+     {
+      "name": "Teivrim-Engine — engine from scratch",
+      "meta": "C++17 · CMake · 2025 — Present",
+      "bullets": [
+       "Runtime backend selection, scene graph, FBX/OBJ import via Assimp, 88 commits."
+      ]
+     },
+     {
+      "name": "Visual novel editor",
+      "meta": "C++ · Win32 / GDI+ · MinGW",
+      "bullets": [
+       "6 editor panels: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline.",
+       "Drag-and-drop from Explorer, project save and load."
+      ]
+     }
+    ],
+    "Technical Skills": "Languages: Python, C++17, Rust, SQL (SQLite), C# (Unity) Backend: Actix-Web, REST API, JSON, SQLite FTS5, Docker Automation: Selenium, Pytest, Allure, website scrapers, Telegram bots, third-party API integrations Developer Tools: Git, CMake, Cargo, MinGW / MSVC, Linux, debugging and profiling Practices: automated testing (769 tests across projects), CI, code review, architecture docs",
+    "Additional": "English — reading technical documentation. Open source: 9 public repositories , MIT licensed, every project has tests and CI."
+   },
+   "skills": [
+    "Languages: Python, C++17, Rust, SQL (SQLite), C# (Unity)",
+    "Backend: Actix-Web, REST API, JSON, SQLite FTS5, Docker",
+    "Automation: Selenium, Pytest, Allure, website scrapers, Telegram bots, third-party API integrations",
+    "Developer Tools: Git, CMake, Cargo, MinGW / MSVC, Linux, debugging and profiling",
+    "Practices: automated testing (769 tests across projects), CI, code review, architecture docs"
+   ]
+  },
+  "flat": {
+   "about": "Python since 2022, C++ and Rust since 2024. I build backend services, REST APIs and automation; alongside that, graphics and tooling: a raster editor and a game engine from scratch. 769 automated tests in total, CI on every push: rustfmt, clippy -D warnings, cargo test. Looking for a junior/backend internship, open to test tasks.",
+   "jobs": [
+    {
+     "name": "Freelance Developer — client orders on Kwork",
+     "meta": "Python · 2022 — Present",
+     "bullets": [
+      "Telegram bots in Python, website scrapers, REST APIs and automation built to client specs; kwork.ru/user/teivrim ."
+     ]
+    },
+    {
+     "name": "Unity indie game — team with a senior developer",
+     "meta": "C# · Unity",
+     "bullets": [
+      "Write code and game design alongside a senior developer; ran hiring for the project. HackIT hackathon: shipped a prototype over one weekend."
+     ]
+    }
+   ],
+   "projects": [
+    {
+     "name": "practice-automation-tests — UI autotests",
+     "meta": "Python · Selenium, Pytest, Allure · 2026 — Present",
+     "bullets": [
+      "47 UI tests on Selenium and Pytest: 28 positive and 13 negative across three pages, plus 6 contact-form tests.",
+      "Allure HTML reports, single-command run, Selenium Manager installs the drivers."
+     ]
+    },
+    {
+     "name": "Anime DB — catalogue from 3 public APIs",
+     "meta": "Actix-Web · SQLite FTS5 · Docker · 2024 — Present",
+     "bullets": [
+      "Rewrote the project from Node.js to Actix-Web: aggregation of AniList, Kitsu and Shikimori, ~20k records, JSON API with filters and pagination.",
+      "SQLite FTS5 for full-text search, Docker for packaging, Android client on the same API.",
+      "564 unit tests; CI on every push: rustfmt, clippy with -D warnings, cargo test."
+     ]
+    },
+    {
+     "name": "TPaint — image editor",
+     "meta": "Rust · 2026 — Present",
+     "bullets": [
+      "Custom immediate-mode UI with no native widgets: 15+ tools, layers with masks and 10 blend modes.",
+      ".tpaint, PSD and PNG formats, 158 unit tests."
+     ]
+    },
+    {
+     "name": "Teivrim-Engine — engine from scratch",
+     "meta": "C++17 · CMake · 2025 — Present",
+     "bullets": [
+      "Runtime backend selection, scene graph, FBX/OBJ import via Assimp, 88 commits."
+     ]
+    },
+    {
+     "name": "Visual novel editor",
+     "meta": "C++ · Win32 / GDI+ · MinGW",
+     "bullets": [
+      "6 editor panels: Hierarchy, Scene, Inspector, Script, Asset Browser, Timeline.",
+      "Drag-and-drop from Explorer, project save and load."
+     ]
+    }
+   ],
+   "education": "",
+   "skills": [
+    "Languages: Python, C++17, Rust, SQL (SQLite), C# (Unity)",
+    "Backend: Actix-Web, REST API, JSON, SQLite FTS5, Docker",
+    "Automation: Selenium, Pytest, Allure, website scrapers, Telegram bots, third-party API integrations",
+    "Developer Tools: Git, CMake, Cargo, MinGW / MSVC, Linux, debugging and profiling",
+    "Practices: automated testing (769 tests across projects), CI, code review, architecture docs"
+   ]
+  }
+ }
+]

@@ -8,6 +8,7 @@ const fs = require('fs');
 const list = require('./hh-shortlist.js');
 const drop = require('./hh-shortlist-drop.js');
 const { composeLetter } = require('./hh-letter.js');
+const { stackFor, profileFor, STACKS } = require('./hh-resume-stack.js');
 
 // Данные в пяти файлах по партиям: 1, 2, 3, 4, 5.
 // Склеиваем, потому что все партии обязаны идти через один и тот же генератор
@@ -53,11 +54,13 @@ for (const v of list) {
   // Описание склеиваем из отобранных предложений: этого хватает генератору,
   // а пересылать полный текст вакансии ради пары цитат незачем.
   const desc = sents.join('. ');
-  const text = composeLetter(v.title, desc, company);
+  const routed = stackFor(v.title, desc);
+  const profile = profileFor(routed.stack);
+  const text = composeLetter(v.title, desc, company, profile);
   const quoted = (text.match(/^— «/gm) || []).length;
   if (texts.has(text)) { dup++; console.log('  ДУБЛЬ: ' + v.id + ' = ' + texts.get(text)); }
   texts.set(text, v.id);
-  out.push({ id: v.id, title: v.title, company, why: v.why, sents, letter: text, quoted, len: text.length });
+  out.push({ id: v.id, title: v.title, company, why: v.why, sents, letter: text, quoted, len: text.length, stack: routed.stack, stackWhy: routed.why, resume: profile.hhTitle, resumeId: profile.resumeId, resumeReady: profile.hhResumeReady });
 }
 
 fs.writeFileSync('LETTERS-SHORTLIST.json', JSON.stringify(out, null, 1), 'utf8');
@@ -69,6 +72,7 @@ let md = ['# Письма к шорт-листу', '',
 for (const r of out) {
   md.push('## ' + r.id + ' — ' + r.title);
   md.push('**' + r.company + '** · беру потому что: ' + r.why);
+  md.push('стек: **' + r.stack + '** (' + r.stackWhy + ') · прикрепляю резюме: «' + r.resume + '»' + (r.resumeReady ? '' : ' — на hh ещё не создано'));
   md.push('цитат из описания: ' + r.quoted + ', длина письма: ' + r.len);
   md.push('');
   md.push(r.letter);
@@ -81,6 +85,19 @@ const noData = out.filter((r) => !r.sents.length).map((r) => r.id);
 console.log('в отборе: ' + list.length + ', отклонено по описанию: ' + dropped + ', в письмах: ' + out.length);
 console.log('уникальных писем: ' + texts.size + ', дублей: ' + dup);
 console.log('писем с цитатой из описания: ' + withQuotes + ' из ' + out.length);
+
+// Сколько вакансий под какое резюме. Это и есть ответ на вопрос «какое резюме
+// закреплять за какой вакансией», и одновременно список недостающих резюме.
+const byStack = {};
+for (const r of out) {
+  if (!byStack[r.stack]) byStack[r.stack] = { count: 0, resume: r.resume, ready: r.resumeReady };
+  byStack[r.stack].count++;
+}
+console.log('вакансии по стекам и нужные резюме на hh:');
+for (const s of Object.keys(byStack).sort()) {
+  const b = byStack[s];
+  console.log('  ' + s.padEnd(9) + String(b.count).padStart(3) + ' вакансий · резюме «' + b.resume + '» ' + (b.ready ? 'создано' : 'НЕ СОЗДАНО'));
+}
 console.log('без цитаты (в описании нет предложений-требований): ' + (noData.join(', ') || 'нет'));
 if (dropped) {
   console.log('причины отклонений:');
