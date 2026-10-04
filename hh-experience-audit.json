@@ -1,0 +1,34 @@
+{
+ "generated": "2026-10-04",
+ "thresholdMonths": 12,
+ "checked": 125,
+ "errors": [],
+ "violations": [],
+ "falsePositives": [],
+ "dropsNoLongerNeeded": [
+  {
+   "id": "137937810",
+   "title": "Тестировщик ПО",
+   "company": "ООО АйТи Фо Ю",
+   "descLen": 2026,
+   "rule": "",
+   "matched": "",
+   "months": 0,
+   "context": "",
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137652608",
+   "title": "Специалист по развитию Telegram-каналов и AI-продуктов",
+   "company": "ООО Созвездие",
+   "descLen": 4443,
+   "rule": "",
+   "matched": "",
+   "months": 0,
+   "context": "",
+   "alreadyDropped": true,
+   "protected": false
+  }
+ ]
+}
