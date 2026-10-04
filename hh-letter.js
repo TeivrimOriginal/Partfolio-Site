@@ -359,7 +359,12 @@ function composeLetter(title, desc, company, profile) {
   const said = hows.slice(0, 3);
   for (const v of candidates) {
     if (proofs.length >= 4) break;
-    if (proofs.some((p) => p === v || sameFact(p, v))) continue;
+    // Внутри блока фактов — жёсткое правило по технологиям: два пункта про один
+    // инструмент это дубль, даже если слова разные.
+    if (proofs.some((p) => p === v || sameFactLoose(p, v))) continue;
+    // Против блока «Что сделаю» — только строгое правило: план про healthcheck и
+    // сделанное про compose на шесть сервисов совпадают словами, но это разные
+    // вещи, и второе как раз и есть опыт.
     if (said.some((p) => p === v || sameFact(p, v))) continue;
     proofs.push(v);
   }
@@ -534,6 +539,28 @@ function words(s) {
   );
 }
 
+// Технологический след: два пункта про один и тот же инструмент — это один и тот
+// же факт, даже когда слова разные. Без этого в письма попадало:
+//
+//   — Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера…
+//   — Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются
+//
+// Разница только в формулировке, а читатель видит один пункт, написанный дважды.
+// Порог 50% по общим словам не срабатывал: короткий пункт длиннее по числу
+// слов, и получалось 0.4 вместо 0.5. Поэтому отдельно считаем общие
+// технологические токены — латиница, а не русские слова.
+const LATIN_TOKEN = /^[a-z_][a-z0-9_.\-+]*$/;
+
+function techTokens(sentence) {
+  // words() возвращает Set, а не массив: filter здесь неприменим.
+  const out = new Set();
+  for (const w of words(sentence)) if (LATIN_TOKEN.test(w) && w.length >= 4) out.add(w);
+  return out;
+}
+
+// Строгий вариант: совпадение по обычным словам. Применяется между блоками
+// «Что сделаю» и «Что уже делал», где один пункт про план, а другой про
+// сделанное, — это разные вещи, и путать их нельзя.
 function sameFact(a, b) {
   const A = words(a);
   const B = words(b);
@@ -543,4 +570,20 @@ function sameFact(a, b) {
   return common / Math.min(A.size, B.size) >= 0.5;
 }
 
-module.exports = { composeLetter, letterTags, extractRequirements, browserScripts, CONTACTS, GROUPS, sameFact };
+// Жадный вариант: добавляет совпадение по технологическим токенам. Применяется
+// только внутри блока фактов, где два пункта про один инструмент действительно
+// дубль. Между блоками он даёт ошибку: план «Docker-образ с healthcheck» и
+// сделанное «compose на шесть сервисов с healthcheck и именованными томами» —
+// не одно и то же, а жадное правило выкидывало из письма единственный реальный
+// опыт по Docker.
+function sameFactLoose(a, b) {
+  if (sameFact(a, b)) return true;
+  const TA = techTokens(a);
+  const TB = techTokens(b);
+  if (TA.size < 2 || TB.size < 2) return false;
+  let shared = 0;
+  for (const w of TB) if (TA.has(w)) shared++;
+  return shared >= 2 && shared / TB.size >= 0.5;
+}
+
+module.exports = { composeLetter, letterTags, extractRequirements, browserScripts, CONTACTS, GROUPS, sameFact, sameFactLoose };

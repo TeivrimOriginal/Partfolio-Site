@@ -39,7 +39,7 @@
 ## 1000167096 — DevOps Engineer (KORM)
 **Лаборатория Касперского** · уровень: не указан · удалённая: да
 стек: **devops** · резюме: «Инженер DevOps» — на площадке ещё не создано
-длина письма: 1391, цитат из описания: 2
+длина письма: 1300, цитат из описания: 2
 
 Здравствуйте! Откликаюсь на «DevOps Engineer (KORM)» в Лаборатория Касперского.
 Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.
@@ -60,7 +60,6 @@
 — Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах
 — скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат
 — CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях
-— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой
 
 Код: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com
 Готов выполнить тестовое задание.
@@ -70,7 +69,7 @@
 ## 1000168634 — DevOps / Infrastructure Engineer (Europe/CIS)
 **Flex Databases** · уровень: Middle · удалённая: да
 стек: **devops** · резюме: «Инженер DevOps» — на площадке ещё не создано
-длина письма: 1450, цитат из описания: 2
+длина письма: 1454, цитат из описания: 2
 
 Здравствуйте! Откликаюсь на «DevOps / Infrastructure Engineer (Europe/CIS)» в Flex Databases.
 Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.
@@ -91,7 +90,7 @@
 — Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах
 — скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат
 — CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях
-— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой
+— SQLite + FTS5 на ~20 тыс. записей: индексы, полнотекстовый поиск с unicode61, пул соединений
 
 Код: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com
 Готов выполнить тестовое задание.
@@ -101,7 +100,7 @@
 ## 1000168753 — Инженер DevOps
 **Intellectual management systems** · уровень: Middle · удалённая: да
 стек: **devops** · резюме: «Инженер DevOps» — на площадке ещё не создано
-длина письма: 1431, цитат из описания: 2
+длина письма: 1386, цитат из описания: 2
 
 Здравствуйте! Откликаюсь на «Инженер DevOps» в Intellectual management systems.
 Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.
@@ -122,7 +121,7 @@
 — Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах
 — скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат
 — CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях
-— Docker + docker-compose с healthcheck и .env.example: сервисы поднимаются одной командой
+— Telegram-боты на Python по заказам на Kwork
 
 Код: github.com/TeivrimOriginal · Telegram @Smishnyavko · teivrim@gmail.com
 Готов выполнить тестовое задание.
