@@ -63,6 +63,10 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // без кода подряд, а потом нормальный ответ. Тот же файл при десяти попытках с
 // паузой 2500 мс ответил 200 все десять раз. Отсюда восемь попыток и пауза
 // 2500 мс — успех засчитывается только при 200 с непустым телом.
+//
+// Восьми попыток внутри одного прохода, однако, не хватает: при сплошной
+// проверке 15 ссылок девять не ответили, и помог только повторный проход после
+// паузы 5000 мс. Проверка поэтому двухпроходная, см. ниже.
 const LIVE_ATTEMPTS = 8;
 const LIVE_PAUSE_MS = 2500;
 const LIVE_BETWEEN_MS = 1500;
@@ -233,7 +237,20 @@ console.log('локальных проблем: ' + problems);
   console.log('живая проверка ' + list.length + ' ссылок (до ' + LIVE_ATTEMPTS + ' попыток, пауза ' + LIVE_PAUSE_MS + ' мс):');
   console.log('');
 
-  let liveBad = 0;
+  // Проверка в два прохода, и второй проход — обязательная часть, а не
+  // перестраховка.
+  //
+  // Замерено на 15 ссылках: 9 из 15 не ответили с первого раза, несмотря на
+  // восемь попыток с паузой 2500 мс внутри первой проверки. Все девять ответили
+  // 200 сразу после паузы 5000 мс. Те же ссылки при отдельном замере с
+  // интервалом 2000 мс ответили 10 из 10.
+  //
+  // То есть дело не в отдельной ссылке, а в том, что подряд идущие запросы
+  // к github.io начинают обрываться, и восемь попыток без паузы эту серию не
+  // проходят. Повторный проход после длинной паузы отличает «ссылка мертва» от
+  // «выдал серию оборванных соединений». Без него проверка объявляет мёртвыми
+  // живые файлы, а скрипт, который регулярно врёт, перестают запускать.
+  const pass1 = [];
   for (const t of list) {
     const r = await checkLive(t.url);
     const issues = [];
@@ -245,6 +262,34 @@ console.log('локальных проблем: ' + problems);
       if (/коммерческ/i.test(txt)) issues.push('на сайте слово «коммерческий»');
       if (!/<title>/i.test(txt)) issues.push('на сайте нет <title>');
     }
+    pass1.push({ t: t, r: r, issues: issues });
+    await sleep(LIVE_BETWEEN_MS);
+  }
+
+  const failed = pass1.filter((p) => p.issues.length && /^HTTP|нет ответа|пустое тело/.test(p.issues[0]));
+  if (failed.length) {
+    console.log('');
+    console.log('не ответили с первого раза: ' + failed.length + ' — повторная проверка через ' + (LIVE_PAUSE_MS * 2) + ' мс');
+    for (const p of failed) {
+      await sleep(LIVE_PAUSE_MS * 2);
+      const r = await checkLive(p.t.url);
+      const issues = [];
+      if (r.code !== 200) issues.push('HTTP ' + (r.code || 'нет ответа'));
+      else if (r.buf.length <= 200) issues.push('пустое тело, ' + r.buf.length + ' байт');
+      if (!issues.length && /html/.test(r.type)) {
+        const txt = r.buf.toString('utf8');
+        if (/\b2022\b/.test(txt)) issues.push('на сайте год 2022');
+        if (/коммерческ/i.test(txt)) issues.push('на сайте слово «коммерческий»');
+        if (!/<title>/i.test(txt)) issues.push('на сайте нет <title>');
+      }
+      p.r = r;
+      p.issues = issues;
+      console.log('  ' + p.t.name + ' → ' + (issues.length ? 'всё ещё плохо' : 'ответил ' + r.code + ', ' + r.buf.length + ' Б'));
+    }
+  }
+
+  let liveBad = 0;
+  for (const { t, r, issues } of pass1) {
     if (issues.length) {
       liveBad++;
       console.log('  ПРОБЛЕМА ' + t.name.padEnd(24) + ' ! ' + issues.join('; '));
