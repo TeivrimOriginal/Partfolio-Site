@@ -14,14 +14,22 @@
 //   * заголовок страницы совпадает с меткой стека, чтобы ссылка вела на то же
 //     самое резюме, а не на соседнее.
 //
-// Что скрипт НЕ проверяет и почему: доступность ссылки извне. С localhost
-// до github.io соединение обрывается (ECONNRESET), поэтому HTTP-проверка отсюда
-// всегда будет врать. Живость ссылок проверяется браузером — смётся список в
-// выводе, открыть его можно одним проходом.
+// Живость ссылок проверяется отсюда. Раньше это было невозможно: соединение с
+// github.io обрывалось (ECONNRESET) и вывод говорил «проверяйте браузером».
+// На 05.10.2026 те же запросы из node проходят, но нестабильно: часть файлов
+// вернула пустое тело без кода, и только повтор с паузой дал 200. Отсюда пять
+// попыток и 1200 мс между ними — без этого скрипт врал бы в обе стороны: то
+// «всё мертво», то «всё живо» на пустых ответах.
+//
+// Что именно проверяется по сети, помимо кода:
+//   * в HTML на сайте нет года 2022 и слова «коммерческий» — локальная проверка
+//     следит только за файлами, а читает рекрутер опубликованную копию;
+//   * в теле не пусто и есть ожидаемый заголовок.
 //
 // Использование: node verify-resume-links.js
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 const { STACKS } = require('./hh-resume-stack.js');
 
 // Формулировки, которые запрещены в резюме по требованию пользователя.
@@ -44,6 +52,50 @@ const refEmails = [...new Set(refText.match(/[\w.\-]+@[\w.\-]+\.\w+/g) || [])];
 
 function norm(s) {
   return String(s == null ? '' : s).toLowerCase().replace(/[^a-zа-яё0-9]+/gi, ' ').trim();
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Соединение с github.io отсюда рвётся без кода и без тела. Один ответ ничего
+// не значит: считаем успехом только 200 с непустым телом, иначе повторяем.
+// Параметры подобраны по факту, а не на глаз. При пяти попытках с паузой 1200 мс
+// скрипт объявлял мёртвыми два живых файла: github.io отдаёт серию соединений
+// без кода подряд, а потом нормальный ответ. Тот же файл при десяти попытках с
+// паузой 2500 мс ответил 200 все десять раз. Отсюда восемь попыток и пауза
+// 2500 мс — успех засчитывается только при 200 с непустым телом.
+const LIVE_ATTEMPTS = 8;
+const LIVE_PAUSE_MS = 2500;
+const LIVE_BETWEEN_MS = 1500;
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+
+function fetchBuf(url, depth) {
+  depth = depth || 0;
+  return new Promise((resolve) => {
+    const req = https.get(url, { headers: { 'User-Agent': UA, Accept: '*/*' } }, (res) => {
+      const chunks = [];
+      res.on('data', (c) => chunks.push(c));
+      res.on('end', () => {
+        const buf = Buffer.concat(chunks);
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location && depth < 4) {
+          resolve(fetchBuf(new URL(res.headers.location, url).href, depth + 1));
+          return;
+        }
+        resolve({ code: res.statusCode, type: res.headers['content-type'] || '', buf: buf });
+      });
+    });
+    req.setTimeout(25000, () => { req.destroy(); resolve({ code: 0, type: '', buf: Buffer.alloc(0) }); });
+    req.on('error', () => resolve({ code: 0, type: '', buf: Buffer.alloc(0) }));
+  });
+}
+
+async function checkLive(url) {
+  let last = { code: 0, type: '', buf: Buffer.alloc(0) };
+  for (let i = 0; i < LIVE_ATTEMPTS; i++) {
+    last = await fetchBuf(url);
+    if (last.code === 200 && last.buf.length > 200) break;
+    if (i < LIVE_ATTEMPTS - 1) await sleep(LIVE_PAUSE_MS);
+  }
+  return last;
 }
 
 let problems = 0;
@@ -153,9 +205,59 @@ for (const r of rows) {
   for (const i of r.issues) console.log('           ! ' + i);
 }
 console.log('');
-console.log('проблем: ' + problems);
-if (problems === 0) {
-  console.log('ссылки для проверки в браузере (живость отсюда не проверяется — github.io рвёт соединение):');
-  for (const r of rows) if (r.url) console.log('  ' + r.url);
-}
-process.exit(problems === 0 ? 0 : 1);
+console.log('локальных проблем: ' + problems);
+
+// Живая проверка опубликованных копий. Локально файл может быть правильным, а
+// на сайте лежать старая сборка Pages — так было с семью файлами под стеки, они
+// не были в git и Pages отдавал 404.
+(async function () {
+  const targets = [];
+  for (const r of rows) if (r.url) targets.push({ name: r.file, url: r.url });
+
+  // PDF из тех же файлов: к отклику прикрепляется PDF, а не HTML.
+  for (const stack of Object.keys(STACKS)) {
+    const s = STACKS[stack];
+    const full = path.join(__dirname, s.file);
+    if (!s.publicUrl || !fs.existsSync(full)) continue;
+    const text = fs.readFileSync(full, 'utf8');
+    const base = s.publicUrl.replace(/\/[^/]*$/, '/');
+    const pdfs = [...new Set((text.match(/href="([^"]*\.pdf)"/g) || []).map((h) => h.slice(6, -1).split('/').pop()))];
+    for (const p of pdfs) targets.push({ name: p, url: base + p });
+  }
+
+  // Повторов нет: одинаковые ссылки из разных стеков не проверяем дважды.
+  const seen = new Set();
+  const list = targets.filter((t) => (seen.has(t.url) ? false : (seen.add(t.url), true)));
+
+  console.log('');
+  console.log('живая проверка ' + list.length + ' ссылок (до ' + LIVE_ATTEMPTS + ' попыток, пауза ' + LIVE_PAUSE_MS + ' мс):');
+  console.log('');
+
+  let liveBad = 0;
+  for (const t of list) {
+    const r = await checkLive(t.url);
+    const issues = [];
+    if (r.code !== 200) issues.push('HTTP ' + (r.code || 'нет ответа'));
+    else if (r.buf.length <= 200) issues.push('пустое тело, ' + r.buf.length + ' байт');
+    if (!issues.length && /html/.test(r.type)) {
+      const txt = r.buf.toString('utf8');
+      if (/\b2022\b/.test(txt)) issues.push('на сайте год 2022');
+      if (/коммерческ/i.test(txt)) issues.push('на сайте слово «коммерческий»');
+      if (!/<title>/i.test(txt)) issues.push('на сайте нет <title>');
+    }
+    if (issues.length) {
+      liveBad++;
+      console.log('  ПРОБЛЕМА ' + t.name.padEnd(24) + ' ! ' + issues.join('; '));
+      console.log('           ' + t.url);
+    } else {
+      console.log('  ок       ' + t.name.padEnd(24) + String(r.buf.length).padStart(7) + ' Б  ' + r.type.split(';')[0]);
+    }
+    await sleep(LIVE_BETWEEN_MS);
+  }
+
+  console.log('');
+  console.log('живых проблем: ' + liveBad);
+  const total = problems + liveBad;
+  console.log(total === 0 ? 'ИТОГ: локально чисто и все ссылки на сайте отвечают' : 'ИТОГ: проблем ' + total);
+  process.exit(total === 0 ? 0 : 1);
+})();
