@@ -241,7 +241,7 @@ async function main() {
       // каноническому имени, чтобы «Яндекс» и «ООО Яндекс» не жили отдельно.
       const link = upsertCompany(db, companyRaw, {
         site: 'hh',
-        hh_id: v.companyId || (/href="\/employer\/(\d+)"/.exec(page.body) || [])[1] || null,
+        hh_id: v.companyId || hh.employerIdFrom(page.body),
         hh_url: v.companyId ? 'https://hh.ru/employer/' + v.companyId : null,
         source: 'hh-serp',
       });

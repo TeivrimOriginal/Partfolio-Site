@@ -135,6 +135,19 @@ async function fetchVacancy(id, opts) {
   return null;
 }
 
+// Номер работодателя.
+//
+// Регулярка требует хвост [^"]* после цифр, и это не формальность. На карточке
+// ссылка выглядит как href="/employer/8975022?hhtmFrom=vacancy" — то есть
+// кавычка стоит после параметров, а не сразу за номером. Вариант
+// /href="\/employer\/(\d+)"/ не находит ничего, и hh_id остаётся null у всех
+// компаний. Измерено на карточке 138140507: номер 8975022 есть, ссылка есть,
+// регулярка молча возвращала пустоту.
+function employerIdFrom(html) {
+  const m = /href="\/employer\/(\d+)[^"]*"/.exec(html);
+  return m ? m[1] : null;
+}
+
 // Разобранная карточка: то, что нужно и сборщику, и генератору.
 function parseVacancy(html, id) {
   const title = qa(html, 'vacancy-title');
@@ -149,7 +162,7 @@ function parseVacancy(html, id) {
     // есть аккредитация» — то есть в базу писалось не имя компании, а
     // объявление под ней. Точный элемент — vacancy-company-name.
     companyBlock: qa(html, 'vacancy-company__details'),
-    companyId: (/href="\/employer\/(\d+)"/.exec(html) || [])[1] || null,
+    companyId: employerIdFrom(html),
     salary: qa(html, 'vacancy-salary'),
     experience: qa(html, 'work-experience-text'),
     workFormat: qa(html, 'work-formats-text'),
@@ -176,7 +189,7 @@ function parseSearchHtml(html) {
       id: idMatch[1],
       title: qa(body, 'serp-item__title-text'),
       company: qa(body, 'vacancy-serp__vacancy-employer-text'),
-      companyId: (/href="\/employer\/(\d+)"/.exec(body) || [])[1] || null,
+      companyId: employerIdFrom(body),
       address: qa(body, 'vacancy-serp__vacancy-address'),
       noExperienceTag: /data-qa="vacancy-serp__vacancy-work-experience-noExperience"/.test(body),
       remoteTag: /data-qa="vacancy-label-work-schedule-remote"/.test(body),
@@ -227,6 +240,6 @@ function parseRss(xml) {
 
 module.exports = {
   UA, HOSTS, PAUSE_MS,
-  htmlToText, qa, sleep,
+  htmlToText, qa, sleep, employerIdFrom,
   fetchOnce, fetchVacancy, parseVacancy, parseSearchHtml, parseRss,
 };
