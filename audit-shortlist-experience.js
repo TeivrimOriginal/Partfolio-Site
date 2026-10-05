@@ -179,8 +179,20 @@ const closed = desc ? !state.hasApply : null;
   const labels = rows.filter((r) => r.label).slice(0, 6).map((r) => r.id + ' = «' + r.label + '»');
   if (labels.length) console.log('как выглядит надпись на кнопке: ' + labels.join('; '));
   if (falsePositives.length) {
-    console.log('ЛОЖНЫЕ СРАБАТЫВАНИЯ НА ЗАЩИЩЁННЫХ: ' + falsePositives.length);
-    for (const r of falsePositives) console.log('  ' + r.id + ' ' + r.rule + ' «' + r.matched + '»');
+    // Оговорка про слово «ложные». Здесь попадает не одно и то же:
+    //
+    //   * вакансия правда требует опыта, а отбор её пропустил — тогда отсев
+    //     ВЕРЕН, и «ложное срабатывание» означает пропуск отбора;
+    //   * опыт не требуется, а формулировка сработала — тогда ошибка в правиле.
+    //
+    // Разница видна только по тексту описания, поэтому печатается кусок текста
+    // вокруг совпадения, и решение принимается чтением, а не числом.
+    console.log('СРАБАТЫВАНИЯ НА ЗАЩИЩЁННЫХ: ' + falsePositives.length + ' (см. текст ниже: отсев верен или это ошибка правила)');
+    for (const r of falsePositives) {
+      console.log('  ' + r.id + ' | ' + r.rule + ' | ' + r.title.slice(0, 40) + ' | ' + (r.company || '').slice(0, 26));
+      console.log('      совпадение: «' + r.matched + '»');
+      console.log('      текст: ' + r.context.slice(0, 260));
+    }
   }
   if (missedDrops.length) {
     // Это не дефект правила: такие вакансии отклонены по смыслу работы

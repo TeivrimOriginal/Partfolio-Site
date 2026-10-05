@@ -1,55 +1,71 @@
-// Печать фрагментов README TeivrimSite вокруг ключевых слов, чтобы формулировка
-// в письме совпадала с тем, что репозиторий действительно описывает.
+// Печать фрагментов файлов TeivrimSite вокруг ключевых слов.
 //
-// Зачем. «Три загрузчика с разными схемами ошибок: GraphQL, JSON:API и v1 JSON»
-// не подтвердилось: в репозитории есть AniList, Kitsu и Shikimori, но слов GraphQL
-// и JSON:API там нет. Прежде чем писать новое утверждение, смотрю исходный текст.
+// Зачем. Формулировка в письме должна совпадать с тем, что репозиторий
+// действительно описывает, иначе это выдумка.
+//
+// ВАЖНО, что здесь было испорчено. Скрипт читал витрину github.com, то есть
+// только README. Из этого следовал вывод «слов GraphQL и JSON:API в
+// репозитории нет, значит названия протоколов появились сами» — и вывод был
+// неверен: эти слова есть в docs/ARCHITECTURE.md, который витрина не
+// показывает. Ложный вывод удалил из писем настоящие факты.
+//
+// Теперь читаются реальные файлы через gh CLI: README, docs/, tools/, src/,
+// .github/. Список файлов — по дереву репозитория, то есть целиком.
 //
 // Использование: node read-teivrimsite-readme.js
-const https = require('https');
+const { execFileSync } = require('child_process');
 
-const URL = 'https://github.com/TeivrimOriginal/TeivrimSite';
-const WORDS = ['AniList', 'Kitsu', 'Shikimori', 'ошибк', 'лимит', 'пагинац', 'FTS5'];
+const GH = 'F:\\SUPPORT PROGRAMM\\gh.exe';
+const REPO = 'TeivrimSite';
 
-function get(url) {
-  return new Promise((resolve) => {
-    const req = https.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
-        Accept: 'text/html',
-      },
-    }, (res) => {
-      let body = '';
-      res.on('data', (c) => (body += c));
-      res.on('end', () => resolve({ code: res.statusCode, body: body }));
-    });
-    req.setTimeout(30000, () => { req.destroy(); resolve({ code: 0, body: '' }); });
-    req.on('error', () => resolve({ code: 0, body: '' }));
+const WORDS = [
+  'AniList', 'Kitsu', 'Shikimori',
+  // Названия протоколов — именно их поиск не нашёл на витрине.
+  'GraphQL', 'JSON:API', 'v1 JSON',
+  'FTS5', 'WAL', 'unicode61',
+  'ошибк', 'лимит', 'пагинац',
+  // RuStore: разбор ключа и тест на него.
+  'DER', 'ASN.1', 'черновик', '5.1',
+  // CI.
+  'clippy', 'rustfmt',
+];
+
+function gh(args) {
+  return execFileSync(GH, ['api', ...args, '-H', 'Accept: application/vnd.github.raw+json'], {
+    encoding: 'utf8',
+    maxBuffer: 64 * 1024 * 1024,
   });
 }
 
-function text(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/g, ' ')
-    .replace(/<style[\s\S]*?<\/style>/g, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&laquo;/g, '«').replace(/&raquo;/g, '»')
-    .replace(/&mdash;/g, '—').replace(/&ndash;/g, '–')
-    .replace(/&middot;/g, '·').replace(/&amp;/g, '&')
-    .replace(/\s+/g, ' ');
-}
+const tree = JSON.parse(gh(['repos/TeivrimOriginal/' + REPO + '/git/trees/main?recursive=1']));
+// Текстовые файлы, которые стоит прочесть: README, документация, скрипты,
+// исходники и CI. Картинки и бинарные пропускаем.
+const files = (tree.tree || [])
+  .filter((x) => x.type === 'blob')
+  .map((x) => x.path)
+  .filter((p) => /\.(md|rs|ps1|yml|yaml|toml|json|kts)$/i.test(p));
 
-(async function () {
-  const r = await get(URL);
-  if (r.code !== 200) { console.log('HTTP ' + r.code); return; }
-  const t = text(r.body);
+console.log('репозиторий: TeivrimOriginal/' + REPO);
+console.log('файлов в дереве: ' + (tree.tree || []).length + ', текстовых разбираю: ' + files.length);
+console.log('слов: ' + WORDS.length);
+console.log('');
+
+for (const p of files) {
+  let src;
+  try {
+    src = gh(['repos/TeivrimOriginal/' + REPO + '/contents/' + p]);
+  } catch (e) {
+    console.log('  ! не прочитан ' + p);
+    continue;
+  }
+  const low = src.toLowerCase();
   for (const w of WORDS) {
-    const i = t.toLowerCase().indexOf(w.toLowerCase());
-    if (i < 0) { console.log('[' + w + '] не найдено'); continue; }
-    const from = Math.max(0, i - 130);
-    console.log('[' + w + '] …' + t.slice(from, i + 190).trim() + '…');
+    const i = low.indexOf(w.toLowerCase());
+    if (i < 0) continue;
+    const line = src.slice(0, i).split('\n').length;
+    const from = Math.max(0, i - 120);
+    console.log('[' + w + '] ' + p + ':' + line);
+    console.log('    …' + src.slice(from, i + 180).replace(/\s+/g, ' ').trim() + '…');
     console.log('');
   }
-})();
+}

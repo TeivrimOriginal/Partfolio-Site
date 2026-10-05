@@ -29,7 +29,7 @@ const GROUPS = [
       'Python на заказах Kwork: Telegram-боты, парсеры сайтов, REST-сервисы',
     ],
     evidence: [
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'SQLite FTS5' },
+      { file: 'evidence/github/TeivrimSite.README.md', quote: 'SQLite FTS5' },
       { file: 'resume-python.html', quote: 'Kwork' },
     ],
   },
@@ -47,7 +47,7 @@ const GROUPS = [
       'на Kwork делал парсеры сайтов и Telegram-ботов',
     ],
     evidence: [
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'чекпоинт' },
+      { file: 'evidence/github/TeivrimSite.README.md', quote: 'чекпоинт' },
       { file: 'resume-python.html', quote: 'парсер' },
     ],
   },
@@ -69,7 +69,7 @@ const GROUPS = [
     // единого формата ошибок. Проверено: node verify-backend-repo.js
     evidence: [
       { file: 'resume-python.html', quote: 'Telegram' },
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'ошибки имеют единый вид' },
+      { file: 'evidence/github/TeivrimSite.README.md', quote: 'ошибки имеют единый вид' },
     ],
   },
   {
@@ -90,8 +90,8 @@ const GROUPS = [
     // ни в резюме её нет, а в письме она читалась как гарантия опыта. Убрана: если
     // историю нечем подтвердить, в отклике её быть не должно.
     evidence: [
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'unicode61' },
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'пересобирается сам' },
+      { file: 'evidence/github/TeivrimSite.README.md', quote: 'unicode61' },
+      { file: 'evidence/github/TeivrimSite.README.md', quote: 'пересобирается сам' },
     ],
   },
   {
@@ -111,7 +111,7 @@ const GROUPS = [
     // ни в одном проекте, а рядом с реальным CI она выглядела как реальная.
     evidence: [
       { file: 'PROJECTFASTAPI/docker-compose.yml', quote: 'healthcheck' },
-      { file: 'resume-backend.html', quote: 'clippy' },
+      { file: 'evidence/github/TeivrimSite..github-workflows-ci.yml', quote: 'clippy' },
     ],
   },
   {
@@ -128,8 +128,8 @@ const GROUPS = [
       'в публичных репозиториях у каждого проекта есть тесты и CI',
     ],
     evidence: [
-      { file: 'resume-qa.html', quote: 'Allure' },
-      { file: 'resume-backend.html', quote: 'у каждого проекта тесты и CI' },
+      { file: 'evidence/github/practice-automation-tests.README.md', quote: 'Всего 47 тестов' },
+      { file: 'evidence/github/TeivrimSite..github-workflows-ci.yml', quote: 'cargo test' },
     ],
   },
   {
@@ -145,12 +145,14 @@ const GROUPS = [
       '88 коммитов в движке с нуля, каждый с осмысленным сообщением',
       'открытый код: 11 активных публичных репозиториев, лицензия MIT',
     ],
-    // Ссылка на docs/ARCHITECTURE.md убрана: в дереве репозитория такого файла
-    // не нашлось, а упоминание несуществующего файла в письме — это ровно то,
-    // что проверяющий откроет первым делом.
+    // Раньше здесь стояла ссылка на docs/ARCHITECTURE.md, и она была убрана с
+    // выводом «в дереве репозитория такого файла нет». Файл есть:
+    // docs/ARCHITECTURE.md, 7 КБ, со схемой загрузчиков и обоснованием
+    // решений. Не нашли потому, что смотрели витрину GitHub, где docs/ не
+    // показывается. Утверждение вернулось — теперь со ссылкой на файл.
     evidence: [
       { file: 'resume-cpp.html', quote: '88 коммитов' },
-      { file: 'resume-backend.html', quote: 'лицензия MIT' },
+      { file: 'evidence/github/TeivrimSite.docs-ARCHITECTURE.md', quote: 'How the pieces fit' },
     ],
   },
   {
@@ -167,8 +169,8 @@ const GROUPS = [
       'редактор на Rust и GLFW со своим immediate-mode UI, 158 юнит-тестов',
     ],
     evidence: [
-      { file: 'evidence/teivrim-engine-readme.txt', quote: 'Vulkan' },
-      { file: 'resume-cpp.html', quote: '158' },
+      { file: 'evidence/github/Teivrim-Engine.README.md', quote: 'Vulkan' },
+      { file: 'evidence/github/Teivrim-Engine.README.md', quote: 'Assimp' },
     ],
   },
   {
@@ -186,7 +188,7 @@ const GROUPS = [
     // «Нашёл 12 багов при переносе» убрано: числа нет нигде, кроме этого письма.
     // Придуманное «12» выглядит конкретнее настоящих фактов и обесценивает их.
     evidence: [
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'ошибки имеют единый вид' },
+      { file: 'evidence/github/TeivrimSite.README.md', quote: 'AniList' },
     ],
   },
   {
@@ -199,14 +201,15 @@ const GROUPS = [
       'логи, понятные человеку: что упало и на каком шаге',
     ],
     // Раньше здесь стояло «разбор приватного ключа руками… тест на этот разбор
-    // ловил ошибки в ASN.1». Ни скрипта test-rustore-signing.ps1, ни разбора
-    // ASN.1 на диске нет — поиск по всему D:\SOOBSHESTVA их не находит, а фраза
-    // успела разойтись по 13 письмам на hh и по одному на Хабре.
+    // ловил ошибки в ASN.1», и это было объявлено выдумкой, потому что поиск не
+    // нашёл ни скрипта, ни разбора ASN.1. Оба нашлись в публичном
+    // репозитории: tools/rustore-upload.ps1 и tools/test-rustore-signing.ps1.
+    // Проверка шла не туда — по локальному диску без копий репозиториев и по
+    // витрине GitHub, где нет каталогов tools/.
     //
-    // Теперь факты берутся из профиля стека hh-resume-stack.js: там каждый
-    // пункт подтверждён файлом и проверяется test-proof-sources.js. Своей копии
-    // фактов у генератора больше нет — именно из-за двух копий выдумка и
-    // разошлась по вакансиям.
+    // Факты берутся из профиля стека hh-resume-stack.js: там каждый пункт
+    // подтверждён файлом и проверяется test-proof-sources.js. Своей копии у
+    // генератора больше нет — именно из-за двух копий факты расходятся.
     proof: [],
   },
   {

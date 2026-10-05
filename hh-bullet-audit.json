@@ -1,0 +1,950 @@
+{
+ "found": [
+  {
+   "id": "137418714",
+   "title": "Backend Developer Python (junior)",
+   "company": "Онлайн-школа Тетрика",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с Apache Kafka",
+   "lacks": [
+    "kafka"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137539010",
+   "title": "Разработчик Python (FastAPI)",
+   "company": "ИП Вельц Станислав Сергеевич",
+   "rule": "commercial",
+   "matched": "коммерческий опыт",
+   "context": "расскажем при встрече Что важно • уверенный Python 3.10+; • коммерческий опыт с FastAPI или Flask/Django и понимание async; • PostgreSQL + SQLAlchemy; • опыт работы с pytest; • уверенная работа с Docker и docker-compose; • умение разбираться в существующем коде и аккуратно его развивать. Будет плюсо",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137196770",
+   "title": "Python backend разработчик",
+   "company": "ИП Волгин Дмитрий Олегович",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "рхитектуры приложений Тре��ования Опыт разработки на Python от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137235698",
+   "title": "Integration / AI Automation Developer — Python/API/n8n",
+   "company": "ООО Мустанг",
+   "rule": "commercial",
+   "matched": "коммерческой разработк",
+   "context": "ии в корпоративный контур. Что для нас обязательно: 3+ года коммерческой разработки на Python / backend / integration development. Уверенный Python: requests/httpx, работа с файлами и данными, желательно FastAPI, pandas/openpyxl. REST API, JSON, OAuth/tokens, webhooks, обработка ошибок и лимитов API",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137467118",
+   "title": "Инженер по автотестированию (Python)",
+   "company": "IBS",
+   "rule": "commercial",
+   "matched": "коммерческого опыт",
+   "context": "иками для уточнения требований. Наши ожидания: От 6 месяцев коммерческого опыта автоматизированного тестирования. Преобладание опыта тестирования backend (API, JSON, SQL, DevTools) — это ключевое требование. PyTest: уверенное знание библиотеки (фикстуры, параметризация, маркеры, фикстуры). Общее вла",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137629197",
+   "title": "Инженер по автоматизации тестирования (Python)",
+   "company": "БЮРО 1440",
+   "rule": "experience-stated",
+   "matched": "ожидаем: Опыт",
+   "context": "‑менеджерами, участие в ревью тестовой документации. Что мы ожидаем: Опыт работы в тестировании – от 3 лет (API, UI, интеграционные сценарии, регресс); Язык программирования – знание Python; Технологии взаимодействия – знакомство с gRPC/Protobuf, REST, Kafka; Контейнеризация и оркестрация – опыт раб",
+   "lacks": [
+    "kafka"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137044827",
+   "title": "Инженер по тестированию (Python / API) / QA Engineer",
+   "company": "IBS",
+   "rule": "commercial",
+   "matched": "коммерческого опыт",
+   "context": "ребований. Наши требования (компетенции) Опыт: от 6 месяцев коммерческого опыта автоматизированного тестирования. Обязательные навыки: Преобладание опыта тестирования backend (API, JSON, SQL, DevTools) — это ключевое требование. PyTest: уверенное знание библиотеки (фикстуры, параметризация, маркеры,",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138018340",
+   "title": "Разработчик Rust/C++",
+   "company": "ООО Передовые технологии",
+   "rule": "commercial",
+   "matched": "коммерческой разработк",
+   "context": "е владение Rust и его основными концептами ИЛИ сильный опыт коммерческой разработки на C++ с готовностью перейти на Rust (поможем с онбордингом и развитием). — Обширный опыт системного программирования; понимание низкоуровневых концепций: сетевые сокеты, механизмы линковки (статическая vs динамическ",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137875419",
+   "title": "Junior AI Developer / Python",
+   "company": "НаПоправку",
+   "rule": "commercial",
+   "matched": "коммерческий опыт",
+   "context": "3 Чего мы ожидаем: MUST (без этого не возьмем). У тебя есть коммерческий опыт разработки 1-3 года (рассматриваем грейд Junior ); Быстрое прототипирование и проверка гипотез с использованием агентов разработки (Claude code / Сodex); Используешь AI агентов (Claude Code, Codex) для работы регулярно, по",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138013047",
+   "title": "Backend Engineer (Python)",
+   "company": "Ваш инвестор",
+   "rule": "commercial",
+   "matched": "коммерческого опыт",
+   "context": "e, Cursor и аналоги) Твоими плюсами будут: Python - 2+ года коммерческого опыта FastAPI, asyncio Понимание принципов масштабируемых систем PostgreSQL (схемы, индексы, оптимизация) Регулярное использование AI-инструментов Брокеры сообщений (RabbitMQ, Kafka) Опыт работы в продуктовой команде Кэширован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137493494",
+   "title": "Junior Python Developer / Младший backend разработчик",
+   "company": "Okkam",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": "х программных решений для бизнеса Нам по пути, если у тебя: Коммерческий опыт разработки ~ 1 год Хорошее знание Python, его инфраструктуры и встроенных библиотек Знание как минимум одного популярного веб-фреймворка Знание и опыт применения как минимум одного популярного фреймворка для обработки данн",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137186883",
+   "title": "QA инженер / Тестировщик (Junior)",
+   "company": "ИП Кузьмин Александр Сергеевич",
+   "rule": "experience-stated",
+   "matched": "ожидаем? Опыт",
+   "context": "с базами данных; Ведение отчётности и работа с Jira. Что мы ожидаем? Опыт работы в тестировании от 1 года; Техническое образование будет вашим преимуществом; Знание/опыт работы со стеком: автотесты, SQL, Postman, Claude, Swagger, Git, GitLab, Docker, Kafka; Трудолюбие, активность, коммуникабельность",
+   "lacks": [
+    "kafka"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137751653",
+   "title": "Junior QA engineer",
+   "company": "1PAYMENT",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "ых дефектов. Мы ожидаем от Ва c: Опыт работы в тестировании от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137438698",
+   "title": "Junior QA Engineer",
+   "company": "",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "шения; коммерческий опыт ручного тестирования от 6 месяцев; высшее образован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138048346",
+   "title": "Junior DevOps",
+   "company": "ГКУ Инфогород",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": " тестовой среде, подготовка документации. Требования: Опыт: Коммерческий опыт от 1,5 лет ОС Linux: Уверенный пользователь Linux. Понимание файловой системы, прав доступа, умение работать с логами, базовое понимание systemd и процессов. Контейнеризация: Понимание, что такое Docker. Умение написать ба",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137015861",
+   "title": "Инженер по автоматизации тестирования (python)",
+   "company": "ООО Петрович-Тех",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": "та с документацией (Confluence, Swagger). Наши ожидания : — Коммерческий опыт автоматизации тестирования веб-приложений (SOAP, REST) на языке Python от 1го года. — Знание теории и методик тестирования ПО. — Знание и применение ООП и основных паттернов проектирования в автоматизации тестирования. — З",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137979920",
+   "title": "Automation QA engineer (Python)",
+   "company": "Bercut",
+   "rule": "experience-bullet",
+   "matched": ", опыт работы",
+   "context": " опыт работы с PL/SQL и PL/pgSQL",
+   "lacks": [
+    "pl/sql"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137878837",
+   "title": "Инженер по автоматизации тестирования (Пайтон)",
+   "company": "Перфоманс Лаб",
+   "rule": "level",
+   "matched": "уровне middle",
+   "context": "ратегически! 🌱 Мы ждём от тебя: Уверенные знания Python на уровне middle-разработчика или выше; Знание операционной системы Linux на уровне опытного пользователя (работа с консолью, процессами, логами, сетевыми утилитами); Хорошее знание SQL ; Опыт разработки автотестов не менее 2 лет с использован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137873203",
+   "title": "Инженер по тестированию (бэкенд)",
+   "company": "Перфоманс Лаб",
+   "rule": "experience-bullet",
+   "matched": "; опыт работы",
+   "context": " опыт работы с Kafka",
+   "lacks": [
+    "kafka"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137428040",
+   "title": "Python Backend Developer",
+   "company": "Miles&Miles",
+   "rule": "commercial",
+   "matched": "коммерческой разработк",
+   "context": "спецификации, README, ADR) Наши ожидания от кандидата: Опыт коммерческой разработки на Python от 2–3 лет Уверенное знание одного из фреймворков: Django / FastAPI / Flask Опыт работы с реляционными БД (PostgreSQL предпочтительно), понимание индексов, транзакций, нормализации Знание принципов проектир",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137980197",
+   "title": "Python-разработчик (backend)",
+   "company": "ИП Кушнарев Александ Александрович",
+   "rule": "commercial",
+   "matched": "Коммерческая разработк",
+   "context": "и, unit of work и внедрением зависимостей. Что нужно от вас Коммерческая разработка на Python от 1 года. Уверенный Python: типизация, dataclasses, контекстные менеджеры, исключения. Понимание asyncio: event loop, почему блокирующий вызов в асинхронном коде тормозит весь сервис, таймауты и отмена зад",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137204191",
+   "title": "Python-разработчик",
+   "company": "IBS",
+   "rule": "commercial",
+   "matched": "коммерческий опыт",
+   "context": "водительности; настройка CI/CD и развертывание. Требования: коммерческий опыт работы от 2 года; образование не ниже среднего-специального; понимание принципов ООП и паттернов проектирования; навыки работы с БД; владение системой контроля версий (Git); знание основ CI/CD и контейнеризации; опыт напис",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "136586918",
+   "title": "Python-разработчик",
+   "company": "АО «ОХК «Уралхим»",
+   "rule": "experience-bullet",
+   "matched": ": Опыт работы",
+   "context": " Будет преимуществом: Опыт работы с очередями сообщений RabbitMQ или Apache Kafka",
+   "lacks": [
+    "kafka",
+    "rabbitmq"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "138066880",
+   "title": "QA инженер (Python/AI)",
+   "company": "Лига Цифровой Экономики",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": "я тестовых моделей и ведения тестовой документации от 3 лет Коммерческий опыт автоматизации на Python: pytest, requests, Selenium или Playwright Уверенное тестирование API (REST) через Postman/Insomnia, работа со Swagger/OpenAPI Работа с системами мониторинга логов (Kibana, ELK, Grafana) Опыт нагруз",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137321307",
+   "title": "Инженер-тестировщик",
+   "company": "Bell Integrator Регионы",
+   "rule": "floor",
+   "matched": "от 2-х лет",
+   "context": "ческий ML, Big Data и LLM. Что мы ждем от тебя: Опыт работы от 2-х лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "136881715",
+   "title": "Тестировщик",
+   "company": "IBReal",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "льные 1. Опыт работы в тестировании проектов (Front + Back) от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "135031592",
+   "title": "Инженер-тестировщик",
+   "company": "ООО БАЗИС",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с инструментами автоматизации Terraform и/или Ansible Опыт работы с Gitlab, Jenkins, Testrail, Pytest, Allure, Jira, Confluence",
+   "lacks": [
+    "ansible",
+    "terraform"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138008023",
+   "title": "Manual QA engineer (Трайб VAS)",
+   "company": "ОТП Банк. IT",
+   "rule": "floor",
+   "matched": "от 4 лет",
+   "context": "участниками команды Что мы ждём: Опыт работы в тестировании от 4 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137898148",
+   "title": "Manual QA Engineer",
+   "company": "НКО ПЛАТЕЖИ И РАСЧЕТЫ",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "емами логирования Наши ожидания: Опыт работы в тестировании от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138002567",
+   "title": "Аналитик-тестировщик",
+   "company": "UnitCode",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "решения по логике работы и удобству продуктов. Что ожидаем: Высшее образован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137430558",
+   "title": "Разработчик RPA",
+   "company": "M-docs",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "рование существующих RPA-решений. Наши ожидания: Профильное высшее образован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137921242",
+   "title": "Разработчик AI-автоматизации (Python, LLM), разработчик чат-ботов",
+   "company": "ООО СК",
+   "rule": "floor",
+   "matched": "от 3 лет",
+   "context": "олио реальных проектов по автоматизации Опыт работы в ML/AI от 3 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137223578",
+   "title": "Инженер по AI-автоматизации",
+   "company": "Группа компаний Агротек",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "пыт работы с LLM через API (OpenAI, Claude, DeepSeek/Llama) от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137867481",
+   "title": "Python-разработчик (ITSM, Frappe Framework)",
+   "company": "ББР Банк",
+   "rule": "level",
+   "matched": "уровня middle",
+   "context": "> О вакансии: Ищем Python-разработчика уровня middle для развития и сопровождения ITSM-системы на базе Frappe Framework. Предстоит работать с backend- и frontend-частью приложения, SQL-запросами к PostgreSQL, интеграционным и нагрузочным тестированием, а также взаимодействовать ",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137831549",
+   "title": "Python backend-разработчик (AI voice agents)",
+   "company": "ООО Альвента",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": "сопровождать сервисы в Docker на Ubuntu Что мы ждём от тебя Коммерческий опыт разработки на Python от 1 до 3 лет Опыт разработки на FastAPI и уверенное понимание async/await в Python Pydantic (v2): валидация данных, схемы запросов и ответов, настройки PostgreSQL: уверенный SQL, индексы, оптимизация ",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137855537",
+   "title": "AI-first Developer / Python Developer",
+   "company": "ИП Учускик Дмитрий Петрович",
+   "rule": "commercial",
+   "matched": "коммерческой разработк",
+   "context": "вать уже запущенные решения. Что ожидаем от кандидата: Опыт коммерческой разработки на Python от 3 лет . Будет преимуществом опыт разработки продуктов для e-commerce, маркетплейсов, маркетинга или аналитики . Практический опыт работы с PostgreSQL, HTML, JavaScript и FastAPI . Опыт использования ИИ н",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "132787721",
+   "title": "Инженер по тестированию",
+   "company": "Перфоманс Лаб",
+   "rule": "floor",
+   "matched": "от 2х лет",
+   "context": "ать свои навыки! Требования: Опыт работы в роли QA инженера от 2х лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "135486588",
+   "title": "Инженер по ручному тестированию",
+   "company": "Перфоманс Лаб",
+   "rule": "floor",
+   "matched": "от 18 месяцев",
+   "context": "офис по желанию Требования: Опыт работы в роли тестировщика от 18 месяцев",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "135720652",
+   "title": "Инженер по тестированию",
+   "company": "Ozon Tech",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "тик тестирования. Опыт автоматизации тестирования на Python от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "136694620",
+   "title": "Тестировщик",
+   "company": "Первый Бит",
+   "rule": "floor",
+   "matched": "от 2-х лет",
+   "context": "xchange); FTP; HTTP; и пр. Требования: Опыт тестирования ПО от 2-х лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137234172",
+   "title": "QA Engineer (ручное тестирование)",
+   "company": "TEAMSCORE",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "ные сценарии Основные требования: Опыт ручного тестирования от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137249489",
+   "title": "QA Engineer / Тестировщик (Manual + Automation)",
+   "company": "ООО АудиоПривет",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": "уктовым менеджером и другими участниками команды. Что важно Коммерческий опыт работы тестировщиком или QA Engineer от 2 лет. Практический опыт ручного тестирования веб-приложений, опыт тестирования мобильных приложений. Уверенное знание функционального и регрессионного тестирования, понимание принци",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137294413",
+   "title": "Инженер-тестировщик (Manual, Junior QA Auto)",
+   "company": "Центр финансовых технологий",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "ам, если ты имеешь опыт тестирования коммерческого продукта от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137271087",
+   "title": "QA-инженер",
+   "company": "ИП Сафронов Максим Юрьевич",
+   "rule": "floor",
+   "matched": "От 2 лет",
+   "context": " ожидаем от вас: Стек: pytest, OpenAPI, SQL, Playwright, k6 От 2 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137335907",
+   "title": "QA Engineer (Manual, Automatic)",
+   "company": "Robusta",
+   "rule": "floor",
+   "matched": "от 2х лет",
+   "context": "aywright. Что мы от тебя ожидаем: Опыт работы в качестве QA от 2х лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137444300",
+   "title": "QA Manual (ручное тестирование)",
+   "company": "ООО Р-Вижн",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с платформами виртуализации и оркестрации (Docker, Kubernetes), знание Linux shell",
+   "lacks": [
+    "kubernetes"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137587404",
+   "title": "QA-инженер",
+   "company": "ООО Премиум Кеа Груп",
+   "rule": "floor",
+   "matched": "от 2–3 лет",
+   "context": "вания: Опыт работы QA-инженером / инженером по тестированию от 2–3 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137698797",
+   "title": "Manual QA Engineer в iGaming, betting или fintech",
+   "company": "ИП Асланян Роза Александровна",
+   "rule": "level",
+   "matched": "Senior ",
+   "context": " Полностью удаленно 5/2, 8 часов , гибкое начало дня Рост в Senior QA / QA Lead или продуктовую роль Проект связан с gambling , поэтому важно нейтральное или позитивное отношение к сфере. Задайте вопрос работодателю Он получит его с откликом на вакансию Где располагается место работы? Какой график р",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137962058",
+   "title": "Инженер по тестированию (QA)",
+   "company": "Ozon Офис и Коммерция",
+   "rule": "experience-stated",
+   "matched": "ожидаем: Опыт",
+   "context": "рования новых фичей вместе с командой бэкенд-разработки. Мы ожидаем: Опыт разработки автотестов для бэкенда на Python или Go. Понимание REST API, gRPC и асинхронных очередей сообщений (Kafka). Базовое знание PostgreSQL или Redis из автотестов. Опыт работы с CI/CD (GitLab CI) и умение разбирать паден",
+   "lacks": [
+    "kafka"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "138025438",
+   "title": "Ручной тестировщик в команду разработки",
+   "company": "Playerok",
+   "rule": "floor",
+   "matched": "от 2 лет",
+   "context": " automation-инженерами Что важно Опыт в ручном тестировании от 2 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138089383",
+   "title": "Тестировщик QA",
+   "company": "SwitchCase",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "ах. Требования: Опыт в тестировании коммерческих приложений от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137570046",
+   "title": "DevOps-инженер",
+   "company": "Wolle Development Limited",
+   "rule": "experience-bullet",
+   "matched": ": Опыт работы",
+   "context": " ✅ Требования: Опыт работы DevOps / SRE от 2 лет",
+   "lacks": [
+    "sre"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137740978",
+   "title": "Системный инженер/DevOps-инженер (CI/CD & Infrastructure)",
+   "company": "ООО Цифролаб",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": " оптимальных Dockerfile, работа с registry, best practices. Коммерческий опыт работы с Kubernetes: деплой, сеть (Ingress/CNI), хранилища (PV/PVC), Helm, RBAC. Опыт настройки CI/CD систем (GitLab CI, Jenkins, TeamCity или аналог) для Java (Maven/Gradle) и PHP (Composer). Понимание принципов работы с ",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137783121",
+   "title": "DevOps-инженер",
+   "company": "eXpress",
+   "rule": "experience-bullet",
+   "matched": ": Опыт работы",
+   "context": "настройки стендов (используем IaC) Требования к кандидатам: Опыт работы DevOps инженером от 1,5-х лет Уверенные знания linux Боевой опыт запуска и эксплуатации k8s в продакшене и опыт написания helm сharts c 0 Опыт написания docker-compse с 0 и доработка существующих Опы",
+   "lacks": [
+    "k8s",
+    "helm"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137828878",
+   "title": "DevOps-инженер",
+   "company": "Robusta",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы хотя бы с одним публичным облаком (AWS, GCP, Azure и др",
+   "lacks": [
+    "aws"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137865918",
+   "title": "DevOps-инженер",
+   "company": "ООО Рускомтехнологии",
+   "rule": "experience-bullet",
+   "matched": ": Опыт с",
+   "context": " Требования: Опыт с контейнерами и оркестровкой: Docker и Kubernetes (опыт работы и разворачивания) Мониторинг: Prometheus, VictoriaMetrics Ansible, Helm GitLab и GitLab CI Nginx, HAproxy, keepalived Умение писать скрип",
+   "lacks": [
+    "ansible",
+    "kubernetes",
+    "prometheus",
+    "helm"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137597865",
+   "title": "Инженер-разработчик",
+   "company": "LOGINOF",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": ", который продолжит развивать продуктовую часть Требования: Коммерческий опыт бэкенд-разработки на TypeScript / Node.js — от 4 лет. PostgreSQL на уровне проектирования схемы и миграций, а не только запросов. Опыт с React — достаточный, чтобы уверенно менять существующий интерфейс. Отдельный Практиче",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "134227396",
+   "title": "Аналитик данных",
+   "company": "СМ Лаб",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "мандах будет преимуществом; Опыт работы с Python от 1 года; Высшее образован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137257914",
+   "title": "Data & Automation Analyst",
+   "company": "Advert Technology Solutions",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "новые команды и процессы компании. Что мы ищем: Опыт работы от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "127057371",
+   "title": "QA Automation Engineer",
+   "company": "Nord.Codes",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "надобятся: подтвержденный опыт в автоматизации тестирования от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137092896",
+   "title": "QA engineer ЦФТ (Трайб Core IT)",
+   "company": "ОТП Банк. IT",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с RabbitMQ, IBM MQ, Kafka Опыт работы с АБС ЦФТ (ИБСО + R2) Знания продуктов: Платежи, взаимодействие с гос органами(ФНС, ФССП, ГИС ЖКХ, ГИС ГМП), Расчетный центр Тебя ждет Технологичный и просторный",
+   "lacks": [
+    "kafka",
+    "rabbitmq"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137116207",
+   "title": "Тестировщик / Manual QA Engineer (IGaming)",
+   "company": "KOLDEXI LTD",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "чек-листы и пр.); Мы ждём от вас: Опыт работы тестировщиком от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137198601",
+   "title": "QA Engineer (AI-Native)",
+   "company": "Сёрф",
+   "rule": "commercial",
+   "matched": "коммерческий опыт",
+   "context": "индивидуально под проект. Мы ищем кандидата, который: Имеет коммерческий опыт работы QA от 2х лет Хорошо понимает принципы тестирования и жизненный цикл разработки ПО Имеет опыт функционального, интеграционного и регрессионного тестирования Умеет работать с API и понимает основы HTTP/REST Уверенно р",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138022210",
+   "title": "QA engineer manual",
+   "company": "RWB (Wildberries & Russ)",
+   "rule": "floor",
+   "matched": "от 2 лет",
+   "context": "командами. Вы нам подходите, если: Имеете опыт тестирования от 2 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137629780",
+   "title": "Тестировщик",
+   "company": "Alip group",
+   "rule": "floor",
+   "matched": "от 5 лет",
+   "context": "е требования Опыт коммерческого тестирования веб-приложений от 5 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137932870",
+   "title": "Инженер по тестированию / QA Engineer (ручное)",
+   "company": "Тануки, японский ресторан",
+   "rule": "experience-bullet",
+   "matched": ". Опыт работы",
+   "context": " Опыт работы с Kibana, Grafana или аналогичными инструментами",
+   "lacks": [
+    "grafana",
+    "kibana"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "135046068",
+   "title": "Software engineer (Python)",
+   "company": "МТС",
+   "rule": "floor",
+   "matched": "от 5 лет",
+   "context": "ованием ЧТО МЫ ЖДЕМ практический опыт разработки на Python (от 5 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "134742112",
+   "title": "Разработчик аналитических решений",
+   "company": "X5 Tech",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с технологиями: Hadoop (Hive, Spark), ETL (SAS DI, Airflow, Informatica PC, SAP DS), MPP DB (GreenPlum и др",
+   "lacks": [
+    "airflow",
+    "spark",
+    "hadoop",
+    "hive",
+    "greenplum"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137637713",
+   "title": "AI Automation Engineer / AI-оркестратор",
+   "company": "ИП Видинеева Анастасия Сергеевна",
+   "rule": "floor",
+   "matched": "от 2 лет",
+   "context": " чтобы компания не зависела от одного сервиса. Требования — от 2 лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137996757",
+   "title": "Специалист по интернет-мониторингу и автоматизации",
+   "company": "Литрес",
+   "rule": "floor",
+   "matched": "от 1 года",
+   "context": "нятного и измеримого результата. Наши ожидания: Опыт работы от 1 года",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137765064",
+   "title": "Инженер мониторинга инфраструктуры",
+   "company": "VOXYS",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с Zabbix, Grafana или другими системами мониторинга",
+   "lacks": [
+    "grafana",
+    "zabbix"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  },
+  {
+   "id": "137252236",
+   "title": "Аналитик данных",
+   "company": "ООО Эво",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "ёта показателей, состава и логики витрин данных. Требования Высшее образован",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137528370",
+   "title": "Аналитик данных/Data Analyst",
+   "company": "ООО ТАРГЕТ АДС",
+   "rule": "experience-bullet",
+   "matched": ", опыт работы",
+   "context": " опыт работы с ClickHouse и большими объёмами данных (10^9+ строк)",
+   "lacks": [
+    "clickhouse"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137311182",
+   "title": "DevOps-инженер",
+   "company": "Industry Soft Solutions",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с брокерами сообщений: Kafka/RabbitMQ",
+   "lacks": [
+    "kafka",
+    "rabbitmq"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137324383",
+   "title": "DevOps engineer",
+   "company": "МТС Банк. IT",
+   "rule": "experience-bullet",
+   "matched": ": опыт работы",
+   "context": " постоянно обучаться Наши пожелания к кандидату: опыт работы DevOps-инженером от 2–3 лет опыт работы с DevOps-инструментами (Ansible, GitLab, kubectl) опыт администрирования Kubernetes на уровне namespace опыт администрирования и сопровождения Java-приложений ",
+   "lacks": [
+    "ansible",
+    "kubernetes"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137528485",
+   "title": "DevOps-инженер",
+   "company": "Finstar Financial Group",
+   "rule": "experience-bullet",
+   "matched": ". Опыт работы",
+   "context": " Опыт работы с Vault/OpenBao или другими системами управления секретами",
+   "lacks": [
+    "vault"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "137869574",
+   "title": "Devops инженер",
+   "company": "Альфа-Банк. Центральный оф",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы Hadoop, Spark, Kafka, ELK",
+   "lacks": [
+    "spark",
+    "hadoop",
+    "kafka",
+    "elk"
+   ],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138071346",
+   "title": "DevOps-инженер",
+   "company": "ООО Р-Вижн",
+   "rule": "level",
+   "matched": "Senior ",
+   "context": "дукта, поддержка и развитие инсталлятора Дежурство в паре с Senior L2: приём и обработка инцидентов Обслуживание стендов разработки и тестирования Работа с мониторингом: настройка алертов и дашбордов Участие в спринтах команды (проектные задачи от сеньоров) Прямое взаимодействие с командами разработ",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "138028675",
+   "title": "Серверный администратор (DevOps инженер)",
+   "company": "ООО КОМИТАС",
+   "rule": "floor",
+   "matched": "от двух лет",
+   "context": "ежным задачами. МЫ РАССЧИТЫВАЕМ, ЧТО ТЫ: имеешь опыт работы от двух лет",
+   "lacks": [],
+   "alreadyDropped": true,
+   "protected": false
+  },
+  {
+   "id": "136856840",
+   "title": "QA Тестировщик",
+   "company": "АЙ-ТЕКО",
+   "rule": "experience-bullet",
+   "matched": "; Опыт работы",
+   "context": " Опыт работы с системами логирования (Grafana/ELK)",
+   "lacks": [
+    "grafana",
+    "elk"
+   ],
+   "alreadyDropped": false,
+   "protected": false
+  }
+ ],
+ "unreadable": 3
+}

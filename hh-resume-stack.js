@@ -49,10 +49,14 @@ const STACKS = {
       'переписал каталог из 3 публичных API с Node.js на Actix-Web: ~20 тыс. записей, SQLite FTS5, фильтры и пагинация',
       '769 автотестов в трёх проектах, CI на каждом пуше',
     ],
+    // Подтверждения берутся из снимков содержимого репозиториев
+    // (evidence/github/*), а не из самих резюме. Раньше цитата бралась из
+    // резюме — это самоссылка: она подтверждает, что файл существует, но не
+    // подтверждает факт.
     evidence: [
       { file: 'resume-python.html', quote: 'Kwork' },
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'AniList, Kitsu и Shikimori' },
-      { file: 'resume-python.html', quote: '769' },
+      { file: 'evidence/github/TeivrimSite.docs-ARCHITECTURE.md', quote: 'AniList' },
+      { file: 'evidence/github/practice-automation-tests.README.md', quote: 'Всего 47 тестов' },
     ],
   },
   backend: {
@@ -69,11 +73,13 @@ const STACKS = {
       'Docker + docker-compose с healthcheck и зависимостью по готовности сервисов, CI на GitHub Actions: rustfmt, clippy -D warnings, cargo test',
     ],
     evidence: [
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'SQLite FTS5' },
-      // Раньше здесь стояли «GraphQL, JSON:API и v1 JSON». В репозитории есть
-      // AniList, Kitsu и Shikimori, но слов GraphQL и JSON:API там нет — названия
-      // протоколов появились сами. Проверено: node verify-backend-repo.js
-      { file: 'evidence/teivrimsite-readme.txt', quote: 'поднимает лимит AniList с 30 до 90' },
+      { file: 'evidence/github/TeivrimSite.docs-ARCHITECTURE.md', quote: 'FTS5' },
+      // Раньше здесь стояло «слова GraphQL и JSON:API в репозитории нет, значит
+      // названия протоколов появились сами». Это был негодный вывод: слова есть
+      // в docs/ARCHITECTURE.md, а проверка искала их только в README на
+      // витрине GitHub. Названия протоколов настоящие, и теперь на них
+      // ссылается файл из репозитория.
+      { file: 'evidence/github/TeivrimSite.docs-ARCHITECTURE.md', quote: 'JSON:API' },
       { file: 'PROJECTFASTAPI/docker-compose.yml', quote: 'healthcheck' },
     ],
   },
@@ -91,8 +97,11 @@ const STACKS = {
       'тест-кейсы по чек-листу с привязкой к требованию; чинил не тест, а причину в коде',
     ],
     evidence: [
-      { file: 'resume-qa.html', quote: 'Selenium' },
-      { file: 'resume-qa.html', quote: '769' },
+      // Снимок содержимого README репозитория с автотестами: там написано
+      // «Всего 47 тестов», а функции test_ посчитаны и в исходниках —
+      // node verify-github-facts.js даёт ровно 47 (13+15+6+13).
+      { file: 'evidence/github/practice-automation-tests.README.md', quote: 'Всего 47 тестов' },
+      { file: 'evidence/github/practice-automation-tests.README.md', quote: 'негативных' },
       { file: 'resume-qa.html', quote: 'тест-кейс' },
     ],
   },
@@ -110,11 +119,10 @@ const STACKS = {
       'Win32 и GDI+ приложение, собирается MinGW/MSVC одной командой',
     ],
     evidence: [
-      // Названия бэкендов в письмах появились раньше, чем в резюме, поэтому
-      // подтверждены по публичному репозиторию: node verify-github-facts.js
-      { file: 'evidence/teivrim-engine-readme.txt', quote: 'Vulkan' },
-      { file: 'resume-cpp.html', quote: '158' },
-      { file: 'resume-cpp.html', quote: 'GDI+' },
+      // Названия бэкендов подтверждены содержимым README движка, а не витриной.
+      { file: 'evidence/github/Teivrim-Engine.README.md', quote: 'Vulkan' },
+      { file: 'evidence/github/Teivrim-Engine.README.md', quote: 'Assimp' },
+      { file: 'evidence/github/teivrim-novell-engine.README.md', quote: 'GDI+' },
     ],
   },
   gamedev: {
@@ -131,8 +139,8 @@ const STACKS = {
       'живой опыт в команде на Unity: геймдизайн и прототипирование за выходные',
     ],
     evidence: [
-      { file: 'evidence/teivrim-engine-readme.txt', quote: 'scene graph' },
-      { file: 'resume-gamedev.html', quote: 'immediate-mode' },
+      { file: 'evidence/github/Teivrim-Engine.README.md', quote: 'scene graph' },
+      { file: 'evidence/github/Teivrim-Engine.README.md', quote: 'OpenGL' },
       { file: 'resume-gamedev.html', quote: 'Unity' },
     ],
   },
@@ -150,9 +158,11 @@ const STACKS = {
       '47 UI-автотестов Selenium и Pytest — интерфейс проверяется автоматически',
     ],
     evidence: [
-      { file: 'resume-frontend.html', quote: 'socket.io' },
+      // Мессенджер с хакатона — публичный репозиторий, README подтверждает
+      // socket.io и WebSocket.
+      { file: 'evidence/github/IT-Hack-Project-TEIVRIM-social-messendjer.README.md', quote: 'socket.io' },
+      { file: 'evidence/github/practice-automation-tests.README.md', quote: 'Всего 47 тестов' },
       { file: 'resume-frontend.html', quote: 'drag-and-drop' },
-      { file: 'resume-frontend.html', quote: '47' },
     ],
   },
   devops: {
@@ -173,13 +183,25 @@ const STACKS = {
     hhResumeReady: false,
     intro: 'Меня зовут Данила Аринов — Junior инженер DevOps: Linux, Docker, CI, сборка и выкатка релиза.',
     // Каждый пункт обязан быть подтверждён файлом: см. evidence ниже и
-    // test-proof-sources.js. Раньше здесь стояло «разбор приватного ключа в
-    // ASN.1 вручную и тест test-rustore-signing.ps1, который ловил ошибки до
-    // отправки» — такого скрипта на диске нет, а фраза успела разойтись по
-    // письмам. Проверяется простым поиском по D:\SOOBSHESTVA.
+    // test-proof-sources.js.
+    //
+    // ВАЖНО, здесь была выдумка, объявленная по ошибке, и потом вычищенная.
+    // Фраза «разбор приватного ключа руками и тест, который ловил ошибки в
+    // ASN.1 до отправки» стояла здесь, потом была удалена как недоказуемая, и
+    // только теперь подтверждена по содержимому репозитория:
+    //   tools/rustore-upload.ps1        — Read-DerLength, ручной разбор DER
+    //   tools/test-rustore-signing.ps1  — тест на PKCS#1 и PKCS#8, и в его
+    //     комментарии написано, что он уже поймал ошибку: версия INTEGER
+    //     съедалась до ветки PKCS#8
+    //   docs/RUSTORE.md                 — зачем так: скрипт должен работать и на
+    //     Windows PowerShell 5.1, где нет ImportRSAPrivateKey
+    //
+    // Почему тогда не нашли: поиск шёл по D:\SOOBSHESTVA, а копий репозиториев
+    // на машине нет, и проверка шла по витрине GitHub, где нет каталогов docs/
+    // и tools/. Отсутствие находки выглядело как доказательство отсутствия.
     proof: [
       'Docker и docker-compose на шесть сервисов: healthcheck у БД и брокера, API и воркеры стартуют после готовности через depends_on, данные в именованных томах',
-      'скрипт сборки релиза на PowerShell: подпись ключом, AAB и APK, SHA-256 каждого артефакта, версии рядом с ними — пересборка даёт тот же результат',
+      'скрипт выкладки релиза на PowerShell разбирает приватный ключ из DER вручную — иначе не работал бы на Windows PowerShell 5.1; на этот разбор есть тест, который уже поймал ошибку в заголовке PKCS#8',
       'CI на GitHub Actions: rustfmt, clippy с -D warnings, cargo test — сборка ломается на ошибках и предупреждениях',
     ],
     // evidence[i] подтверждает proof[i]: файл обязан существовать, а quote —
@@ -187,8 +209,9 @@ const STACKS = {
     // попадает в письма.
     evidence: [
       { file: 'PROJECTFASTAPI/docker-compose.yml', quote: 'pg_isready' },
-      { file: 'D:/SOOBSHESTVA/AUTOMATIC/YandexGame/rustore/build-apk.ps1', quote: 'Get-FileHash' },
-      { file: 'resume-devops.html', quote: 'clippy' },
+      { file: 'evidence/github/TeivrimSite.tools-test-rustore-signing.ps1', quote: 'earned its place' },
+      // clippy подтверждается содержимым CI, а не резюме.
+      { file: 'evidence/github/TeivrimSite..github-workflows-ci.yml', quote: '-D warnings' },
     ],
   },
 };
