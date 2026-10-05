@@ -48,6 +48,22 @@ function fitFor(db, vacancyId) {
   const contacts = db
     .prepare('SELECT COUNT(*) c FROM contacts WHERE company_id = (SELECT company_id FROM vacancies WHERE id = ?) AND is_public = 1')
     .get(vacancyId);
+  // 40 баллов даёт только адрес, который компания публикует ДЛЯ ОТКЛИКА по
+  // вакансии: role='hr' (job@, hr@, careers@).
+  //
+  // Почему не любой публичный контакт. Первая версия считала hasHr как «есть хоть
+  // один публичный контакт» и подписывала это «контакт HR». Измеренная разница:
+  // у EvaTeam опубликован только sales@evateam.ru, и такая компания получала 40
+  // баллов за адрес отдела продаж. В окне это выглядело бы как наличие шанса
+  // там, где его нет, то есть враньё в самой цифре.
+  //
+  // Что при этом теряется. Личные контакты сотрудников не публикуются нигде:
+  // проверено на странице работодателя hh, публичного делового телефона там нет
+  // вовсе. Поэтому 40 баллов получает одна компания из семи — это правда о
+  // компаниях, а не о неработающей проверке.
+  const forHr = db
+    .prepare("SELECT COUNT(*) c FROM contacts WHERE company_id = (SELECT company_id FROM vacancies WHERE id = ?) AND is_public = 1 AND role = 'hr'")
+    .get(vacancyId);
 
   const letter = letters[0] || null;
 
@@ -60,7 +76,7 @@ function fitFor(db, vacancyId) {
   }
   const channelCount = channels.size;
 
-  const hasHr = contacts.c > 0;
+  const hasHr = forHr.c > 0;
   const channelPart = Math.min(channelCount, CHANNELS_FOR_MAX) * (WEIGHT_CHANNELS / CHANNELS_FOR_MAX);
   const fitPart = letter ? (Math.max(0, Math.min(100, letter.fit)) * WEIGHT_FIT) / 100 : 0;
 
@@ -68,16 +84,27 @@ function fitFor(db, vacancyId) {
     (hasHr ? WEIGHT_HR_CONTACT : 0) + channelPart + fitPart
   );
 
+  // Причина для контакта. Три состояния, а не два: «адрес для отклика есть»,
+  // «контакт есть, но не для отклика» и «контактов нет». Среднее состояние
+  // важно, иначе по компании с опубликованным sales@ непонятно, искать дальше
+  // или уже некуда.
+  const hrWhy = hasHr
+    ? 'адрес для отклика есть (' + forHr.c + ') — ' + WEIGHT_HR_CONTACT + ' из ' + WEIGHT_HR_CONTACT
+    : contacts.c > 0
+      ? 'контактов ' + contacts.c + ', но нет адреса для отклика — 0 из ' + WEIGHT_HR_CONTACT
+      : 'контактов нет — 0 из ' + WEIGHT_HR_CONTACT;
+
   return {
     percent: percent,
     hasHrContact: hasHr,
     contactsFound: contacts.c,
+    hrContactsFound: forHr.c,
     channels: [...channels],
     channelCount: channelCount,
     letterFit: letter ? letter.fit : null,
     letterState: letter ? letter.state : null,
     why: [
-      hasHr ? 'контакт есть (' + contacts.c + ')' : 'контакта HR нет — 0 из ' + WEIGHT_HR_CONTACT,
+      hrWhy,
       channelCount + ' из ' + CHANNELS_FOR_MAX + ' сайтов — ' + Math.round(channelPart) + ' из ' + WEIGHT_CHANNELS,
       letter ? 'резюме подходит на ' + letter.fit + '% — ' + Math.round(fitPart) + ' из ' + WEIGHT_FIT : 'письма нет — 0 из ' + WEIGHT_FIT,
     ],
@@ -138,8 +165,14 @@ function preparingTab(db) {
     .all();
 
   return rows.map((r) => {
+    // Два счётчика по той же причине, что и в fitFor: всего контактов и
+    // адресов для отклика. «Контактов 3» и «адрес для отклика есть» — разные
+    // вещи, и в строке видно только второе.
     const contacts = r.cid
       ? db.prepare('SELECT COUNT(*) c FROM contacts WHERE company_id = ? AND is_public = 1').get(r.cid).c
+      : 0;
+    const hrContacts = r.cid
+      ? db.prepare("SELECT COUNT(*) c FROM contacts WHERE company_id = ? AND is_public = 1 AND role = 'hr'").get(r.cid).c
       : 0;
     const already = r.vacancy_id
       ? db.prepare('SELECT COUNT(*) c FROM applications WHERE vacancy_id = ? AND ok = 1').get(r.vacancy_id).c
@@ -160,6 +193,7 @@ function preparingTab(db) {
       stack: r.stack,
       company: r.company_name || r.company_raw || '',
       contactsFound: contacts,
+      hrContactsFound: hrContacts,
       alreadySent: already,
       createdAt: r.created_at,
     };
