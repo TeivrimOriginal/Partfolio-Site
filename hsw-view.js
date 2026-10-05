@@ -225,6 +225,10 @@ function summary(db) {
   const collected = db.prepare('SELECT count(*) c FROM companies WHERE fully_collected = 1').get().c;
   const sessions = db.prepare('SELECT count(*) c FROM sessions WHERE logged_in = 1').get().c;
   const sessionsAll = db.prepare('SELECT count(*) c FROM sessions').get().c;
+  // Непроверенные площадки считаются отдельно. Раньше сводка показывала
+  // «входов 0 из 3», и это читалось как «нигде входа нет», хотя часть
+  // площадок просто не удалось проверить — файл Cookies держал Chrome.
+  const sessionsUnchecked = sessionsTab(db).filter((s) => s.state === 'unchecked').length;
   const mail = db.prepare('SELECT count(*) c FROM mailboxes WHERE usable = 1').get().c;
   const mailAll = db.prepare('SELECT count(*) c FROM mailboxes').get().c;
 
@@ -246,23 +250,37 @@ function summary(db) {
     contacts: contacts,
     sessionsLoggedIn: sessions,
     sessionsChecked: sessionsAll,
+    sessionsUnchecked: sessionsUnchecked,
     mailUsable: mail,
     mailTotal: mailAll,
     medianPercent: median,
   };
 }
 
+// Проверка не состоялась — профиль был заблокирован или файл не прочитался.
+// Тогда logged_in = 0 не означает «входа нет», и показывать красное «нет входа»
+// было бы враньём: инструмент не заглянул в файл.
+//
+// Помеча берутся из check_how, потому что колонки отдельного признака в схеме
+// нет, а менять схему ради одного слова дороже, чем держать правило здесь.
+// Правило одно и в одном месте — иначе окно и отчёт начнут считать по-разному.
+const CHECK_FAILED = /файл держит Chrome|не проверено|не прочитан/i;
+
 function sessionsTab(db) {
   return db.prepare('SELECT * FROM sessions ORDER BY site').all().map((s) => {
     let names = [];
     try { names = JSON.parse(s.cookie_names || '[]'); } catch (e) { names = []; }
+    const how = s.check_how || '';
+    const verified = !CHECK_FAILED.test(how);
     return {
       site: s.site,
       loggedIn: !!s.logged_in,
+      // Три состояния вместо двух: вход есть, входа нет, и НЕ ПРОВЕРЕНО.
+      state: s.logged_in ? 'in' : (verified ? 'out' : 'unchecked'),
       account: s.account || '',
       checkedAt: s.checked_at,
       cookies: names,
-      how: s.check_how || '',
+      how,
       tabId: s.tab_id || '',
     };
   });

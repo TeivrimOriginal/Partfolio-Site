@@ -567,7 +567,14 @@ function Render-Pages {
             $row = New-Object System.Windows.Controls.StackPanel
             $row.Orientation = 'Horizontal'
             $row.Margin = New-Object System.Windows.Thickness(0, 0, 0, 8)
-            $st = if ($sn.loggedIn) { @{ T = 'вход есть'; C = 'Good' } } else { @{ T = 'нет входа'; C = 'Bad' } }
+            # Три состояния. Красное «нет входа» ставится только когда проверка
+            # действительно состоялась; если профиль был заблокирован, это
+            # «не проверено», и жёлтым — потому что решение принимать нельзя.
+            $st = switch ([string]$sn.state) {
+                'in' { @{ T = 'вход есть'; C = 'Good' } }
+                'unchecked' { @{ T = 'не проверено'; C = 'Warn' } }
+                default { @{ T = 'нет входа'; C = 'Bad' } }
+            }
             $b = New-Text -Text $st.T -Size 11 -Color $st.C -Bold $true
             $b.Width = 92
             $row.Children.Add($b) | Out-Null
@@ -619,8 +626,14 @@ function Update-Data {
     }
     Render-Pages $data
     $s = $data.summary
-    $script:Subtitle.Text = "отправлено {0} · готово {1} · вакансий {2} · компаний {3} · контактов {4} · площадок со входом {5} из {6} · почт {7} из {8}" -f `
-        $s.sent, $s.prepared, $s.vacancies, $s.companies, $s.contacts, $s.sessionsLoggedIn, $s.sessionsChecked, $s.mailUsable, $s.mailTotal
+    # В строке состояния площадки разделены: сколько проверено и вход есть, сколько
+    # проверено и входа нет, сколько вообще не проверено. Сводить это в одно
+    # число значило бы утверждать, что там, где проверка не состоялась, входа
+    # точно нет.
+    $sites = "площадок: вход {0}, без входа {1}, не проверено {2}" -f `
+        $s.sessionsLoggedIn, ($s.sessionsChecked - $s.sessionsLoggedIn - $s.sessionsUnchecked), $s.sessionsUnchecked
+    $script:Subtitle.Text = "отправлено {0} · готово {1} · вакансий {2} · компаний {3} · контактов {4} · {5} · почт {6} из {7}" -f `
+        $s.sent, $s.prepared, $s.vacancies, $s.companies, $s.contacts, $sites, $s.mailUsable, $s.mailTotal
     Show-Tab $script:Current
 }
 
