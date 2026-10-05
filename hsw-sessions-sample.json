@@ -1,0 +1,26 @@
+[
+  {
+    "site": "hh",
+    "logged_in": false,
+    "account": null,
+    "cookie_names": ["_xsrf", "hhuid", "hhrole", "GMT", "device_breakpoint", "iap.uid", "uxs_uid"],
+    "how": "fetch /applicant/resumes → 403, на странице форма входа с телефоном и паролем",
+    "tab_id": "tab_9c43d9e9-a115-402b-b729-f5bd7f4df987"
+  },
+  {
+    "site": "habr",
+    "logged_in": false,
+    "account": null,
+    "cookie_names": [],
+    "how": "account.habr.com/ru/ident/… → «Неопознанный запрос», сессионных кук нет",
+    "tab_id": "tab_9d1563fa-aadc-4566-93a3-569c8d74b74c"
+  },
+  {
+    "site": "habr_career",
+    "logged_in": false,
+    "account": null,
+    "cookie_names": ["check_cookies", "mid", "vtypev2"],
+    "how": "career.habr.com/vacancies → в шапке кнопка «Войти»",
+    "tab_id": "tab_02391f29-21c4-40af-a4c9-6571463e5d24"
+  }
+]
