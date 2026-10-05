@@ -177,6 +177,9 @@ function preparingTab(db) {
     const already = r.vacancy_id
       ? db.prepare('SELECT COUNT(*) c FROM applications WHERE vacancy_id = ? AND ok = 1').get(r.vacancy_id).c
       : 0;
+    // Процент приёма по этой вакансии — та же величина, что и в детализации
+    // отправки, иначе две вкладки показывали бы разные числа под одним смыслом.
+    const f = r.vacancy_id ? fitFor(db, r.vacancy_id) : null;
     return {
       id: r.id,
       state: r.state,
@@ -194,6 +197,11 @@ function preparingTab(db) {
       company: r.company_name || r.company_raw || '',
       contactsFound: contacts,
       hrContactsFound: hrContacts,
+      // Тот же процент приёма, что и в детализации отправки: считается по
+      // вакансии, а не по компании. Раньше вкладка «Подготавливаются» отдавала
+      // только fit письма, и две разные величины назывались в окне одним числом.
+      percent: f ? f.percent : null,
+      percentWhy: f ? f.why : [],
       alreadySent: already,
       createdAt: r.created_at,
     };

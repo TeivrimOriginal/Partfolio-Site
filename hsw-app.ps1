@@ -249,22 +249,30 @@ function New-PreparingRow {
     $sp.Children.Add($len) | Out-Null
 
     # Что ещё не сделано по этой вакансии. Слово «адрес» вместо «контакта»:
-    # контакт есть у почти каждой компании (сайт, страница hh), а вот адрес,
-    # по которому можно ответить за вакансию, публикуют единицы. Считать одно
-    # вместо другого показывало бы готовность там, где её нет.
+    # контакт есть у почти каждой компании (сайт, страница hh), а вот адрес, по
+    # которому можно ответить за вакансию, публикуют единицы.
+    #
+    # Строки короткие: при ширине 230 обе не помещались и слипались в одну
+    # обрезанную надпись, из-за чего второе условие было не видно вообще.
     $lack = @()
     if ([int]$Row.hrContactsFound -eq 0) {
-        if ([int]$Row.contactsFound -gt 0) { $lack += 'контакт есть, адреса для отклика нет' }
-        else { $lack += 'нет адреса для отклика' }
+        if ([int]$Row.contactsFound -gt 0) { $lack += 'адреса нет' }
+        else { $lack += 'контакта нет' }
     }
-    if ([int]$Row.alreadySent -eq 0) { $lack += 'нигде не отправлено' }
+    if ([int]$Row.alreadySent -eq 0) { $lack += 'не отправлено' }
     $lackText = New-Text -Text $(if ($lack.Count) { $lack -join ', ' } else { 'всё собрано' }) -Size 11.5 -Color $(if ($lack.Count) { 'Warn' } else { 'Good' })
     $lackText.TextTrimming = 'CharacterEllipsis'
-    $lackText.Width = 230
+    $lackText.Width = 168
     $sp.Children.Add($lackText) | Out-Null
 
-    $pct = New-Text -Text "$($Row.letterFit)%" -Size 15 -Bold $true
-    $pct.Foreground = Get-PercentBrush $Row.letterFit
+    # Процент ПРИЁМА ПО ВАКАНСИИ, а не fit письма.
+    #
+    # Раньше здесь выводился letterFit, и две цифры в разных вкладках назывались
+    # одним и тем же. ТЗ требует процент по вакансии — тот же, что в детализации
+    # отправки. fit письма показан отдельно мелким шрифтом, потому что это
+    # другая величина: из чего письмо на 100, ещё не значит, что отклик примут.
+    $pct = New-Text -Text $(if ($null -ne $Row.percent) { "$($Row.percent)%" } else { '—' }) -Size 15 -Bold $true
+    $pct.Foreground = Get-PercentBrush $Row.percent
     $pct.HorizontalAlignment = [System.Windows.HorizontalAlignment]::Right
     $pct.Width = 62
     $sp.Children.Add($pct) | Out-Null
