@@ -5,6 +5,16 @@ hh-requirements-latest.json
 hardsearchwork.db
 hardsearchwork.db-wal
 hardsearchwork.db-shm
+hsw/hsw.sqlite
+hsw/hsw.sqlite-wal
+hsw/hsw.sqlite-shm
+hsw/test-send.sqlite
+# Подготовленные письма: в них адреса компаний и текст откликов. На общий
+# доступ это не выкладывается.
+hsw/outbox/
+hsw/outbox-test/
+# Сырой ответ Хабра: артефакт прогона сборщика, 140 КБ и без пользы в репозитории.
+hsw/habr-raw.json
 # Ящики для рассылки: здесь будут пароли в переменных окружения
 mailboxes.csv
 
