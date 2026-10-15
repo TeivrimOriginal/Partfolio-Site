@@ -29,3 +29,14 @@ hsw-*.png
 _probe-*
 _*.png
 *.bak-*
+
+# Secret-bot: демо-база passkey и файлы страницы — только для проверки,
+# в репозиторий не несут ни ключей, ни токенов.
+pw-demo.db
+pw-demo.db-wal
+pw-demo.db-shm
+secret-bot/links.db
+secret-bot/links.db-wal
+secret-bot/links.db-shm
+__pycache__/
+*.pyc
