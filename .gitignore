@@ -35,8 +35,10 @@ _*.png
 pw-demo.db
 pw-demo.db-wal
 pw-demo.db-shm
-secret-bot/links.db
-secret-bot/links.db-wal
-secret-bot/links.db-shm
+# links.db — БД ссылок бота; создаётся рядом с запуском (DB_PATH по
+# умолчанию относительный), поэтому глубина не важна.
+links.db
+links.db-wal
+links.db-shm
 __pycache__/
 *.pyc
