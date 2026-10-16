@@ -12,6 +12,7 @@
 4. Отказ без сессии и отказ по клону ключа (счётчик не вырос).
 5. Ссылки в сообщениях бота собраны через <a href>.
 6. Сайт собирается на FastAPI (роуты web_app.create_app).
+7. PWA для Android: манифест, service worker, иконки.
 """
 
 import hashlib
@@ -213,10 +214,14 @@ def api_tests():
                if hasattr(r, "methods")]
     ok("сайт на FastAPI", app.__class__.__module__.startswith("fastapi"),
        app.__class__)
-    ok("восемь маршрутов", len(methods) == 8, methods)
+    ok("двенадцать маршрутов", len(methods) == 12, methods)
     ok("GET и POST на /d/{token} разделены",
-       "/d/{token}" in paths and len(methods) == 8, methods)
+       "/d/{token}" in paths and len(methods) == 12, methods)
     ok("маршрут /healthz есть", "/healthz" in paths, sorted(paths))
+    ok("PWA-маршруты есть",
+       all(p in paths for p in ("/manifest.webmanifest", "/sw.js",
+                                "/icon-192.png", "/icon-512.png")),
+       sorted(paths))
 
     time_shifted = False
     real_time = None
@@ -227,6 +232,21 @@ def api_tests():
             ok("healthz -> ok", r.status_code == 200 and r.json() == {"ok": True},
                r.status_code)
 
+            # 0.1 PWA
+            r = client.get("/manifest.webmanifest")
+            ok("PWA: манифест отдаётся",
+               r.status_code == 200 and r.json()["name"].startswith("Secret-bot")
+               and r.json()["icons"], r.status_code)
+            r = client.get("/sw.js")
+            ok("PWA: service worker отдаётся",
+               r.status_code == 200 and "caches" in r.text
+               and "serviceWorker" not in r.text, r.status_code)
+            for size in (192, 512):
+                r = client.get(f"/icon-{size}.png")
+                ok(f"PWA: иконка {size} отдаётся",
+                   r.status_code == 200 and r.content[:8] == b"\x89PNG\r\n\x1a\n",
+                   r.status_code)
+
             # 1. страница без кук: только форма
             r = client.get(f"/d/{token}")
             text = r.text
@@ -234,6 +254,8 @@ def api_tests():
             ok("форма с токеном", f'action="/d/{token}"' in text)
             ok("кнопок passkey до входа нет",
                'id="pw-setup"' not in text and 'id="pw-login"' not in text)
+            ok("PWA: в странице манифест и тема",
+               'rel="manifest"' in text and 'theme-color' in text)
 
             # 2. неверное кодовое слово
             r = client.post(f"/d/{token}", data={"password": "wrong"})
