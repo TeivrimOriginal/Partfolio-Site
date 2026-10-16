@@ -1,4 +1,4 @@
-"""Проверка passkey-интеграции и кликабельных ссылок в secret-bot/crypt_bot.py.
+"""Проверка passkey-интеграции и кликабельных ссылок в secret-bot.
 
 Запуск: python test-passkey.py
 
@@ -6,13 +6,14 @@
 1. Разбор WebAuthn-ответов синтетическим аутентификатором (создание и вход),
    включая отказы: не тот origin, не тот challenge, битая подпись, нет UV.
 2. Одноразовость challenge.
-3. Полный проход по HTTP: страница -> неверное слово -> верное слово ->
-   регистрация passkey -> вход по passkey -> скачивание файла по сессии.
+3. Полный проход по HTTP через FastAPI TestClient: страница -> неверное
+   слово -> верное слово -> регистрация passkey -> вход по passkey ->
+   скачивание файла по сессии.
 4. Отказ без сессии и отказ по клону ключа (счётчик не вырос).
 5. Ссылки в сообщениях бота собраны через <a href>.
+6. Сайт собирается на FastAPI (роуты web_app.create_app).
 """
 
-import asyncio
 import hashlib
 import json
 import os
@@ -188,8 +189,12 @@ def unit_tests():
 
 # --------------------------- HTTP-сценарий (e2e) ----------------------------
 
-async def api_tests():
-    from aiohttp.test_utils import TestClient, TestServer
+def api_tests():
+    """Полный проход через HTTP: FastAPI TestClient, без Telegram."""
+    from fastapi.testclient import TestClient
+
+    import time as time_mod
+    from web_app import create_app
 
     password = "correct horse battery staple"
     plain = b"top secret payload\n" * 50
@@ -202,142 +207,217 @@ async def api_tests():
             assert file_id == "file-id-1", file_id
             destination.write(encrypted)
 
-    app = cb.build_web_app(FakeBot())
-    client = TestClient(TestServer(app, host="localhost"))
-    await client.start_server()
+    app = create_app(FakeBot())
+    paths = {getattr(r, "path", "") for r in app.routes}
+    methods = [f"{sorted(r.methods)[0]} {r.path}" for r in app.routes
+               if hasattr(r, "methods")]
+    ok("сайт на FastAPI", app.__class__.__module__.startswith("fastapi"),
+       app.__class__)
+    ok("восемь маршрутов", len(methods) == 8, methods)
+    ok("GET и POST на /d/{token} разделены",
+       "/d/{token}" in paths and len(methods) == 8, methods)
+    ok("маршрут /healthz есть", "/healthz" in paths, sorted(paths))
+
     time_shifted = False
     real_time = None
-    try:
-        # 1. страница без кук: только форма
-        r = await client.get(f"/d/{token}")
-        text = await r.text()
-        ok("страница открывается", r.status == 200, r.status)
-        ok("форма с токеном", f'action="/d/{token}"' in text)
-        ok("кнопок passkey до входа нет",
-           'id="pw-setup"' not in text and 'id="pw-login"' not in text)
+    with TestClient(app) as client:
+        try:
+            # 0. healthz
+            r = client.get("/healthz")
+            ok("healthz -> ok", r.status_code == 200 and r.json() == {"ok": True},
+               r.status_code)
 
-        # 2. неверное кодовое слово
-        r = await client.post(f"/d/{token}", data={"password": "wrong"})
-        ok("неверное слово -> 403", r.status == 403, r.status)
+            # 1. страница без кук: только форма
+            r = client.get(f"/d/{token}")
+            text = r.text
+            ok("страница открывается", r.status_code == 200, r.status_code)
+            ok("форма с токеном", f'action="/d/{token}"' in text)
+            ok("кнопок passkey до входа нет",
+               'id="pw-setup"' not in text and 'id="pw-login"' not in text)
 
-        # 3. регистрация до кодового слова запрещена
-        r = await client.post(f"/d/{token}/pw/register/options")
-        ok("регистрация без кодового слова -> 403", r.status == 403, r.status)
+            # 2. неверное кодовое слово
+            r = client.post(f"/d/{token}", data={"password": "wrong"})
+            ok("неверное слово -> 403", r.status_code == 403, r.status_code)
 
-        # 4. верное кодовое слово: файл + печать grant
-        r = await client.post(f"/d/{token}", data={"password": password})
-        ok("верное слово -> файл", r.status == 200 and (await r.read() == plain), r.status)
+            # 3. регистрация до кодового слова запрещена
+            r = client.post(f"/d/{token}/pw/register/options")
+            ok("регистрация без кодового слова -> 403", r.status_code == 403,
+               r.status_code)
 
-        # Продолжаем «в будущем»: подпись куки не должна зависеть от секунды,
-        # в которую её проверяют (иначе ловится только спустя ровно 0 секунд).
-        import time as time_mod
-        real_time = time_mod.time
-        time_mod.time = lambda: real_time() + 5
-        time_shifted = True
+            # 4. верное кодовое слово: файл + печать grant
+            r = client.post(f"/d/{token}", data={"password": password})
+            ok("верное слово -> файл",
+               r.status_code == 200 and (r.content == plain), r.status_code)
 
-        r = await client.get(f"/d/{token}")
-        text = await r.text()
-        ok("после кодового слова появляется кнопка passkey", 'id="pw-setup"' in text)
+            # Продолжаем «в будущем»: подпись куки не должна зависеть от секунды,
+            # в которую её проверяют (иначе ловится только спустя ровно 0 секунд).
+            real_time = time_mod.time
+            time_mod.time = lambda: real_time() + 5
+            time_shifted = True
 
-        # 5. options регистрации
-        r = await client.post(f"/d/{token}/pw/register/options")
-        ok("register/options -> 200", r.status == 200, await r.text())
-        pub = (await r.json())["publicKey"]
-        ok("rpId в options", pub["rp"]["id"] == cb.RP_ID, pub["rp"])
-        ok("UV обязателен", pub["authenticatorSelection"]["userVerification"] == "required")
+            r = client.get(f"/d/{token}")
+            text = r.text
+            ok("после кодового слова появляется кнопка passkey",
+               'id="pw-setup"' in text)
 
-        auth = FakeAuthenticator()
-        cdj, attestation = auth.create(pub["challenge"])
-        payload = {
-            "id": cb._b64u(auth.cred_id),
-            "type": "public-key",
-            "clientDataJSON": cb._b64u(cdj),
-            "attestationObject": cb._b64u(attestation),
-        }
-        r = await client.post(f"/d/{token}/pw/register/verify", json=payload)
-        ok("register/verify -> 200", r.status == 200, await r.text())
-        ok("passkey сохранён", cb._pw_list(token) == [cb._b64u(auth.cred_id)],
-           cb._pw_list(token))
-        ok("ключ ссылки сохранён (vault)", cb._vault_get(token) is not None)
+            # 5. options регистрации
+            r = client.post(f"/d/{token}/pw/register/options")
+            ok("register/options -> 200", r.status_code == 200, r.text)
+            pub = r.json()["publicKey"]
+            ok("rpId в options", pub["rp"]["id"] == cb.RP_ID, pub["rp"])
+            ok("UV обязателен",
+               pub["authenticatorSelection"]["userVerification"] == "required")
 
-        # повтор того же ответа — challenge сгорел
-        r = await client.post(f"/d/{token}/pw/register/verify", json=payload)
-        ok("повторная регистрация -> 400", r.status == 400, r.status)
+            auth = FakeAuthenticator()
+            cdj, attestation = auth.create(pub["challenge"])
+            payload = {
+                "id": cb._b64u(auth.cred_id),
+                "type": "public-key",
+                "clientDataJSON": cb._b64u(cdj),
+                "attestationObject": cb._b64u(attestation),
+            }
+            r = client.post(f"/d/{token}/pw/register/verify", json=payload)
+            ok("register/verify -> 200", r.status_code == 200, r.text)
+            ok("passkey сохранён", cb._pw_list(token) == [cb._b64u(auth.cred_id)],
+               cb._pw_list(token))
+            ok("ключ ссылки сохранён (vault)", cb._vault_get(token) is not None)
 
-        # 6. вход: сначала битая подпись
-        r = await client.post(f"/d/{token}/pw/login/options")
-        ok("login/options -> 200", r.status == 200, await r.text())
-        pub = (await r.json())["publicKey"]
-        cdj2, auth_data2, signature2 = auth.get(pub["challenge"])
-        bad = bytes(bytearray(signature2)[:-1] + bytes([signature2[-1] ^ 0xFF]))
-        r = await client.post(f"/d/{token}/pw/login/verify", json={
-            "id": cb._b64u(auth.cred_id), "type": "public-key",
-            "clientDataJSON": cb._b64u(cdj2),
-            "authenticatorData": cb._b64u(auth_data2),
-            "signature": cb._b64u(bad),
-        })
-        ok("битая подпись -> 403", r.status == 403, r.status)
+            # повтор того же ответа — challenge сгорел
+            r = client.post(f"/d/{token}/pw/register/verify", json=payload)
+            ok("повторная регистрация -> 400", r.status_code == 400, r.status_code)
 
-        # 7. честный вход
-        r = await client.post(f"/d/{token}/pw/login/options")
-        pub = (await r.json())["publicKey"]
-        cdj3, auth_data3, signature3 = auth.get(pub["challenge"])
-        r = await client.post(f"/d/{token}/pw/login/verify", json={
-            "id": cb._b64u(auth.cred_id), "type": "public-key",
-            "clientDataJSON": cb._b64u(cdj3),
-            "authenticatorData": cb._b64u(auth_data3),
-            "signature": cb._b64u(signature3),
-        })
-        ok("вход по passkey -> 200", r.status == 200, await r.text())
-        ok("счётчик записан", cb._pw_get(cb._b64u(auth.cred_id))[2] == auth.counter)
+            # 6. вход: сначала битая подпись
+            r = client.post(f"/d/{token}/pw/login/options")
+            ok("login/options -> 200", r.status_code == 200, r.text)
+            pub = r.json()["publicKey"]
+            cdj2, auth_data2, signature2 = auth.get(pub["challenge"])
+            bad = bytes(bytearray(signature2)[:-1] + bytes([signature2[-1] ^ 0xFF]))
+            r = client.post(f"/d/{token}/pw/login/verify", json={
+                "id": cb._b64u(auth.cred_id), "type": "public-key",
+                "clientDataJSON": cb._b64u(cdj2),
+                "authenticatorData": cb._b64u(auth_data2),
+                "signature": cb._b64u(bad),
+            })
+            ok("битая подпись -> 403", r.status_code == 403, r.status_code)
 
-        # 8. файл по сессии passkey (без кодового слова)
-        r = await client.get(f"/d/{token}/get")
-        ok("скачивание по сессии -> файл",
-           r.status == 200 and (await r.read() == plain), r.status)
+            # 7. честный вход
+            r = client.post(f"/d/{token}/pw/login/options")
+            pub = r.json()["publicKey"]
+            cdj3, auth_data3, signature3 = auth.get(pub["challenge"])
+            r = client.post(f"/d/{token}/pw/login/verify", json={
+                "id": cb._b64u(auth.cred_id), "type": "public-key",
+                "clientDataJSON": cb._b64u(cdj3),
+                "authenticatorData": cb._b64u(auth_data3),
+                "signature": cb._b64u(signature3),
+            })
+            ok("вход по passkey -> 200", r.status_code == 200, r.text)
+            ok("счётчик записан",
+               cb._pw_get(cb._b64u(auth.cred_id))[2] == auth.counter)
 
-        # 9. страница показывает кнопку скачивания после входа
-        r = await client.get(f"/d/{token}")
-        text = await r.text()
-        ok("кнопка «скачать» после входа", "/get" in text and 'id="pw-login"' in text)
+            # 8. файл по сессии passkey (без кодового слова)
+            r = client.get(f"/d/{token}/get")
+            ok("скачивание по сессии -> файл",
+               r.status_code == 200 and (r.content == plain), r.status_code)
 
-        # 10. клон ключа: тот же счётчик -> отказ
-        r = await client.post(f"/d/{token}/pw/login/options")
-        pub = (await r.json())["publicKey"]
-        cdj4, auth_data4, signature4 = auth.get(pub["challenge"], counter=auth.counter)
-        r = await client.post(f"/d/{token}/pw/login/verify", json={
-            "id": cb._b64u(auth.cred_id), "type": "public-key",
-            "clientDataJSON": cb._b64u(cdj4),
-            "authenticatorData": cb._b64u(auth_data4),
-            "signature": cb._b64u(signature4),
-        })
-        ok("клон ключа (счётчик не вырос) -> 403", r.status == 403, r.status)
+            # 9. страница показывает кнопку скачивания после входа
+            r = client.get(f"/d/{token}")
+            text = r.text
+            ok("кнопка «скачать» после входа",
+               "/get" in text and 'id="pw-login"' in text)
 
-        # 11. без кук — файл не выдаём
-        client.session.cookie_jar.clear()
-        r = await client.get(f"/d/{token}/get")
-        ok("без сессии -> 403", r.status == 403, r.status)
-        r = await client.post(f"/d/{token}/pw/register/options")
-        ok("без grant регистрация снова запрещена", r.status == 403, r.status)
-    finally:
-        if time_shifted:
-            time_mod.time = real_time
-        await client.close()
+            # 10. клон ключа: тот же счётчик -> отказ
+            r = client.post(f"/d/{token}/pw/login/options")
+            pub = r.json()["publicKey"]
+            cdj4, auth_data4, signature4 = auth.get(pub["challenge"],
+                                                    counter=auth.counter)
+            r = client.post(f"/d/{token}/pw/login/verify", json={
+                "id": cb._b64u(auth.cred_id), "type": "public-key",
+                "clientDataJSON": cb._b64u(cdj4),
+                "authenticatorData": cb._b64u(auth_data4),
+                "signature": cb._b64u(signature4),
+            })
+            ok("клон ключа (счётчик не вырос) -> 403", r.status_code == 403,
+               r.status_code)
+
+            # 11. без кук — файл не выдаём
+            client.cookies.clear()
+            r = client.get(f"/d/{token}/get")
+            ok("без сессии -> 403", r.status_code == 403, r.status_code)
+            r = client.post(f"/d/{token}/pw/register/options")
+            ok("без grant регистрация снова запрещена", r.status_code == 403,
+               r.status_code)
+
+            # 12. неизвестная ссылка
+            r = client.get("/d/no-such-token-here")
+            ok("неизвестная ссылка -> 404", r.status_code == 404, r.status_code)
+        finally:
+            if time_shifted:
+                time_mod.time = real_time
 
 
 def link_tests():
-    src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                            "secret-bot", "crypt_bot.py"), encoding="utf-8").read()
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "secret-bot")
+    src = open(os.path.join(root, "crypt_bot.py"), encoding="utf-8").read()
     anchors = src.count('f\'🔗 <a href="{html.escape(link)}">')
     ok("ссылки в личке и в группе — через <a href>", anchors == 2, anchors)
-    ok("кнопка «скачать» на странице — якорь", 'class="btn" href=' in src)
+    web = open(os.path.join(root, "web_app.py"), encoding="utf-8").read()
+    ok("кнопка «скачать» на странице — якорь", 'class="btn" href=' in web)
+    ok("веб-слой не держится на aiohttp", "aiohttp" not in src.split(
+        "# -------------------------------- Запуск")[0].replace(
+        "aiohttp-сессию", ""), "в crypt_bot.py остался импорт aiohttp")
+
+
+def live_site_tests(port=8123):
+    """Живой uvicorn через cb.start_site/cb.stop_site — как в crypt_bot.main().
+
+    Проверяет именно обвязку запуска: сайт встаёт в текущем цикле, отвечает
+    по настоящему TCP и порт освобождается после остановки.
+    """
+    import asyncio
+
+    import httpx
+
+    async def run():
+        class DummyBot:
+            pass
+
+        server, task = await cb.start_site(DummyBot(), "127.0.0.1", port)
+        ok("start_site вернул запущенный сервер", server.started)
+        try:
+            async with httpx.AsyncClient(
+                base_url=f"http://127.0.0.1:{port}", timeout=5
+            ) as client:
+                r = await client.get("/healthz")
+                ok("живой сайт: /healthz 200", r.status_code == 200 and
+                   r.json() == {"ok": True}, r.status_code)
+                r = await client.get("/d/нет-такой-ссылки")
+                ok("живой сайт: неизвестная ссылка 404", r.status_code == 404,
+                   r.status_code)
+        finally:
+            await cb.stop_site(server, task)
+        ok("после stop_site задача завершена", task.done())
+        # порт должен быть свободен
+        try:
+            async with httpx.AsyncClient(
+                base_url=f"http://127.0.0.1:{port}", timeout=2
+            ) as client:
+                await client.get("/healthz")
+            ok("порт освобождён после остановки", False, "сайт всё ещё отвечает")
+        except (httpx.ConnectError, httpx.ConnectTimeout):
+            ok("порт освобождён после остановки", True)
+        except Exception as exc:
+            ok("порт освобождён после остановки", False, repr(exc))
+
+    asyncio.run(run())
 
 
 def main():
     print("Юнит-тесты WebAuthn:")
     unit_tests()
-    print("HTTP-сценарий:")
-    asyncio.run(api_tests())
+    print("HTTP-сценарий (FastAPI TestClient):")
+    api_tests()
+    print("Живой сайт на uvicorn (обвязка запуска):")
+    live_site_tests()
     print("Кликабельные ссылки:")
     link_tests()
     print(f"\nВСЁ ПРОШЛО: {len(CHECKS)} проверок")

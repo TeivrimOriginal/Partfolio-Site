@@ -1,16 +1,18 @@
 """Демо-сервер страницы расшифровки для ручной проверки passkey в браузере.
 
-Запуск: python pw-demo-server.py   (порт можно сменить через PW_DEMO_PORT)
+Запуск: python pw-demo-server.py   (порт меняется через PW_DEMO_PORT)
 Страница: http://localhost:8099/d/demo-token-1
 Кодовое слово: demo-codeword-1
 
-Поднимает только сайт из secret-bot/crypt_bot.py (без Telegram): файл
-отдаётся из памяти, чтобы не нужен токен бота.
+Поднимает сайт из secret-bot/web_app.py (FastAPI, без Telegram): файл
+отдаётся из памяти, поэтому токен бота не нужен. Тот же способ запуска,
+что и в crypt_bot.main(): uvicorn работает в текущем event loop.
 """
 
 import asyncio
 import os
 import sys
+import time
 
 # Порт берём свободный: 127.0.0.1:8080 на этой машине занят Steam (CEF),
 # а origin должен совпадать с BASE_URL — поэтому настраиваем до импорта бота.
@@ -21,9 +23,10 @@ os.environ.setdefault("DB_PATH", os.path.join(
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "secret-bot"))
 
-from aiohttp import web
+import uvicorn
 
 import crypt_bot as cb
+from web_app import create_app
 
 TOKEN = "demo-token-1"
 PASSWORD = "demo-codeword-1"
@@ -31,7 +34,7 @@ PAYLOAD = "Демо-файл для проверки passkey.\n".encode("utf-8")
 
 
 class LocalBot:
-    """Заглушка: вместо скачивания из Telegram отдаёт заранее зашифрованный байты."""
+    """Заглушка: вместо скачивания из Telegram отдаёт заранее зашифрованные байты."""
 
     async def download(self, file_id, destination=None, **kwargs):
         destination.write(ENCRYPTED)
@@ -47,16 +50,15 @@ async def main() -> None:
         cb._db.execute("DELETE FROM links WHERE token = ?", (TOKEN,))
         cb._db.execute(
             "INSERT INTO links (token, file_id, file_name, created) VALUES (?, ?, ?, ?)",
-            (TOKEN, "local-file", "демо-отчёт.txt", __import__("time").time()),
+            (TOKEN, "local-file", "демо-отчёт.txt", time.time()),
         )
         cb._db.commit()
-    app = cb.build_web_app(LocalBot())
-    runner = web.AppRunner(app, access_log=None)
-    await runner.setup()
-    await web.TCPSite(runner, "0.0.0.0", PORT).start()
+    config = uvicorn.Config(
+        create_app(LocalBot()), host="0.0.0.0", port=PORT, log_level="warning"
+    )
     print(f"Демо: http://localhost:{PORT}/d/{TOKEN}  кодовое слово: {PASSWORD}",
           flush=True)
-    await asyncio.Event().wait()
+    await uvicorn.Server(config).serve()
 
 
 if __name__ == "__main__":
