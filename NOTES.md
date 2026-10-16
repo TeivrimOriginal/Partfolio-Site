@@ -8204,6 +8204,8 @@ capture_signals` → `nullcontext`), иначе Ctrl+C гасит сайт, а p
   порта после остановки).
 - HTTP-сценарий переведён с aiohttp TestClient на `fastapi.testclient`
   (httpx): `r.status_code`, `r.text`, `client.cookies.clear()`.
+  Starlette 1.7 печатает `StarletteDeprecationWarning` про `httpx2` — это
+  предупреждение, не ошибка; записано в README, тесты зелёные.
 - Браузер (демо на FastAPI, localhost:8099): `/healthz` → `{"ok":true}`;
   страница 5605 байт; неверное слово → «❌ Неверное кодовое слово.»; верное →
   кнопка «🔑 Создать passkey» и разблокированное скачивание;
