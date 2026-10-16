@@ -8221,3 +8221,82 @@ capture_signals` → `nullcontext`), иначе Ctrl+C гасит сайт, а p
 который лежит в той же базе (`settings`): кража файла БД уносит и ключ.
 Это записано и в README, и в раздел «Безопасность» — компромисс ради входа
 с чужого устройства.
+
+## 16.10.2026 — Secret-bot: установщик для Windows и релиз v1.1.0
+
+**Задача оператора.** «Засунуть всё в установщик exe и подготовить релиз».
+
+**Что добавлено.**
+```
+secret-bot/launcher.py          точка входа: --version, --selftest, secret-bot.env
+secret-bot/build/secret-bot.spec  сборка PyInstaller (onedir)
+secret-bot/build/installer.iss    сценарий Inno Setup 6
+secret-bot/build/build.py         оркестрация: иконка -> тесты -> exe -> установщик
+secret-bot/build/release.py       портативный zip, SHA256SUMS, публикация
+secret-bot/build/make-icon.py     рисует secret-bot.ico (Pillow, без ассетов)
+secret-bot/build/release-notes.md заметки релиза
+secret-bot/build/LICENSE.txt      честная запись о происхождении (НЕ лицензия)
+secret-bot/requirements.txt       зависимости (+ .gitignore для артефактов)
+```
+
+**Почему нужен был отдельный `launcher.py`, а не запуск `crypt_bot.py`.**
+`crypt_bot` читает настройки из окружения на уровне модуля, поэтому решить
+«откуда конфиг» и «куда писать базу» надо ДО его импорта. Отсюда порядок в
+`launcher.main()`: аргументы → `load_config()` (файл `secret-bot.env` рядом
+с программой / в cwd / в `%APPDATA%\SecretBot`, точный путь через
+`SECRET_BOT_ENV`; переменные окружения приоритетнее файла) → выбор `DB_PATH`
+→ и только потом `import crypt_bot`. В собранном виде база уходит в
+`%APPDATA%\SecretBot\links.db`: писать в каталог программы нельзя.
+
+**Установщик ставится без администратора** (`PrivilegesRequired=lowest`,
+`DefaultDirName={autopf}\Secret-bot`, что для lowest = `%LOCALAPPDATA%
+\Programs\Secret-bot`). Конфиг и база — в `%APPDATA%\SecretBot`, потому что
+файлы в каталоге программы править без прав нельзя. Удаление сносит
+программу и ярлыки, но НЕ пользовательские данные (ключи ссылок и passkey).
+
+**Три бага, найденных выполнением (не чтением).**
+1. `UnicodeEncodeError` на emoji: консоль Windows в cp1251 роняла
+   `--selftest` на печати «✅». Лечение — `stream.reconfigure(encoding=
+   "utf-8", errors="replace")` в `launcher._setup_console()`.
+2. `ModuleNotFoundError: No module named 'unittest'` в frozen-сборке.
+   Причина: я исключил `unittest` из spec, а aiogram делает
+   `from unittest.mock import sentinel` (`aiogram/types/base.py`,
+   `aiogram/dispatcher/event/bases.py`). Убрал из excludes, в spec оставлен
+   комментарий-предупреждение.
+3. Скрипт сборки на PowerShell 5.1 падал на первой же строке — при том что
+   `[Parser]::ParseFile` синтаксис принимал, а `Write-Host` в транскрипт не
+   попадал. Возиться не стал: оркестрация переписана на Python
+   (`build/build.py`), `build.ps1` — обёртка в три строки (ASCII).
+
+**Проверено выполнением (все шаги, с числами).**
+- `python build\build.py` → exit 0: py_compile, самотест из исходников,
+  PyInstaller (exe 15.3 МБ, каталог 65.6 МБ), самотест собранного exe,
+  Inno Setup → `SecretBot-1.1.0-setup.exe` 29.3 МБ.
+- Самотест frozen-сборки (7 проверок, exit 0): импорт `crypt_bot`,
+  зависимости, шифрование/расшифровка, база, `/healthz`, страница
+  `/d/<token>`, 404 на неизвестную ссылку. Самотест специально усилен:
+  раньше проверял только `/healthz`, теперь ещё страницу и 404 — иначе
+  frozen-сборку нечем проверить, для обычного запуска нужен живой
+  `BOT_TOKEN`.
+- Установщик: тихая установка `Start-Process -Wait` → exit 0; файлы на
+  месте; самотест УСТАНОВЛЕННОГО exe → exit 0; конфиг-шаблон создан в
+  `%APPDATA%\SecretBot\secret-bot.env`; 5 ярлыков в меню Пуск.
+- Реальный запуск установленного exe с конфигом (не самотест!): в логе
+  «Сайт (FastAPI/uvicorn) на 127.0.0.1:8123», «Бот запущен», aiogram
+  Start polling; по HTTP `/healthz` → 200 `{"ok":true}`,
+  `/d/release-check-token` → 200 (5624 байта, токен внутри),
+  `/d/nope-nope` → 404.
+- Удаление: exit 0, каталог и ярлыки убраны, `%APPDATA%\SecretBot` сохранён.
+- Портативный zip: распаковка, структура верная, самотест из распакованного
+  → exit 0.
+- Артефакты: setup 29.3 МБ (sha256 1fe1da86…), portable 34.3 МБ
+  (sha256 49a8efa2…), `SHA256SUMS.txt`.
+
+**Открытый вопрос (честно).** У upstream `Kir13ll/Secret-bot` лицензия не
+указана — значит права у автора. Поэтому `LICENSE.txt` в установке — это
+уведомление о происхождении, а не лицензия, и там прямо сказано, что для
+коммерческого использования нужно разрешение автора.
+
+**Грабли на будущее.** Установщик Inno запускает себя заново из `%TEMP%`,
+поэтому `& setup.exe` возвращает управление сразу — ждать только
+`Start-Process -Wait` (иначе проверка «а установилось ли» врёт).
