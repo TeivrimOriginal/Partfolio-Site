@@ -215,10 +215,11 @@ def api_tests():
                if hasattr(r, "methods")]
     ok("сайт на FastAPI", app.__class__.__module__.startswith("fastapi"),
        app.__class__)
-    ok("двенадцать маршрутов", len(methods) == 12, methods)
+    ok("тринадцать маршрутов", len(methods) == 13, methods)
     ok("GET и POST на /d/{token} разделены",
-       "/d/{token}" in paths and len(methods) == 12, methods)
+       "/d/{token}" in paths and len(methods) == 13, methods)
     ok("маршрут /healthz есть", "/healthz" in paths, sorted(paths))
+    ok("есть заставка /", "/" in paths, sorted(paths))
     ok("PWA-маршруты есть",
        all(p in paths for p in ("/manifest.webmanifest", "/sw.js",
                                 "/icon-192.png", "/icon-512.png")),
@@ -232,6 +233,12 @@ def api_tests():
             r = client.get("/healthz")
             ok("healthz -> ok", r.status_code == 200 and r.json() == {"ok": True},
                r.status_code)
+
+            # 0.0 заставка: без неё мобильная обёртка открывала бы 404
+            r = client.get("/")
+            ok("заставка / открывается", r.status_code == 200, r.status_code)
+            ok("заставка просит ссылку и сама её проверяет",
+               'id="link"' in r.text and "/d/" in r.text)
 
             # 0.1 PWA
             r = client.get("/manifest.webmanifest")
@@ -477,6 +484,12 @@ def link_tests():
        "await codeword_get(chat.id)" in groups)
     web = read("web_app.py")
     ok("кнопка «скачать» на странице — якорь", 'class="btn" href=' in web)
+    # Ветка Android-обёртки: WebView не умеет blob-скачивание, страница
+    # отдаёт файл мосту. Без неё apk «скачает» файл в никуда.
+    ok("страница умеет отдать файл мосту Android",
+       "AndroidFile.saveBase64" in web and "toB64Big" in web)
+    ok("мост вызывается раньше обычного скачивания",
+       web.index("AndroidFile.saveBase64") < web.index("a.download = name"))
     # Сайт больше не знает про бота: он берёт из модулей только то, что нужно
     ok("сайт не импортирует crypt_bot", "import crypt_bot" not in web)
     ok("сайт и бот не ходят в базу синхронно", "asyncio.to_thread(cb." not in web)
