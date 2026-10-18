@@ -10,9 +10,10 @@
    слово -> верное слово -> регистрация passkey -> вход по passkey ->
    скачивание файла по сессии.
 4. Отказ без сессии и отказ по клону ключа (счётчик не вырос).
-5. Ссылки в сообщениях бота собраны через <a href>.
+5. Ссылки в боте: в личке — через <a href>, в группе — обычный URL.
 6. Сайт собирается на FastAPI (роуты web_app.create_app).
 7. PWA для Android: манифест, service worker, иконки.
+8. Статика пакета: никто не зовёт async-функцию без await.
 """
 
 import hashlib
@@ -377,6 +378,85 @@ def api_tests():
                 time_mod.time = real_time
 
 
+def static_tests():
+    """Разбор исходников пакета: забытый await и ссылки между модулями.
+
+    Проверка добавлена после живого бага: `has_pw = bool(db.passkey_list(t))`
+    компилируется, но короутина всегда истинна, и кнопки passkey показывались
+    всем, включая тех, кто кодовое слово не вводил. Ни код-ревью, ни запуск
+    без Telegram такое не ловят — ловит вот эта проверка.
+    """
+    import ast
+
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "secret-bot")
+    files = ("config.py", "crypto.py", "database.py", "passkey.py",
+             "private.py", "groups.py", "web_app.py", "crypt_bot.py", "launcher.py")
+
+    trees, async_names, local_async = {}, set(), {}
+    for name in files:
+        with open(os.path.join(root, name), encoding="utf-8") as handle:
+            tree = ast.parse(handle.read(), filename=name)
+        trees[name] = tree
+        local_async[name] = set()
+        for node in ast.walk(tree):
+            if isinstance(node, ast.AsyncFunctionDef):
+                async_names.add(node.name)
+                local_async[name].add(node.name)
+    ok("в пакете есть async-функции", len(async_names) > 20, len(async_names))
+
+    # Родитель нужен, чтобы отличить `await f()` от голого `f()`
+    # Функции, которые принимают корутину и берут её на себя: законно не await
+    delegates = {"create_task", "gather", "ensure_future", "to_thread", "wait_for",
+                 "shield", "run", "run_until_complete", "as_completed"}
+    skipped = 0
+    for name, tree in trees.items():
+        parents = {}
+        for node in ast.walk(tree):
+            for child in ast.iter_child_nodes(node):
+                parents[id(child)] = node
+
+        def delegated(node, parents=parents):
+            """True, если корутина отдана кому-то (asyncio.run(f()) и т.п.)."""
+            parent = parents.get(id(node))
+            if isinstance(parent, ast.Await):
+                return True
+            # Поднимаемся по цепочке аргументов: f() внутри g(f()) -> g(...).
+            while isinstance(parent, ast.Call) and node in parent.args:
+                attr = (getattr(parent.func, "attr", None)
+                        or getattr(parent.func, "id", None))
+                if attr in delegates:
+                    return True
+                node, parent = parent, parents.get(id(parent))
+            return False
+
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
+            if isinstance(node.func, ast.Attribute):
+                called, known = node.func.attr, node.func.attr in async_names
+            else:
+                # Голое имя смотрим только среди async-функций ЭТОГО файла:
+                # иначе `main()` в launcher.py (он синхронный) совпал бы
+                # с async main() из crypt_bot.
+                called = getattr(node.func, "id", None)
+                known = called in local_async[name]
+            if not known:
+                continue
+            if delegated(node):
+                skipped += 1
+                continue
+            ok(f"{name}: {called}() без await", False, f"строка {node.lineno}")
+    ok("передача корутины в asyncio.run/create_task уместна", skipped > 0, skipped)
+
+    # Сайт не должен знать про бота: иначе снова получится монолит
+    web = trees["web_app.py"]
+    imports = {alias.name for node in ast.walk(web) if isinstance(node, ast.Import)
+               for alias in node.names}
+    ok("сайт не импортирует бота", "crypt_bot" not in imports, sorted(imports))
+    ok("сайт импортирует модули пакета",
+       {"config", "crypto", "database", "passkey"} <= imports, sorted(imports))
+
+
 def link_tests():
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "secret-bot")
 
@@ -409,7 +489,20 @@ def link_tests():
            "остался импорт или вызов aiohttp")
 
 
-def live_site_tests(port=8123):
+def _free_port() -> int:
+    """Свободный порт вместо зашитого 8123.
+
+    На этой машине 8123 может быть отдан Hyper-V/WSL (WSAEACCES, а не
+    «занят»), и жёсткий номер превращает прогон в лотерею.
+    """
+    import socket
+
+    with socket.socket() as sock:
+        sock.bind(("127.0.0.1", 0))
+        return sock.getsockname()[1]
+
+
+def live_site_tests(port=None):
     """Живой uvicorn через cb.start_site/cb.stop_site — как в crypt_bot.main().
 
     Проверяет именно обвязку запуска: сайт встаёт в текущем цикле, отвечает
@@ -418,6 +511,8 @@ def live_site_tests(port=8123):
     import asyncio
 
     import httpx
+
+    port = port or _free_port()
 
     async def run():
         class DummyBot:
@@ -460,6 +555,8 @@ def main():
     api_tests()
     print("Живой сайт на uvicorn (обвязка запуска):")
     live_site_tests()
+    print("Статика пакета:")
+    static_tests()
     print("Кликабельные ссылки:")
     link_tests()
     print(f"\nВСЁ ПРОШЛО: {len(CHECKS)} проверок")
