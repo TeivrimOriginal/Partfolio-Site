@@ -40,7 +40,7 @@ class LocalBot:
         destination.write(ENCRYPTED)
 
 
-ENCRYPTED = cb.encrypt_file(PAYLOAD, PASSWORD)
+ENCRYPTED = cb.encrypt_file_sync(PAYLOAD, PASSWORD)
 
 
 async def main() -> None:

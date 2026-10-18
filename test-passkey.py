@@ -199,7 +199,7 @@ def api_tests():
 
     password = "correct horse battery staple"
     plain = b"top secret payload\n" * 50
-    encrypted = cb.encrypt_file(plain, password)
+    encrypted = cb.encrypt_file_sync(plain, password)
     token = "tok-api-test-1"
     cb._db_add(token, "file-id-1", "отчёт.txt")
 
@@ -379,14 +379,34 @@ def api_tests():
 
 def link_tests():
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "secret-bot")
-    src = open(os.path.join(root, "crypt_bot.py"), encoding="utf-8").read()
-    anchors = src.count('f\'🔗 <a href="{html.escape(link)}">')
-    ok("ссылки в личке и в группе — через <a href>", anchors == 2, anchors)
-    web = open(os.path.join(root, "web_app.py"), encoding="utf-8").read()
+
+    def read(name):
+        with open(os.path.join(root, name), encoding="utf-8") as handle:
+            return handle.read()
+
+    # Хендлеры бота разъехались по модулям, поэтому смотрим оба, а не один
+    # файл: ссылка в личке и ссылка в группе живут в разных местах.
+    private = read("private.py")
+    groups = read("groups.py")
+    anchor = 'f\'🔗 <a href="{html.escape(link)}">'
+    ok("ссылка в личке — через <a href>", private.count(anchor) == 1,
+       private.count(anchor))
+    ok("ссылка в группе — тоже ссылка", f'f"🔗 {{link}}\\n\\n"' in groups
+       and 'link = f"{BASE_URL}/d/{token}"' in groups)
+    ok("в группе кодовое слово достаётся из БД",
+       "await codeword_get(chat.id)" in groups)
+    web = read("web_app.py")
     ok("кнопка «скачать» на странице — якорь", 'class="btn" href=' in web)
-    ok("веб-слой не держится на aiohttp", "aiohttp" not in src.split(
-        "# -------------------------------- Запуск")[0].replace(
-        "aiohttp-сессию", ""), "в crypt_bot.py остался импорт aiohttp")
+    # Сайт больше не знает про бота: он берёт из модулей только то, что нужно
+    ok("сайт не импортирует crypt_bot", "import crypt_bot" not in web)
+    ok("сайт и бот не ходят в базу синхронно", "asyncio.to_thread(cb." not in web)
+    for name in ("crypt_bot.py", "web_app.py", "private.py", "groups.py"):
+        src = read(name)
+        # Проверяем не слово «aiohttp» вообще (оно осталось в комментариях
+        # про историю переезда), а реальную зависимость: импорт или обращение.
+        ok(f"в {name} остался aiohttp",
+           "import aiohttp" not in src and "aiohttp." not in src,
+           "остался импорт или вызов aiohttp")
 
 
 def live_site_tests(port=8123):
