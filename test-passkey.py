@@ -586,6 +586,7 @@ def android_tests():
         ("логика поиска устройства (без сети)", "test-find-device.py", []),
         ("поиск устройства (find-device)", "find-device.py", ["--help"]),
         ("разведка mDNS (mdns_probe)", "mdns_probe.py", ["--help"]),
+        ("прогон на эмуляторе (run-emulator)", "run-emulator.py", ["--help"]),
     ]
     for title, script, extra in scripts:
         path = os.path.join(android, script)
