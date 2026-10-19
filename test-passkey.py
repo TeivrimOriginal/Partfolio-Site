@@ -572,7 +572,8 @@ def android_tests():
     `find-device.py` и `mdns_probe.py` гоняются с `--help`: они ходят в сеть,
     а прогон юнит-тестов не должен зависеть от того, включён ли телефон.
     `--help` проверяет и синтаксис, и разбор аргументов, не посылая ни одного
-    пакета.
+    пакета. Логика при этом проверяется отдельно: `test-find-device.py`
+    разбирает синтетический mDNS-пакет и считает порты, тоже без сети.
     """
     import subprocess
 
@@ -582,6 +583,7 @@ def android_tests():
         ("логика моста (javac + java)", "test-bridge.py", []),
         ("проверка apk", "verify-apk.py", []),
         ("проверка dex", "verify-dex.py", []),
+        ("логика поиска устройства (без сети)", "test-find-device.py", []),
         ("поиск устройства (find-device)", "find-device.py", ["--help"]),
         ("разведка mDNS (mdns_probe)", "mdns_probe.py", ["--help"]),
     ]
