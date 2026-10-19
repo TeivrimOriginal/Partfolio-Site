@@ -561,6 +561,50 @@ def live_site_tests(port=None):
     asyncio.run(run())
 
 
+def android_tests():
+    """Запуск android-проверок: логика моста, apk, dex, поиск устройства.
+
+    Скрипты живут в secret-bot/android и вызываются как подпроцессы —
+    каждый из них самостоятелен и запускается руками. Дублировать их логику
+    здесь нельзя: копия разойдётся с оригиналом при первом же изменении и
+    станет врать. Здесь только запуск и подсчёт.
+
+    `find-device.py` и `mdns_probe.py` гоняются с `--help`: они ходят в сеть,
+    а прогон юнит-тестов не должен зависеть от того, включён ли телефон.
+    `--help` проверяет и синтаксис, и разбор аргументов, не посылая ни одного
+    пакета.
+    """
+    import subprocess
+
+    android = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "secret-bot", "android")
+    scripts = [
+        ("логика моста (javac + java)", "test-bridge.py", []),
+        ("проверка apk", "verify-apk.py", []),
+        ("проверка dex", "verify-dex.py", []),
+        ("поиск устройства (find-device)", "find-device.py", ["--help"]),
+        ("разведка mDNS (mdns_probe)", "mdns_probe.py", ["--help"]),
+    ]
+    for title, script, extra in scripts:
+        path = os.path.join(android, script)
+        if not os.path.isfile(path):
+            ok(f"android: {script} есть", False, path)
+            continue
+        try:
+            proc = subprocess.run([sys.executable, path] + extra, cwd=android,
+                                  capture_output=True, text=True,
+                                  encoding="utf-8", errors="replace",
+                                  timeout=600)
+            passed = proc.returncode == 0
+            tail = ""
+            for line in (proc.stdout or "").splitlines():
+                if line.strip():
+                    tail = line.strip()
+            ok(f"android: {title}", passed, tail if not passed else "")
+        except subprocess.SubprocessError as exc:
+            ok(f"android: {title}", False, repr(exc))
+
+
 def main():
     print("Юнит-тесты WebAuthn:")
     unit_tests()
@@ -572,6 +616,8 @@ def main():
     static_tests()
     print("Кликабельные ссылки:")
     link_tests()
+    print("Android (мост, apk, dex, поиск устройства):")
+    android_tests()
     print(f"\nВСЁ ПРОШЛО: {len(CHECKS)} проверок")
 
 
