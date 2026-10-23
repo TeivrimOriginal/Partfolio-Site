@@ -1,0 +1,3 @@
+"email","id","company","inn","smtp","bounced_at","sent_at"
+"24mpe@mail.ru","d004","ООО ""КОНС""","","550 5.2.1 invalid mailbox, user is terminated","2026-10-03 21:18:45","2026-10-03"
+"aspmk@astranet.ru","d001","ООО АСПМК-3","3018000021","550 5.1.1 Recipient address rejected: User unknown","2026-10-03 21:15:01","2026-10-03"

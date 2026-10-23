@@ -1,0 +1,13 @@
+COUNT=12
+ROW|aspmk@astranet.ru|To: aspmk@astranet.ru|?
+ROW|52048-2012@mail.ru|To: 52048-2012@mail.ru|?
+ROW|baranova-1962@mail.ru|To: baranova-1962@mail.ru|?
+ROW|baranova-1962@mail.ru|Сайт для ООО "АЛЬФА" за 500 ? -|?
+ROW|24mpe@mail.ru|Сайт для ООО "КОНС" за 500 ? - |?
+ROW|land7777@yandex.ru|Сайт для ООО "КИК "КОНСАЛТИНГ|?
+ROW|magazinruss00@mail.ru|Сайт для ООО МАГАЗИ?|?
+ROW|info@sevinfotech.com|Сайт для предприяти|?
+ROW|info@nextech.ru|Сбор данных и автом?|?
+ROW|manager@it-klaster.com|Сбор данных и автом?|?
+ROW|admin@orsodin.ru|Сбор данных и автом?|?
+ROW|dov@it-service-guk.ru|Сбор данных и автом?|?

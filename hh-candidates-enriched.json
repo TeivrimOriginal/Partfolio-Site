@@ -1,0 +1,73 @@
+[
+ {
+  "id": "138090482",
+  "title": "AI Automation Specialist / Специалист по AI и автоматизации",
+  "employer": "LOOK.IN store",
+  "city": "Москва",
+  "salary": null,
+  "posted": "2026-10-04",
+  "valid": "2026-11-03",
+  "formats": "Формат работы:",
+  "hours": "",
+  "open": true,
+  "keywords": [
+   "python",
+   "n8n",
+   "ai ",
+   "api"
+  ]
+ },
+ {
+  "id": "137874768",
+  "title": "Администратор Jira и автоматизации",
+  "employer": "Умскул",
+  "city": "Москва",
+  "salary": null,
+  "posted": "2026-09-28",
+  "valid": "2026-10-28",
+  "formats": "Формат работы:",
+  "hours": "",
+  "open": true,
+  "keywords": [
+   "python",
+   "n8n",
+   "jira",
+   "api"
+  ]
+ },
+ {
+  "id": "137593415",
+  "title": "Специалист по автоматизации/ Специалист по внедрению AI - инструментов",
+  "employer": "X5 Tech",
+  "city": "Москва",
+  "salary": null,
+  "posted": "2026-09-21",
+  "valid": "2026-10-21",
+  "formats": "Формат работы:",
+  "hours": "",
+  "open": true,
+  "keywords": [
+   "ai ",
+   "llm",
+   "api"
+  ]
+ },
+ {
+  "id": "137609545",
+  "title": "ИИ-инженер полного цикла",
+  "employer": "Космос Про Медиа",
+  "city": "Москва",
+  "salary": null,
+  "posted": "2026-09-21",
+  "valid": "2026-10-21",
+  "formats": "Формат работы:",
+  "hours": "",
+  "open": true,
+  "keywords": [
+   "python",
+   "ai ",
+   "llm",
+   "api"
+  ]
+ }
+]

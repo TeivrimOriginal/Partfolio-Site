@@ -1,0 +1,1990 @@
+{
+ "generated": "2026-10-04",
+ "good": [
+  {
+   "id": "137770983",
+   "title": "Junior оператор LLM/backend",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137770983",
+   "tags": [
+    "ai",
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Touch Instinct",
+   "valid": "",
+   "descLen": 4355
+  },
+  {
+   "id": "138081849",
+   "title": "Разработчик 1С (стажер)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/138081849",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3888
+  },
+  {
+   "id": "138054059",
+   "title": "JavaScript/React разработчик (стажер)",
+   "from": 40000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/138054059",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4149
+  },
+  {
+   "id": "137707586",
+   "title": "1С разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137707586",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4428
+  },
+  {
+   "id": "137690487",
+   "title": "Java разработчик/Java Developer (стажер)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137690487",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4687
+  },
+  {
+   "id": "137647314",
+   "title": "1С разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137647314",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4428
+  },
+  {
+   "id": "137171227",
+   "title": "Стажер-TestOps",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137171227",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Р-Вижн",
+   "valid": "",
+   "descLen": 5021
+  },
+  {
+   "id": "137634896",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137634896",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137589847",
+   "title": "JavaScript/React разработчик (стажер)",
+   "from": 40000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137589847",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4119
+  },
+  {
+   "id": "137572611",
+   "title": "Java разработчик/Java Developer (стажер)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137572611",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4687
+  },
+  {
+   "id": "136452517",
+   "title": "Стажер/web-разработчик (программист)",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/136452517",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Онли",
+   "valid": "",
+   "descLen": 3659
+  },
+  {
+   "id": "137149821",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137149821",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137102470",
+   "title": "Java разработчик/Java Developer (стажер)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137102470",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4687
+  },
+  {
+   "id": "137085748",
+   "title": "QA-engineer/тестировщик (стажер/intern)",
+   "from": 50000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137085748",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=3"
+   ],
+   "employer": "Ренью",
+   "valid": "",
+   "descLen": 4446
+  },
+  {
+   "id": "137085638",
+   "title": "Системный аналитик (стажер/intern)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137085638",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=3"
+   ],
+   "employer": "Ренью",
+   "valid": "",
+   "descLen": 4516
+  },
+  {
+   "id": "137065012",
+   "title": "Стажер-DevSecOps",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137065012",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Р-Вижн",
+   "valid": "",
+   "descLen": 6535
+  },
+  {
+   "id": "138054176",
+   "title": "Аналитик данных (ученик)",
+   "from": 80000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/138054176",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4802
+  },
+  {
+   "id": "138003498",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/138003498",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3542
+  },
+  {
+   "id": "138003120",
+   "title": "DevOps инженер (стажер)",
+   "from": 70000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/138003120",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4504
+  },
+  {
+   "id": "137993289",
+   "title": "Системный аналитик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/137993289",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4332
+  },
+  {
+   "id": "137966605",
+   "title": "DevOps инженер (ученик)",
+   "from": 70000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/137966605",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4610
+  },
+  {
+   "id": "134492344",
+   "title": "Стажер-тестировщик",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/134492344",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Р-Вижн",
+   "valid": "",
+   "descLen": 4894
+  },
+  {
+   "id": "137891936",
+   "title": "Системный аналитик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/137891936",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4332
+  },
+  {
+   "id": "137863405",
+   "title": "DevOps инженер (стажер)",
+   "from": 70000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/137863405",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4504
+  },
+  {
+   "id": "137848833",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/137848833",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137790521",
+   "title": "DevOps инженер (ученик)",
+   "from": 70000,
+   "to": 0,
+   "remote": true,
+   "q": "стажёр python",
+   "url": "https://hh.ru/vacancy/137790521",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4629
+  },
+  {
+   "id": "137526123",
+   "title": "DevOps инженер (ученик)",
+   "from": 70000,
+   "to": 0,
+   "remote": true,
+   "q": "ученик python",
+   "url": "https://hh.ru/vacancy/137526123",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4485
+  },
+  {
+   "id": "137477415",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "ученик python",
+   "url": "https://hh.ru/vacancy/137477415",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137418190",
+   "title": "Системный аналитик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "ученик python",
+   "url": "https://hh.ru/vacancy/137418190",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4297
+  },
+  {
+   "id": "137380271",
+   "title": "DevOps инженер (ученик)",
+   "from": 70000,
+   "to": 0,
+   "remote": true,
+   "q": "ученик python",
+   "url": "https://hh.ru/vacancy/137380271",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4622
+  },
+  {
+   "id": "137361604",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "ученик python",
+   "url": "https://hh.ru/vacancy/137361604",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137654502",
+   "title": "Junior-тестировщик",
+   "from": 35000,
+   "to": 0,
+   "remote": true,
+   "q": "junior python",
+   "url": "https://hh.ru/vacancy/137654502",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=3"
+   ],
+   "employer": "EvaTeam",
+   "valid": "",
+   "descLen": 3628
+  },
+  {
+   "id": "137538973",
+   "title": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "junior python",
+   "url": "https://hh.ru/vacancy/137538973",
+   "tags": [
+    "analytic",
+    "automation"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Topface Media",
+   "valid": "",
+   "descLen": 3754
+  },
+  {
+   "id": "137201120",
+   "title": "Python-разработчик по автоматизации",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "python разработчик",
+   "url": "https://hh.ru/vacancy/137201120",
+   "tags": [
+    "python",
+    "dev",
+    "automation"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Симикян Андраник Артурович",
+   "valid": "",
+   "descLen": 3760
+  },
+  {
+   "id": "137196945",
+   "title": "Инженер ИИ-автоматизаций / AI automation engineer",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "python инженер",
+   "url": "https://hh.ru/vacancy/137196945",
+   "tags": [
+    "ai",
+    "automation"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Topface Media",
+   "valid": "",
+   "descLen": 3283
+  },
+  {
+   "id": "138075885",
+   "title": "Стажер тестировщик QA",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "тестировщик junior",
+   "url": "https://hh.ru/vacancy/138075885",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Солар",
+   "valid": "",
+   "descLen": 15632
+  },
+  {
+   "id": "137964777",
+   "title": "Младший тестировщик / Junior QA",
+   "from": 40000,
+   "to": 0,
+   "remote": true,
+   "q": "тестировщик junior",
+   "url": "https://hh.ru/vacancy/137964777",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Коротков Александр Евгеньевич",
+   "valid": "",
+   "descLen": 4275
+  },
+  {
+   "id": "137408496",
+   "title": "Стажер QA / Junior QA Engineer",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "тестировщик junior",
+   "url": "https://hh.ru/vacancy/137408496",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Развитие ИТ",
+   "valid": "",
+   "descLen": 1883
+  },
+  {
+   "id": "137256922",
+   "title": "Junior QA",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "qa junior",
+   "url": "https://hh.ru/vacancy/137256922",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "АМТЕХ",
+   "valid": "",
+   "descLen": 3821
+  },
+  {
+   "id": "137959956",
+   "title": "QA Engineer Java/Инженер-тестировщик Java (ученик)",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "инженер по тестированию",
+   "url": "https://hh.ru/vacancy/137959956",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3765
+  },
+  {
+   "id": "137319238",
+   "title": "Инженер-аналитик (машинные данные)",
+   "from": 60000,
+   "to": 120000,
+   "remote": true,
+   "q": "инженер по тестированию",
+   "url": "https://hh.ru/vacancy/137319238",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Группа НН2",
+   "valid": "",
+   "descLen": 3471
+  },
+  {
+   "id": "137510416",
+   "title": "Младший веб-аналитик",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "аналитик junior",
+   "url": "https://hh.ru/vacancy/137510416",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "E-Promo Group",
+   "valid": "",
+   "descLen": 4173
+  },
+  {
+   "id": "137141648",
+   "title": "Разработчик Google Sheets / Программист в Google Apps Script",
+   "from": 40000,
+   "to": 50000,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137141648",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Николенко Сергей Александрович",
+   "valid": "",
+   "descLen": 4012
+  },
+  {
+   "id": "137352565",
+   "title": "Системный аналитик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137352565",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4332
+  },
+  {
+   "id": "137247447",
+   "title": "Аналитик-автоматизатор",
+   "from": 50000,
+   "to": 0,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137247447",
+   "tags": [
+    "analytic",
+    "automation"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Карпова Екатерина Ивановна",
+   "valid": "",
+   "descLen": 4782
+  },
+  {
+   "id": "137238745",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137238745",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137187462",
+   "title": "Системный аналитик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137187462",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4332
+  },
+  {
+   "id": "137146063",
+   "title": "Стажер QAA (Python) [InetCore, МТС Веб Сервисы]",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137146063",
+   "tags": [
+    "python",
+    "qa"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "\"МТС\", Работа в IT",
+   "valid": "",
+   "descLen": 10504
+  },
+  {
+   "id": "137042507",
+   "title": "Стажер технической поддержки devops",
+   "from": 20000,
+   "to": 30000,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137042507",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Bothost",
+   "valid": "",
+   "descLen": 4290
+  },
+  {
+   "id": "137015649",
+   "title": "Преподаватель Python в IT школу",
+   "from": 40000,
+   "to": 90000,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137015649",
+   "tags": [
+    "python"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Алгоритмика::Программирование::Грозный (ИП Хачукаев Муса Магомедович)",
+   "valid": "",
+   "descLen": 1954
+  },
+  {
+   "id": "137430410",
+   "title": "Бизнес аналитик",
+   "from": 70000,
+   "to": 90000,
+   "remote": true,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/137430410",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Бабаев Эльмар Фархад Оглы",
+   "valid": "",
+   "descLen": 2824
+  },
+  {
+   "id": "138015097",
+   "title": "Разработчик 1С (стажер)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/138015097",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3888
+  },
+  {
+   "id": "137748534",
+   "title": "JavaScript/React разработчик (стажер)",
+   "from": 40000,
+   "to": 0,
+   "remote": true,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/137748534",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE",
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4278
+  },
+  {
+   "id": "137737976",
+   "title": "Java разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/137737976",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 3584
+  },
+  {
+   "id": "137205786",
+   "title": "JavaScript/React разработчик (стажер)",
+   "from": 40000,
+   "to": 0,
+   "remote": true,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/137205786",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4133
+  },
+  {
+   "id": "137201152",
+   "title": "Java разработчик/Java Developer (стажер)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/137201152",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=113&work_format=REMOTE"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4687
+  },
+  {
+   "id": "137889295",
+   "title": "Аналитик 1С (стажер)",
+   "from": 80000,
+   "to": 120000,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/137889295",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=3"
+   ],
+   "employer": "Компания Апогей",
+   "valid": "",
+   "descLen": 7997
+  },
+  {
+   "id": "137319302",
+   "title": "Стажер/PHP-разработчик",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/137319302",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=3"
+   ],
+   "employer": "Ракета",
+   "valid": "",
+   "descLen": 3784
+  },
+  {
+   "id": "136812729",
+   "title": "DevOps (информационная безопасность)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/136812729",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=3"
+   ],
+   "employer": "ПАО «Газпром нефть» ИТ",
+   "valid": "",
+   "descLen": 31503
+  },
+  {
+   "id": "138037232",
+   "title": "Аналитик данных",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/138037232",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=3"
+   ],
+   "employer": "Artsofte",
+   "valid": "",
+   "descLen": 2796
+  },
+  {
+   "id": "138061096",
+   "title": "Стажер менеджер проектов, Аналитика селлеров, Ozon Банк",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/138061096",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Ozon Банк",
+   "valid": "",
+   "descLen": 10897
+  },
+  {
+   "id": "137906636",
+   "title": "Стажер-разработчик C++ / Computer Vision (офис)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/137906636",
+   "tags": [
+    "dev",
+    "cpp"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Smart Engines",
+   "valid": "",
+   "descLen": 4034
+  },
+  {
+   "id": "137719430",
+   "title": "Стажер в Управление бюджетирования, Центр аналитики и оптимизации расходов, ВТБ Юниор",
+   "from": 81000,
+   "to": 0,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/137719430",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Банк ВТБ (ПАО), Подразделения Поддержки и Контроля",
+   "valid": "",
+   "descLen": 9988
+  },
+  {
+   "id": "138009960",
+   "title": "Стажер-аналитик (большие данные)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/138009960",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Яндекс",
+   "valid": "",
+   "descLen": 2422
+  },
+  {
+   "id": "138008096",
+   "title": "Стажер-аналитик AI",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/138008096",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Сбер. IT",
+   "valid": "",
+   "descLen": 3311
+  },
+  {
+   "id": "136186099",
+   "title": "Стажер аналитик SQL",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/136186099",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Банк ПСБ, Старт карьеры",
+   "valid": "",
+   "descLen": 17604
+  },
+  {
+   "id": "136784192",
+   "title": "Стажер-аналитик",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/136784192",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Банк ПСБ, Старт карьеры",
+   "valid": "",
+   "descLen": 17517
+  },
+  {
+   "id": "137303185",
+   "title": "Стажер Data scientist",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/137303185",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Сбер. IT",
+   "valid": "",
+   "descLen": 2387
+  },
+  {
+   "id": "137256684",
+   "title": "Стажер (процессный аналитик)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер python",
+   "url": "https://hh.ru/vacancy/137256684",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "«МТС», Стажировки",
+   "valid": "",
+   "descLen": 11105
+  },
+  {
+   "id": "134717822",
+   "title": "Стажер Frontend-разработчик",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/134717822",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Bellerage",
+   "valid": "",
+   "descLen": 3416
+  },
+  {
+   "id": "138011152",
+   "title": "Бизнес-аналитик, 1С стажер",
+   "from": 46000,
+   "to": 0,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/138011152",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "1С-Перспектива",
+   "valid": "",
+   "descLen": 3634
+  },
+  {
+   "id": "137789868",
+   "title": "1С разработчик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137789868",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4428
+  },
+  {
+   "id": "137690459",
+   "title": "Стажер системный аналитик",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137690459",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Сбер. IT",
+   "valid": "",
+   "descLen": 3159
+  },
+  {
+   "id": "137664489",
+   "title": "Стажер-аналитик",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137664489",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "INFOWATCH",
+   "valid": "",
+   "descLen": 5486
+  },
+  {
+   "id": "137649397",
+   "title": "Стажер ML-разработчик (fast track)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137649397",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Яндекс",
+   "valid": "",
+   "descLen": 2572
+  },
+  {
+   "id": "137649133",
+   "title": "Стажер фронтенд-разработчик (fast track)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137649133",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Яндекс",
+   "valid": "",
+   "descLen": 2882
+  },
+  {
+   "id": "137648389",
+   "title": "Стажер-инженер по мобильному тестированию",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "стажер разработчик",
+   "url": "https://hh.ru/vacancy/137648389",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Яндекс",
+   "valid": "",
+   "descLen": 3151
+  },
+  {
+   "id": "137750841",
+   "title": "Стажер аналитик данных / Intern Data Analyst",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "ученик python",
+   "url": "https://hh.ru/vacancy/137750841",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Deft",
+   "valid": "",
+   "descLen": 3711
+  },
+  {
+   "id": "138024656",
+   "title": "Младший инженер по тестированию (мобильное приложение)",
+   "from": 75000,
+   "to": 0,
+   "remote": false,
+   "q": "тестировщик junior",
+   "url": "https://hh.ru/vacancy/138024656",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Перфоманс Лаб",
+   "valid": "",
+   "descLen": 2895
+  },
+  {
+   "id": "137903685",
+   "title": "Продуктовый QA-инженер junior",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "тестировщик junior",
+   "url": "https://hh.ru/vacancy/137903685",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "FunFlow (ООО Мобильные Игровые Решения)",
+   "valid": "",
+   "descLen": 5038
+  },
+  {
+   "id": "138090404",
+   "title": "Стажер инженера-тестировщика в мастерскую",
+   "from": 110000,
+   "to": 170000,
+   "remote": false,
+   "q": "инженер по тестированию",
+   "url": "https://hh.ru/vacancy/138090404",
+   "tags": [
+    "qa"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "ServiOn",
+   "valid": "",
+   "descLen": 2385
+  },
+  {
+   "id": "137969565",
+   "title": "Младший маркетолог-аналитик / Начинающий специалист",
+   "from": 60000,
+   "to": 0,
+   "remote": false,
+   "q": "аналитик junior",
+   "url": "https://hh.ru/vacancy/137969565",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Аз Снабжение",
+   "valid": "",
+   "descLen": 3454
+  },
+  {
+   "id": "137531876",
+   "title": "Руководитель ИТ-инфраструктуры и технической автоматизации",
+   "from": 400000,
+   "to": 0,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137531876",
+   "tags": [
+    "automation"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Саприм",
+   "valid": "",
+   "descLen": 5064
+  },
+  {
+   "id": "137920980",
+   "title": "AI Engineer (Middle)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137920980",
+   "tags": [
+    "ai"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "ГигаЧат Бизнес",
+   "valid": "",
+   "descLen": 3729
+  },
+  {
+   "id": "138044465",
+   "title": "Python-разработчик - парсинг и сбор данных (Middle/Middle+)",
+   "from": 180000,
+   "to": 250000,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/138044465",
+   "tags": [
+    "python",
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Говорухин Пётр Алексеевич",
+   "valid": "",
+   "descLen": 3498
+  },
+  {
+   "id": "137805557",
+   "title": "Руководитель направления ML Pretrain Multimodal LLM",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137805557",
+   "tags": [
+    "ai"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Сбер. Data Science",
+   "valid": "",
+   "descLen": 6311
+  },
+  {
+   "id": "137803637",
+   "title": "Стажер в команду аналитики, Ozon Банк",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137803637",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Стажировки Ozon Банк",
+   "valid": "",
+   "descLen": 11028
+  },
+  {
+   "id": "137726847",
+   "title": "Младший аналитик",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137726847",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Агроплем",
+   "valid": "",
+   "descLen": 4070
+  },
+  {
+   "id": "137718380",
+   "title": "Junior Backend разработчик Python",
+   "from": 40000,
+   "to": 80000,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137718380",
+   "tags": [
+    "python",
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Аналитические программные решения",
+   "valid": "",
+   "descLen": 3149
+  },
+  {
+   "id": "137687542",
+   "title": "Младший аналитик 1С",
+   "from": 0,
+   "to": null,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137687542",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Первый Бит",
+   "valid": "",
+   "descLen": 4070
+  },
+  {
+   "id": "137679038",
+   "title": "Системный аналитик (ученик)",
+   "from": 60000,
+   "to": 0,
+   "remote": true,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137679038",
+   "tags": [
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Aston",
+   "valid": "",
+   "descLen": 4332
+  },
+  {
+   "id": "133465940",
+   "title": "Инженер-программист (математическое моделирование)",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/133465940",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "ФГУП Центральный научно-исследовательский институт химии и механики",
+   "valid": "",
+   "descLen": 2254
+  },
+  {
+   "id": "137634585",
+   "title": "Стажер DevOps / SRE",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137634585",
+   "tags": [
+    "devops"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Сбер. IT",
+   "valid": "",
+   "descLen": 2852
+  },
+  {
+   "id": "137633482",
+   "title": "Data Engineer Intern / Стажер - дата инженер",
+   "from": 110000,
+   "to": 0,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137633482",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "«Procter & Gamble», Стажировки. IT",
+   "valid": "",
+   "descLen": 5555
+  },
+  {
+   "id": "137276500",
+   "title": "AI Business Assistant к генеральному директору",
+   "from": 70000,
+   "to": 0,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137276500",
+   "tags": [
+    "ai"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Пульс Инноваций",
+   "valid": "",
+   "descLen": 6337
+  },
+  {
+   "id": "133099243",
+   "title": "Разработчик (системный аналитик, тестировщик) бортовых алгоритмов управления",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/133099243",
+   "tags": [
+    "dev",
+    "qa",
+    "devops",
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "НПО ЛАВОЧКИНА",
+   "valid": "",
+   "descLen": 3462
+  },
+  {
+   "id": "137219856",
+   "title": "Lead Data Scientist",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137219856",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Сбер. Data Science",
+   "valid": "",
+   "descLen": 3701
+  },
+  {
+   "id": "137191565",
+   "title": "Разработчик С++",
+   "from": 90000,
+   "to": 0,
+   "remote": false,
+   "q": "python без опыта",
+   "url": "https://hh.ru/vacancy/137191565",
+   "tags": [
+    "dev"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "ФГУП НИИ Квант",
+   "valid": "",
+   "descLen": 2574
+  },
+  {
+   "id": "133386194",
+   "title": "Стажер-аналитик 1С",
+   "from": 0,
+   "to": null,
+   "remote": false,
+   "q": "разработчик стажировка",
+   "url": "https://hh.ru/vacancy/133386194",
+   "tags": [
+    "analytic"
+   ],
+   "zones": [
+    "area=1"
+   ],
+   "employer": "Bellerage",
+   "valid": "",
+   "descLen": 3774
+  }
+ ],
+ "dropped": [
+  {
+   "id": "137089022",
+   "title": "AI Intern Product Manager / AI Product Builder (Vibe Coding)",
+   "employer": "LENIVINS.AI",
+   "rule": "commercial",
+   "matched": "коммерческого опыт",
+   "context": "ы уже самостоятельно сделал и запустил , чем количество лет коммерческого опыта, образование или название предыдущей должности. БУДЕТ ПЛЮСОМ, НО НЕ ОБЯЗАТЕЛЬНО: — Опыт создания собственных продуктов в сфере Generative AI, особенно связанных с генерацией или обработкой фото и видео. — Опыт работы с H"
+  },
+  {
+   "id": "137128688",
+   "title": "Бизнес-аналитик (стажер)",
+   "employer": "Чувашев Павел Владимирович",
+   "rule": "commercial",
+   "matched": "коммерческий опыт",
+   "context": "ствующим мобильным продуктом. - Возможность получить первый коммерческий опыт в IT. - Быстрый профессиональный рост до Junior / Middle Business Analyst. - Удалённый формат работы и гибкий график. - Молодую и дружную команду, которая всегда готова помочь. Если ты давно хотел начать карьеру в IT, но н"
+  },
+  {
+   "id": "137098621",
+   "title": "Junior+ / Middle- AI Engineer (On-Premise LLM)",
+   "employer": "Современные технологии управления",
+   "rule": "commercial",
+   "matched": "коммерческого опыт",
+   "context": "ятия открытых LLM молодая, поэтому мы не ждем десятилетнего коммерческого опыта. Однако менторов и готовой ML-команды для обучения у нас нет . С нашей стороны — четкие ТЗ от системных архитекторов коробки, инфраструктура и железо. С вашей стороны — фундаментальная база, умение читать исходники, разб"
+  },
+  {
+   "id": "137302610",
+   "title": "Инженер-программист (стажер, поддержка БИТ.IIoT)",
+   "employer": "Первый Бит",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "качестве программиста или аналитика. Мы ждем, что вы Имеете высшее образован"
+  },
+  {
+   "id": "137302609",
+   "title": "Инженер-программист (стажер, поддержка БИТ.IIoT)",
+   "employer": "Первый Бит",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "качестве программиста или аналитика. Мы ждем, что вы Имеете высшее образован"
+  },
+  {
+   "id": "137302608",
+   "title": "Инженер-программист (стажер, поддержка БИТ.IIoT)",
+   "employer": "Первый Бит",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "качестве программиста или аналитика. Мы ждем, что вы Имеете высшее образован"
+  },
+  {
+   "id": "137993985",
+   "title": "Python разработчик",
+   "employer": "ТД ГраСС",
+   "rule": "commercial",
+   "matched": "коммерческой разработк",
+   "context": "рхитектурные решения. Вы наш человек, если у вас есть: Опыт коммерческой разработки Уверенное знание Python (ООП, асинхронность, типизация) Опыт работы с фреймворками FastAPI / Django / Flask Практика с реляционными БД (PostgreSQL, MSSQL) и NoSQL (Redis, MongoDB) Понимание микросервисной архитектуры"
+  },
+  {
+   "id": "137357189",
+   "title": "Junior Fullstack-разработчик / DevOps / Системный инженер",
+   "employer": "Точка Эффективности",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "ые, pet- или open-source проекты. Обязательное требование - высшее образован"
+  },
+  {
+   "id": "137270001",
+   "title": "Младший инвестиционный аналитик",
+   "employer": "Алабуга. Менеджмент",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": " работать с законодательными актами РФ; Среднее-специальное/высшее образован"
+  },
+  {
+   "id": "137893290",
+   "title": "Стажер-аналитик в отдел ценообразования",
+   "employer": "METRO.Молодым специалистам",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "знес-процессов, ETL-процессы и их выстраивание. Требования: Высшее образован"
+  },
+  {
+   "id": "136873761",
+   "title": "Стажер в отдел прогнозирования спроса с функциями аналитика",
+   "employer": "METRO.Офис",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "тделом; Работа с ежедневной отчётностью. Пожелания к опыту: Высшее образован"
+  },
+  {
+   "id": "137245590",
+   "title": "Тестировщик Junior/Junior+",
+   "employer": "amoCRM",
+   "rule": "commercial",
+   "matched": "Коммерческий опыт",
+   "context": "частие в разработке стратегии контроля качества Требования: Коммерческий опыт Знание и понимание современных подходов тестирования и контроля качества Опыт написания документации тестирования (отчеты об ошибках, тестовый сценарий, протоколы тестирования) Опыт в использовании DevTools Самостоятельнос"
+  },
+  {
+   "id": "138068756",
+   "title": "Системный аналитик AEF.Lite (GenAI / AI-агенты)",
+   "employer": "Сбер. IT",
+   "rule": "floor",
+   "matched": "от 3 лет",
+   "context": "ls) и приносить лучшие практики в продукт. Требования опыт: от 3 лет"
+  },
+  {
+   "id": "137250032",
+   "title": "Младший аналитик",
+   "employer": "Frank RG",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "и и помогать коллегам в исследованиях. Что мы ждем от тебя? Высшее образован"
+  },
+  {
+   "id": "138063556",
+   "title": "Младший маркетолог-аналитик",
+   "employer": "РЕСО-Гарантия, САО, Бэк-офис",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": " Ведение каналов и ботов в ТГ-каналах и МАХ Ожидаем от Вас: Высшее образован"
+  },
+  {
+   "id": "137052167",
+   "title": "Финансовый аналитик (потребительское кредитование)",
+   "employer": "Сбер для экспертов",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "ительское кредитование, ипотека или кредитные карты) имеете высшее образован"
+  },
+  {
+   "id": "137854860",
+   "title": "Аналитик SOC L1",
+   "employer": "Табит",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "опасности, в том числе от систем мониторинга Наши ожидания: Высшее образован"
+  },
+  {
+   "id": "137296762",
+   "title": "Специалист по планированию поставок и аналитике",
+   "employer": "PIERRE FABRE (ООО Пьер Фабр)",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": "процессов (Excel, Power Query, AI-инструменты). Требования: Высшее образован"
+  },
+  {
+   "id": "136204766",
+   "title": "Специалист по автоматизации ALM-рисков",
+   "employer": "Московский Кредитный Банк. Эксперты",
+   "rule": "education",
+   "matched": "высшее образован",
+   "context": "явленных нарушениях лимитов Требования: Неоконченное высшее/высшее образован"
+  },
+  {
+   "id": "137110035",
+   "title": "Ведущий инженер-программист Linux OpenBMC",
+   "employer": "GS GROUP",
+   "rule": "education",
+   "matched": "Высшее образован",
+   "context": " анализа отчетов и верификации исправлений. НАШИ ПОЖЕЛАНИЯ: Высшее образован"
+  }
+ ],
+ "closed": []
+}

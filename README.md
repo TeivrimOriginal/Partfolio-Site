@@ -1,4 +1,4 @@
-﻿# Partfolio-Site
+# Partfolio-Site
 
 Сайт-портфолио Данилы Аринова.
 

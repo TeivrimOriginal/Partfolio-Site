@@ -1,0 +1,21 @@
+Тема: Junior C++/Rust — ищу работу, готов к стажировке
+
+Здравствуйте, команда [Название]!
+
+Меня зовут Данила Аринов. Пишу на C++/Rust: графика, инструменты, backend, mobile.
+
+Что сделано:
+— TPaint, растровый редактор на Rust/OpenGL: свой UI без системных контролов, 15+ инструментов, слои и PSD, 140+ автотестов;
+— игровой движок с нуля на C++17: два бэкенда Vulkan/OpenGL, scene graph, импорт FBX/OBJ;
+— каталог аниме: переписал с Node.js на Rust, ~20 тыс. записей, REST API, Android-клиент.
+Плюс командная Unity-игра, фриланс на Kwork, оплачиваемая работа художником.
+
+По ставке договоримся. Главное — задачи и команда.
+
+GitHub: https://github.com/TeivrimOriginal
+Резюме: https://teivrimoriginal.github.io/Partfolio-Site/resume.html
+
+Готов сделать тестовое.
+
+Данила Аринов
+@Smishnyavko · teivrim@gmail.com

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{COMPANY}} — пример админ-панели</title>
+<style>
+  :root { --ink:#12151b; --bg:#f2f4f7; --panel:#fff; --line:#e3e6ec; --muted:#6b7280; --accent:#1f6feb; --ok:#15803d; --warn:#b45309; --new:#1d4ed8; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+
+  .demo-banner { background:repeating-linear-gradient(45deg,#fff7ed,#fff7ed 12px,#ffedd5 12px,#ffedd5 24px);
+    border-bottom:2px solid var(--warn); color:#7c2d12; padding:10px 16px; font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; text-align:center; }
+  .demo-banner b { color:var(--warn); }
+
+  .topbar { background:var(--panel); border-bottom:1px solid var(--line); }
+  .topbar .in { max-width:1140px; margin:0 auto; padding:12px 20px; display:flex; align-items:center; gap:14px; }
+  .brand { font-weight:800; font-size:17px; }
+  .brand span { color:var(--accent); }
+  .role { font-size:12px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:3px 10px; }
+  .spacer { flex:1; }
+
+  .wrap { max-width:1140px; margin:0 auto; padding:20px; }
+  h1 { font-size:23px; margin:0 0 4px; letter-spacing:-.02em; }
+  .sub { color:var(--muted); margin:0 0 20px; font-size:14px; }
+
+  .cards { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(165px,1fr)); margin-bottom:22px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .kpi b { display:block; font-size:26px; letter-spacing:-.02em; }
+  .kpi span { color:var(--muted); font-size:13px; }
+  .kpi .up { color:var(--ok); font-size:12px; }
+
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; margin-bottom:20px; overflow:hidden; }
+  .panel h2 { font-size:16px; margin:0; padding:14px 18px; border-bottom:1px solid var(--line); background:#fafbfc; }
+  .panel .hint { padding:10px 18px; font-size:13px; color:var(--muted); border-bottom:1px solid var(--line); background:#fcfdfe; }
+
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { padding:11px 14px; text-align:left; border-bottom:1px solid var(--line); }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); font-weight:700; }
+  tr:last-child td { border-bottom:0; }
+
+  .st { display:inline-block; padding:3px 10px; border-radius:999px; font-size:12px; font-weight:600; }
+  .st-new { background:#eff6ff; color:var(--new); }
+  .st-work { background:#fffbeb; color:var(--warn); }
+  .st-done { background:#f0fdf4; color:var(--ok); }
+
+  .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:7px 13px; border-radius:8px; font-size:13px; font-weight:600; border:0; }
+  .btn.ghost { background:#fff; color:var(--accent); border:1px solid var(--accent); }
+  .btn.mini { padding:5px 10px; font-size:12px; }
+
+  .login { max-width:400px; margin:60px auto; }
+  .login .panel { padding:26px; }
+  .login label { display:block; font-size:13px; color:var(--muted); margin:14px 0 6px; }
+  .login input { width:100%; padding:11px 13px; border:1px solid var(--line); border-radius:9px; font:inherit; }
+
+  .demo-foot { background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; border-radius:10px; padding:14px 16px; font-size:13px; }
+  .demo-foot b { color:var(--warn); }
+</style>
+</head>
+<body>
+
+<!-- ============ ЭТО ПРИМЕР. Не админ-панель компании {{COMPANY}}. ============ -->
+<div class="demo-banner">
+  <b>ЭТО ПРИМЕР АДМИН-ПАНЕЛИ, А НЕ СИСТЕМА КОМПАНИИ «{{COMPANY}}».</b>
+  Заявки и заказы в таблице — вымышленные. Показывает, что вы получите
+  при тарифе 1000–2000 ₽: база заявок, статусы, заказы.
+</div>
+
+<div class="topbar">
+  <div class="in">
+    <div class="brand">{{COMPANY_SHORT}}<span> / админ</span></div>
+    <span class="role">Вы вошли как: администратор</span>
+    <div class="spacer"></div>
+    <span class="role">Выйти</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <h1>Заявки и заказы</h1>
+  <p class="sub">Всё, что пришло с сайта, лежит здесь. Ничего не надо переносить из почты вручную.</p>
+
+  <div class="cards">
+    <div class="kpi"><b>17</b><span>заявок за неделю</span><br><span class="up">+5 к прошлой</span></div>
+    <div class="kpi"><b>4</b><span>новых, не отвечено</span></div>
+    <div class="kpi"><b>11</b><span>в работе</span></div>
+    <div class="kpi"><b>63%</b><span>отвечено за 2 часа</span></div>
+  </div>
+
+  <div class="panel">
+    <h2>Заявки с сайта</h2>
+    <div class="hint">Заявка приходит с именем, телефоном и комментарием. Статус меняется одним нажатием, видно, кто и когда отвечал.</div>
+    <table>
+      <thead><tr><th>Когда</th><th>Имя</th><th>Телефон</th><th>Что нужно</th><th>Статус</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>сегодня, 14:02</td><td>Алексей</td><td>+7 9xx-xxx-xx-xx</td><td>{{SERVICE_1}}</td><td><span class="st st-new">новая</span></td><td><a class="btn mini" href="#">ответить</a></td></tr>
+        <tr><td>сегодня, 11:47</td><td>Марина</td><td>+7 9xx-xxx-xx-xx</td><td>{{SERVICE_2}}</td><td><span class="st st-work">в работе</span></td><td><a class="btn mini ghost" href="#">позвонить</a></td></tr>
+        <tr><td>вчера, 18:20</td><td>Сергей</td><td>+7 9xx-xxx-xx-xx</td><td>{{SERVICE_3}}</td><td><span class="st st-done">закрыта</span></td><td><a class="btn mini ghost" href="#">открыть</a></td></tr>
+        <tr><td>вчера, 09:15</td><td>Ольга</td><td>+7 9xx-xxx-xx-xx</td><td>уточнить сроки</td><td><span class="st st-work">в работе</span></td><td><a class="btn mini ghost" href="#">позвонить</a></td></tr>
+        <tr><td>12.10, 16:03</td><td>Дмитрий</td><td>+7 9xx-xxx-xx-xx</td><td>{{SERVICE_4}}</td><td><span class="st st-done">закрыта</span></td><td><a class="btn mini ghost" href="#">открыть</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Заказы</h2>
+    <div class="hint">Если клиент покупает онлайн, заказ появляется здесь же: что заказал, сколько стоит, статус оплаты и выдачи.</div>
+    <table>
+      <thead><tr><th>Номер</th><th>Что заказали</th><th>Сумма</th><th>Оплата</th><th>Выдача</th></tr></thead>
+      <tbody>
+        <tr><td>З-1042</td><td>{{SERVICE_1}}</td><td>2 400 ₽</td><td><span class="st st-done">оплачен</span></td><td>в работе</td></tr>
+        <tr><td>З-1041</td><td>{{SERVICE_2}}, 2 шт.</td><td>5 100 ₽</td><td><span class="st st-work">ожидает оплаты</span></td><td>—</td></tr>
+        <tr><td>З-1040</td><td>{{SERVICE_3}}</td><td>1 800 ₽</td><td><span class="st st-done">оплачен</span></td><td>выдан</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Вход в панель</h2>
+    <div class="hint">Логин и пароль — ваши, доступ к панели только у вас. Данные лежат у вас, а не у посредника.</div>
+    <div class="login">
+      <div class="panel" style="margin:0">
+        <label for="u">Логин</label>
+        <input id="u" value="admin@{{COMPANY_SHORT_DOMAIN}}">
+        <label for="p">Пароль</label>
+        <input id="p" type="password" value="············">
+        <div style="margin-top:18px"><a class="btn" href="#">Войти</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-foot">
+    <b>И это тоже пример.</b> Настоящая панель выглядит так же, но данные в ней —
+    ваши заявки и заказы, а вход защищён паролем. Входит только владелец компании.
+    В стоимость тарифа 1000 ₽ входит: приём заявок в базу, статусы, список заказов,
+    выгрузка в Excel и эта панель.
+  </div>
+</div>
+
+</body>
+</html>

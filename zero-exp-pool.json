@@ -1,0 +1,3035 @@
+{
+ "generated": "2026-10-04",
+ "zones": {
+  "remote-ru": {
+   "area": "area=113&work_format=REMOTE",
+   "queries": 15,
+   "pages": 31,
+   "cards": 445,
+   "perQuery": {
+    "стажер python": 0,
+    "стажер разработчик": 52,
+    "стажёр python": 20,
+    "ученик python": 60,
+    "junior python": 20,
+    "python разработчик": 60,
+    "python инженер": 60,
+    "тестировщик junior": 20,
+    "qa junior": 20,
+    "инженер по тестированию": 60,
+    "автоматизация python": 60,
+    "devops junior": 16,
+    "аналитик junior": 60,
+    "python без опыта": 35,
+    "разработчик стажировка": 60
+   },
+   "byExp": {
+    "between1And3": 158,
+    "noExperience": 115,
+    "between3And6": 135,
+    "moreThan6": 37
+   },
+   "noExperienceCount": 115,
+   "noExperience": [
+    {
+     "id": "137770983",
+     "title": "Junior оператор LLM/backend",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137770983"
+    },
+    {
+     "id": "138081849",
+     "title": "Разработчик 1С (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138081849"
+    },
+    {
+     "id": "138081219",
+     "title": "Менеджер по продажам БАДов",
+     "from": 70000,
+     "to": 180000,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138081219"
+    },
+    {
+     "id": "135277290",
+     "title": "Ассистент поддержки команды интернет-маркетинга (стажер)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/135277290"
+    },
+    {
+     "id": "138063955",
+     "title": "Начинающий специалист по сопровождению пользователей",
+     "from": 57000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138063955"
+    },
+    {
+     "id": "138054059",
+     "title": "JavaScript/React разработчик (стажер)",
+     "from": 40000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138054059"
+    },
+    {
+     "id": "137089022",
+     "title": "AI Intern Product Manager / AI Product Builder (Vibe Coding)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137089022"
+    },
+    {
+     "id": "138036708",
+     "title": "Начинающий сотрудник онлайн-заботы",
+     "from": 40000,
+     "to": 50000,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138036708"
+    },
+    {
+     "id": "136464816",
+     "title": "Интернет-маркетолог (стажер)",
+     "from": 20000,
+     "to": 30000,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/136464816"
+    },
+    {
+     "id": "137707586",
+     "title": "1С разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137707586"
+    },
+    {
+     "id": "137690487",
+     "title": "Java разработчик/Java Developer (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137690487"
+    },
+    {
+     "id": "137660172",
+     "title": "Практикант IT Project Manager / Менеджер IT проектов",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137660172"
+    },
+    {
+     "id": "137647314",
+     "title": "1С разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137647314"
+    },
+    {
+     "id": "137171227",
+     "title": "Стажер-TestOps",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137171227"
+    },
+    {
+     "id": "137634896",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137634896"
+    },
+    {
+     "id": "137589847",
+     "title": "JavaScript/React разработчик (стажер)",
+     "from": 40000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137589847"
+    },
+    {
+     "id": "137572611",
+     "title": "Java разработчик/Java Developer (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137572611"
+    },
+    {
+     "id": "137539724",
+     "title": "Программист-стажер 1C",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137539724"
+    },
+    {
+     "id": "137535328",
+     "title": "Стажер-инженер технологий машинного обучения",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137535328"
+    },
+    {
+     "id": "136452517",
+     "title": "Стажер/web-разработчик (программист)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/136452517"
+    },
+    {
+     "id": "137149821",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137149821"
+    },
+    {
+     "id": "137134542",
+     "title": "Менеджер по продажам (Стажер)",
+     "from": 100000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137134542"
+    },
+    {
+     "id": "137128688",
+     "title": "Бизнес-аналитик (стажер)",
+     "from": 90000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137128688"
+    },
+    {
+     "id": "137102470",
+     "title": "Java разработчик/Java Developer (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137102470"
+    },
+    {
+     "id": "135666635",
+     "title": "Менеджер по работе с клиентами",
+     "from": 40000,
+     "to": 120000,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/135666635"
+    },
+    {
+     "id": "137085748",
+     "title": "QA-engineer/тестировщик (стажер/intern)",
+     "from": 50000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137085748"
+    },
+    {
+     "id": "137085638",
+     "title": "Системный аналитик (стажер/intern)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137085638"
+    },
+    {
+     "id": "137065012",
+     "title": "Стажер-DevSecOps",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137065012"
+    },
+    {
+     "id": "138054176",
+     "title": "Аналитик данных (ученик)",
+     "from": 80000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/138054176"
+    },
+    {
+     "id": "138043975",
+     "title": "Дата-инженер (ученик)",
+     "from": 85000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/138043975"
+    },
+    {
+     "id": "138003498",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/138003498"
+    },
+    {
+     "id": "138003120",
+     "title": "DevOps инженер (стажер)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/138003120"
+    },
+    {
+     "id": "138001953",
+     "title": "Дата-инженер (ученик)",
+     "from": 85000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/138001953"
+    },
+    {
+     "id": "137993289",
+     "title": "Системный аналитик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137993289"
+    },
+    {
+     "id": "137979320",
+     "title": "Начинающий актуарий / Стажёр",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137979320"
+    },
+    {
+     "id": "137966605",
+     "title": "DevOps инженер (ученик)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137966605"
+    },
+    {
+     "id": "137956441",
+     "title": "Дата инженер (ученик)",
+     "from": 85000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137956441"
+    },
+    {
+     "id": "134492344",
+     "title": "Стажер-тестировщик",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/134492344"
+    },
+    {
+     "id": "137905468",
+     "title": "Дата инженер (ученик)",
+     "from": 85000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137905468"
+    },
+    {
+     "id": "137891936",
+     "title": "Системный аналитик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137891936"
+    },
+    {
+     "id": "137863405",
+     "title": "DevOps инженер (стажер)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137863405"
+    },
+    {
+     "id": "137848833",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137848833"
+    },
+    {
+     "id": "137790521",
+     "title": "DevOps инженер (ученик)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137790521"
+    },
+    {
+     "id": "137789976",
+     "title": "Дата инженер (ученик)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажёр python",
+     "url": "https://hh.ru/vacancy/137789976"
+    },
+    {
+     "id": "137526123",
+     "title": "DevOps инженер (ученик)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137526123"
+    },
+    {
+     "id": "137477415",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137477415"
+    },
+    {
+     "id": "137450242",
+     "title": "Стажёр (Инженер по информационной безопасности)",
+     "from": 30000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137450242"
+    },
+    {
+     "id": "137418190",
+     "title": "Системный аналитик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137418190"
+    },
+    {
+     "id": "137380271",
+     "title": "DevOps инженер (ученик)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137380271"
+    },
+    {
+     "id": "137361604",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137361604"
+    },
+    {
+     "id": "137654502",
+     "title": "Junior-тестировщик",
+     "from": 35000,
+     "to": 0,
+     "remote": true,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/137654502"
+    },
+    {
+     "id": "137538973",
+     "title": "Junior аналитик-автоматизатор (n8n + ИИ-агенты)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/137538973"
+    },
+    {
+     "id": "138020836",
+     "title": "Junior Trading Operations Specialist / Сопровождение торговых операций и поддержка трейдинг-деска",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/138020836"
+    },
+    {
+     "id": "136643169",
+     "title": "Младший инженер информационной безопасности (Junior InfoSec Engineer)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/136643169"
+    },
+    {
+     "id": "137201120",
+     "title": "Python-разработчик по автоматизации",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python разработчик",
+     "url": "https://hh.ru/vacancy/137201120"
+    },
+    {
+     "id": "137196945",
+     "title": "Инженер ИИ-автоматизаций / AI automation engineer",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python инженер",
+     "url": "https://hh.ru/vacancy/137196945"
+    },
+    {
+     "id": "137098621",
+     "title": "Junior+ / Middle- AI Engineer (On-Premise LLM)",
+     "from": 100000,
+     "to": 200000,
+     "remote": true,
+     "q": "python инженер",
+     "url": "https://hh.ru/vacancy/137098621"
+    },
+    {
+     "id": "138075885",
+     "title": "Стажер тестировщик QA",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/138075885"
+    },
+    {
+     "id": "137964777",
+     "title": "Младший тестировщик / Junior QA",
+     "from": 40000,
+     "to": 0,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/137964777"
+    },
+    {
+     "id": "137408496",
+     "title": "Стажер QA / Junior QA Engineer",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/137408496"
+    },
+    {
+     "id": "137256922",
+     "title": "Junior QA",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "qa junior",
+     "url": "https://hh.ru/vacancy/137256922"
+    },
+    {
+     "id": "137959956",
+     "title": "QA Engineer Java/Инженер-тестировщик Java (ученик)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/137959956"
+    },
+    {
+     "id": "137319238",
+     "title": "Инженер-аналитик (машинные данные)",
+     "from": 60000,
+     "to": 120000,
+     "remote": true,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/137319238"
+    },
+    {
+     "id": "135422140",
+     "title": "Game Analyst на мобильную RTS",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "автоматизация python",
+     "url": "https://hh.ru/vacancy/135422140"
+    },
+    {
+     "id": "138029998",
+     "title": "Инженер технической поддержки",
+     "from": 55000,
+     "to": 0,
+     "remote": true,
+     "q": "автоматизация python",
+     "url": "https://hh.ru/vacancy/138029998"
+    },
+    {
+     "id": "137655951",
+     "title": "Junior Quantitative Researcher (Market Research) / Социолог",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137655951"
+    },
+    {
+     "id": "137850113",
+     "title": "Ассистент менеджера по работе с маркетплейсом WB",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137850113"
+    },
+    {
+     "id": "137302610",
+     "title": "Инженер-программист (стажер, поддержка БИТ.IIoT)",
+     "from": 47000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137302610"
+    },
+    {
+     "id": "137302609",
+     "title": "Инженер-программист (стажер, поддержка БИТ.IIoT)",
+     "from": 47000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137302609"
+    },
+    {
+     "id": "137302608",
+     "title": "Инженер-программист (стажер, поддержка БИТ.IIoT)",
+     "from": 47000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137302608"
+    },
+    {
+     "id": "137899571",
+     "title": "Стажёр технической поддержки IIoT/MDT (1С:ERP, маркировка)",
+     "from": 47000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137899571"
+    },
+    {
+     "id": "137899572",
+     "title": "Стажёр технической поддержки IIoT/MDT (1С:ERP, маркировка)",
+     "from": 47000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137899572"
+    },
+    {
+     "id": "137899573",
+     "title": "Стажёр технической поддержки IIoT/MDT (1С:ERP, маркировка)",
+     "from": 47000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137899573"
+    },
+    {
+     "id": "137879093",
+     "title": "Стажер в отдел продаж/ младший менеджер по продажам/ SDR",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137879093"
+    },
+    {
+     "id": "137876516",
+     "title": "Младший менеджер маркетплейсов | Wildberries (одежда)",
+     "from": 40000,
+     "to": 55000,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137876516"
+    },
+    {
+     "id": "137871194",
+     "title": "Младший ИТ-сервис-менеджер",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137871194"
+    },
+    {
+     "id": "137867069",
+     "title": "Младший менеджер WB (Ассистент менеджера маркетплейсов/Ассистент Wildberries)",
+     "from": 30000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137867069"
+    },
+    {
+     "id": "137613352",
+     "title": "Практикант по развитию партнерств",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137613352"
+    },
+    {
+     "id": "137611918",
+     "title": "Скаут / Junior influence manager в digital агентство",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137611918"
+    },
+    {
+     "id": "137576027",
+     "title": "Младший аккаунт менеджер / Стажер",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137576027"
+    },
+    {
+     "id": "137510416",
+     "title": "Младший веб-аналитик",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137510416"
+    },
+    {
+     "id": "137502492",
+     "title": "Junior HR / Recruiter / Sourcer (стажер)",
+     "from": 30000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137502492"
+    },
+    {
+     "id": "137539097",
+     "title": "Специалист по IT",
+     "from": 60000,
+     "to": 120000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137539097"
+    },
+    {
+     "id": "137141648",
+     "title": "Разработчик Google Sheets / Программист в Google Apps Script",
+     "from": 40000,
+     "to": 50000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137141648"
+    },
+    {
+     "id": "137993985",
+     "title": "Python разработчик",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137993985"
+    },
+    {
+     "id": "137352565",
+     "title": "Системный аналитик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137352565"
+    },
+    {
+     "id": "137332146",
+     "title": "Специалист по безопасной разработке (Appsec, фаззинг)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137332146"
+    },
+    {
+     "id": "137276033",
+     "title": "Репетитор ОГЭ ЕГЭ (Информатика)",
+     "from": 70000,
+     "to": 100000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137276033"
+    },
+    {
+     "id": "137247447",
+     "title": "Аналитик-автоматизатор",
+     "from": 50000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137247447"
+    },
+    {
+     "id": "137238745",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137238745"
+    },
+    {
+     "id": "137187462",
+     "title": "Системный аналитик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137187462"
+    },
+    {
+     "id": "137146063",
+     "title": "Стажер QAA (Python) [InetCore, МТС Веб Сервисы]",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137146063"
+    },
+    {
+     "id": "137077165",
+     "title": "Репетитор по Информатике (Готовая программа)",
+     "from": 60000,
+     "to": 120000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137077165"
+    },
+    {
+     "id": "137042507",
+     "title": "Стажер технической поддержки devops",
+     "from": 20000,
+     "to": 30000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137042507"
+    },
+    {
+     "id": "137015649",
+     "title": "Преподаватель Python в IT школу",
+     "from": 40000,
+     "to": 90000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137015649"
+    },
+    {
+     "id": "137430410",
+     "title": "Бизнес аналитик",
+     "from": 70000,
+     "to": 90000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137430410"
+    },
+    {
+     "id": "137539168",
+     "title": "IT менеджер",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137539168"
+    },
+    {
+     "id": "137539094",
+     "title": "IT менеджер",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137539094"
+    },
+    {
+     "id": "137010711",
+     "title": "Junior Game Designer (social farm)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137010711"
+    },
+    {
+     "id": "138015097",
+     "title": "Разработчик 1С (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/138015097"
+    },
+    {
+     "id": "137748534",
+     "title": "JavaScript/React разработчик (стажер)",
+     "from": 40000,
+     "to": 0,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137748534"
+    },
+    {
+     "id": "137737976",
+     "title": "Java разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137737976"
+    },
+    {
+     "id": "137719219",
+     "title": "Практикант — ассистент менеджера по продажам",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137719219"
+    },
+    {
+     "id": "137719220",
+     "title": "Ассистент менеджера по продажам (практикант)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137719220"
+    },
+    {
+     "id": "137660279",
+     "title": "Практикант Менеджер проектов (IT)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137660279"
+    },
+    {
+     "id": "137657315",
+     "title": "Практикант менеджер проектов (HR направление)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137657315"
+    },
+    {
+     "id": "137240582",
+     "title": "IT менеджер (Лидерская программа)",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137240582"
+    },
+    {
+     "id": "137221697",
+     "title": "Junior B2B Sales / Ассистент менеджера B2B-продаж",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137221697"
+    },
+    {
+     "id": "137205786",
+     "title": "JavaScript/React разработчик (стажер)",
+     "from": 40000,
+     "to": 0,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137205786"
+    },
+    {
+     "id": "137205576",
+     "title": "Intern/Стажер отдела развития бизнеса с китайским языком",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137205576"
+    },
+    {
+     "id": "137201152",
+     "title": "Java разработчик/Java Developer (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137201152"
+    },
+    {
+     "id": "137189744",
+     "title": "IT менеджер",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137189744"
+    },
+    {
+     "id": "137141663",
+     "title": "IT менеджер (Лидерская программа)",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137141663"
+    },
+    {
+     "id": "136076065",
+     "title": "Практикант Event Manager / Ассистент ивент-менеджера (Москва)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/136076065"
+    },
+    {
+     "id": "137104554",
+     "title": "IT менеджер",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137104554"
+    }
+   ]
+  },
+  "sverdlovsk": {
+   "area": "area=3",
+   "queries": 15,
+   "pages": 23,
+   "cards": 188,
+   "perQuery": {
+    "стажер python": 58,
+    "стажер разработчик": 19,
+    "стажёр python": 58,
+    "ученик python": 10,
+    "junior python": 2,
+    "python разработчик": 20,
+    "python инженер": 28,
+    "тестировщик junior": 3,
+    "qa junior": 2,
+    "инженер по тестированию": 60,
+    "автоматизация python": 25,
+    "devops junior": 3,
+    "аналитик junior": 17,
+    "python без опыта": 9,
+    "разработчик стажировка": 18
+   },
+   "byExp": {
+    "between3And6": 50,
+    "noExperience": 64,
+    "between1And3": 69,
+    "moreThan6": 5
+   },
+   "noExperienceCount": 64,
+   "noExperience": [
+    {
+     "id": "137654502",
+     "title": "Junior-тестировщик",
+     "from": 35000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137654502"
+    },
+    {
+     "id": "137063431",
+     "title": "Менеджер по работе с входящими заявками (металлопрокат)",
+     "from": 90000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137063431"
+    },
+    {
+     "id": "135467370",
+     "title": "Стажер в отдел продаж",
+     "from": 15000,
+     "to": 55000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135467370"
+    },
+    {
+     "id": "137052666",
+     "title": "Стажер на сборку электрощитков",
+     "from": 160000,
+     "to": 180000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137052666"
+    },
+    {
+     "id": "137784861",
+     "title": "Директор магазина (ТРЦ &quot;ГРАНАТ&quot;)",
+     "from": 69200,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137784861"
+    },
+    {
+     "id": "137628752",
+     "title": "Директор магазина (ЖК Изумрудный бор)",
+     "from": 69200,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137628752"
+    },
+    {
+     "id": "137420583",
+     "title": "Стажёр в компанию (Услуги Яндекс / Google)",
+     "from": 78000,
+     "to": 110000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137420583"
+    },
+    {
+     "id": "137889295",
+     "title": "Аналитик 1С (стажер)",
+     "from": 80000,
+     "to": 120000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137889295"
+    },
+    {
+     "id": "137676937",
+     "title": "Риелтор-стажер",
+     "from": 150000,
+     "to": 300000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137676937"
+    },
+    {
+     "id": "135238031",
+     "title": "Стажер по недвижимости с личным юридическим сопровождением(Горный щит)",
+     "from": 250000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135238031"
+    },
+    {
+     "id": "137319302",
+     "title": "Стажер/PHP-разработчик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137319302"
+    },
+    {
+     "id": "138002804",
+     "title": "Стажер call-центра",
+     "from": 80000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138002804"
+    },
+    {
+     "id": "135362225",
+     "title": "Продавец-консультант медицинской техники",
+     "from": 70000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135362225"
+    },
+    {
+     "id": "137486025",
+     "title": "Преподаватель математики/программирования",
+     "from": 50000,
+     "to": 80000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137486025"
+    },
+    {
+     "id": "137841391",
+     "title": "Повар на производство (ул. Космонавтов 17К)",
+     "from": 58000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137841391"
+    },
+    {
+     "id": "135060691",
+     "title": "Ночной Повар на производство (ул. Космонавтов 17К)",
+     "from": 65000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135060691"
+    },
+    {
+     "id": "138056569",
+     "title": "Стажер в отдел продаж",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138056569"
+    },
+    {
+     "id": "137566117",
+     "title": "Стажер-бармен в отель (обучение с нуля, опыт не требуется)",
+     "from": 43500,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137566117"
+    },
+    {
+     "id": "137553289",
+     "title": "Мастер по ремонту и обслуживанию бытовой техники",
+     "from": 100000,
+     "to": 175000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137553289"
+    },
+    {
+     "id": "136546512",
+     "title": "Продавец-кассир",
+     "from": 45500,
+     "to": 48500,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136546512"
+    },
+    {
+     "id": "137198836",
+     "title": "Продавец-консультант DNS (ТЦ Парус)",
+     "from": 74000,
+     "to": 91900,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137198836"
+    },
+    {
+     "id": "135482177",
+     "title": "Стажер сопровождения розничного бизнеса",
+     "from": 35000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135482177"
+    },
+    {
+     "id": "138009474",
+     "title": "Продавец-консультант DNS (ТРЦ Фан Фан)",
+     "from": 74000,
+     "to": 91900,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138009474"
+    },
+    {
+     "id": "135338186",
+     "title": "Продавец-консультант (Уралмаш)",
+     "from": 40000,
+     "to": 65000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135338186"
+    },
+    {
+     "id": "136863096",
+     "title": "Продавец-консультант (Академика Бардина)",
+     "from": 55000,
+     "to": 78000,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136863096"
+    },
+    {
+     "id": "136812729",
+     "title": "DevOps (информационная безопасность)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136812729"
+    },
+    {
+     "id": "136982649",
+     "title": "Продавец-консультант DNS (Ленина)",
+     "from": 62150,
+     "to": 79100,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136982649"
+    },
+    {
+     "id": "137964224",
+     "title": "Сотрудник на лёгкие поручения (доставка отправлений/посылок)",
+     "from": 80000,
+     "to": 224500,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137964224"
+    },
+    {
+     "id": "136789037",
+     "title": "Курьер в парк &quot;Папа в Бизнесе&quot;",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136789037"
+    },
+    {
+     "id": "137828018",
+     "title": "Курьер в &quot;IT-Компанию (заказы/посылки)",
+     "from": 800,
+     "to": 1000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137828018"
+    },
+    {
+     "id": "136790764",
+     "title": "Курьер «Папа в Бизнесе»",
+     "from": 80000,
+     "to": 223300,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/136790764"
+    },
+    {
+     "id": "136246805",
+     "title": "Начинающий курьер заказов",
+     "from": 6400,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/136246805"
+    },
+    {
+     "id": "138072888",
+     "title": "",
+     "from": 83500,
+     "to": 226000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138072888"
+    },
+    {
+     "id": "138071712",
+     "title": "",
+     "from": 80000,
+     "to": 223300,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138071712"
+    },
+    {
+     "id": "137223470",
+     "title": "Сотрудник выходного дня (От 2-4 часа в день)",
+     "from": 84000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137223470"
+    },
+    {
+     "id": "137927281",
+     "title": "Курьер (зоомагазины, посылки)",
+     "from": 150000,
+     "to": 275000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137927281"
+    },
+    {
+     "id": "137868746",
+     "title": "Сотрудник на отправления (доставка посылок / заказов)",
+     "from": 80000,
+     "to": 224500,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137868746"
+    },
+    {
+     "id": "137656382",
+     "title": "Сотрудник посменного сервиса логистики (доставка лёгких-отправлений / посылок)",
+     "from": 82000,
+     "to": 224500,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137656382"
+    },
+    {
+     "id": "137553939",
+     "title": "Сотрудник &quot;логистической-компании&quot; (доставка онлайн-посылок/заказов, со складов/РЦ)",
+     "from": 2000,
+     "to": 9000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137553939"
+    },
+    {
+     "id": "137064327",
+     "title": "Сотрудник «IT—организации» (онлайн-посылки/заказы со склада/ПВЗ)подработка-оплата-сразу",
+     "from": 2000,
+     "to": 8500,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137064327"
+    },
+    {
+     "id": "137752061",
+     "title": "Преподаватель программирования",
+     "from": 10000,
+     "to": 0,
+     "remote": false,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137752061"
+    },
+    {
+     "id": "137357189",
+     "title": "Junior Fullstack-разработчик / DevOps / Системный инженер",
+     "from": 80000,
+     "to": 0,
+     "remote": false,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/137357189"
+    },
+    {
+     "id": "137085748",
+     "title": "QA-engineer/тестировщик (стажер/intern)",
+     "from": 50000,
+     "to": 0,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/137085748"
+    },
+    {
+     "id": "137085638",
+     "title": "Системный аналитик (стажер/intern)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/137085638"
+    },
+    {
+     "id": "137384403",
+     "title": "Продавец-консультант косметики парфюмерный супермаркет &quot;Золотое Яблоко&quot;",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/137384403"
+    },
+    {
+     "id": "135633778",
+     "title": "Инспектор по качеству",
+     "from": 69000,
+     "to": 0,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/135633778"
+    },
+    {
+     "id": "137780294",
+     "title": "Инженер по качеству (бюро СМК 138)",
+     "from": 73700,
+     "to": 0,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/137780294"
+    },
+    {
+     "id": "138057813",
+     "title": "Младший специалист в Управление HR",
+     "from": 127500,
+     "to": 0,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/138057813"
+    },
+    {
+     "id": "138039357",
+     "title": "Младший специалист по сертификации",
+     "from": 40000,
+     "to": 60000,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/138039357"
+    },
+    {
+     "id": "137697535",
+     "title": "Младший менеджер продукта",
+     "from": 60000,
+     "to": 0,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137697535"
+    },
+    {
+     "id": "137613352",
+     "title": "Практикант по развитию партнерств",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137613352"
+    },
+    {
+     "id": "136412240",
+     "title": "Младший категорийный менеджер",
+     "from": 72000,
+     "to": 0,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/136412240"
+    },
+    {
+     "id": "137270001",
+     "title": "Младший инвестиционный аналитик",
+     "from": 127500,
+     "to": 0,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137270001"
+    },
+    {
+     "id": "138037232",
+     "title": "Аналитик данных",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/138037232"
+    },
+    {
+     "id": "137748147",
+     "title": "Младший специалист по машинному обучению",
+     "from": 51000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137748147"
+    },
+    {
+     "id": "137571614",
+     "title": "Инженер компьютерного зрения",
+     "from": 127500,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137571614"
+    },
+    {
+     "id": "137278453",
+     "title": "Инженер-конструктор (управление летательными аппаратами)",
+     "from": 80700,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137278453"
+    },
+    {
+     "id": "136987284",
+     "title": "Кредитный менеджер Лемана Про (Екатеринбург Металлургов)",
+     "from": 70000,
+     "to": 0,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/136987284"
+    },
+    {
+     "id": "136987146",
+     "title": "Кредитный менеджер Лемана Про (Екатеринбург Базовый)",
+     "from": 70000,
+     "to": 0,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/136987146"
+    },
+    {
+     "id": "137311341",
+     "title": "Менеджер по продажам B2B",
+     "from": 150000,
+     "to": 200000,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137311341"
+    },
+    {
+     "id": "137311342",
+     "title": "Менеджер по продажам B2B",
+     "from": 150000,
+     "to": 200000,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137311342"
+    },
+    {
+     "id": "137311343",
+     "title": "Менеджер по продажам B2B",
+     "from": 150000,
+     "to": 200000,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137311343"
+    },
+    {
+     "id": "137311344",
+     "title": "Менеджер по продажам B2B",
+     "from": 150000,
+     "to": 200000,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137311344"
+    },
+    {
+     "id": "137311345",
+     "title": "Менеджер по продажам B2B",
+     "from": 150000,
+     "to": 200000,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137311345"
+    }
+   ]
+  },
+  "moscow": {
+   "area": "area=1",
+   "queries": 15,
+   "pages": 35,
+   "cards": 530,
+   "perQuery": {
+    "стажер python": 33,
+    "стажер разработчик": 57,
+    "стажёр python": 33,
+    "ученик python": 60,
+    "junior python": 40,
+    "python разработчик": 60,
+    "python инженер": 60,
+    "тестировщик junior": 20,
+    "qa junior": 20,
+    "инженер по тестированию": 60,
+    "автоматизация python": 60,
+    "devops junior": 20,
+    "аналитик junior": 60,
+    "python без опыта": 60,
+    "разработчик стажировка": 40
+   },
+   "byExp": {
+    "between1And3": 166,
+    "noExperience": 147,
+    "between3And6": 172,
+    "moreThan6": 45
+   },
+   "noExperienceCount": 147,
+   "noExperience": [
+    {
+     "id": "138067617",
+     "title": "Стажер в группу моделирования рисков",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138067617"
+    },
+    {
+     "id": "138061096",
+     "title": "Стажер менеджер проектов, Аналитика селлеров, Ozon Банк",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138061096"
+    },
+    {
+     "id": "137906636",
+     "title": "Стажер-разработчик C++ / Computer Vision (офис)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137906636"
+    },
+    {
+     "id": "138054176",
+     "title": "Аналитик данных (ученик)",
+     "from": 80000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138054176"
+    },
+    {
+     "id": "137893290",
+     "title": "Стажер-аналитик в отдел ценообразования",
+     "from": 75000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137893290"
+    },
+    {
+     "id": "137089022",
+     "title": "AI Intern Product Manager / AI Product Builder (Vibe Coding)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137089022"
+    },
+    {
+     "id": "136873761",
+     "title": "Стажер в отдел прогнозирования спроса с функциями аналитика",
+     "from": 75000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136873761"
+    },
+    {
+     "id": "136884314",
+     "title": "Стажер отдела закупок",
+     "from": 75000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136884314"
+    },
+    {
+     "id": "138029689",
+     "title": "Специалист L1/L2 в команду SOC (стажёр)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138029689"
+    },
+    {
+     "id": "137719430",
+     "title": "Стажер в Управление бюджетирования, Центр аналитики и оптимизации расходов, ВТБ Юниор",
+     "from": 81000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137719430"
+    },
+    {
+     "id": "138009960",
+     "title": "Стажер-аналитик (большие данные)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138009960"
+    },
+    {
+     "id": "138008096",
+     "title": "Стажер-аналитик AI",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138008096"
+    },
+    {
+     "id": "138003120",
+     "title": "DevOps инженер (стажер)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/138003120"
+    },
+    {
+     "id": "137997062",
+     "title": "Стажер в казначейство",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137997062"
+    },
+    {
+     "id": "137979320",
+     "title": "Начинающий актуарий / Стажёр",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137979320"
+    },
+    {
+     "id": "136451112",
+     "title": "Стажер по организационному развитию",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136451112"
+    },
+    {
+     "id": "136186099",
+     "title": "Стажер аналитик SQL",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136186099"
+    },
+    {
+     "id": "136784192",
+     "title": "Стажер-аналитик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/136784192"
+    },
+    {
+     "id": "137303185",
+     "title": "Стажер Data scientist",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137303185"
+    },
+    {
+     "id": "135212682",
+     "title": "Практикант (стажер) в Группу валидации моделей, Отдел управления финансовыми рисками",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/135212682"
+    },
+    {
+     "id": "137256684",
+     "title": "Стажер (процессный аналитик)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137256684"
+    },
+    {
+     "id": "137146063",
+     "title": "Стажер QAA (Python) [InetCore, МТС Веб Сервисы]",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137146063"
+    },
+    {
+     "id": "137065012",
+     "title": "Стажер-DevSecOps",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137065012"
+    },
+    {
+     "id": "137020315",
+     "title": "Стажер сетевой инженер (МТС ПРО)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137020315"
+    },
+    {
+     "id": "137042507",
+     "title": "Стажер технической поддержки devops",
+     "from": 20000,
+     "to": 30000,
+     "remote": true,
+     "q": "стажер python",
+     "url": "https://hh.ru/vacancy/137042507"
+    },
+    {
+     "id": "137070318",
+     "title": "Официант",
+     "from": 80000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137070318"
+    },
+    {
+     "id": "138014389",
+     "title": "Начинающий дизайнер в копировальный центр &quot;Копирка&quot;",
+     "from": 70000,
+     "to": 90000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138014389"
+    },
+    {
+     "id": "137857568",
+     "title": "Официант на банкеты",
+     "from": 90000,
+     "to": 150000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137857568"
+    },
+    {
+     "id": "138088735",
+     "title": "",
+     "from": 80000,
+     "to": 227500,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138088735"
+    },
+    {
+     "id": "137630592",
+     "title": "Сборщик заказов / Комплектовщик / Упаковщик (ТСД)",
+     "from": 200000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137630592"
+    },
+    {
+     "id": "137849644",
+     "title": "Сборщик/Комплектовщик/Упаковщик/Сортировщик/Оператор обработки заказов на склад",
+     "from": 200000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137849644"
+    },
+    {
+     "id": "137623521",
+     "title": "Начинающий кладовщик-комплектовщик на склад Маркета",
+     "from": 5000,
+     "to": 6000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137623521"
+    },
+    {
+     "id": "137623520",
+     "title": "Начинающий сотрудник на передачу отправлений",
+     "from": 79200,
+     "to": 125000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137623520"
+    },
+    {
+     "id": "132858420",
+     "title": "Начинающий курьер заказов",
+     "from": 6400,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/132858420"
+    },
+    {
+     "id": "137901720",
+     "title": "Преподаватель программирования (Ст.метро Кузьминки,Марьино, Бунинская аллея,Улица Академика Янгеля)",
+     "from": 2000,
+     "to": 2700,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137901720"
+    },
+    {
+     "id": "137901564",
+     "title": "Преподаватель программирования (Ст. метро Фили, Спортивная, Водный стадион)",
+     "from": 2000,
+     "to": 2700,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137901564"
+    },
+    {
+     "id": "137900633",
+     "title": "Комплектовщик online заказов (Сборщик/Упаковщик)",
+     "from": 200000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137900633"
+    },
+    {
+     "id": "137899776",
+     "title": "Сборщик заказов на склад/Комплектовщик/Упаковщик/Стикеровщик/Сортировщик с ТСД",
+     "from": 200000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137899776"
+    },
+    {
+     "id": "137432304",
+     "title": "Начинающий сотрудник на склад",
+     "from": 100000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137432304"
+    },
+    {
+     "id": "133386173",
+     "title": "Программист-стажер 1C",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/133386173"
+    },
+    {
+     "id": "134717822",
+     "title": "Стажер Frontend-разработчик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/134717822"
+    },
+    {
+     "id": "136464816",
+     "title": "Интернет-маркетолог (стажер)",
+     "from": 20000,
+     "to": 30000,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/136464816"
+    },
+    {
+     "id": "138021958",
+     "title": "Стажер отдела регистрации лекарственных средств",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138021958"
+    },
+    {
+     "id": "138015097",
+     "title": "Разработчик 1С (стажер)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138015097"
+    },
+    {
+     "id": "138011152",
+     "title": "Бизнес-аналитик, 1С стажер",
+     "from": 46000,
+     "to": 0,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/138011152"
+    },
+    {
+     "id": "137789868",
+     "title": "1С разработчик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137789868"
+    },
+    {
+     "id": "137758350",
+     "title": "Стажер ЦОД",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137758350"
+    },
+    {
+     "id": "137748534",
+     "title": "JavaScript/React разработчик (стажер)",
+     "from": 40000,
+     "to": 0,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137748534"
+    },
+    {
+     "id": "137738963",
+     "title": "Бариста / Начинающий сотрудник кофейни",
+     "from": 80000,
+     "to": 110000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137738963"
+    },
+    {
+     "id": "135549460",
+     "title": "Стажёр-дизайнер продукта",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/135549460"
+    },
+    {
+     "id": "137690459",
+     "title": "Стажер системный аналитик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137690459"
+    },
+    {
+     "id": "137687544",
+     "title": "HR стажер",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137687544"
+    },
+    {
+     "id": "137664489",
+     "title": "Стажер-аналитик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137664489"
+    },
+    {
+     "id": "137660265",
+     "title": "Стажер технической поддержки IT",
+     "from": 80000,
+     "to": 100000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137660265"
+    },
+    {
+     "id": "137660172",
+     "title": "Практикант IT Project Manager / Менеджер IT проектов",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137660172"
+    },
+    {
+     "id": "137651259",
+     "title": "Курьер зоомагазины (мелкогабаритные посылки)",
+     "from": 150000,
+     "to": 275000,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137651259"
+    },
+    {
+     "id": "137649397",
+     "title": "Стажер ML-разработчик (fast track)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137649397"
+    },
+    {
+     "id": "137649133",
+     "title": "Стажер фронтенд-разработчик (fast track)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137649133"
+    },
+    {
+     "id": "137648389",
+     "title": "Стажер-инженер по мобильному тестированию",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "стажер разработчик",
+     "url": "https://hh.ru/vacancy/137648389"
+    },
+    {
+     "id": "137923233",
+     "title": "Педагог по программированию и робототехнике (в составе IT‑направления школы IQ007)",
+     "from": 50000,
+     "to": 80000,
+     "remote": false,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137923233"
+    },
+    {
+     "id": "137844215",
+     "title": "Педагог по робототехнике и программированию",
+     "from": 170000,
+     "to": 0,
+     "remote": false,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137844215"
+    },
+    {
+     "id": "137808528",
+     "title": "Преподаватель робототехники и программирования (Митино)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137808528"
+    },
+    {
+     "id": "137790521",
+     "title": "DevOps инженер (ученик)",
+     "from": 70000,
+     "to": 0,
+     "remote": true,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137790521"
+    },
+    {
+     "id": "137750841",
+     "title": "Стажер аналитик данных / Intern Data Analyst",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "ученик python",
+     "url": "https://hh.ru/vacancy/137750841"
+    },
+    {
+     "id": "138020836",
+     "title": "Junior Trading Operations Specialist / Сопровождение торговых операций и поддержка трейдинг-деска",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/138020836"
+    },
+    {
+     "id": "137573457",
+     "title": "Преподаватель компьютерных курсов",
+     "from": 20000,
+     "to": 60000,
+     "remote": false,
+     "q": "junior python",
+     "url": "https://hh.ru/vacancy/137573457"
+    },
+    {
+     "id": "137201120",
+     "title": "Python-разработчик по автоматизации",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python разработчик",
+     "url": "https://hh.ru/vacancy/137201120"
+    },
+    {
+     "id": "136810027",
+     "title": "Support Engineer / Специалист по сопровождению торговой платформы (B2B)",
+     "from": 90000,
+     "to": 0,
+     "remote": false,
+     "q": "python разработчик",
+     "url": "https://hh.ru/vacancy/136810027"
+    },
+    {
+     "id": "138075885",
+     "title": "Стажер тестировщик QA",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/138075885"
+    },
+    {
+     "id": "137245590",
+     "title": "Тестировщик Junior/Junior+",
+     "from": 70000,
+     "to": 0,
+     "remote": false,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/137245590"
+    },
+    {
+     "id": "138024656",
+     "title": "Младший инженер по тестированию (мобильное приложение)",
+     "from": 75000,
+     "to": 0,
+     "remote": false,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/138024656"
+    },
+    {
+     "id": "134492344",
+     "title": "Стажер-тестировщик",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/134492344"
+    },
+    {
+     "id": "137903685",
+     "title": "Продуктовый QA-инженер junior",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "тестировщик junior",
+     "url": "https://hh.ru/vacancy/137903685"
+    },
+    {
+     "id": "137256922",
+     "title": "Junior QA",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "qa junior",
+     "url": "https://hh.ru/vacancy/137256922"
+    },
+    {
+     "id": "138090404",
+     "title": "Стажер инженера-тестировщика в мастерскую",
+     "from": 110000,
+     "to": 170000,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/138090404"
+    },
+    {
+     "id": "138019038",
+     "title": "Продавец-кассир (ул. Льва Кассиля, 1к1)",
+     "from": 54450,
+     "to": 59400,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/138019038"
+    },
+    {
+     "id": "137856502",
+     "title": "Сборщик банкоматов",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/137856502"
+    },
+    {
+     "id": "126207843",
+     "title": "Продавец (Тимирязевский район)",
+     "from": 54450,
+     "to": 59400,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/126207843"
+    },
+    {
+     "id": "126199422",
+     "title": "Продавец-кассир (район Солнцево)",
+     "from": 54450,
+     "to": 59400,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/126199422"
+    },
+    {
+     "id": "123804637",
+     "title": "Продавец (район Академический)",
+     "from": 54450,
+     "to": 59400,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/123804637"
+    },
+    {
+     "id": "137995513",
+     "title": "Директор магазина (ст.м. Новопеределкино, Рассказовка, Боровское шоссе)",
+     "from": 82000,
+     "to": 0,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/137995513"
+    },
+    {
+     "id": "131613808",
+     "title": "Продавец-кассир (м. Шелепиха)",
+     "from": 13200,
+     "to": 39600,
+     "remote": false,
+     "q": "инженер по тестированию",
+     "url": "https://hh.ru/vacancy/131613808"
+    },
+    {
+     "id": "138068756",
+     "title": "Системный аналитик AEF.Lite (GenAI / AI-агенты)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "devops junior",
+     "url": "https://hh.ru/vacancy/138068756"
+    },
+    {
+     "id": "137655951",
+     "title": "Junior Quantitative Researcher (Market Research) / Социолог",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137655951"
+    },
+    {
+     "id": "137850113",
+     "title": "Ассистент менеджера по работе с маркетплейсом WB",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137850113"
+    },
+    {
+     "id": "137259991",
+     "title": "Партнер по управлению персоналом – стажер",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137259991"
+    },
+    {
+     "id": "137250032",
+     "title": "Младший аналитик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137250032"
+    },
+    {
+     "id": "138063556",
+     "title": "Младший маркетолог-аналитик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/138063556"
+    },
+    {
+     "id": "137969565",
+     "title": "Младший маркетолог-аналитик / Начинающий специалист",
+     "from": 60000,
+     "to": 0,
+     "remote": false,
+     "q": "аналитик junior",
+     "url": "https://hh.ru/vacancy/137969565"
+    },
+    {
+     "id": "138008937",
+     "title": "Специалист по информационной безопасности",
+     "from": 189000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/138008937"
+    },
+    {
+     "id": "137196945",
+     "title": "Инженер ИИ-автоматизаций / AI automation engineer",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137196945"
+    },
+    {
+     "id": "137539097",
+     "title": "Специалист по IT",
+     "from": 60000,
+     "to": 120000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137539097"
+    },
+    {
+     "id": "137531876",
+     "title": "Руководитель ИТ-инфраструктуры и технической автоматизации",
+     "from": 400000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137531876"
+    },
+    {
+     "id": "137750400",
+     "title": "Администратор баз данных",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137750400"
+    },
+    {
+     "id": "137920980",
+     "title": "AI Engineer (Middle)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137920980"
+    },
+    {
+     "id": "137052167",
+     "title": "Финансовый аналитик (потребительское кредитование)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137052167"
+    },
+    {
+     "id": "137319238",
+     "title": "Инженер-аналитик (машинные данные)",
+     "from": 60000,
+     "to": 120000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137319238"
+    },
+    {
+     "id": "138055698",
+     "title": "Инженер технической поддержки по управлению данными",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/138055698"
+    },
+    {
+     "id": "138051735",
+     "title": "Специалист по статическому анализу и экспертизе кода",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/138051735"
+    },
+    {
+     "id": "137302450",
+     "title": "Преподаватель программирования С++",
+     "from": 150000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137302450"
+    },
+    {
+     "id": "138044465",
+     "title": "Python-разработчик - парсинг и сбор данных (Middle/Middle+)",
+     "from": 180000,
+     "to": 250000,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/138044465"
+    },
+    {
+     "id": "136422089",
+     "title": "Специалист / ведущий специалист / главный специалист / провизор / фармакоэкономика / HTA",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/136422089"
+    },
+    {
+     "id": "137854860",
+     "title": "Аналитик SOC L1",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137854860"
+    },
+    {
+     "id": "137805557",
+     "title": "Руководитель направления ML Pretrain Multimodal LLM",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137805557"
+    },
+    {
+     "id": "137803637",
+     "title": "Стажер в команду аналитики, Ozon Банк",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137803637"
+    },
+    {
+     "id": "137753468",
+     "title": "Технический лидер сопровождения систем",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137753468"
+    },
+    {
+     "id": "137748307",
+     "title": "Преподаватель в детскую ИТ-школу",
+     "from": 60000,
+     "to": 100000,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137748307"
+    },
+    {
+     "id": "137740377",
+     "title": "Стажер System Analyst",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137740377"
+    },
+    {
+     "id": "137726847",
+     "title": "Младший аналитик",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137726847"
+    },
+    {
+     "id": "137718380",
+     "title": "Junior Backend разработчик Python",
+     "from": 40000,
+     "to": 80000,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137718380"
+    },
+    {
+     "id": "137687542",
+     "title": "Младший аналитик 1С",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137687542"
+    },
+    {
+     "id": "137679038",
+     "title": "Системный аналитик (ученик)",
+     "from": 60000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137679038"
+    },
+    {
+     "id": "137649233",
+     "title": "Начинающий IT-специалист / Инцидент-менеджер",
+     "from": 60000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137649233"
+    },
+    {
+     "id": "133465940",
+     "title": "Инженер-программист (математическое моделирование)",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/133465940"
+    },
+    {
+     "id": "137634585",
+     "title": "Стажер DevOps / SRE",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137634585"
+    },
+    {
+     "id": "137633482",
+     "title": "Data Engineer Intern / Стажер - дата инженер",
+     "from": 110000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137633482"
+    },
+    {
+     "id": "137296762",
+     "title": "Специалист по планированию поставок и аналитике",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137296762"
+    },
+    {
+     "id": "137280295",
+     "title": "Преподаватель Робототехники (Lego, Arduino и пр.), 3D-моделирования, КОМПАС-3D, Scratch",
+     "from": 1750,
+     "to": 2500,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137280295"
+    },
+    {
+     "id": "137276500",
+     "title": "AI Business Assistant к генеральному директору",
+     "from": 70000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137276500"
+    },
+    {
+     "id": "137276033",
+     "title": "Репетитор ОГЭ ЕГЭ (Информатика)",
+     "from": 70000,
+     "to": 100000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137276033"
+    },
+    {
+     "id": "136202266",
+     "title": "Менеджер продукта",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/136202266"
+    },
+    {
+     "id": "137257163",
+     "title": "Преподаватель программирования и робототехники для детей",
+     "from": 15000,
+     "to": 100000,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137257163"
+    },
+    {
+     "id": "137255549",
+     "title": "Ассистент преподавателя в школу программирования",
+     "from": 400,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137255549"
+    },
+    {
+     "id": "137249793",
+     "title": "Преподаватель программирования и робототехники для детей",
+     "from": 15000,
+     "to": 100000,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137249793"
+    },
+    {
+     "id": "137247447",
+     "title": "Аналитик-автоматизатор",
+     "from": 50000,
+     "to": 0,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137247447"
+    },
+    {
+     "id": "133099243",
+     "title": "Разработчик (системный аналитик, тестировщик) бортовых алгоритмов управления",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/133099243"
+    },
+    {
+     "id": "137219856",
+     "title": "Lead Data Scientist",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137219856"
+    },
+    {
+     "id": "137191565",
+     "title": "Разработчик С++",
+     "from": 90000,
+     "to": 0,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137191565"
+    },
+    {
+     "id": "136204766",
+     "title": "Специалист по автоматизации ALM-рисков",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/136204766"
+    },
+    {
+     "id": "137110035",
+     "title": "Ведущий инженер-программист Linux OpenBMC",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137110035"
+    },
+    {
+     "id": "137077165",
+     "title": "Репетитор по Информатике (Готовая программа)",
+     "from": 60000,
+     "to": 120000,
+     "remote": true,
+     "q": "python без опыта",
+     "url": "https://hh.ru/vacancy/137077165"
+    },
+    {
+     "id": "137539094",
+     "title": "IT менеджер",
+     "from": 60000,
+     "to": 170000,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137539094"
+    },
+    {
+     "id": "135277290",
+     "title": "Ассистент поддержки команды интернет-маркетинга (стажер)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/135277290"
+    },
+    {
+     "id": "133647598",
+     "title": "Специалист в &quot;Самолет Плюс &quot; (ученик, м. Перово) СРОЧНО",
+     "from": 200000,
+     "to": 0,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/133647598"
+    },
+    {
+     "id": "133386194",
+     "title": "Стажер-аналитик 1С",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/133386194"
+    },
+    {
+     "id": "137010711",
+     "title": "Junior Game Designer (social farm)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137010711"
+    },
+    {
+     "id": "134995882",
+     "title": "Специалист в флагманский офис «Самолет Плюс»",
+     "from": 250000,
+     "to": 0,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/134995882"
+    },
+    {
+     "id": "137719219",
+     "title": "Практикант — ассистент менеджера по продажам",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137719219"
+    },
+    {
+     "id": "137719220",
+     "title": "Ассистент менеджера по продажам (практикант)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137719220"
+    },
+    {
+     "id": "137661509",
+     "title": "Стажер/Консультант, группа стратегического консультирования и трансформации",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137661509"
+    },
+    {
+     "id": "137657315",
+     "title": "Практикант менеджер проектов (HR направление)",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137657315"
+    },
+    {
+     "id": "137171227",
+     "title": "Стажер-TestOps",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137171227"
+    },
+    {
+     "id": "137613359",
+     "title": "Практикант по работе с партнёрами и ИИ",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137613359"
+    },
+    {
+     "id": "137613358",
+     "title": "Практикант по бизнес-процессам",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137613358"
+    },
+    {
+     "id": "137613352",
+     "title": "Практикант по развитию партнерств",
+     "from": 0,
+     "to": null,
+     "remote": true,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137613352"
+    },
+    {
+     "id": "137607182",
+     "title": "Стажер в команду развития нового бизнеса / New Business Development Intern",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137607182"
+    },
+    {
+     "id": "137586201",
+     "title": "Практикант Project Manager / Практикант менеджер проектов",
+     "from": 0,
+     "to": null,
+     "remote": false,
+     "q": "разработчик стажировка",
+     "url": "https://hh.ru/vacancy/137586201"
+    }
+   ]
+  }
+ }
+}

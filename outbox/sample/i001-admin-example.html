@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<title>Пример: автоматизация под эксплуатацию</title>
+<style>
+ body{font:15px/1.65 Arial,sans-serif;color:#111;max-width:640px;margin:0;padding:32px 24px}
+ h1{font-size:22px;margin:0 0 6px} h2{font-size:16px;margin:26px 0 8px}
+ .lead{color:#555;margin:0 0 22px}
+ pre{background:#f6f7f9;border-left:3px solid #177de6;padding:12px 14px;overflow:auto;font:13px/1.5 Consolas,monospace}
+ .tag{display:inline-block;background:#eef4fd;color:#177de6;border-radius:3px;padding:2px 8px;font-size:13px;margin-bottom:10px}
+ .warn{background:#fff6e6;border-left:3px solid #d98f00;padding:12px 14px;margin:18px 0}
+ .note{color:#666;font-size:14px;margin-top:24px;padding-top:14px;border-top:1px solid #e3e6ea}
+ ul{padding-left:20px} li{margin:4px 0}
+</style>
+</head>
+<body>
+<!-- ============ ЭТО ПРИМЕР РАБОТЫ, НЕ ДЕЙСТВУЮЩИЙ САЙТ ============ -->
+<div class="demo-banner" style="background:#fff4e5;border:2px solid #d98f00;
+     color:#7a4b00;padding:14px 18px;margin:0 0 22px;border-radius:4px;
+     font-size:14px;line-height:1.5">
+  <b>ЭТО ПРИМЕР РАБОТЫ.</b> Реальный разбор задачи и реальный код, который её
+  решает. Это не действующий сайт компании и не предложение купить что-либо —
+  образец того, как я подхожу к похожим задачам.
+</div>
+
+
+<span class="tag">пример работы</span>
+<h1>Автоматизация под эксплуатацию, а не «скрипт и забыл»</h1>
+<p class="lead">Разница между разовым скриптом и системой, которая работает
+через месяц без меня.</p>
+
+<h2>Разовое решение</h2>
+<pre><code>python parse.py &gt; result.csv</code></pre>
+<p>Один раз отработал — и всё. Через неделю упал на новом разделе,
+кто-то вручную правил таблицу, формат поменялся, и данные перестали приходить.
+Разбираться некому.</p>
+
+<h2>Система</h2>
+<ul>
+<li><strong>Расписание.</strong> Запуск по времени, а не по факту «кто-то открыл
+терминал». Планировщик на сервере, задача не зависит от живого человека.</li>
+<li><strong>Лог.</strong> Дата, источник, число строк, итог. Открыл лог за вчера —
+сразу видно: было 4200 строк или 0.</li>
+<li><strong>Уведомление о сбое.</strong> Если упало — сообщение приходит сразу,
+а не обнаруживается через неделю в пустом файле.</li>
+<li><strong>Частичный успех.</strong> Упало на третьем источнике — первые два
+сохранились, повтор запускается только по третьему.</li>
+</ul>
+
+<h2>Состояние в базе, а не в файле</h2>
+<pre><code>CREATE TABLE runs (
+  id        INTEGER PRIMARY KEY,
+  started   TEXT,
+  finished  TEXT,
+  source    TEXT,
+  rows_ok   INTEGER,
+  status    TEXT,          -- ok | partial | failed
+  error     TEXT
+);</code></pre>
+<p>История прогонов видна сразу: когда последний раз данные были,
+что упало и почему. Всё это дешевле, чем разбираться по памяти через полгода.</p>
+
+<div class="warn">
+<b>Чего этот пример не делает.</b> Он не разворачивается на вашем сервере.
+Сервер, домен, SSL и настройка задачи в планировщике — отдельная работа.
+Сам парсер и логика — то, что показано выше.
+</div>
+
+<h2>Что входит и что нет</h2>
+<ul>
+<li>Входит: скрипт, расписание, лог, уведомление о сбое, база с историей прогонов.</li>
+<li>Не входит: сервер и домен, настройка доступа к источнику, поддержка
+сайта, который сломался сам по себе.</li>
+</ul>
+
+<p class="note">Пример работы. Объём и стоимость считаются по вашему
+источнику и числу прогонов в сутки.</p>
+
+</body></html>

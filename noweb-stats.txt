@@ -1,0 +1,12 @@
+﻿=== build-noweb-base v2 stats ===
+shards used     : 1  targets: 25
+parsed / failed : 0 / 3
+throttled pages : 3   cache file: noweb-cache.jsonl
+unique          : 0
+active          : 0
+active+commercial+no-site : 0
+  with e-mail   : 0   (best: 0, free-mail only: 0)
+  phone only    : 0
+unique e-mails  : 0 total, 0 business-grade
+social-instead-of-site : 0
+msp members     : 0

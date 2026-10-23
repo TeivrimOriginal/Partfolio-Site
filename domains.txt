@@ -1,0 +1,36 @@
+# ДОМЕНЫ — вставить в скрипт или открыть списком браузером
+reaktiv.ru
+jetlin.ru
+sm-lab.ru
+farpost.ru
+azr.ru
+gri.ru
+itkontakt.ru
+buro1440.ru
+yadro.ru
+rb.ru
+sber.ru
+t1.ru
+ibs.ru
+lanit.ru
+agima.ru
+aston.ru
+bgrating.ru
+mindsoftware.ru
+playstudios.io
+parapaht.ru
+madmind.ru
+gamedev.ru
+nanorender.ru
+splatglobal.ru
+center-tek.ru
+tekforpro.ru
+compass.ru
+friffiy.ru
+iidf.ru
+sk.ru
+innopolis.ru
+itmopark.ru
+
+# Что вставлять в Яндекс Почту «Кому» после прогона scrape-emails.ps1:
+# (содержимое emails.txt — пачками по 30-50 адресов, в «Копию» остальные)

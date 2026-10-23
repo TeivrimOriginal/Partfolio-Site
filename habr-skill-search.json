@@ -1,0 +1,693 @@
+{
+ "generated": "2026-10-04",
+ "items": [
+  {
+   "id": "1000166397",
+   "title": "NLP-разработчик в Браузер",
+   "company": "Яндекс",
+   "remote": false,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000167368",
+   "title": "Продуктовый аналитик",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167367",
+   "title": "Продуктовый аналитик",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167366",
+   "title": "Продуктовый аналитик",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167365",
+   "title": "Продуктовый аналитик",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167369",
+   "title": "Продуктовый аналитик (Daily Banking)",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167272",
+   "title": "Эксперт Data Science",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167356",
+   "title": "Продуктовый аналитик (Daily Banking)",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167340",
+   "title": "Ведущий аналитик антифрод-систем",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167302",
+   "title": "Аналитик данных (учет / дебиторка / контроль остатков)",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167271",
+   "title": "Data Scientist",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000168565",
+   "title": "Портфельный аналитик",
+   "company": "ANCOR",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000168554",
+   "title": "Fullstack-разработчик",
+   "company": "ANCOR",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000168446",
+   "title": "Старший инженер по безопасной разработке (AppSec-инженер)",
+   "company": "СОГАЗ",
+   "remote": false,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000168355",
+   "title": "Стажер-инженер данных BI (Data Engineer)",
+   "company": "ИТ-компания «Лоция»",
+   "remote": true,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167977",
+   "title": "BI Analyst (Tableau, Python)",
+   "company": "Marfatech",
+   "remote": true,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000167801",
+   "title": "Senior QA Engineer — Web, Backend, API, Linux",
+   "company": "IT-hunter",
+   "remote": true,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000167800",
+   "title": "QA Automation Engineer / SDET",
+   "company": "IT-hunter",
+   "remote": true,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000118633",
+   "title": "Сетевой инженер",
+   "company": "Eltex",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000168340",
+   "title": "ML Engineer \"Search\"",
+   "company": "Okko",
+   "remote": true,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000166973",
+   "title": "BI-разработчик / Data-инженер / Проектная работа / АУТСТАФФ",
+   "company": "Extyl",
+   "remote": false,
+   "level": "Middle",
+   "skills": "python"
+  },
+  {
+   "id": "1000167287",
+   "title": "Старший разработчик сервисов данных (Python)",
+   "company": "БЮРО 1440",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167284",
+   "title": "Data QA / Инженер тестирования данных",
+   "company": "БЮРО 1440",
+   "remote": false,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000168339",
+   "title": "AI исследователь",
+   "company": "Top Selection",
+   "remote": true,
+   "level": "Senior",
+   "skills": "python"
+  },
+  {
+   "id": "1000167966",
+   "title": "Разработчик ETL / Data Engineer",
+   "company": "Онлайн-кинотеатр Иви",
+   "remote": true,
+   "level": null,
+   "skills": "python"
+  },
+  {
+   "id": "1000167600",
+   "title": "Senior разработчик C#/.NET (криптография)",
+   "company": "Vital Partners",
+   "remote": false,
+   "level": "Lead",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167378",
+   "title": "Ведущий разработчик C#",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167379",
+   "title": "Ведущий разработчик Java",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167371",
+   "title": "Ведущий разработчик Java",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167347",
+   "title": "Старший системный аналитик",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167317",
+   "title": "Ведущий разработчик C#",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167305",
+   "title": "Ведущий инженер автоматизации бизнес-процессов (Atlassian)",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168556",
+   "title": "Руководитель группы DBA PostgreSQL",
+   "company": "ANCOR",
+   "remote": false,
+   "level": "Lead",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168221",
+   "title": "Системный администратор",
+   "company": "AGIMA",
+   "remote": false,
+   "level": "Junior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168356",
+   "title": "Функциональный тестировщик / QA инженер (стажировка)",
+   "company": "ИТ-компания «Лоция»",
+   "remote": true,
+   "level": "Intern",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000163623",
+   "title": "Senior Java-разработчик",
+   "company": "РОСГОССТРАХ",
+   "remote": true,
+   "level": "Senior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167802",
+   "title": " Администратор приложений",
+   "company": "Bell Integrator",
+   "remote": true,
+   "level": "Middle",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000128807",
+   "title": "QA инженер (java/kotlin)",
+   "company": "Action tech",
+   "remote": true,
+   "level": "Junior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000161071",
+   "title": "ИТ Лид команды разработки (java)",
+   "company": "ИТ-Холдинг Т1",
+   "remote": true,
+   "level": "Lead",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168335",
+   "title": "Архитектор облачных решений",
+   "company": "Базис",
+   "remote": false,
+   "level": "Senior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000163346",
+   "title": "Python Developer",
+   "company": "ITK academy",
+   "remote": true,
+   "level": "Junior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168328",
+   "title": "Разработчик С++",
+   "company": "DIS Group",
+   "remote": true,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167783",
+   "title": "GenAI-разработчик / бизнес-аналитик",
+   "company": "Top Selection",
+   "remote": true,
+   "level": "Senior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168521",
+   "title": "Solution архитектор с опытом в проектах складской и транспортной логистики",
+   "company": "Top Selection",
+   "remote": true,
+   "level": "Senior",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000166843",
+   "title": "Системный аналитик",
+   "company": "Лига Цифровой Экономики",
+   "remote": true,
+   "level": null,
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168518",
+   "title": "Python разработчик (офисный формат)",
+   "company": "Совкомбанк Технологии",
+   "remote": false,
+   "level": "Middle",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168517",
+   "title": "Golang разработчик",
+   "company": "BGStaff",
+   "remote": true,
+   "level": "Middle",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000168910",
+   "title": "Технический лидер (Цифровые сервисы)",
+   "company": "YADRO",
+   "remote": true,
+   "level": "Lead",
+   "skills": "postgresql"
+  },
+  {
+   "id": "1000167273",
+   "title": "DevOps engineer",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": "Senior",
+   "skills": "docker"
+  },
+  {
+   "id": "1000167337",
+   "title": "Инженер по автоматизированному тестированию/QA automation Java",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "docker"
+  },
+  {
+   "id": "1000167796",
+   "title": "Прикладной администратор",
+   "company": "Bell Integrator",
+   "remote": true,
+   "level": "Middle",
+   "skills": "docker"
+  },
+  {
+   "id": "1000167858",
+   "title": "DevOps-инженер",
+   "company": "Центр Финансовых Технологий",
+   "remote": true,
+   "level": null,
+   "skills": "docker"
+  },
+  {
+   "id": "1000168844",
+   "title": "Senior DevOps-инженер",
+   "company": "AGIMA",
+   "remote": false,
+   "level": "Lead",
+   "skills": "docker"
+  },
+  {
+   "id": "1000166528",
+   "title": "ML Engineer",
+   "company": "Aston",
+   "remote": true,
+   "level": "Middle",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168904",
+   "title": "Системный администратор",
+   "company": "Raft Digital Solutions",
+   "remote": false,
+   "level": "Middle",
+   "skills": "docker"
+  },
+  {
+   "id": "1000166709",
+   "title": "Senior DevOps-инженер",
+   "company": "AGIMA",
+   "remote": true,
+   "level": "Senior",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168169",
+   "title": "DevOps",
+   "company": "ИнфоТеКС",
+   "remote": false,
+   "level": "Middle",
+   "skills": "docker"
+  },
+  {
+   "id": "1000164826",
+   "title": "DevSecOps инженер (SOC)",
+   "company": "ИТ-компания «Лоция»",
+   "remote": true,
+   "level": null,
+   "skills": "docker"
+  },
+  {
+   "id": "1000168751",
+   "title": "Full-stack разработчик/Tech Lead (стартап в PharmaTech)",
+   "company": "Частный рекрутер Виктория Бебко",
+   "remote": true,
+   "level": "Lead",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168530",
+   "title": "Network engineer",
+   "company": "OKO.Labs",
+   "remote": true,
+   "level": "Junior",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168741",
+   "title": "Python Developer / AI Engineer (Document Processing)",
+   "company": "AYROSA",
+   "remote": true,
+   "level": "Middle",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168632",
+   "title": "Python разработчик ",
+   "company": "Вкусно - и точка",
+   "remote": false,
+   "level": "Middle",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168472",
+   "title": "MLOps",
+   "company": "СОГАЗ",
+   "remote": false,
+   "level": null,
+   "skills": "docker"
+  },
+  {
+   "id": "1000166801",
+   "title": "Старший разработчик С++",
+   "company": "ИнфоТеКС",
+   "remote": false,
+   "level": null,
+   "skills": "docker"
+  },
+  {
+   "id": "1000166800",
+   "title": "Старший разработчик С++",
+   "company": "ИнфоТеКС",
+   "remote": false,
+   "level": null,
+   "skills": "docker"
+  },
+  {
+   "id": "1000150058",
+   "title": "Java разработчик",
+   "company": "SENSE",
+   "remote": true,
+   "level": "Senior",
+   "skills": "docker"
+  },
+  {
+   "id": "1000168825",
+   "title": "DevOps",
+   "company": "IT_One",
+   "remote": true,
+   "level": "Junior",
+   "skills": "docker"
+  },
+  {
+   "id": "1000167265",
+   "title": "ML/DevOps Engineer",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "linux"
+  },
+  {
+   "id": "1000167351",
+   "title": "Старший инженер Unix платформ",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "linux"
+  },
+  {
+   "id": "1000167352",
+   "title": "Старший инженер Unix платформ",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": null,
+   "skills": "linux"
+  },
+  {
+   "id": "1000167264",
+   "title": "DevOps-инженер (стажер)",
+   "company": "МТС Банк",
+   "remote": false,
+   "level": "Intern",
+   "skills": "linux"
+  },
+  {
+   "id": "1000161388",
+   "title": "Системный администратор Linux",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Middle",
+   "skills": "linux"
+  },
+  {
+   "id": "1000161382",
+   "title": "Выездной инженер технической поддержки",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Middle",
+   "skills": "linux"
+  },
+  {
+   "id": "1000161380",
+   "title": "Выездной инженер технической поддержки",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Middle",
+   "skills": "linux"
+  },
+  {
+   "id": "1000161379",
+   "title": "Выездной инженер технической поддержки",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Middle",
+   "skills": "linux"
+  },
+  {
+   "id": "1000157114",
+   "title": "Выездной инженер технической поддержки",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Junior",
+   "skills": "linux"
+  },
+  {
+   "id": "1000161371",
+   "title": "Системный аналитик",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": null,
+   "skills": "linux"
+  },
+  {
+   "id": "1000161370",
+   "title": "Инженер технической поддержки АРМ",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Middle",
+   "skills": "linux"
+  },
+  {
+   "id": "1000168560",
+   "title": "Специалист по информационным технологиям",
+   "company": "ANCOR",
+   "remote": false,
+   "level": null,
+   "skills": "linux"
+  },
+  {
+   "id": "1000168543",
+   "title": "Старший системный администратор (Виртуализация)",
+   "company": "ANCOR",
+   "remote": false,
+   "level": "Senior",
+   "skills": "linux"
+  },
+  {
+   "id": "1000161343",
+   "title": "Системный администратор (DNS/Linux)",
+   "company": "ИТ-Холдинг Т1",
+   "remote": false,
+   "level": "Middle",
+   "skills": "linux"
+  },
+  {
+   "id": "1000168445",
+   "title": "Руководитель группы разработки (Team Lead)",
+   "company": "DIS Group",
+   "remote": false,
+   "level": "Lead",
+   "skills": "linux"
+  },
+  {
+   "id": "1000153848",
+   "title": "QA инженер (Linux)",
+   "company": "Marfatech",
+   "remote": true,
+   "level": "Senior",
+   "skills": "linux"
+  },
+  {
+   "id": "1000168533",
+   "title": "C++ Developer (VoIP/Телеком)",
+   "company": "Top Selection",
+   "remote": true,
+   "level": "Senior",
+   "skills": "linux"
+  },
+  {
+   "id": "1000168362",
+   "title": "Automation QA (Java)",
+   "company": "ITK academy",
+   "remote": true,
+   "level": "Junior",
+   "skills": "selenium"
+  },
+  {
+   "id": "1000168122",
+   "title": "Automation QA (Java)",
+   "company": "ITK academy",
+   "remote": true,
+   "level": "Junior",
+   "skills": "selenium"
+  }
+ ]
+}

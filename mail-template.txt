@@ -1,0 +1,67 @@
+Тема письма (копировать как есть):
+
+Junior C++/Rust - готов начать со стажёрской ставки, код покажу
+
+---
+
+Текст письма (копировать, вставить компанию вместо [Название]):
+
+Здравствуйте, команда [Название]!
+
+Меня зовут Данила Аринов, я C++/Rust-разработчик: графика, инструменты, backend, mobile.
+
+Что сделано руками, а не на курсах:
+— TPaint, растровый редактор на Rust/OpenGL: собственный UI без системных контролов, 15+ инструментов, слои и PSD, 140+ автотестов;
+— игровой движок с нуля на C++17: два бэкенда Vulkan/OpenGL, scene graph, импорт FBX/OBJ;
+— каталог аниме из 3 публичных API: переписал с Node.js на Rust, ~20 тыс. записей, REST API, Android-клиент.
+Плюс командная Unity-игра, фриланс на Kwork и оплачиваемая работа художником.
+
+Ищу первую работу в продуктовой команде. По деньгам гибок: готов начать со стажёрской/junior-ставки — важнее реальные задачи и рост. Быстро вникаю, в кодовой базе не теряюсь.
+
+GitHub: https://github.com/TeivrimOriginal
+Портфолио: https://teivrimoriginal.github.io/Partfolio-Site/
+Резюме: https://teivrimoriginal.github.io/Partfolio-Site/resume.html
+
+Буду рад тестовому заданию.
+
+Данила Аринов
+Telegram: @Smishnyavko
+teivrim@gmail.com
+
+---
+
+Вложение: resume.pdf (116 КБ, 1 страница)
+
+================================================================
+ГОТОВЫЕ ВАРИАНТЫ ЗАПРАВКИ [Название]
+================================================================
+
+englex.ru            -> команда Englex
+tensor.ru            -> команда Tensor
+visionlabs.ru        -> команда VisionLabs
+mindbox.cloud        -> команда Mindbox
+mindbox.ru           -> команда Mindbox
+nanocad.ru           -> команда NanoCAD
+cgstudio.ru          -> команду CGStudio
+itmo.ru              -> ИТМО
+skolkovo.ru          -> Сколково
+technomoscow.ru      -> ТехноМоскву
+iidf.ru              -> ФРИИ
+ihor.ru              -> компанию ihor
+ihor-hosting.ru      -> компанию ihor
+postgrespro.ru       -> команду Postgres Pro
+nextgis.ru           -> компанию NextGIS
+avanpost.ru          -> команду Avanpost
+datamart.ru          -> компанию DataMart
+sevinfotech.com      -> компанию Sevenfotech
+tagil.tensor.ru      -> команду Tensor (Тюмень)
+selectel.ru          -> Selectel
+beget.ru             -> Beget
+masterhost.ru        -> Masterhost
+it-klaster.com       -> IT-Klaster
+skillbox.ru          -> Skillbox
+geekbrains.ru        -> GeekBrains
+skyeng.ru            -> Skyeng
+habr.team            -> Хабр
+kwork.ru             -> Kwork
+yamale.ru            -> компанию Yamale

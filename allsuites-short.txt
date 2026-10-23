@@ -1,0 +1,12 @@
+##### test-pipeline.ps1
+ИТОГО: pass=22 fail=0
+##### test-eml.ps1
+ИТОГО: pass=133 fail=0
+##### test-filter-safety.ps1
+ИТОГО: pass=3 fail=0
+##### test-bounce-scan.ps1
+ИТОГО: pass=14 fail=0
+##### test-make-site.ps1
+ИТОГО: pass=34 fail=0
+##### test-target-picker.ps1
+ИТОГО: pass=21 fail=0

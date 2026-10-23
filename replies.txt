@@ -1,0 +1,11 @@
+SELECT: * 581 EXISTS
+найдено с 01-Oct-2026: 8
+=== СВЕЖИЕ ===
+ROW|Google <no-reply@accounts.google.com>|Оповещение системы безопасн|Fri, 02 Oct 2026 10:56:24 GMT
+ROW|Google <no-reply@accounts.google.com>|Оповещение системы безопасн|Sat, 03 Oct 2026 13:23:27 GMT
+ROW|Google <no-reply@accounts.google.com>|Оповещение системы безопасн|Sat, 03 Oct 2026 13:51:55 GMT
+ROW|Mail Delivery Subsystem <mailer-daemon@googlemail.com>|Delivery Status Notification (Failure)|Sat, 03 Oct 2026 07:36:35 -0700 (PDT)
+ROW|Mail Delivery Subsystem <mailer-daemon@googlemail.com>|Delivery Status Notification (Failure)|Sat, 03 Oct 2026 11:18:45 -0700 (PDT)
+ROW|Google <no-reply@accounts.google.com>|Двухэтапная аутентификация |Sun, 04 Oct 2026 06:05:56 GMT
+ROW|Google <no-reply@accounts.google.com>|Оповещение системы безопасн|Sun, 04 Oct 2026 06:06:37 GMT
+ROW|Google <no-reply@accounts.google.com>|Оповещение системы безопасн|Sun, 04 Oct 2026 06:30:06 GMT

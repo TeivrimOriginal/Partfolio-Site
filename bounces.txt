@@ -1,0 +1,12 @@
+всего с 01.10: 8
+отказов найдено: 2
+=== отказ id=577 ===
+   Final-Recipient: rfc822; aspmk@astranet.ru
+   Action: failed
+   Status: 5.1.1
+   Diagnostic-Code: smtp; 550 5.1.1 <aspmk@astranet.ru>: Recipient address rejected: User unknown
+=== отказ id=578 ===
+   Final-Recipient: rfc822; 24mpe@mail.ru
+   Action: failed
+   Status: 5.2.1
+   Diagnostic-Code: smtp; 550 Message was not accepted -- invalid mailbox.  Local mailbox 24mpe@mail.ru is unavailable: user is terminated

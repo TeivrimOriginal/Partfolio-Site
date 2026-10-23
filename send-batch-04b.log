@@ -1,0 +1,13 @@
+  i006   manager@vetreria-project.ru    sent
+  i007   office@benefitconsult.ru       sent
+  i008   sales@it-lion-kontur.ru        sent
+
+итого отправлено: 3 из 3
+
+id   to                          status
+--   --                          ------
+i006 manager@vetreria-project.ru sent  
+i007 office@benefitconsult.ru    sent  
+i008 sales@it-lion-kontur.ru     sent  
+
+

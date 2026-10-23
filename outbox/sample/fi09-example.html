@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<title>Пример парсера и автоматизации</title>
+<style>
+ body{font:15px/1.65 Arial,sans-serif;color:#111;max-width:640px;margin:0;padding:32px 24px}
+ h1{font-size:22px;margin:0 0 6px} h2{font-size:16px;margin:26px 0 8px}
+ .lead{color:#555;margin:0 0 22px}
+ pre{background:#f6f7f9;border-left:3px solid #177de6;padding:12px 14px;overflow:auto;font:13px/1.5 Consolas,monospace}
+ .tag{display:inline-block;background:#eef4fd;color:#177de6;border-radius:3px;padding:2px 8px;font-size:13px;margin-bottom:10px}
+ .note{color:#666;font-size:14px;margin-top:24px;padding-top:14px;border-top:1px solid #e3e6ea}
+ ul{padding-left:20px} li{margin:4px 0}
+</style>
+</head>
+<body>
+<!-- ============ ЭТО ПРИМЕР РАБОТЫ, НЕ ДЕЙСТВУЮЩИЙ САЙТ ============ -->
+<div class="demo-banner" style="background:#fff4e5;border:2px solid #d98f00;
+     color:#7a4b00;padding:14px 18px;margin:0 0 22px;border-radius:4px;
+     font-size:14px;line-height:1.5">
+  <b>ЭТО ПРИМЕР РАБОТЫ.</b> Реальный разбор задачи и реальный код, который её
+  решает. Это не действующий сайт компании и не предложение купить что-либо —
+  образец того, как я подхожу к похожим задачам.
+</div>
+
+
+<span class="tag">пример работы</span>
+<h1>Парсер: сбор данных с сайта в таблицу</h1>
+<p class="lead">Задача, которую решает этот скрипт, и почему он не «сломается
+на третьей странице».</p>
+
+<h2>Что делает</h2>
+<ul>
+<li>Обходит список страниц каталога, на каждой берёт карточку товара.</li>
+<li>Забирает нужные поля: название, цена, наличие, артикул, ссылка.</li>
+<li>Складывает в CSV и в Google Sheets, чтобы смотреть без скачивания.</li>
+<li>Повторный запуск — одна команда, повторно идёт по тем же адресам.</li>
+</ul>
+
+<h2>Почему просто «requests + BeautifulSoup» не хватает</h2>
+<pre><code>for page in range(1, pages + 1):
+    html = session.get(url(page)).text
+    for item in parse(html):     # &lt;-- здесь всё ломается
+        rows.append(item)</code></pre>
+
+<p>На третьей-четвёртой странице сайт начинает отдавать пустые ответы или
+заглушку. Причина — не блокировка, а пауза: запросы идут чаще, чем сайт
+рассчитан. Дальше либо данные приходят пустыми и молча портят таблицу,
+либо скрипт падает.</p>
+
+<h2>Что сделано в рабочей версии</h2>
+<pre><code>session.headers.update({'User-Agent': UA})
+delay = random.uniform(1.8, 3.2)   # пауза между страницами
+
+for page in pages:
+    for attempt in range(3):
+        r = session.get(url(page), timeout=20)
+        if r.status_code == 200 and len(r.text) > 500:
+            break
+        sleep(5 * (attempt + 1))
+    else:
+        log.warning('страница %s не отдала данные, иду дальше', page)
+        continue
+
+    items = parse(r.text)
+    if not items:
+        break                      # пустая выдача = конец, а не ошибка
+
+    write_rows(items)              # пишем порциями, не всё в память
+    sleep(delay)</code></pre>
+
+<h2>Обработка ошибок</h2>
+<ul>
+<li>Повтор запроса при пустом или обрезанном ответе — до трёх раз.</li>
+<li>Пустая выдача завершает обход, а не крутит по кругу до таймаута.</li>
+<li>Уже собранные строки пишутся порциями: упали посередине — не теряется всё.</li>
+<li>В лог падает номер страницы и причина, по логу видно, где остановились.</li>
+</ul>
+
+<h2>Сайты с подгрузкой на JavaScript</h2>
+<p>Если карточки появляются после нажатия или тянутся через API, обычный
+разбор разметки вернёт пустую таблицу. Тогда подключается браузер: страница
+открывается, ждём появления блока, забираем текст. Медленнее, но результат
+реальный.</p>
+
+<h2>Что на выходе</h2>
+<ul>
+<li>CSV и Google Sheets с собранными данными.</li>
+<li>Скрипт, который запускается повторно без участия исполнителя.</li>
+<li>Лог с датой запуска, числом страниц и итогом.</li>
+</ul>
+
+<p class="note">Это пример работы: показано, что именно решается и как
+обрабатываются сбои. Ваши поля и ваш источник подставляются отдельно,
+оценка по объёму данных.</p>
+
+</body></html>

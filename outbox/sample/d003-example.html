@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ООО "АЛЬФА" — пример сайта</title>
+<style>
+  :root { --ink:#12151b; --paper:#f6f7f9; --card:#ffffff; --line:#e3e6ec; --accent:#1f6feb; --accent-ink:#fff; --muted:#6b7280; --warn:#b45309; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:var(--paper); }
+
+  /* ===== баннер примера: обязателен, нельзя удалить при генерации ===== */
+  .demo-banner { background:repeating-linear-gradient(45deg,#fff7ed,#fff7ed 12px,#ffedd5 12px,#ffedd5 24px);
+    border-bottom:2px solid var(--warn); color:#7c2d12; padding:10px 16px; font:600 14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; text-align:center; }
+  .demo-banner b { color:var(--warn); }
+
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+  header { background:var(--card); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+  .nav { display:flex; align-items:center; gap:18px; height:64px; }
+  .logo { font-weight:800; font-size:19px; letter-spacing:-.01em; }
+  .logo span { color:var(--accent); }
+  nav a { color:var(--muted); text-decoration:none; font-size:15px; }
+  nav a:hover { color:var(--ink); }
+  .nav .spacer { flex:1; }
+  .btn { display:inline-block; background:var(--accent); color:var(--accent-ink); text-decoration:none;
+    padding:10px 18px; border-radius:10px; font-weight:600; font-size:15px; border:0; cursor:pointer; }
+  .btn:hover { filter:brightness(.93); }
+  .btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .btn.big { padding:15px 30px; font-size:17px; border-radius:12px; }
+
+  .hero { padding:64px 0 56px; }
+  .hero h1 { font-size:clamp(30px,5vw,46px); line-height:1.12; margin:0 0 16px; letter-spacing:-.02em; }
+  .hero p.lead { font-size:clamp(17px,2.2vw,20px); color:var(--muted); margin:0 0 28px; max-width:60ch; }
+  .hero .cta { display:flex; gap:12px; flex-wrap:wrap; }
+  .hero .facts { display:flex; gap:34px; margin-top:34px; flex-wrap:wrap; }
+  .fact b { display:block; font-size:26px; letter-spacing:-.02em; }
+  .fact span { color:var(--muted); font-size:14px; }
+
+  section { padding:52px 0; }
+  h2 { font-size:clamp(23px,3vw,30px); margin:0 0 8px; letter-spacing:-.02em; }
+  .sub { color:var(--muted); margin:0 0 28px; }
+
+  .grid { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; }
+  .card h3 { margin:0 0 8px; font-size:18px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  .card .price { display:inline-block; margin-top:12px; font-weight:700; color:var(--accent); font-size:15px; }
+
+  .steps { counter-reset:s; display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  .step { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; position:relative; }
+  .step::before { counter-increment:s; content:counter(s); position:absolute; top:-14px; left:20px;
+    width:30px; height:30px; border-radius:50%; background:var(--accent); color:#fff; font-weight:700;
+    display:grid; place-items:center; font-size:15px; }
+
+  .work { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  .work .ph { aspect-ratio:4/3; border-radius:12px; border:1px dashed #c8ced8; background:
+    linear-gradient(135deg,#eef1f5,#e3e7ee); display:grid; place-items:center; color:#8a93a3; font-size:14px; }
+
+  form { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px; }
+  .row { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+  label { display:block; font-size:14px; color:var(--muted); margin-bottom:6px; }
+  input, textarea, select { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px;
+    font:inherit; background:#fff; color:var(--ink); }
+  input:focus, textarea:focus { outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent); }
+  textarea { min-height:96px; resize:vertical; }
+  .note { font-size:13px; color:var(--muted); margin-top:14px; }
+
+  .contacts { display:grid; gap:26px; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+  .contacts a { color:var(--accent); text-decoration:none; font-size:19px; font-weight:600; }
+  .contacts .line { margin-top:6px; color:var(--muted); font-size:15px; }
+  .map { aspect-ratio:16/7; border-radius:14px; border:1px solid var(--line);
+    background:repeating-linear-gradient(0deg,#eef1f5 0 22px,#e6eaf1 22px 23px),
+                repeating-linear-gradient(90deg,#eef1f5 0 22px,#e6eaf1 22px 23px); display:grid; place-items:center; color:#8a93a3; }
+
+  footer { border-top:1px solid var(--line); padding:26px 0; color:var(--muted); font-size:14px; margin-top:20px; }
+  footer .demo-foot { background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; border-radius:10px; padding:14px 16px; margin-bottom:20px; font-size:14px; }
+
+  @media (max-width:760px) { nav a { display:none; } .hero { padding:40px 0 34px; } section { padding:40px 0; } }
+</style>
+</head>
+<body>
+
+<!-- ============ ЭТО ПРИМЕР. Не сайт компании ООО "АЛЬФА". ============ -->
+<div class="demo-banner">
+  <b>ЭТО ПРИМЕР САЙТА, А НЕ САЙТ КОМПАНИИ «ООО "АЛЬФА"».</b>
+  Страница собрана за 40 минут как демонстрация. Здесь нет настоящих цен,
+  телефонов и адреса — они подставляются при реальном заказе.
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">АЛЬФА<span>.</span></div>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#how">Как работаем</a>
+      <a href="#work">Работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="spacer"></div>
+    <a class="btn" href="#order">Оставить заявку</a>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <h1>ООО "АЛЬФА" — строительство жилых и нежилых зданий · Богучаны</h1>
+  <p class="lead">АЛЬФА работает в городе Богучаны: сметы считаем до начала работ, сроки фиксируем в договоре. Заявки прямо на этой странице, без звонков и переписок: форма уходит на почту и в Telegram за секунду.</p>
+  <div class="cta">
+    <a class="btn big" href="#order">Оставить заявку за 30 секунд</a>
+    <a class="btn big ghost" href="#services">Что мы делаем</a>
+  </div>
+  <div class="facts">
+    <div class="fact"><b>12</b><span>лет на рынке</span></div>
+    <div class="fact"><b>340+</b><span>заказов выполнено</span></div>
+    <div class="fact"><b>1 год</b><span>гарантия на работы</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Что мы делаем</h2>
+    <p class="sub">Четыре позиции — столько нужно, чтобы клиент понял, куда обращаться. Лишние блоки только отвлекают.</p>
+    <div class="grid">
+      <div class="card"><h3>Строительство домов</h3><p>объём фиксируем в смете, отвечаем за срок</p><span class="price">от 2207 ₽</span></div>
+      <div class="card"><h3>Ремонт под ключ</h3><p>объём фиксируем в смете, отвечаем за срок</p><span class="price">от 3679 ₽</span></div>
+      <div class="card"><h3>Отделка помещений</h3><p>объём фиксируем в смете, отвечаем за срок</p><span class="price">от 5423 ₽</span></div>
+      <div class="card"><h3>Проектирование и смета</h3><p>объём фиксируем в смете, отвечаем за срок</p><span class="price">от 2946 ₽</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--card); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2>Как проходит работа</h2>
+    <p class="sub">Три шага. Клиенту не нужно ни разу выезжать и согласовывать макеты по пять раз.</p>
+    <div class="steps">
+      <div class="step"><h3>Заявка</h3><p style="color:var(--muted);margin:0">Вы оставляете номер и задачу. Форма приходит на почту и в Telegram.</p></div>
+      <div class="step"><h3>Уточнение</h3><p style="color:var(--muted);margin:0">Возвращаемся в течение часа в рабочее время, задаём 2-3 вопроса.</p></div>
+      <div class="step"><h3>Работа</h3><p style="color:var(--muted);margin:0">Согласуем объём и цену. Обычно от 500 ₽ за стартовый сайт.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Наши работы</h2>
+    <p class="sub">Здесь будут ваши фотографии. Четыре-пять снимков реальных объектов работают лучше, чем десять стоковых.</p>
+    <div class="work">
+      <div class="ph">фото 1</div><div class="ph">фото 2</div><div class="ph">фото 3</div><div class="ph">фото 4</div>
+    </div>
+  </div>
+</section>
+
+<section id="order" style="background:var(--card); border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2>Оставить заявку</h2>
+    <p class="sub">Поля с пометкой * обязательны. Остальное — по желанию.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').hidden=false;this.reset();">
+      <div class="row">
+        <div><label for="n">Как к вам обращаться *</label><input id="n" name="name" required placeholder="Имя"></div>
+        <div><label for="t">Телефон *</label><input id="t" name="phone" type="tel" required placeholder="+7 ___ ___-__-__"></div>
+      </div>
+      <div style="margin-top:14px">
+        <label for="s">Что нужно сделать</label>
+        <select id="s" name="service">
+          <option>Строительство домов</option><option>Ремонт под ключ</option><option>Отделка помещений</option><option>Проектирование и смета</option>
+          <option>Другое</option>
+        </select>
+      </div>
+      <div style="margin-top:14px"><label for="m">Комментарий</label><textarea id="m" name="message" placeholder="Сроки, адрес, объём — что важно знать"></textarea></div>
+      <div style="margin-top:18px"><button class="btn big" type="submit">Отправить заявку</button></div>
+      <p class="ok" hidden style="color:#15803d;font-weight:600;margin-top:14px">Заявка отправлена. Вам перезвонят в рабочее время.</p>
+      <p class="note">Это демонстрационная форма — она ничего не отправляет. В настоящем сайте заявка уходит на почту и в Telegram, а в админ-панели видна список с датой и статусом.</p>
+    </form>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <h2>Контакты</h2>
+    <p class="sub">Телефон, почта, адрес и карта. Раньше адрес прятали в подвал — теперь он на первом экране.</p>
+    <div class="contacts">
+      <div>
+        <a href="tel:+73916221864">+73916221864</a>
+        <div class="line">Ежедневно, 9:00–20:00</div>
+      </div>
+      <div>
+        <a href="mailto:baranova-1962@mail.ru">baranova-1962@mail.ru</a>
+        <div class="line">Отвечаем в течение часа</div>
+      </div>
+      <div>
+        <div style="font-size:19px;font-weight:600">адрес компании (уточняется)</div>
+        <div class="line">Богучаны</div>
+      </div>
+    </div>
+    <div class="map" style="margin-top:26px">карта с меткой на адрес компании (уточняется)</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="demo-foot">
+      <b>Ещё раз: это пример.</b> Страница сделана как демонстрация того, что можно
+      получить за 500–2000 ₽. Она не принадлежит «ООО "АЛЬФА"», не содержит её
+      настоящих данных и не публикуется в интернете. Реальный сайт собирается
+      из этой основы за 1-2 дня под ваши тексты, фотографии и цены.
+    </div>
+    <div>© 2026 АЛЬФА. Демонстрационный макет, подготовлен как пример.</div>
+  </div>
+</footer>
+
+</body>
+</html>

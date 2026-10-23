@@ -1,0 +1,5 @@
+ID=i002 from=teivrim21@gmail.com to=info@nextech.ru
+subject=Сбор данных и автоматизация для НексТех от 500 ? - пример во вложении
+attachments=i002-example.html,i002-admin-example.html
+body chars=2145
+RESULT=SENT_OK

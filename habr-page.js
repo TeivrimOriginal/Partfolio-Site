@@ -218,8 +218,64 @@ async function fetchVacancy(id) {
   return null;
 }
 
+// Домены, которые принадлежат самому Хабру и компанией не являются.
+// ai-courses.habr.io — рекламный баннер на каждой странице вакансии, и он
+// попадался первым в списке: без него в контакты записывался бы habr.io вместо
+// сайта работодателя. Проверено на пяти хабровских вакансиях: рядом с сайтом
+// компании всегда лежат промо Хабра и его аккаунт в соцсети.
+const HABR_OWN = /(^|\.)(habr\.com|habr\.io|habrcdn\.ru|habr\.media|dk\.ru|assets\.habr\.com)$/i;
+
+// Ссылки на соцсети: у Хабра свой аккаунт с путём /habr_career, и он попадал
+// в список вместе с сайтом компании.
+const SOCIAL = /(vk\.com|facebook|twitter|t\.me|telegram|linkedin|instagram\.com|youtube|boosty|vc\.ru|flamp\.ru|gitlab\.com|github\.com|pikabu|dtf\.ru)/i;
+
+// Сайт компании со страницы вакансии.
+//
+// Возвращает домен в читаемом виде: Хабр отдаёт «дом.рф» как
+// xn--d1aqf.xn--p1ai, и в контактах такой адрес нечитаем. Декодируется
+// punycode, потому что в письме и в окне должен быть «дом.рф».
+function companySite(html, baseUrl, companyName) {
+  let best = null;
+  let m;
+  const re = /href="([^"]+)"/g;
+  while ((m = re.exec(html)) !== null) {
+    let u;
+    try { u = new URL(m[1].replace(/&amp;/g, '&'), baseUrl); } catch (e) { continue; }
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') continue;
+    if (HABR_OWN.test(u.hostname)) continue;
+    if (SOCIAL.test(u.hostname)) continue;
+    if (/\.(js|css|png|jpg|jpeg|svg|gif|webp|ico|pdf|woff2?)(\?|$)/i.test(u.pathname)) continue;
+    // Ссылка с utm-метками — всё равно тот же сайт, но чистим, чтобы в контактах
+    // лежало «https://site.ru», а не хвост из четырёх параметров.
+    u.search = '';
+    u.hash = '';
+    if (!best) { best = u.href; continue; }
+    // Если известно название компании, предпочитаем домен, где есть его часть.
+    if (companyName) {
+      const needle = String(companyName).toLowerCase().replace(/[^a-zа-я0-9]+/gi, '').slice(0, 6);
+      if (needle.length >= 4) {
+        const host = u.hostname.toLowerCase().replace(/[^a-z0-9]/g, '');
+        const puny = decodePunycode(u.hostname).toLowerCase().replace(/[^a-zа-я0-9]/gi, '').slice(0, 6);
+        if (host.startsWith(needle) || puny.startsWith(needle)) return u.href;
+      }
+    }
+  }
+  return best;
+}
+
+// Домен в читаемом виде из punycode. node:url.domainToUnicode умеет ровно это.
+function decodePunycode(host) {
+  try {
+    const u = require('url');
+    if (typeof u.domainToUnicode === 'function') return u.domainToUnicode(host);
+  } catch (e) {
+    // У node:url нет domainToUnicode в этой версии — остаётся как есть.
+  }
+  return host;
+}
+
 module.exports = {
   HOST, UA, sleep, get,
   htmlToText, unescapeXml, splitRssTitle, parseRssSummary, parseRss,
-  fetchFeed, fetchVacancy, parseVacancyPage,
+  fetchFeed, fetchVacancy, parseVacancyPage, companySite, decodePunycode,
 };

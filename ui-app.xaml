@@ -1,0 +1,262 @@
+﻿<!--
+  ui-app.xaml — разметка окна. Тема задана здесь целиком, а не в коде.
+
+  ПОЧЕМУ XAML. Первая версия окна собиралась в PowerShell-коде на DataGrid и
+  выглядела нечитаемо: задав Background таблицы, я не переопределил тему WPF,
+  и светлыми остались заголовки колонок, шапка вкладок и сами строки. Вторая
+  версия на ListBox с DataTemplate в коде упёрлась в DataTemplate.VisualTree —
+  это свойство только для чтения. В XAML тема это стили, а ошибка разметки
+  ловится парсером при загрузке файла.
+
+  ПОЧЕМУ НЕ TabControl. Даже со своим Style заголовок выбранной вкладки
+  рисуется системной темой: светлая плашка, а на ней светлый текст — мимо.
+  Свой шаблон вкладки требует переопределить и сам TabControl, а выигрыш
+  копеечный. Поэтому таб-бар сделан вручную: две кнопки и две панели, цвет
+  и видимость переключает Update-Ui. Темы, которую можно не перекрыть, нет.
+
+  Выравнивание колонок: шапка (КОГДА/ЯЩИК/...) и шаблон строки объявляют
+  ОДИНАКОВЫЕ ширины. Числа продублированы намеренно: менять — в обоих местах,
+  иначе заголовки разъедутся по значениям. Это проверяется тестом.
+-->
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Рассылка — что отправлено и что пришло"
+        Width="1240" Height="700" MinWidth="900" MinHeight="440"
+        Background="#14161A" Foreground="#E6E8EB"
+        FontFamily="Segoe UI" FontSize="12.5"
+        WindowStartupLocation="CenterScreen">
+
+  <Window.Resources>
+    <SolidColorBrush x:Key="Bg" Color="#14161A" />
+    <SolidColorBrush x:Key="Panel" Color="#1B1E24" />
+    <SolidColorBrush x:Key="Line" Color="#2A2E36" />
+    <SolidColorBrush x:Key="Text" Color="#E6E8EB" />
+    <SolidColorBrush x:Key="Muted" Color="#8A9099" />
+    <SolidColorBrush x:Key="Faint" Color="#4E555E" />
+    <SolidColorBrush x:Key="Accent" Color="#2F5D9E" />
+    <SolidColorBrush x:Key="TabOff" Color="#191C21" />
+
+    <!-- тёмная полоса прокрутки: системная светлая осталась бы пятном на окне -->
+    <Style TargetType="ScrollBar">
+      <Setter Property="Background" Value="{StaticResource Panel}" />
+      <Setter Property="Foreground" Value="{StaticResource Muted}" />
+      <Setter Property="BorderBrush" Value="{StaticResource Line}" />
+      <Setter Property="BorderThickness" Value="0" />
+    </Style>
+
+    <!-- кнопка-вкладка: без системного хрома, цвет задаётся из кода -->
+    <Style x:Key="TabBtn" TargetType="Button">
+      <Setter Property="Background" Value="{StaticResource TabOff}" />
+      <Setter Property="Foreground" Value="{StaticResource Muted}" />
+      <Setter Property="BorderBrush" Value="{StaticResource Line}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="Padding" Value="16,7,16,7" />
+      <Setter Property="Margin" Value="0,0,4,0" />
+      <Setter Property="FontSize" Value="12.5" />
+      <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <Style TargetType="Button">
+      <Setter Property="Background" Value="{StaticResource Panel}" />
+      <Setter Property="Foreground" Value="{StaticResource Text}" />
+      <Setter Property="BorderBrush" Value="{StaticResource Line}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="Padding" Value="10,4,10,4" />
+      <Setter Property="Cursor" Value="Hand" />
+    </Style>
+
+    <!-- строка таблицы: цвет задан явно, тема не подмешивает своё -->
+    <Style TargetType="ListBoxItem">
+      <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+      <Setter Property="Padding" Value="0" />
+      <Setter Property="Margin" Value="0" />
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="BorderThickness" Value="0" />
+      <Setter Property="MinHeight" Value="26" />
+      <Setter Property="Foreground" Value="{StaticResource Text}" />
+      <Style.Triggers>
+        <Trigger Property="IsSelected" Value="True">
+          <Setter Property="Background" Value="{StaticResource Accent}" />
+        </Trigger>
+      </Style.Triggers>
+    </Style>
+
+    <Style TargetType="ListBox">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="BorderThickness" Value="0" />
+      <Setter Property="Padding" Value="0" />
+      <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+      <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+    </Style>
+
+    <Style x:Key="Cell" TargetType="TextBlock">
+      <Setter Property="Foreground" Value="{StaticResource Text}" />
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+      <Setter Property="Margin" Value="0,0,10,0" />
+    </Style>
+
+    <Style x:Key="Head" TargetType="TextBlock">
+      <Setter Property="Foreground" Value="{StaticResource Muted}" />
+      <Setter Property="FontSize" Value="11" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="Margin" Value="0,0,10,0" />
+    </Style>
+
+    <!-- ШАПКА И ШАБЛОН СТРОКИ: ширины колонок должны совпадать. -->
+    <DataTemplate x:Key="SentRow">
+      <Grid Background="Transparent">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="150" />
+          <ColumnDefinition Width="235" />
+          <ColumnDefinition Width="235" />
+          <ColumnDefinition Width="190" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="165" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Style="{StaticResource Cell}" Text="{Binding when}" />
+        <!-- Style этой ячейки задаётся ТОЛЬКО через TextBlock.Style. Если оставить
+             ещё и атрибут Style="{StaticResource Cell}", XAML падает с «Style
+             object 'Style' is already set on element 'TextBlock'» — и падает не
+             при загрузке файла, а при отрисовке, уже в открытом окне. -->
+        <TextBlock Grid.Column="1" Text="{Binding box}">
+          <TextBlock.Style>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource Cell}">
+              <Style.Triggers>
+                <DataTrigger Binding="{Binding box}" Value="(ящик не указан)">
+                  <Setter Property="Foreground" Value="{StaticResource Faint}" />
+                </DataTrigger>
+              </Style.Triggers>
+            </Style>
+          </TextBlock.Style>
+        </TextBlock>
+        <TextBlock Grid.Column="2" Style="{StaticResource Cell}" Text="{Binding to}" />
+        <TextBlock Grid.Column="3" Style="{StaticResource Cell}" Text="{Binding company}" />
+        <TextBlock Grid.Column="4" Style="{StaticResource Cell}" Text="{Binding subject}" />
+        <TextBlock Grid.Column="5" Style="{StaticResource Cell}" Text="{Binding status}" />
+      </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="InboxRow">
+      <Grid Background="Transparent">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="150" />
+          <ColumnDefinition Width="280" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="190" />
+          <ColumnDefinition Width="240" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Style="{StaticResource Cell}" Text="{Binding when}" />
+        <TextBlock Grid.Column="1" Style="{StaticResource Cell}" Text="{Binding from}" />
+        <TextBlock Grid.Column="2" Style="{StaticResource Cell}" Text="{Binding subject}" />
+        <TextBlock Grid.Column="3" Style="{StaticResource Cell}" Text="{Binding kind}" />
+        <TextBlock Grid.Column="4" Style="{StaticResource Cell}" Text="{Binding note}" />
+      </Grid>
+    </DataTemplate>
+  </Window.Resources>
+
+  <Grid Background="{StaticResource Bg}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <!-- шапка окна -->
+    <Border Grid.Row="0" Background="{StaticResource Panel}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,0,1" Padding="16,0,16,0">
+      <Grid Height="54">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="Рассылка" FontSize="15" FontWeight="SemiBold"
+                   Foreground="{StaticResource Text}" VerticalAlignment="Center" />
+        <TextBlock x:Name="statusTb" Grid.Column="2" Text="" FontSize="11.5"
+                   Foreground="{StaticResource Muted}" VerticalAlignment="Center" />
+      </Grid>
+    </Border>
+
+    <!-- сводка по ящикам -->
+    <Border Grid.Row="1" Background="{StaticResource Bg}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,0,1" Padding="16,0,16,0">
+      <TextBlock x:Name="sumTb" Text="" FontSize="11.5" Foreground="{StaticResource Muted}" VerticalAlignment="Center" Margin="0,9,0,9" />
+    </Border>
+
+    <!-- таб-бар: две кнопки, фон и текст переключает Update-Ui -->
+    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="12,8,12,0">
+      <Button x:Name="tabSentBtn" Style="{StaticResource TabBtn}" Content="Отправленные" />
+      <Button x:Name="tabInboxBtn" Style="{StaticResource TabBtn}" Content="Полученные" />
+    </StackPanel>
+
+    <!-- содержимое вкладок: одно поверх другого, переключается видимостью -->
+    <Grid Grid.Row="3" Margin="12,6,12,0">
+
+      <Grid x:Name="sentRoot" Background="{StaticResource Bg}">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="{StaticResource Panel}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="235" />
+            <ColumnDefinition Width="235" />
+            <ColumnDefinition Width="190" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="165" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Column="0" Style="{StaticResource Head}" Text="КОГДА" />
+          <TextBlock Grid.Column="1" Style="{StaticResource Head}" Text="ЯЩИК" />
+          <TextBlock Grid.Column="2" Style="{StaticResource Head}" Text="КОМУ" />
+          <TextBlock Grid.Column="3" Style="{StaticResource Head}" Text="КОМПАНИЯ" />
+          <TextBlock Grid.Column="4" Style="{StaticResource Head}" Text="ТЕМА" />
+          <TextBlock Grid.Column="5" Style="{StaticResource Head}" Text="СТАТУС" />
+        </Grid>
+        <ListBox x:Name="sentList" Grid.Row="1" ItemTemplate="{StaticResource SentRow}" />
+        <TextBlock x:Name="sentEmpty" Grid.Row="1" Text="Пока пусто: писем ещё не отправлялось."
+                   Foreground="{StaticResource Muted}" Margin="14,14,0,0" />
+      </Grid>
+
+      <Grid x:Name="inboxRoot" Background="{StaticResource Bg}" Visibility="Collapsed">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="{StaticResource Panel}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="280" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="190" />
+            <ColumnDefinition Width="240" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Column="0" Style="{StaticResource Head}" Text="КОГДА" />
+          <TextBlock Grid.Column="1" Style="{StaticResource Head}" Text="ОТ КОГО" />
+          <TextBlock Grid.Column="2" Style="{StaticResource Head}" Text="ТЕМА" />
+          <TextBlock Grid.Column="3" Style="{StaticResource Head}" Text="ТИП" />
+          <TextBlock Grid.Column="4" Style="{StaticResource Head}" Text="ЗАМЕТКА" />
+        </Grid>
+        <ListBox x:Name="inboxList" Grid.Row="1" ItemTemplate="{StaticResource InboxRow}" />
+        <TextBlock x:Name="inboxEmpty" Grid.Row="1" Text="Пока пусто: живых ответов ещё не было."
+                   Foreground="{StaticResource Muted}" Margin="14,14,0,0" />
+      </Grid>
+
+    </Grid>
+
+    <!-- подвал -->
+    <Border Grid.Row="4" Background="{StaticResource Panel}" BorderBrush="{StaticResource Line}" BorderThickness="0,1,0,0" Padding="16,0,16,0">
+      <Grid Height="38">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Text="F5 — обновить · двойной клик по строке копирует её"
+                   FontSize="11.5" Foreground="{StaticResource Muted}" VerticalAlignment="Center" />
+        <Button x:Name="refreshBtn" Grid.Column="1" Content="Обновить" Width="104" VerticalAlignment="Center" />
+      </Grid>
+    </Border>
+  </Grid>
+</Window>

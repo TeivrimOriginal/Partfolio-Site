@@ -1,0 +1,28 @@
+* STATUS "INBOX" (MESSAGES 581 UNSEEN 548)
+powershell.exe : Исключение при вызове "ReadLine" с "0" аргументами: "Не удается прочитать данные из транспортного соед
+инения: Попытка у
+строка:2 знак:6
++ $o = & powershell -NoProfile -ExecutionPolicy Bypass -File check-inbo ...
++      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Исключение при ...ения: Попытка у:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+становить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было
+ разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера."
+D:\SOOBSHESTVA\AUTOMATIC\RABOTA_RADICAL\check-inbox.ps1:18 знак:9
++         $l = $rd.ReadLine()
++         ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : IOException
+ 
+INBOX: 
+--- Р?Р?Р?Р?Р? ---
+  INBOX
+  [Gmail]
+  [Gmail]/&BBIEMAQ2BD0EPgQ1-
+  [Gmail]/&BBIEQQRP- &BD8EPgRHBEIEMA-
+  [Gmail]/&BBoEPgRABDcEOAQ9BDA-
+  [Gmail]/&BB4EQgQ,BEAEMAQyBDsENQQ9BD0ESwQ1-
+  [Gmail]/&BB8EPgQ8BDUERwQ1BD0EPQRLBDU-
+  [Gmail]/&BCEEPwQwBDw-
+  [Gmail]/&BCcENQRABD0EPgQyBDgEOgQ4-

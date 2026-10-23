@@ -1,0 +1,17 @@
+ID=i003 from=teivrim21@gmail.com to=manager@it-klaster.com
+subject=Сбор данных и автоматизация: парсер или бот от 500 ? - пример во вложении
+attachments=i003-example.html,i003-admin-example.html
+body chars=2140
+RESULT=SENT_OK
+
+ID=i004 from=teivrim21@gmail.com to=admin@orsodin.ru
+subject=Сбор данных и автоматизация: парсер или бот от 500 ? - пример во вложении
+attachments=i004-example.html,i004-admin-example.html
+body chars=2128
+RESULT=SENT_OK
+
+ID=i005 from=teivrim21@gmail.com to=dov@it-service-guk.ru
+subject=Сбор данных и автоматизация: парсер или бот от 500 ? - пример во вложении
+attachments=i005-example.html,i005-admin-example.html
+body chars=2138
+RESULT=SENT_OK

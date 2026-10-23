@@ -1,0 +1,20 @@
+в папке отправленных: 18
+COUNT=18
+ROW|aspmk@astranet.ru|To: aspmk@astranet.ru|Sat, 3 Oct 2026 19:36:21 +0500
+ROW|52048-2012@mail.ru|To: 52048-2012@mail.ru|Sat, 3 Oct 2026 19:42:07 +0500
+ROW|baranova-1962@mail.ru|To: baranova-1962@mail.ru|Sat, 3 Oct 2026 21:10:23 +0500
+ROW|baranova-1962@mail.ru|Сайт для ООО "АЛЬФА" за 500 ? -|Sat, 3 Oct 2026 22:54:29 +0500
+ROW|24mpe@mail.ru|Сайт для ООО "КОНС" за 500 ? - |Sat, 3 Oct 2026 23:18:29 +0500
+ROW|land7777@yandex.ru|Сайт для ООО "КИК "КОНСАЛТИНГ|Sat, 3 Oct 2026 23:22:25 +0500
+ROW|magazinruss00@mail.ru|Сайт для ООО МАГАЗИ?|Sat, 03 Oct 2026 23:50:35 -0700 (PDT)
+ROW|info@sevinfotech.com|Сайт для предприяти|Sun, 04 Oct 2026 01:29:20 -0700 (PDT)
+ROW|info@nextech.ru|Сбор данных и автом?|Sun, 04 Oct 2026 01:34:14 -0700 (PDT)
+ROW|manager@it-klaster.com|Сбор данных и автом?|Sun, 04 Oct 2026 03:39:20 -0700 (PDT)
+ROW|admin@orsodin.ru|Сбор данных и автом?|Sun, 04 Oct 2026 03:40:54 -0700 (PDT)
+ROW|dov@it-service-guk.ru|Сбор данных и автом?|Sun, 04 Oct 2026 03:42:27 -0700 (PDT)
+ROW|manager@vetreria-project.ru|Сбор данных и автом?|Sun, 04 Oct 2026 04:16:02 -0700 (PDT)
+ROW|office@benefitconsult.ru|Сбор данных и автом?|Sun, 04 Oct 2026 04:17:37 -0700 (PDT)
+ROW|sales@it-lion-kontur.ru|Сбор данных и автом?|Sun, 04 Oct 2026 04:19:11 -0700 (PDT)
+ROW|info@kontur-irkutsk.ru|Сбор данных и автом?|Sun, 04 Oct 2026 04:26:09 -0700 (PDT)
+ROW|info@ahtubamaster.ru|Сбор данных и автом?|Sun, 04 Oct 2026 04:27:45 -0700 (PDT)
+ROW|info@avangard1016.ru|Сбор данных и автом?|Sun, 04 Oct 2026 04:29:20 -0700 (PDT)

@@ -1,0 +1,68 @@
+﻿2026-10-03 15:38:07  collector start: budget=3000 batch=50 delay=3000ms cached=0
+2026-10-03 15:38:08  probe -> 429 (blocked probe #1) sleeping 420s
+2026-10-03 15:45:08  probe -> 429 (blocked probe #2) sleeping 420s
+2026-10-03 15:56:01  collector start: budget=3000 batch=40 delay=3500ms cached=0
+2026-10-03 15:56:02  probe -> 429 (blocked probe #1) sleeping 300s
+2026-10-03 16:01:02  probe -> 429 (blocked probe #2) sleeping 300s
+2026-10-03 16:06:02  probe -> 429 (blocked probe #3) sleeping 300s
+2026-10-03 16:11:02  probe -> 429 (blocked probe #4) sleeping 300s
+2026-10-03 16:16:02  probe -> 429 (blocked probe #5) sleeping 300s
+2026-10-03 16:21:03  probe -> 429 (blocked probe #6) sleeping 300s
+2026-10-03 16:26:03  probe -> 429 (blocked probe #7) sleeping 300s
+2026-10-03 16:31:03  probe -> 429 (blocked probe #8) sleeping 300s
+2026-10-03 16:36:03  probe -> 429 (blocked probe #9) sleeping 300s
+2026-10-03 16:41:03  probe -> 429 (blocked probe #10) sleeping 300s
+2026-10-03 16:46:04  probe -> 429 (blocked probe #11) sleeping 300s
+2026-10-03 16:51:04  probe -> 429 (blocked probe #12) sleeping 300s
+2026-10-03 16:56:04  probe -> 429 (blocked probe #13) sleeping 300s
+2026-10-03 17:01:06  probe -> 429 (blocked probe #14) sleeping 300s
+2026-10-03 17:06:07  probe -> 429 (blocked probe #15) sleeping 300s
+2026-10-03 17:11:07  probe -> 429 (blocked probe #16) sleeping 300s
+2026-10-03 17:16:08  probe -> 429 (blocked probe #17) sleeping 300s
+2026-10-03 17:21:08  probe -> 429 (blocked probe #18) sleeping 300s
+2026-10-03 17:26:08  probe -> 429 (blocked probe #19) sleeping 300s
+2026-10-03 17:31:08  probe -> 429 (blocked probe #20) sleeping 300s
+2026-10-03 17:36:09  probe -> 429 (blocked probe #21) sleeping 300s
+2026-10-03 17:41:10  probe -> 429 (blocked probe #22) sleeping 300s
+2026-10-03 17:46:10  probe -> 429 (blocked probe #23) sleeping 300s
+2026-10-03 17:51:11  probe -> 429 (blocked probe #24) sleeping 300s
+2026-10-03 17:51:11  block did not lift, stopping (run collector.ps1 again later)
+2026-10-03 17:51:11  collector done: batches=0 cache=0
+2026-10-03 17:51:11  filter-noweb re-run over the cache
+2026-10-03 21:59:45  collector start: budget=3000 batch=50 delay=3000ms cached=0
+2026-10-03 21:59:46  probe -> 429 (blocked probe #1) sleeping 900s (backoff x1)
+2026-10-03 22:14:46  probe -> 429 (blocked probe #2) sleeping 1800s (backoff x2)
+2026-10-03 22:44:46  probe -> 429 (blocked probe #3) sleeping 3600s (backoff x4)
+2026-10-03 23:44:50  open: batch #1, fetching 50 pages (cache=0)
+2026-10-03 23:46:15    | Reading sitemap index... OK, 62 organization shards
+2026-10-03 23:46:15    |   shard 0004.xml ... 23033 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0001.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0008.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0015.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0021.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0028.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0035.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0042.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0048.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    |   shard 0055.xml ... 50000 urls (downloaded)
+2026-10-03 23:46:15    | Total urls: 473033
+2026-10-03 23:46:15    | Targets: 50 (step 9461 from 10 shards)
+2026-10-03 23:46:15    | circuit breaker: 3 throttled pages in a row, abandoning the rest of the batch
+2026-10-03 23:46:15    | Parsed: 0  failed: 3  (429/403 seen on 3 pages)
+2026-10-03 23:46:15    | === build-noweb-base v2 stats ===
+2026-10-03 23:46:15    | shards used     : 10  targets: 50
+2026-10-03 23:46:15    | parsed / failed : 0 / 3
+2026-10-03 23:46:15    | throttled pages : 3   cache file: noweb-cache.jsonl
+2026-10-03 23:46:15    | unique          : 0
+2026-10-03 23:46:15    | active          : 0
+2026-10-03 23:46:16    | active+commercial+no-site : 0
+2026-10-03 23:46:16    |   with e-mail   : 0   (best: 0, free-mail only: 0)
+2026-10-03 23:46:16    |   phone only    : 0
+2026-10-03 23:46:16    | unique e-mails  : 0 total, 0 business-grade
+2026-10-03 23:46:16    | social-instead-of-site : 0
+2026-10-03 23:46:16    | msp members     : 0
+2026-10-03 23:46:16    | Files: noweb-{all,leads,leads-best}.csv, noweb-emails.txt, noweb-emails-best.txt, noweb-phones.txt, noweb-stats.txt
+2026-10-03 23:46:16  batch #1 done, cache=0
+2026-10-03 23:46:36  probe -> 429 (blocked probe #1) sleeping 900s (backoff x1)
+2026-10-04 00:01:36  probe -> 429 (blocked probe #2) sleeping 1800s (backoff x2)
+2026-10-04 00:31:36  probe -> 429 (blocked probe #3) sleeping 3600s (backoff x4)

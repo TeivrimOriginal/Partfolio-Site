@@ -1,0 +1,1 @@
+Сделаю по ТЗ: главная, каталог с фильтрами, карточки, калькулятор, контакты, 404. HTML+CSS+JS, заявки в Telegram. Срок 1 день. Прототип: teivrimoriginal.github.io/Partfolio-Site/demo-bytsovki/
