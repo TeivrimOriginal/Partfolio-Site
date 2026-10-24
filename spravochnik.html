@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Справочник — технологии, проекты и резюме | Данила Аринов</title>
+<meta name="description" content="Справочник по стеку Данилы Аринова: Python, C++17, Rust, Actix-Web, FastAPI, SQLite FTS5, PostgreSQL, Docker, CI, Pytest, Selenium. Что это, где применялось, ссылка на доказательство." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Danila Arinov" />
+<meta property="og:title" content="Справочник — технологии, проекты и резюме" />
+<meta property="og:description" content="Один экран: весь стек, где он применялся и ссылка на проект или резюме." />
+<meta property="og:image" content="https://teivrimoriginal.github.io/Partfolio-Site/img/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://teivrimoriginal.github.io/Partfolio-Site/spravochnik.html" />
+<link rel="canonical" href="https://teivrimoriginal.github.io/Partfolio-Site/spravochnik.html" />
+<link rel="alternate" hreflang="ru" href="https://teivrimoriginal.github.io/Partfolio-Site/spravochnik.html" />
+<link rel="alternate" hreflang="x-default" href="https://teivrimoriginal.github.io/Partfolio-Site/spravochnik.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&lt;/&gt;</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css?v=2.4" />
+<script>
+// Runs before first paint so a saved light theme never flashes dark first.
+try {
+  var saved = localStorage.getItem("portfolio_theme");
+  if (saved === "light" || saved === "dark") {
+    document.documentElement.dataset.theme = saved;
+  }
+} catch (e) {}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap bar">
+    <a href="index.html" class="logo">Данила Аринов</a>
+    <nav class="menu">
+      <a href="index.html#skills">Навыки</a>
+      <a href="index.html#works">Проекты</a>
+      <a href="spravochnik.html" aria-current="page">Справочник</a>
+    </nav>
+    <a class="lang" href="index-en.html">EN</a>
+    <button class="lang theme" type="button" id="theme-toggle" aria-pressed="false" aria-label="Светлая тема" title="Светлая тема">?</button>
+  </div>
+  <div class="wrap links">
+    <a href="mailto:teivrim@gmail.com">teivrim@gmail.com</a>
+    <a href="https://t.me/Smishnyavko" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://www.linkedin.com/in/danila-arinov-617680439" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://kwork.ru/user/teivrim" target="_blank" rel="noopener">Kwork</a>
+    <a href="https://github.com/TeivrimOriginal" target="_blank" rel="noopener">GitHub</a>
+    <a href="resumes.html" class="cv">41 резюме</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <section class="ref-head">
+    <h1>Справочник</h1>
+    <p class="lead">
+      Весь стек одним списком: что это, где именно применялось и чем это подтверждается.
+      Поиск идёт по названию, описанию и тегам; категории — фильтры сверху.
+      Каждая карточка ведёт на проект в GitHub или на резюме под конкретное направление.
+    </p>
+
+    <div class="ref-tools">
+      <input class="ref-search" id="q" type="search" placeholder="Поиск: docker, sqlite, тесты, парсинг…" aria-label="Поиск по справочнику" autocomplete="off" />
+      <span class="ref-count" id="count" aria-live="polite"></span>
+    </div>
+    <div class="ref-chips" id="chips" role="group" aria-label="Фильтр по категории"></div>
+  </section>
+
+  <div class="ref-grid" id="grid"></div>
+  <p class="ref-empty" id="empty" hidden>Ничего не найдено. Попробуйте другой запрос или сбросьте категорию.</p>
+
+  <h2 class="ref-sub">Резюме по направлению</h2>
+  <div class="ref-links">
+    <a href="resume.html"><b>Общее</b><span>Стек, проекты, навыки</span></a>
+    <a href="resume-python.html"><b>Python</b><span>Боты, парсеры, API</span></a>
+    <a href="resume-backend.html"><b>Backend</b><span>Rust, Actix-Web, SQLite</span></a>
+    <a href="resume-fastapi.html"><b>FastAPI</b><span>Async SQLAlchemy, PostgreSQL</span></a>
+    <a href="resume-cpp.html"><b>C++</b><span>Движок и редакторы</span></a>
+    <a href="resume-qa.html"><b>QA</b><span>Selenium, Pytest, Allure</span></a>
+    <a href="resume-devops.html"><b>DevOps</b><span>Docker, compose, CI</span></a>
+    <a href="resumes.html"><b>Все 41 резюме</b><span>Полный каталог версий</span></a>
+  </div>
+
+  <p class="ref-back"><a href="index.html">&larr; Вернуться на сайт</a> · <a href="resumes.html">Каталог резюме</a></p>
+
+</div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Данила Аринов, 2026 · справочник обновлён 2026-10-24</span>
+  </div>
+</footer>
+
+<script>
+const ENTRIES = [
+  { n: "Python", c: "Языки", d: "Основной язык: backend, автоматизация, тесты. В работе с 2022 года.", u: "Telegram-боты и парсеры по заказам на Kwork; автотесты на Pytest.", t: ["python", "backend", "2022"], l: "resume-python.html" },
+  { n: "C++17", c: "Языки", d: "Нативный код, CMake, Win32. В работе с 2024 года.", u: "Teivrim-Engine и редактор визуальных новелл.", t: ["cpp", "cmake", "win32"], l: "https://github.com/TeivrimOriginal/Teivrim-Engine" },
+  { n: "Rust", c: "Языки", d: "Системный язык: immediate-mode UI и веб-сервер на Actix-Web.", u: "TPaint (редактор изображений) и Anime DB.", t: ["rust", "cargo"], l: "https://github.com/TeivrimOriginal/Copy-SAI-Paint-with-Rust" },
+  { n: "SQL", c: "Языки", d: "Запросы, индексы, планы выполнения, полнотекстовый поиск.", u: "SQLite FTS5 в каталоге, PostgreSQL с tsvector и GIN.", t: ["sql", "sqlite", "postgresql"], l: "resume-sql-data.html" },
+  { n: "C# / Unity", c: "Языки", d: "Геймплейный код в инди-проекте на Unity.", u: "Командная инди-игра; прототип на хакатоне HackIT.", t: ["csharp", "unity", "gamedev"], l: "resume-gamedev.html" },
+  { n: "JavaScript", c: "Языки", d: "Фронтенд и Node.js backend, затем перенос сервиса на Rust.", u: "Сайт для изучения английского; исходная версия каталога на Node.js.", t: ["javascript", "frontend", "node"], l: "resume-frontend.html" },
+
+  { n: "Actix-Web", c: "Backend", d: "Веб-фреймворк для Rust: JSON API, фильтры, пагинация.", u: "Anime DB — каталог из трёх публичных API, ~20 тыс. записей, 564 теста.", t: ["rust", "rest", "api"], l: "https://github.com/TeivrimOriginal/TeivrimSite" },
+  { n: "FastAPI", c: "Backend", d: "Асинхронный Python-фреймворк, OpenAPI из коробки.", u: "Сервис на async SQLAlchemy 2.0, PostgreSQL 16 и Alembic.", t: ["python", "async", "openapi"], l: "resume-fastapi.html" },
+  { n: "REST API", c: "Backend", d: "Проектирование ресурсов, коды ответов, фильтры и пагинация.", u: "Каталог и Android-клиент к одному API; отдельное резюме по проектированию.", t: ["api", "json", "http"], l: "resume-rest-design.html" },
+  { n: "asyncio", c: "Backend", d: "Асинхронные сервисы и конкурентные запросы в Python.", u: "Асинхронные сценарии и клиенты внешних API.", t: ["python", "async"], l: "resume-async-python.html" },
+  { n: "WebSocket", c: "Backend", d: "Двусторонний канал для обмена сообщениями в реальном времени.", u: "Мессенджер и живые интерфейсы.", t: ["realtime", "websocket"], l: "resume-frontend.html" },
+  { n: "Аутентификация", c: "Backend", d: "Проверка прав, хеширование паролей, разграничение доступа.", u: "Сервис с ролями и защищёнными маршрутами.", t: ["security", "auth"], l: "resume-auth-security.html" },
+  { n: "GraphQL", c: "Backend", d: "Один эндпоинт с выбором полей вместо набора REST-маршрутов.", u: "Слой поверх внешних источников данных.", t: ["api", "graphql"], l: "resume-graphql.html" },
+  { n: "OpenAPI", c: "Backend", d: "Спецификация и документация API, генерация клиентов.", u: "Документирование маршрутов и схем ответов.", t: ["api", "docs"], l: "resume-openapi-docs.html" },
+
+  { n: "SQLite FTS5", c: "Данные", d: "Полнотекстовый поиск внутри файловой базы, без отдельного сервера.", u: "Поиск по ~20 тыс. записей каталога Anime DB.", t: ["sqlite", "fts", "search"], l: "https://github.com/TeivrimOriginal/TeivrimSite" },
+  { n: "PostgreSQL 16", c: "Данные", d: "Реляционная СУБД: tsvector, индекс GIN, транзакции.", u: "Основное хранилище FastAPI-сервиса; тесты идут и на SQLite.", t: ["postgres", "sql", "gin"], l: "resume-postgres-dev.html" },
+  { n: "Индексы и планы запросов", c: "Данные", d: "EXPLAIN, составные индексы, устранение seq scan.", u: "Оптимизация выборок в каталоге и аналитических запросах.", t: ["sql", "performance"], l: "resume-query-tuning.html" },
+  { n: "Alembic", c: "Данные", d: "Версионирование схемы БД и миграции в Python.", u: "Миграции FastAPI-сервиса на PostgreSQL.", t: ["python", "migrations"], l: "resume-data-migration.html" },
+  { n: "Redis", c: "Данные", d: "Кэш и быстрые структуры данных в памяти.", u: "Кэширование горячих ответов API.", t: ["cache", "redis"], l: "resume-redis-cache.html" },
+  { n: "Celery", c: "Данные", d: "Очереди и фоновые задачи вне цикла запроса.", u: "Отложенная обработка и фоновые задания.", t: ["python", "queue", "async"], l: "resume-celery-queues.html" },
+  { n: "ETL и синхронизация", c: "Данные", d: "Загрузка, нормализация и слияние данных из разных источников.", u: "Сбор вакансий и каталогов, дедупликация записей.", t: ["etl", "data"], l: "resume-data-pipeline.html" },
+
+  { n: "Docker", c: "Инфраструктура", d: "Многостадийная сборка образов, воспроизводимое окружение.", u: "Сборка и запуск Anime DB; compose с healthcheck и depends_on.", t: ["docker", "devops"], l: "resume-devops.html" },
+  { n: "GitHub Actions / CI", c: "Инфраструктура", d: "Прогон проверок на каждом пуше.", u: "rustfmt, clippy -D warnings и cargo test на каждый коммит.", t: ["ci", "github", "devops"], l: "resume-cicd.html" },
+  { n: "CMake", c: "Инфраструктура", d: "Сборка C++-проектов, цели, зависимости.", u: "Teivrim-Engine и редактор новелл.", t: ["cpp", "build"], l: "https://github.com/TeivrimOriginal/Teivrim-Engine" },
+  { n: "Cargo", c: "Инфраструктура", d: "Сборка, тесты и управление зависимостями Rust.", u: "TPaint и Anime DB.", t: ["rust", "build"], l: "https://github.com/TeivrimOriginal/TeivrimSite" },
+  { n: "MinGW / MSVC", c: "Инфраструктура", d: "Два тулчейна под Windows, сборка нативных приложений.", u: "Редакторы на Win32 и GDI+.", t: ["windows", "compiler"], l: "https://github.com/TeivrimOriginal/teivrim-novell-engine" },
+  { n: "Linux", c: "Инфраструктура", d: "Рабочее окружение для сервисов и контейнеров.", u: "Запуск бэкенда и отладка в консоли.", t: ["linux", "shell"], l: "resume-devops.html" },
+  { n: "Наблюдаемость", c: "Инфраструктура", d: "Логи, метрики и проверки здоровья сервиса.", u: "Healthcheck в compose и структурированные логи.", t: ["logs", "metrics", "devops"], l: "resume-observability.html" },
+
+  { n: "Pytest", c: "Тестирование", d: "Юнит- и интеграционные тесты на Python, фикстуры, параметризация.", u: "47 UI-тестов вместе с Selenium, отчёты Allure.", t: ["python", "tests"], l: "https://github.com/TeivrimOriginal/practice-automation-tests" },
+  { n: "Selenium", c: "Тестирование", d: "Автоматизация браузера, позитивные и негативные сценарии.", u: "28 позитивных и 13 негативных тестов на трёх страницах, 6 на форму обратной связи.", t: ["ui", "tests", "python"], l: "https://github.com/TeivrimOriginal/practice-automation-tests" },
+  { n: "Allure", c: "Тестирование", d: "Наглядный HTML-отчёт по прогону тестов.", u: "Отчёты к Selenium-набору, запуск одной командой.", t: ["reports", "tests"], l: "https://github.com/TeivrimOriginal/practice-automation-tests" },
+  { n: "cargo test", c: "Тестирование", d: "Юнит- и интеграционные тесты Rust в одном инструменте.", u: "564 теста в Anime DB, 158 в TPaint.", t: ["rust", "tests"], l: "https://github.com/TeivrimOriginal/TeivrimSite" },
+  { n: "clippy -D warnings", c: "Тестирование", d: "Линтер Rust, ошибкой считает любое предупреждение.", u: "Гейт в CI на каждом пуше.", t: ["rust", "lint", "ci"], l: "https://github.com/TeivrimOriginal/TeivrimSite" },
+  { n: "Интеграционные тесты", c: "Тестирование", d: "Проверка связки слоёв и внешних границ сервиса.", u: "Тесты API и хранилища в одном прогоне.", t: ["tests", "api"], l: "resume-integration-tests.html" },
+  { n: "Тест-дизайн", c: "Тестирование", d: "Классы эквивалентности, граничные значения, негативные кейсы.", u: "Набор UI-тестов и чек-листы приёмки.", t: ["qa", "tests"], l: "resume-qa.html" },
+  { n: "SDET", c: "Тестирование", d: "Тесты как часть кода: свои фреймворки и CI.", u: "Автотесты в репозитории проекта, а не отдельным скриптом.", t: ["qa", "automation"], l: "resume-sdet.html" },
+
+  { n: "Telegram-боты", c: "Автоматизация", d: "Боты на Python: команды, сценарии, уведомления.", u: "Заказы на Kwork; бот-приёмщик заявок.", t: ["python", "bots"], l: "resume-telegram-bots.html" },
+  { n: "Парсеры сайтов", c: "Автоматизация", d: "Сбор данных со страниц, пагинация, устойчивость к разметке.", u: "Сбор вакансий и контактов, выгрузка в CSV и SQLite.", t: ["python", "scraping"], l: "resume-scraper.html" },
+  { n: "Интеграции внешних API", c: "Автоматизация", d: "Клиенты сторонних сервисов, лимиты, ретраи, нормализация.", u: "Агрегация AniList, Kitsu и Shikimori в один каталог.", t: ["api", "http", "python"], l: "resume-integrations.html" },
+  { n: "1С:Предприятие 8.3", c: "Автоматизация", d: "Справочники, документы, регистры накопления, язык BSL.", u: "Учебная конфигурация и отчёты.", t: ["1c", "bsl"], l: "resume1c.html" },
+
+  { n: "Git", c: "Инструменты", d: "Ветки, осмысленные коммиты, ревью, разрешение конфликтов.", u: "История проектов и работа в команде.", t: ["vcs", "git"], l: "resume-git-workflow.html" },
+  { n: "Отладка и профилирование", c: "Инструменты", d: "Брейкпоинты, дампы, замер времени и памяти.", u: "Профилирование рендера и запросов к БД.", t: ["debug", "performance"], l: "resume-code-quality.html" },
+  { n: "Win32 / GDI+", c: "Инструменты", d: "Нативный интерфейс Windows без сторонних библиотек.", u: "Редактор визуальных новелл: 6 панелей и drag-and-drop.", t: ["cpp", "windows", "ui"], l: "https://github.com/TeivrimOriginal/teivrim-novell-engine" },
+  { n: "Документирование", c: "Практики", d: "README, схема архитектуры, инструкция запуска.", u: "Каждый публичный репозиторий с описанием и тестами.", t: ["docs", "process"], l: "https://github.com/TeivrimOriginal" },
+  { n: "Качество кода", c: "Практики", d: "Линтеры, форматирование, код-ревью, маленькие функции.", u: "Гейты CI и ревью перед слиянием.", t: ["quality", "process"], l: "resume-code-quality.html" },
+  { n: "Стажировка / junior", c: "Практики", d: "Готовность к тестовому заданию и работе в команде.", u: "Ищу junior- или стажировку по backend/Python.", t: ["job", "junior"], l: "resume-junior-intern.html" },
+  { n: "Удалённая работа", c: "Практики", d: "Самостоятельный график, письменная коммуникация, отчёты.", u: "Фриланс-заказы и распределённая команда.", t: ["remote", "job"], l: "resume-remote-junior.html" }
+];
+
+const grid = document.getElementById("grid");
+const q = document.getElementById("q");
+const chips = document.getElementById("chips");
+const count = document.getElementById("count");
+const empty = document.getElementById("empty");
+
+const CATS = ["Все", ...new Set(ENTRIES.map(e => e.c))];
+let activeCat = "Все";
+
+const esc = s => (s || "").replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+
+const isExternal = link => /^https?:/.test(link);
+
+function card(e) {
+  const href = isExternal(e.l) ? e.l : e.l;
+  const attrs = isExternal(e.l) ? ' target="_blank" rel="noopener"' : "";
+  return '<article class="ref-card" data-cat="' + esc(e.c) + '">' +
+    '<h3><a href="' + esc(href) + '"' + attrs + '>' + esc(e.n) + "</a>" +
+    '<span class="ref-cat">' + esc(e.c) + "</span></h3>" +
+    '<p class="ref-desc">' + esc(e.d) + "</p>" +
+    '<p class="ref-use">' + esc(e.u) + "</p>" +
+    '<div class="ref-tags">' + e.t.map(t => '<span class="ref-tag">' + esc(t) + "</span>").join("") + "</div>" +
+    "</article>";
+}
+
+function matches(e, needle) {
+  if (!needle) return true;
+  const hay = (e.n + " " + e.c + " " + e.d + " " + e.u + " " + e.t.join(" ")).toLowerCase();
+  return hay.includes(needle);
+}
+
+function render() {
+  const needle = q.value.trim().toLowerCase();
+  const list = ENTRIES.filter(e => (activeCat === "Все" || e.c === activeCat) && matches(e, needle));
+  grid.innerHTML = list.map(card).join("");
+  count.textContent = list.length + " из " + ENTRIES.length;
+  empty.hidden = list.length > 0;
+}
+
+function buildChips() {
+  chips.innerHTML = CATS.map(c =>
+    '<button type="button" data-cat="' + esc(c) + '" aria-pressed="' + (c === activeCat) + '">' + esc(c) + "</button>"
+  ).join("");
+}
+
+chips.addEventListener("click", ev => {
+  const btn = ev.target.closest("button[data-cat]");
+  if (!btn) return;
+  activeCat = btn.dataset.cat;
+  for (const b of chips.querySelectorAll("button")) {
+    b.setAttribute("aria-pressed", String(b === btn));
+  }
+  render();
+});
+
+q.addEventListener("input", render);
+
+// "/" jumps to the search field, Escape clears it — the usual docs-site habits.
+document.addEventListener("keydown", ev => {
+  if (ev.key === "/" && document.activeElement !== q) {
+    ev.preventDefault();
+    q.focus();
+  } else if (ev.key === "Escape" && document.activeElement === q) {
+    q.value = "";
+    render();
+    q.blur();
+  }
+});
+
+buildChips();
+render();
+</script>
+<script src="js/main.js?v=2.4"></script>
+</body>
+</html>
